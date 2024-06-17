@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: salmon;
+}
+/* Header */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.navbarLine{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navbarOptionsContainer, .navbarLine{
+    margin: 5px 0;
+}
+.navbarLogoContainer{
+    margin: 5px 5px;
+}
+header{
+    height: 100px;
+    width: 100vw;
+    background-color: black;
+    color: white;
+}
+nav{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+}
+.navbarOptionsContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.navbarOptions{
+    display: flex;
+    justify-content: space-around;
+}
+.navbarOptions > *{
+    margin: 0 10px;
+}
+
+.navbarOptions a, .navbarCompanyName{
+    font-size: 1rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.navbarLogoContainer{
+    background-color: red;
+    width: 80px;
+    height: 80px;
+}
+.navbarLine{
+    width: 100%;
+}
+.navbarLines{
+    height: 3px;
+    background-color: white;
+}
+.leftLine{
+    width: 10ch;
+    margin-right: 5px;
+    flex-grow: 1;
+}
+
+.rightLine{
+    width: 80vw;
+    margin-right: 5px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.burgerMenu{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.navbarLogo{
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    margin-left: 5px;
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    .navbarLogo, .burgerMenu{
+        display: block;
+    }
+    .navbarLogoContainer, .navLink, .navbarCompanyName{
+        display: none;
+    }
+    .navbarOptionsContainer{
+        align-items: flex-end;
+    }
+    .leftLine{
+        margin-right: 5px;
+    }
+}
