@@ -164,7 +164,7 @@ nav{
     position: absolute;
     bottom: 0;
     margin-bottom: 3rem;
-    animation: spinZ infinite 6s ease-in-out;
+    animation: spinZ infinite 4s ease-in-out;
 }
 
 .menuDeselect {
