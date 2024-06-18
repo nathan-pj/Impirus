@@ -15,7 +15,7 @@ function closeNavbar() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.burgerLink, .navLink').forEach(item => {
+    document.querySelectorAll('.burgerLink, .navLink, .navbarCompanyName').forEach(item => {
         item.addEventListener('mouseenter', () => {
             item.classList.remove('menuDeselect');
             item.classList.add('menuSelect');

@@ -47,6 +47,10 @@ nav{
     color: white;
 }
 
+.navbarCompanyName{
+    color: white;
+}
+
 .navbarOptions a, .navbarCompanyName{
     font-size: 1.5rem;
     font-family: NSimSun;
