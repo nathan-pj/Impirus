@@ -67,7 +67,7 @@ nav{
     margin: 0 5px;
 }
 .navbarLines{
-    height: 3px;
+    height: 2px;
     background-color: white;
 }
 .leftLine{
@@ -194,6 +194,9 @@ nav{
     .leftLine{
         margin-right: 5px;
     }
+    #footerLogo{
+        display: none;
+    }
 }
 @media screen and (max-width: 450px) {
     #burgerExpanded{
@@ -225,7 +228,16 @@ nav{
         transform: rotateY(0deg);
     }
     to {
-        transform: rotateY(360deg);
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes spinZReverse {
+    from {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(0deg);
     }
 }
 
@@ -245,4 +257,65 @@ nav{
     to {
         color: rgb(255, 255, 255);
     }
+}
+/* header END */
+
+/* footer */
+footer{
+    width: 100vw;
+    height: 15ch;
+    min-height: fit-content;
+    background-color: black;
+    display: grid;
+    grid-template-areas: 
+    "footerLine footerLine"
+    "footerSocials footerLogoContainer"
+    "footerNav footerLogoContainer"
+    "footerCopyright footerLogoContainer";
+    gap: 5px 10px;
+}
+.footerLine{
+    width: 90%;
+    margin: 10px;
+    height: 2px;
+    background-color: white;
+    grid-area: footerLine;
+    justify-self: center;
+}
+footer > *, footer > * > a{
+    color: white;
+    text-decoration: none;
+}
+footer > *{
+    width: 90vw;
+    display: flex;
+}
+.footerLogoContainer{
+    width: 50px;
+    height: 50px;
+    grid-area: footerLogoContainer;
+    background-color: blueviolet;
+}
+.footerNav{
+    grid-area: footerNav;
+}
+.footerSocials{
+    grid-area: footerSocials;
+}
+.footerCopyright{
+    grid-area: footerCopyright;
+    color: rgb(109, 109, 109);
+}
+.footerRow{
+    font-family: 'NSimSun';
+}
+.footerRow > *{
+    margin: 0 1ch;
+}
+
+.footerLogoSelect{
+    animation: spinZ 0.5s ease;
+}
+.footerLogoDeselect{
+    animation: spinZReverse 0.5s ease;
 }

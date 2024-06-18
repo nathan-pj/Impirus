@@ -15,7 +15,7 @@ function closeNavbar() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.burgerLink, .navLink, .navbarCompanyName').forEach(item => {
+    document.querySelectorAll('.burgerLink, .navLink, .navbarCompanyName, .footerLink').forEach(item => {
         item.addEventListener('mouseenter', () => {
             item.classList.remove('menuDeselect');
             item.classList.add('menuSelect');
@@ -36,5 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerCloseBtn.addEventListener('mouseleave', () => {
         burgerCloseBtn.classList.remove('menuSelect');
         burgerCloseBtn.classList.add('menuDeselect');
+    });
+
+    const footerLogo = document.getElementById("footerLogo");
+    footerLogo.addEventListener('mouseenter', () => {
+        footerLogo.classList.remove('footerLogoDeselect');
+        footerLogo.classList.add('footerLogoSelect');
+    });
+
+    footerLogo.addEventListener('mouseleave', () => {
+        footerLogo.classList.remove('footerLogoSelect');
+        footerLogo.classList.add('footerLogoDeselect');
     });
 });
