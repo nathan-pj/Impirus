@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const footerLogo = document.getElementById("footerLogo");
+    
     footerLogo.addEventListener('mouseenter', () => {
         footerLogo.classList.remove('footerLogoDeselect');
         footerLogo.classList.add('footerLogoSelect');

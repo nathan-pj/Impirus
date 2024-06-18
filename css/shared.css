@@ -3,6 +3,10 @@
     padding: 0;
 }
 /* Header */
+.navbarLogoImg, .navbarLogoImg2{
+    width: 100%;
+    height: auto;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -57,14 +61,15 @@ nav{
     text-decoration: none;
 }
 .navbarLogoContainer{
-    background-color: red;
     width: 80px;
     height: 80px;
     margin: 10px 15px;
+    display: flex;
+    align-items: center;
 }
 .navbarLine{
     width: 100%;
-    margin: 0 5px;
+    margin: -10px 5px;
 }
 .navbarLines{
     height: 2px;
@@ -95,7 +100,6 @@ nav{
 .navbarLogo{
     height: 50px;
     width: 50px;
-    background-color: aqua;
     margin-left: 5px;
     display: none;
 }
@@ -128,6 +132,9 @@ nav{
     font-family: NSimSun;
     text-decoration: none;
 }
+.navbarLogoImg2{
+    display: none;
+}
 .burgerOptions > *{
     margin: 1rem 0;
 }
@@ -154,7 +161,6 @@ nav{
 #burgerShowcase{
     width: 100px;
     height: 100px;
-    background-color: blueviolet;
     position: absolute;
     bottom: 0;
     margin-bottom: 3rem;
@@ -182,7 +188,7 @@ nav{
     .navbarOptions > *{
         margin: 0 20px;
     }
-    .navbarLogo, #burgerMenu{
+    .navbarLogo, .navbarLogoImg, #burgerMenu, .navbarLogoImg2{
         display: block;
     }
     .navbarLogoContainer, .navLink, .navbarCompanyName{
@@ -196,6 +202,10 @@ nav{
     }
     #footerLogo{
         display: none;
+    }
+
+    .navbarLine{
+        margin: 0 5px;
     }
 }
 @media screen and (max-width: 450px) {
@@ -273,6 +283,7 @@ footer{
     "footerNav footerLogoContainer"
     "footerCopyright footerLogoContainer";
     gap: 5px 10px;
+    align-items: center;
 }
 .footerLine{
     width: 90%;
@@ -292,9 +303,12 @@ footer > *{
 }
 .footerLogoContainer{
     width: 50px;
-    height: 50px;
+    height: 30px;
     grid-area: footerLogoContainer;
-    background-color: blueviolet;
+}
+.navbarLogo, #burgerShowcase{
+    display: flex;
+    align-items: center;
 }
 .footerNav{
     grid-area: footerNav;
