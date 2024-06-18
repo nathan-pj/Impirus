@@ -1,3 +1,5 @@
 body{
-    background-color: gray;
+    background: url("../assets/temp2.jpg");
+    background-size:cover;
+    background-repeat: none;
 }

@@ -1,3 +1,5 @@
 body{
-    background-color: rgb(196, 196, 196)
+    background: url("../assets/temp3.jpg");
+    background-size:cover;
+    background-repeat: none;
 }
