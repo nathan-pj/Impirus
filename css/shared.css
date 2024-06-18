@@ -46,7 +46,6 @@ nav{
 
 .navbarOptions a, .navbarCompanyName{
     font-size: 1rem;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
@@ -79,7 +78,7 @@ nav{
   'GRAD' 0,
   'opsz' 24
 }
-.burgerMenu{
+#burgerMenu{
     display: none;
     font-size: 2rem;
     cursor: pointer;
@@ -129,7 +128,7 @@ nav{
     background-color: rgb(54, 54, 54);
 }
 
-.burgerClose{
+#burgerClose{
     position: absolute;
     top: 0;
     right: 0;
@@ -150,11 +149,21 @@ nav{
     position: absolute;
     bottom: 0;
     margin-bottom: 3rem;
-    animation: spinZ infinite 4s ease-in-out;
+    animation: spinZ infinite 6s ease-in-out;
+}
+
+.menuDeselect {
+    animation: menuDeselect 0.5s ease;
+    color: white;
+}
+
+.menuSelect {
+    animation: menuSelect 0.5s ease;
+    color: rgb(109, 109, 109);
 }
 
 @media screen and (max-width: 700px) {
-    .navbarLogo, .burgerMenu{
+    .navbarLogo, #burgerMenu{
         display: block;
     }
     .navbarLogoContainer, .navLink, .navbarCompanyName{
@@ -198,5 +207,23 @@ nav{
     }
     to {
         transform: rotateY(360deg);
+    }
+}
+
+@keyframes menuSelect {
+    from {
+        color: rgb(255, 255, 255);
+    }
+    to {
+        color: rgb(109, 109, 109);
+    }
+}
+
+@keyframes menuDeselect {
+    from {
+        color: rgb(109, 109, 109);
+    }
+    to {
+        color: rgb(255, 255, 255);
     }
 }

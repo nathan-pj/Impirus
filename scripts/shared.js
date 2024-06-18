@@ -13,3 +13,28 @@ function closeNavbar() {
         burger.style.display = "none";
     }, 900); 
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.burgerLink, .navLink').forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.classList.remove('menuDeselect');
+            item.classList.add('menuSelect');
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.classList.remove('menuSelect');
+            item.classList.add('menuDeselect');
+        });
+    });
+
+    const burgerCloseBtn = document.getElementById("burgerClose");
+    burgerCloseBtn.addEventListener('mouseenter', () => {
+        burgerCloseBtn.classList.remove('menuDeselect');
+        burgerCloseBtn.classList.add('menuSelect');
+    });
+
+    burgerCloseBtn.addEventListener('mouseleave', () => {
+        burgerCloseBtn.classList.remove('menuSelect');
+        burgerCloseBtn.classList.add('menuDeselect');
+    });
+});
