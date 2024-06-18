@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="icon" type="image/x-icon" href="../assets/blackLogo.png">
-    <script src="../scripts/shared.js"></script>
 </head>
 <body>
     <header class="navbar">
@@ -58,9 +57,26 @@
             </div>
         </nav>
     </header>
-    <h2 style="margin: 1rem 1rem;">Hii im home page!!</h2>
-    <div style="width: 50%; height: 100vh; margin: 1rem 1rem;">
-        im a very long temporary invisible div
+    <!-- 
+    <video id="landingVideo" autoplay loop muted>
+        <source src="../assets/tempVid.mp4" type="video/mp4">
+    </video>
+    -->
+    <div id="landingSection">
+        <img src="../assets/whiteLogo.png" class="landingAnimation" alt="">
+        <img src="../assets/nameStretch.png" class="nameStretch" alt="">
+        <p>! The animation is a placeholder lmao, but I'm thinking we have a 
+            real 3d animation for the final product !</p>
+    </div>
+
+    <div id="whoAreWe">
+        <section>
+            <h2 class="h2-1">High-end</h2>
+            <h2 class="h2-2">3D renders</h2>
+            <h2 class="h2-3">Accessible for</h2>
+            <h2 class="h2-4"><u>Every</u> brand.</h2>
+            <p class="bgText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde deserunt mollitia illum cum repellendus, vitae, ea sequi, corporis distinctio ipsa architecto maxime assumenda similique provident beatae quae debitis facilis perspiciatis?</p>
+        </section>
     </div>
     <footer>
         <div class="footerLine"></div>
@@ -84,5 +100,7 @@
             </a>
         </div>
     </footer>
+    <script src="../scripts/shared.js"></script>
+    <script src="../scripts/home.js"></script>
 </body>
 </html>
