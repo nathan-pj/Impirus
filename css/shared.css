@@ -29,7 +29,12 @@ nav{
     align-items: flex-end;
     justify-content: center;
     flex-direction: column;
-    width: 100vw;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 90%;
+}
+#about{
+    margin-right: 30px;
 }
 .navbarOptionsContainer{
     display: flex;
@@ -57,6 +62,7 @@ nav{
 }
 .navbarLine{
     width: 100%;
+    margin: 0 5px;
 }
 .navbarLines{
     height: 3px;
@@ -171,6 +177,9 @@ nav{
 }
 
 @media screen and (max-width: 700px) {
+    .navbarOptions > *{
+        margin: 0 20px;
+    }
     .navbarLogo, #burgerMenu{
         display: block;
     }
