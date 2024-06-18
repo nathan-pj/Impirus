@@ -91,27 +91,44 @@ nav{
     margin-left: 5px;
     display: none;
 }
+.navbar{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
 #burgerExpanded{
     width: fit-content;
     height: 100vh;
-    background-color: blue;
-    position: absolute;
+    background-color: black;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
     right: 0;
     align-items: center;
     justify-content: center;
     display: none;
+
 }
 .burgerOptions{
     display: flex;
     flex-direction: column;
 }
-.burgerOptions > *{
+.burgerLink{
     margin: 1rem 4rem;
     font-size: xx-large;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
+.burgerOptions > *{
+    margin: 1rem 0;
+}
+.burgerLinkLine{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(54, 54, 54);
+}
+
 .burgerClose{
     position: absolute;
     top: 0;
@@ -120,6 +137,22 @@ nav{
     cursor: pointer;
     font-size: xx-large;
 }
+.burgerOpenAnimation{
+    animation: burgerOpen 1s ease-in-out;
+}
+.burgerCloseAnimation{
+    animation: burgerClose 1s ease-in-out;
+}
+#burgerShowcase{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3rem;
+    animation: spinZ infinite 4s ease-in-out;
+}
+
 @media screen and (max-width: 700px) {
     .navbarLogo, .burgerMenu{
         display: block;
@@ -137,5 +170,33 @@ nav{
 @media screen and (max-width: 450px) {
     #burgerExpanded{
         width: 100vw;
+    }
+}
+
+@keyframes burgerOpen {
+    from {
+        transform: translateX(100%);
+      }
+    
+      to {
+        transform: translateX(0%);
+      }
+}
+
+@keyframes burgerClose {
+    from {
+        transform: translateX(0%);
+      }
+    
+      to {
+        transform: translateX(100%);
+      }
+}
+@keyframes spinZ {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
     }
 }

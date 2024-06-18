@@ -1,7 +1,15 @@
-function expandNavbar(){
-    document.getElementById("burgerExpanded").style.display = "flex";
+function expandNavbar() {
+    const burger = document.getElementById("burgerExpanded");
+    burger.style.display = "flex";
+    burger.classList.add("burgerOpenAnimation");
+    burger.classList.remove("burgerCloseAnimation");
 }
 
-function closeNavbar(){
-    document.getElementById("burgerExpanded").style.display = "none";
+function closeNavbar() {
+    const burger = document.getElementById("burgerExpanded");
+    burger.classList.add("burgerCloseAnimation");
+    burger.classList.remove("burgerOpenAnimation");
+    setTimeout(() => {
+        burger.style.display = "none";
+    }, 900); 
 }
