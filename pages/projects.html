@@ -20,7 +20,7 @@
                     <a href="./index.html" class="navLink">HOME</a>
                     <a href="./projects.html" class="navLink">PROJECTS</a>
                     <a href="./about.html" class="navLink">ABOUT</a>
-                    <span class="material-symbols-outlined burgerMenu" onclick="expandNavbar()">menu</span>
+                    <span class="material-symbols-outlined" id="burgerMenu" onclick="expandNavbar()">drag_handle</span>
                 </div>
             </div>
             <div class="navbarLine">
@@ -29,12 +29,22 @@
             </div>
         </nav>
         <nav id="burgerExpanded">
-            <span class="material-symbols-outlined burgerClose" onclick="closeNavbar()">close</span>
+            <span class="material-symbols-outlined" id="burgerClose" onclick="closeNavbar()">close</span>
             <div class="burgerOptions">
-                <a href="./index.html">HOME</a>
-                <a href="./projects.html">PROJECTS</a>
-                <a href="./about.html">ABOUT</a>
+                <div>
+                    <a href="./index.html" class="burgerLink">HOME</a>
+                    <div class="burgerLinkLine burgerLine1"></div>  
+                </div>
+                <div>
+                    <a href="./projects.html" class="burgerLink">PROJECTS</a>
+                    <div class="burgerLinkLine burgerLine2"></div>
+                </div>
+                <div>
+                    <a href="./about.html" class="burgerLink">ABOUT</a>
+                    <div class="burgerLinkLine burgerLine3"></div>
+                </div>
             </div>
+            <div id="burgerShowcase"></div>
         </nav>
     </header>
     <h2>Hii im projects page!!!!!!</h2>
