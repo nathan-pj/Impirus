@@ -1,22 +1,25 @@
 body{
-    background: url("../assets/temp2.jpg");
+    background-color: #efefef;
     background-size:cover;
     background-repeat: none;
 }
 
 #landingSection{
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
 }
 #landingVideo{
     width: 100%;
     height: auto;
     object-fit: cover;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -24,9 +27,12 @@ body{
     z-index: -1;
 }
 
-.nameStretch{
+#nameStretch{
     width: 70%;
-    height: 100%;
+    height: 70%;
+    position: absolute;
+    z-index: -1;
+    transition: transform 0.1s ease;
 }
 .landingAnimation{
     position: absolute;
@@ -39,11 +45,20 @@ body{
     .landingAnimation{
         width: 30%;
     }
+    #landingVideo{
+        top: 40vh;
+    }
+    #whoAreWe h2{
+        font-size: 4rem;
+    }
 }
 
 @media screen and (max-width: 450px) {
     .landingAnimation{
         width: 35%;
+    }
+    #nameStretch{
+        height: 50%;
     }
 }
   
@@ -66,14 +81,49 @@ body{
 }
 
 #whoAreWe {
-    margin-top: 6rem;
+    padding-top: 6rem;
     width: 100vw;
     height: fit-content;
-    display: none; 
+    display: flex;
     justify-content: center;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     padding: 3rem 0;
+    border: 1px solid rgb(0, 0, 0, 0.4);
+    animation: fadeInFixedWidth ease 1s;
+    border-radius: 15px 15px 0 0
+}
+.card{
+    background-color: rgb(236, 236, 236);
+    padding: 3rem 0;
+    border: 1px solid rgb(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 70vh;
+    border-radius: 15px 15px 0 0;
+    margin-top: -15px;
+}
 
+@keyframes changeFont {
+    0% { font-family: NSimSun; }
+    14.28% { font-family: 'Times New Roman', serif; }
+    28.56% { font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+    42.84% { font-family: 'Georgia', serif; }
+    57.12% { font-family: 'Courier New', monospace; }
+    71.4% { font-family: 'Arial Narrow', Arial, sans-serif; }
+    85.68% { font-family: monospace; }
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    16.67% { color: orange; }
+    33.33% { color: yellow; }
+    50% { color: green; }
+    66.67% { color: blue; }
+    83.33% { color: indigo; }
+    100% { color: violet; }
+}
+
+#everyAnimation{
+    animation: changeFont 3s infinite;
 }
 
 #whoAreWe section {
@@ -85,42 +135,56 @@ body{
         "h2-2"
         "h2-3"
         "h2-4";
-    font-size: 5rem;
-    position: relative;
+    font-size: 4rem;
+    position: relative;;
 }
 
-#whoAreWe{
-    animation: fadeIn linear;
-    animation-timeline: view();
+#landingSection{
+    animation: fadeInFixedWidth ease 1s;
 }
 
 @keyframes fadeIn{
-    from {scale: .8; opacity: 0;}
-    to {scale: 1; opacity: 1;}
+    from {scale: .8; opacity: 0; transform: translateY(-20%);}
+    to {scale: 1; opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInFixedWidth{
+    from {height: .8; width: 100vw; opacity: 0; transform: translateY(-20%);}
+    to {height: 1; width: 100vw; opacity: 1; transform: translateY(0);}
 }
 
 
 #whoAreWe h2{
     width: 100%;
-    margin: 0.3rem 0;
+    margin: 0.4rem 0;
 }
 .h2-1{
     grid-area: h2-1;
     font-family: Arial, Helvetica, sans-serif;
+    transform: rotateX(20deg) rotateY(-20deg);
 }
 .h2-2{
     grid-area: h2-2;
     text-align: end;
     font-family: NSimSun;
+    transform: rotateX(50deg) rotateY(20deg);
+}
+
+.h2-2:hover{
+    animation: rainbow 6s linear infinite;
+    transition: 1s ease;
 }
 .h2-3{
     grid-area: h2-3;
     font-family: Arial, Helvetica, sans-serif;
+    transform: rotateX(20deg) rotateY(-20deg);
 }
 .h2-4{
     grid-area: h2-4;
     text-align: end;
     font-family: NSimSun;
+    height: 3ch;
+    transform: rotateX(50deg) rotateY(20deg);
 }
 .bgText{
     position: fixed;
