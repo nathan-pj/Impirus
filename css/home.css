@@ -41,6 +41,12 @@ body{
     animation: growShrink 7s ease infinite;
 }
 
+@media screen and (max-width: 1100px) {
+    #landingVideo{
+        top: 20vh;
+    }
+}
+
 @media screen and (max-width: 700px) {
     .landingAnimation{
         width: 30%;
@@ -59,6 +65,9 @@ body{
     }
     #nameStretch{
         height: 50%;
+    }
+    #landingVideo{
+        top: 45vh;
     }
 }
   
