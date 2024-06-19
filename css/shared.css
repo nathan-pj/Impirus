@@ -53,9 +53,6 @@ header, footer, #burgerExpanded{
     background: rgba(0, 0, 0, 0.1); 
     backdrop-filter: saturate(180%) blur(10px);
 }
-#burgerExpanded{
-    backdrop-filter: saturate(180%) blur(15px);
-}
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     header, footer, #burgerExpanded{
@@ -157,6 +154,8 @@ nav{
     justify-content: center;
     display: none;
     box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.2);
+    backdrop-filter: saturate(180%) blur(15px);
+    z-index: 2;
 }
 .burgerOptions{
     display: flex;

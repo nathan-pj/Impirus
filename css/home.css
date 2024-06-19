@@ -45,6 +45,9 @@ body{
     #landingVideo{
         top: 20vh;
     }
+    #whoAreWeImgContainer{
+        margin-top: 2rem;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -55,7 +58,7 @@ body{
         top: 40vh;
     }
     #whoAreWe h2{
-        font-size: 4rem;
+        font-size: 0.8em;
     }
 }
 
@@ -68,6 +71,9 @@ body{
     }
     #landingVideo{
         top: 45vh;
+    }
+    #whoAreWe section h2{
+        font-size: 0.7em;
     }
 }
   
@@ -94,7 +100,9 @@ body{
     width: 100vw;
     height: fit-content;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
     padding: 3rem 0;
     border: 1px solid rgb(0, 0, 0, 0.4);
@@ -132,11 +140,12 @@ body{
 }
 
 #everyAnimation{
-    animation: changeFont 3s infinite;
+    animation: changeFont 6s infinite;
 }
 
 #whoAreWe section {
-    width: 80%;
+    width: 50%;
+    min-width: fit-content;
     height: 100%;
     display: grid;
     grid-template-areas: 
@@ -144,8 +153,97 @@ body{
         "h2-2"
         "h2-3"
         "h2-4";
-    font-size: 4rem;
+    font-size: 3.5rem;
     position: relative;;
+}
+
+#whoAreWeImgContainer{
+   width: 40%;
+   min-width: 300px;
+   height: 100%; 
+   border-radius: 20px;
+   overflow: hidden; /* Hide overflowing content */
+   position: relative;
+}
+#whoAreWeImgContainer:hover{
+    background-color: #efefef;
+}
+
+.grayHoverAnimation{
+    animation: hoverGray 1s;
+}
+
+.grayHoverAnimationEnd{
+    animation: hoverGrayEnd 1s;
+}
+
+@keyframes hoverGray {
+    from { background-color: white;}
+    to {background-color: #efefef;}
+}
+
+@keyframes hoverGrayEnd {
+    from { background-color: #efefef;}
+    to {background-color: white;}
+}
+
+.carousel {
+    display: flex; /* Display slides in a row */
+    transition: transform 0.5s ease; /* Smooth transition effect */
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    /* Optionally, add additional styling like padding or margin */
+}
+
+.carouselNav{
+    position: absolute;
+    z-index: 1;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+
+@keyframes opacityFade {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+@keyframes opacityFadeEnd {
+    from { opacity: 1;}
+    to { opacity: 0;}
+}
+
+.navFadeIn{
+    animation: opacityFade 1s;
+}
+
+.navFadeOut{
+    animation: opacityFadeEnd 1s;
+}
+
+.carousel-slide img {
+    width: 100%; /* Ensure images fill their parent container */
+    display: block; /* Remove default inline-block spacing */
+}
+
+.whoAreWeImg{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
 
 #landingSection{
@@ -166,17 +264,16 @@ body{
 #whoAreWe h2{
     width: 100%;
     margin: 0.4rem 0;
+    transform: rotateX(20deg) rotateY(-20deg);
 }
 .h2-1{
     grid-area: h2-1;
     font-family: Arial, Helvetica, sans-serif;
-    transform: rotateX(20deg) rotateY(-20deg);
 }
 .h2-2{
     grid-area: h2-2;
-    text-align: end;
     font-family: NSimSun;
-    transform: rotateX(50deg) rotateY(20deg);
+    transform: rotateX(20deg) rotateY(-20deg);
 }
 
 .h2-2:hover{
@@ -186,16 +283,12 @@ body{
 .h2-3{
     grid-area: h2-3;
     font-family: Arial, Helvetica, sans-serif;
-    transform: rotateX(20deg) rotateY(-20deg);
 }
 .h2-4{
     grid-area: h2-4;
-    text-align: end;
     font-family: NSimSun;
     height: 3ch;
-    transform: rotateX(50deg) rotateY(20deg);
 }
 .bgText{
     position: fixed;
-
 }
