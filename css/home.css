@@ -129,16 +129,6 @@ body{
     85.68% { font-family: monospace; }
 }
 
-@keyframes rainbow {
-    0% { color: red; }
-    16.67% { color: orange; }
-    33.33% { color: yellow; }
-    50% { color: green; }
-    66.67% { color: blue; }
-    83.33% { color: indigo; }
-    100% { color: violet; }
-}
-
 #everyAnimation{
     animation: changeFont 6s infinite;
 }
@@ -217,24 +207,6 @@ body{
     right: 0;
 }
 
-@keyframes opacityFade {
-    from { opacity: 0;}
-    to { opacity: 1;}
-}
-
-@keyframes opacityFadeEnd {
-    from { opacity: 1;}
-    to { opacity: 0;}
-}
-
-.navFadeIn{
-    animation: opacityFade 1s;
-}
-
-.navFadeOut{
-    animation: opacityFadeEnd 1s;
-}
-
 .carousel-slide img {
     width: 100%; /* Ensure images fill their parent container */
     display: block; /* Remove default inline-block spacing */
@@ -274,11 +246,6 @@ body{
     grid-area: h2-2;
     font-family: NSimSun;
     transform: rotateX(20deg) rotateY(-20deg);
-}
-
-.h2-2:hover{
-    animation: rainbow 6s linear infinite;
-    transition: 1s ease;
 }
 .h2-3{
     grid-area: h2-3;

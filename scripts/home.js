@@ -16,25 +16,43 @@ document.addEventListener('mousemove', function(e) {
     h2.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
 });
 
-/*
+
 // Function to adjust rotation based on scroll position
 function adjustRotations() {
     const h2Elements = document.querySelectorAll('#whoAreWe h2');
-    h2Elements.forEach((h2, index) => {
-        const scrollFraction = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const rotateX = 20 - scrollFraction * 30; // Adjust the multiplier for intensity
-        const rotateY = index % 2 === 0 ? -10 + scrollFraction * 10 : 10 - scrollFraction * 10; // Alternating Y rotation
+    const maxScroll = 1200; // The scroll position at which the rotation should be 0
+    const startRotationX = 20; // Initial X rotation in degrees
+    const startRotationY = -20; // Initial Y rotation in degrees
 
-        h2.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    // Get the current scroll position
+    const scrollTop = window.scrollY;
+
+    // Calculate the new rotation based on scroll position
+    let rotationX = startRotationX;
+    let rotationY = startRotationY;
+
+    if (scrollTop >= maxScroll) {
+        // If the scroll position is greater than or equal to maxScroll, set rotation to 0
+        rotationX = 0;
+        rotationY = 0;
+    } else {
+        // Otherwise, calculate the rotation based on the scroll position
+        rotationX = startRotationX - (scrollTop / maxScroll) * startRotationX;
+        rotationY = startRotationY - (scrollTop / maxScroll) * startRotationY;
+    }
+
+    // Apply the calculated rotation to each h2 element
+    h2Elements.forEach((h2) => {
+        h2.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
     });
 }
 
-// Event listener for scroll events
+// Add an event listener for the scroll event
 window.addEventListener('scroll', adjustRotations);
 
-// Initial adjustment on page load
+// Initial call to set the rotation based on the initial scroll position
 adjustRotations();
-*/
+
 const carousel = document.querySelector('.carousel');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
@@ -51,6 +69,8 @@ function goToSlide(index) {
     carousel.style.transform = `translateX(-${index * slideWidth}px)`;
     currentIndex = index;
 }
+
+/* NOTE TO SELF, HAMMERTIME IS NEEDED FOR MOBILE SWIPING */
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -93,29 +113,11 @@ const rightCNav = document.getElementById('next');
 function fadeIn(){
         carouselBg.classList.remove('grayHoverAnimationEnd');
         carouselBg.classList.add('grayHoverAnimation');
-        /* leftCNav.style.display = "flex";
-        rightCNav.style.display = "flex"; */
-        /*
-        rightCNav.classList.remove('navFadeOut');
-        leftCNav.classList.remove('navFadeOut');
-        rightCNav.classList.add('navFadeIn');
-        leftCNav.classList.add('navFadeIn');
-        */
 }
 
 function fadeOut(){
     carouselBg.classList.remove('grayHoverAnimation');
     carouselBg.classList.add('grayHoverAnimationEnd');
-    /*
-    rightCNav.classList.add('navFadeOut');
-    leftCNav.classList.add('navFadeOut');
-    leftCNav.classList.remove('navFadeIn');
-    rightCNav.classList.remove('navFadeIn');
-    */
-    setTimeout(() => {
-        /* leftCNav.style.display = "none";
-        rightCNav.style.display = "none"; */
-    }, 900); 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
