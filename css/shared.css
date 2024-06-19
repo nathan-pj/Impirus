@@ -254,7 +254,10 @@ nav{
     #burgerExpanded{
         width: 100vw;
         border-radius: 1px;
-        overflow: hidden
+        overflow-y: hidden
+    }
+    #burgerShowcase{
+        margin-bottom: 6rem;
     }
 }
 
