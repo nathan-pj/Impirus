@@ -216,7 +216,12 @@ nav{
 
 @font-face {
     font-family: 'NSimSun';
-    src: url('../assets/simsun.ttf') format('truetype');
+    src: url('../assets/simsun.eot'); /* IE9 Compat Modes */
+    src: url('../assets/simsun.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/simsun.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/simsun.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../assets/simsun.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/simsun.svg#NSimSun') format('svg'); /* Legacy iOS */
     font-weight: normal;
     font-style: normal;
 }
