@@ -40,42 +40,6 @@ body{
     height: auto;
     animation: growShrink 7s ease infinite;
 }
-
-@media screen and (max-width: 1100px) {
-    #landingVideo{
-        top: 20vh;
-    }
-    #whoAreWeImgContainer{
-        margin-top: 2rem;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .landingAnimation{
-        width: 30%;
-    }
-    #landingVideo{
-        top: 40vh;
-    }
-    #whoAreWe h2{
-        font-size: 0.8em;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .landingAnimation{
-        width: 35%;
-    }
-    #nameStretch{
-        height: 50%;
-    }
-    #landingVideo{
-        top: 45vh;
-    }
-    #whoAreWe section h2{
-        font-size: 0.7em;
-    }
-}
   
 @keyframes growShrink {
     0% {
@@ -258,4 +222,50 @@ body{
 }
 .bgText{
     position: fixed;
+}
+
+@media screen and (max-width: 1100px) {
+    #landingVideo{
+        top: 20vh;
+    }
+    #whoAreWeImgContainer{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #whoAreWeImgContainer{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .landingAnimation{
+        width: 30%;
+    }
+    #landingVideo{
+        top: 40vh;
+    }
+    #whoAreWe h2{
+        font-size: 0.8em;
+    }
+    #whoAreWeImgContainer{
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .landingAnimation{
+        width: 35%;
+    }
+    #nameStretch{
+        height: 50%;
+    }
+    #landingVideo{
+        top: 45vh;
+    }
+    #whoAreWe section h2{
+        font-size: 0.7em;
+    }
 }
