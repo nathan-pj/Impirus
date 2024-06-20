@@ -1,5 +1,59 @@
 body{
-    background: url("../assets/temp3.jpg");
-    background-size:cover;
-    background-repeat: none;
+    background-color: rgb(42, 42, 42);;
+}
+.canvasCard{
+    background-color: rgb(42, 42, 42);
+    border: 1px solid rgb(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 90vh;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas {
+    display: block;
+    z-index: 1;
+}
+#canvasH2{
+    position: absolute;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    font-size: 5em;
+    color: white;
+    z-index: 0;
+}
+#moreInfo{
+    position: absolute;
+    bottom: 3rem;
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+#moreInfo h3{
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+}
+#arrowDown{
+    margin-top: 1rem;
+}
+.floatUpDown{
+    animation: floatUpDown 2s infinite ease-in-out;
+}
+.fadeIn{
+    animation: fadeIn 2s;
+}
+@keyframes floatUpDown {
+    0% { margin-bottom: 0;}
+    50% {margin-bottom: 1rem;}
+    100% { margin-bottom: 0;}
+}
+
+@keyframes fadeIn {
+    from {  opacity: 0; }
+    to { opacity: 1; }
 }

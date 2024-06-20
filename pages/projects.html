@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="icon" type="image/x-icon" href="../assets/blackLogo.png">
 </head>
-<body>
+<body onload="arrowAnimation()">
     <header class="navbar">
         <div class="navbarLogoContainer">
             <a onclick="redirectTo('./index.html')">
@@ -107,8 +107,13 @@
     <div class="blackTransIn transition"></div>
     <div class="transition transOut"></div>
 
-    <div style="width: 50%; height: 100vh; margin: 1rem 1rem;">
-        im a very long temporary invisible div
+    <div class="canvasCard">
+        <canvas id="canvas"></canvas>
+        <h2 id="canvasH2">CLICK ME</h2>
+        <div id="moreInfo">
+            <h3>More info below</h3>
+            <span class="material-symbols-outlined" id="arrowDown">south</span>
+        </div>
     </div>
     <footer>
         <div class="footerLine"></div>
@@ -134,5 +139,6 @@
     </footer>
     <script src="../scripts/shared.js"></script>
     <script src="../scripts/modal.js"></script>
+    <script src="../scripts/projects.js"></script>
 </body>
 </html>
