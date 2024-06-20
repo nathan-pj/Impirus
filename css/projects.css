@@ -32,6 +32,9 @@ canvas {
     flex-direction: column;
     align-items: center;
     z-index: 1;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 #moreInfo h3{
     font-family: "franklin-gothic-atf", sans-serif;
