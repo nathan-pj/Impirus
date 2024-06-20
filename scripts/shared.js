@@ -50,3 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
         footerLogo.classList.add('footerLogoDeselect');
     });
 });
+
+function redirectTo(url) {
+    let transOut = document.querySelector('.transOut');
+    transOut.classList.add('blackTransOut');
+    setTimeout(() => {
+        window.location.href = url;
+    }, 900); 
+}

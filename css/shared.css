@@ -5,6 +5,11 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100%;
+}
 /* Header */
 .navbarLogoImg, .navbarLogoImg2{
     width: 100%;
@@ -225,46 +230,6 @@ nav{
     font-style: normal;
 }
 
-@media screen and (max-width: 700px) {
-    .navbarOptions > *{
-        margin: 0 20px;
-    }
-    .navbarLogo, .navbarLogoImg, #burgerMenu, .navbarLogoImg2{
-        display: block;
-    }
-    .navbarLogoContainer, .navLink, .navbarCompanyName{
-        display: none;
-    }
-    .navbarOptionsContainer{
-        align-items: flex-end;
-    }
-    .leftLine{
-        margin-right: 5px;
-    }
-    #footerLogo{
-        display: none;
-    }
-
-    .navbarLine{
-        margin: 0 5px;
-    }
-
-    #burgerExpanded:before{
-        border-radius: 5px 0 0 5px;
-    }
-}
-@media screen and (max-width: 450px) {
-    #burgerExpanded{
-        width: 100vw;
-        border-radius: 1px;
-        overflow-y: hidden;
-        overflow-x: hidden;
-    }
-    #burgerShowcase{
-        margin-bottom: 7rem;
-    }
-}
-
 @keyframes burgerOpen {
     from {
         transform: translateX(100%);
@@ -386,4 +351,77 @@ footer > *{
 }
 .footerLogoDeselect{
     animation: spinZReverse 0.5s ease;
+}
+
+.transition{
+    width: 100vw;
+    height: 0px;
+    background-color: #0D111C;
+    z-index: 3;
+    top: 0;
+}
+a{
+    cursor: pointer;
+}
+.blackTransIn{
+   animation: blackTransIn 1s;
+   position: absolute;
+}
+.transOut{
+    height: 100%;
+    width: 0px; 
+    position: fixed;
+}
+.blackTransOut{
+    animation: blackTransOut 1s;
+}
+
+@keyframes blackTransIn {
+    from {height: 100vh;}
+    to {height: 0px;}
+}
+
+@keyframes blackTransOut {
+    from {height: 100%; width: 0px;}
+    to {height: 100%; width: 100vw;}
+}
+
+@media screen and (max-width: 700px) {
+    .navbarOptions > *{
+        margin: 0 20px;
+    }
+    .navbarLogo, .navbarLogoImg, #burgerMenu, .navbarLogoImg2{
+        display: block;
+    }
+    .navbarLogoContainer, .navLink, .navbarCompanyName{
+        display: none;
+    }
+    .navbarOptionsContainer{
+        align-items: flex-end;
+    }
+    .leftLine{
+        margin-right: 5px;
+    }
+    #footerLogo{
+        display: none;
+    }
+
+    .navbarLine{
+        margin: 0 5px;
+    }
+
+    #burgerExpanded:before{
+        border-radius: 5px 0 0 5px;
+    }
+}
+@media screen and (max-width: 450px) {
+    #burgerExpanded{
+        width: 100vw;
+        border-radius: 1px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    #burgerShowcase{
+        margin-bottom: 7rem;
+    }
 }

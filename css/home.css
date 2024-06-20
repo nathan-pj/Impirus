@@ -2,11 +2,15 @@
 font-family: "franklin-gothic-atf", sans-serif;
 font-weight: 700;
 font-style: normal;
+
+Skye Blue: #88CaE7
+Hot Pink: #F865B0
+Indigo Dye: #0A5270
+Russian Violet: #3D2F60
+Rich Black: #0D111C
 */
 body{
     background-color: #efefef;
-    background-size:cover;
-    background-repeat: none;
 }
 
 #landingSection{
@@ -97,7 +101,6 @@ body{
     gap: 3rem;
     width: 90%;
     position: relative;
-    overflow: hidden;
 }
 .sectionContainer{
     width: 100vw;
@@ -293,6 +296,24 @@ b{
 }
 .bgText{
     position: fixed;
+}
+
+.button{
+    padding: 1rem 2rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #0D111C;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+}
+.button:hover{
+    background-color: #88CaE7;
+    color: #0D111C;
 }
 
 @media screen and (max-width: 4000px) {
