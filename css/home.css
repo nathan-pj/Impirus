@@ -1,3 +1,8 @@
+/*
+font-family: "franklin-gothic-atf", sans-serif;
+font-weight: 700;
+font-style: normal;
+*/
 body{
     background-color: #efefef;
     background-size:cover;
@@ -81,6 +86,63 @@ body{
     height: 70vh;
     border-radius: 15px 15px 0 0;
     margin-top: -15px;
+}
+#sectionCard{
+    display: grid;
+    grid-template-areas:  
+    "sectionH2 sectionPar1 sectionPar2"
+    "sectionH2 sectionPar1 sectionPar2"
+    "sectionH2 sectionPar1 sectionImgContainer"
+    ;
+    gap: 3rem;
+    width: 90%;
+    position: relative;
+}
+.sectionContainer{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+#sectionH2{
+    grid-area: sectionH2;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    font-size: 5em;
+    z-index: 1;
+}
+#sectionPar1{
+    grid-area: sectionPar1;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#sectionPar2{
+    grid-area: sectionPar2;
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sectionImgContainer{
+    grid-area: sectionImgContainer;
+    max-width: 100%;
+    max-height: auto;
+}
+#sectionImg{
+    width: 100%;
+    height: auto;
+}
+#sectionBackground{
+    position: absolute;
+    z-index: 0;
+    opacity: 0.7;
+    overflow-x: hidden;
+}
+b{
+    font-size: 1.5em;
+}
+#sectionCard div h3{
+    font-size: xx-large;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
 }
 
 @keyframes changeFont {
@@ -224,12 +286,47 @@ body{
     position: fixed;
 }
 
+@media screen and (max-width: 4000px) {
+    #sectionImgContainer{
+        max-width: 60%;
+        max-height: auto;
+        justify-self: center;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     #landingVideo{
         top: 20vh;
     }
     #whoAreWeImgContainer{
         margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #sectionCard{
+    grid-template-areas:  
+    "sectionH2"
+    "sectionPar1"
+    " sectionPar2" 
+    "sectionImgContainer"
+    ;
+    width: 70%;
+    justify-content: center;
+    }
+    #sectionH2{
+        text-align: center;
+    }
+    #sectionPar1{
+        z-index: 1;
+    }
+    #sectionBackground{
+        opacity: 0.3;
+    }
+    #sectionImgContainer{
+        max-width: 50%;
+        height: auto;
+        justify-self: center;
     }
 }
 
@@ -240,6 +337,12 @@ body{
 }
 
 @media screen and (max-width: 700px) {
+    #sectionH2{
+        text-align: left;
+    }
+    #sectionCard{
+        width: 90%;
+    }
     .landingAnimation{
         width: 30%;
     }
