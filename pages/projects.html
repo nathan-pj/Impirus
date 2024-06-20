@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../css/projects.css">
     <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <link rel="icon" type="image/x-icon" href="../assets/blackLogo.png">
-    <script src="../scripts/shared.js"></script>
 </head>
 <body>
     <header class="navbar">
@@ -60,7 +60,35 @@
     </header>
     <div class="blackTransIn transition"></div>
     <div class="transition transOut"></div>
-    <h2 style="margin: 1rem 1rem;">Hii im projects page!!</h2>
+    
+    <!-- Trigger button -->
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="outerModal">
+        <div id="modalNav">
+            <p id="modalTitle">Form1</p>
+            <div id="minimize" class="modalBtn">
+                <span class="material-symbols-outlined">minimize</span>
+            </div>
+            <div id="tab" class="modalBtn">
+                <span class="material-symbols-outlined">ad</span>
+            </div>
+            <div id="modalClose" class="modalBtn close">
+                <span class="material-symbols-outlined">close</span>
+            </div>
+        </div>
+        <div class="innerModal">
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+
+    </div>
+
+
     <div style="width: 50%; height: 100vh; margin: 1rem 1rem;">
         im a very long temporary invisible div
     </div>
@@ -86,5 +114,7 @@
             </a>
         </div>
     </footer>
+    <script src="../scripts/shared.js"></script>
+    <script src="../scripts/modal.js"></script>
 </body>
 </html>
