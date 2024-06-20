@@ -23,6 +23,8 @@ canvas {
     font-size: 5em;
     color: white;
     z-index: 0;
+    max-width: 95%;
+    text-align: center;
 }
 #moreInfo{
     position: absolute;
