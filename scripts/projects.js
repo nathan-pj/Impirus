@@ -75,9 +75,6 @@ function checkPhone() {
     }
 }
 
-checkPhone();
-
-
 
 function arrowAnimation(){
     setTimeout(() => {
