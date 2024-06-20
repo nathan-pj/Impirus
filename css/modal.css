@@ -134,8 +134,16 @@
     grid-area: modalPar;
     padding: 0 2rem 2rem 2rem;
     font-family: Arial, Helvetica, sans-serif;
-}
 
+}
+.caret{
+    height: 0.8em;
+    margin-left: 0.7ch;
+    border-right: .15em solid black;
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
 
 
 .modalBtn{
@@ -164,7 +172,7 @@
 }
 #modalClose{
     margin-right: 1rem;
-    background-color: #F865B0;
+    background-color: #bb164a;
 }
 
 #modalImgContainer{
@@ -177,6 +185,13 @@
     align-items: center;
     display: flex;
 }
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+  }
+
 @media screen and (max-width: 1100px) { 
     .modalContent{
         background-color: white;
