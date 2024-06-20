@@ -211,3 +211,13 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    .innerModal{
+        width: 90vw;
+    }
+    .modalContent{
+        margin: 1ch;
+    }
+}
+
+
