@@ -62,7 +62,7 @@ let secCurrentIndex = 0;
 
 const secLeftCNav = document.getElementById('sectionPrev');
 const secRightCNav = document.getElementById('sectionNext');
-const secTotalSlides = slides.length;
+const secTotalSlides = secSlides.length;
 
 function secGoToSlide(index) {
     if (index < 0 || index >= secTotalSlides) return;
