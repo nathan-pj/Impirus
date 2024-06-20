@@ -115,9 +115,11 @@ body{
     font-weight: 700;
     font-size: 5em;
     z-index: 1;
+    word-break: break-all;
 }
 #sectionPar1{
     grid-area: sectionPar1;
+    z-index: 1;
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -139,6 +141,8 @@ body{
     position: absolute;
     z-index: 0;
     opacity: 0.7;
+    width: 30%;
+    height: 90%;
 }
 b{
     font-size: 1.5em;
@@ -147,14 +151,6 @@ b{
     font-size: xx-large;
     font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
-}
-#waterBackground{
-    position: absolute;
-    z-index: 0;
-    width: 100vw;
-    opacity: 0.15;
-    align-self: flex-start;
-    margin-top: -3rem;
 }
 
 @keyframes changeFont {
@@ -182,7 +178,7 @@ b{
         "h2-3"
         "h2-4";
     font-size: 3.5rem;
-    position: relative;;
+    position: relative;
 }
 
 #whoAreWeImgContainer{
@@ -323,11 +319,6 @@ b{
         justify-self: center;
     }
 }
-@media screen and (max-width: 1200px) {
-    #waterBackground{
-        display: none;
-    }
-}
 @media screen and (max-width: 1100px) {
     #landingVideo{
         top: 20vh;
@@ -343,8 +334,7 @@ b{
     "sectionH2"
     "sectionPar1"
     " sectionPar2" 
-    "sectionImgContainer"
-    ;
+    "sectionImgContainer";
     width: 70%;
     justify-content: center;
     }
@@ -355,7 +345,10 @@ b{
         z-index: 1;
     }
     #sectionBackground{
-        opacity: 0.3;
+        width: auto;
+        height: 100%;
+        opacity: 0.2;
+        justify-self: center;
     }
     #sectionImgContainer{
         max-width: 50%;

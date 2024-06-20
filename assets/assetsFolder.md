@@ -1,1 +1,0 @@
-This folder is going to have all kinds of assets
