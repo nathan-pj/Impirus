@@ -1,7 +1,7 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 3; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -66,11 +66,66 @@
 
 .innerModal{
     width: 60vw;
-    height: 60vh;
     margin: 1rem;
     border: inset rgb(163, 163, 163) 2px;
     background-color: white;
+    display: grid;
+    grid-template-areas: 
+    "carousel modalH3"
+    "carousel modalPar";
 }
+
+/* carousel */
+
+.carousel {
+    display: flex; /* Display slides in a row */
+    transition: transform 0.5s ease; /* Smooth transition effect */
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    /* Optionally, add additional styling like padding or margin */
+}
+
+.carouselNav{
+    position: absolute;
+    z-index: 1;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+
+.carousel-slide img {
+    width: 100%; /* Ensure images fill their parent container */
+    display: block; /* Remove default inline-block spacing */
+}
+
+
+#modalH3{
+    grid-area: modalH3;
+    font-size: 2.5rem;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    padding: 2rem;
+}
+#modalPar{
+    grid-area: modalPar;
+    padding: 0 2rem 2rem 2rem;
+}
+
+
 
 .modalBtn{
     position: relative;
@@ -101,8 +156,20 @@
     background-color: #F865B0;
 }
 
+#modalImgContainer{
+    height: auto;
+    background-color: #88CaE7;
+    overflow-x: hidden;
+    position: relative;
+    grid-area: carousel;
+    min-width: 200px;
+    align-items: center;
+    display: flex;
+}
+
 @media screen and (max-width: 700px) {
     .innerModal{
         width: 80vw;
     }
 }
+

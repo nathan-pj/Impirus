@@ -53,66 +53,66 @@ window.addEventListener('scroll', adjustRotations);
 // Initial call to set the rotation based on the initial scroll position
 adjustRotations();
 
-const carousel = document.querySelector('.carousel');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+// Carousel
+const secCarousel = document.querySelector('.sectionCarousel');
+let secSlides = document.querySelectorAll('.sectionCarouselSlide');
+let secSlideWidth = secSlides[0].clientWidth;
 
-let slides = document.querySelectorAll('.carousel-slide');
-let slideWidth = slides[0].clientWidth;
+let secCurrentIndex = 0;
 
-let currentIndex = 0;
-const totalSlides = slides.length;
+const secLeftCNav = document.getElementById('sectionPrev');
+const secRightCNav = document.getElementById('sectionNext');
+const secTotalSlides = slides.length;
 
-function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
+function secGoToSlide(index) {
+    if (index < 0 || index >= secTotalSlides) return;
 
-    carousel.style.transform = `translateX(-${index * slideWidth}px)`;
-    currentIndex = index;
+    secCarousel.style.transform = `translateX(-${index * secSlideWidth}px)`;
+    secCurrentIndex = index;
 }
-
-/* NOTE TO SELF, HAMMERTIME IS NEEDED FOR MOBILE SWIPING */
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    slideWidth = slides[0].clientWidth;
-    slides = document.querySelectorAll('.carousel-slide');
+    secSlideWidth = secSlides[0].clientWidth;
+    secSlides = document.querySelectorAll('.sectionCarouselSlide');
 
     // Optional: Auto slide every 5 seconds
-    const autoSlideInterval = setInterval(() => {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        goToSlide(currentIndex);
+    const secAutoSlideInterval = setInterval(() => {
+        secCurrentIndex = (secCurrentIndex + 1) % secTotalSlides;
+        secGoToSlide(secCurrentIndex);
     }, 5000);
 
     // Previous button click event
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        goToSlide(currentIndex);
+    secLeftCNav.addEventListener('click', () => {
+        secCurrentIndex = (secCurrentIndex - 1 + secTotalSlides) % secTotalSlides;
+        secGoToSlide(secCurrentIndex);
     });
 
     // Next button click event
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        goToSlide(currentIndex);
+    secRightCNav.addEventListener('click', () => {
+        secCurrentIndex = (secCurrentIndex + 1) % secTotalSlides;
+        secGoToSlide(secCurrentIndex);
     });
 
     // Pause auto-slide on manual navigation
-    prevButton.addEventListener('click', () => clearInterval(autoSlideInterval));
-    nextButton.addEventListener('click', () => clearInterval(autoSlideInterval));
+    secLeftCNav.addEventListener('click', () => clearInterval(secAutoSlideInterval));
+    secRightCNav.addEventListener('click', () => clearInterval(secAutoSlideInterval));
 });
 
 // Resize event listener
 window.addEventListener('resize', () => {
-    slideWidth = slides[0].clientWidth;
-    goToSlide(currentIndex);
+    secSlideWidth = secSlides[0].clientWidth;
+    secGoToSlide(secCurrentIndex);
 });
 
+secSlideWidth = secSlides[0].clientWidth;
+secGoToSlide(secCurrentIndex);
+
 const carouselBg = document.getElementById('whoAreWeImgContainer');
-const leftCNav = document.getElementById('prev');
-const rightCNav = document.getElementById('next');
 
 function fadeIn(){
-        carouselBg.classList.remove('grayHoverAnimationEnd');
-        carouselBg.classList.add('grayHoverAnimation');
+    carouselBg.classList.remove('grayHoverAnimationEnd');
+    carouselBg.classList.add('grayHoverAnimation');
 }
 
 function fadeOut(){
@@ -121,11 +121,11 @@ function fadeOut(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-        carouselBg.addEventListener('mouseenter', () => {
-            fadeIn();
-        });
-
-        carouselBg.addEventListener('mouseleave', () => {
-            fadeOut();
-        });
+    carouselBg.addEventListener('mouseenter', () => {
+        fadeIn();
     });
+
+    carouselBg.addEventListener('mouseleave', () => {
+        fadeOut();
+    });
+});

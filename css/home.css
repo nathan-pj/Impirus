@@ -212,40 +212,7 @@ b{
     to {background-color: white;}
 }
 
-.carousel {
-    display: flex; /* Display slides in a row */
-    transition: transform 0.5s ease; /* Smooth transition effect */
-}
 
-.carousel-slide {
-    flex: 0 0 100%; /* Each slide takes full width */
-    /* Optionally, add additional styling like padding or margin */
-}
-
-.carouselNav{
-    position: absolute;
-    z-index: 1;
-    padding: 0 2rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    top: 0;
-    cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-.prev{
-    left: 0;
-}
-.next{
-    right: 0;
-}
-
-.carousel-slide img {
-    width: 100%; /* Ensure images fill their parent container */
-    display: block; /* Remove default inline-block spacing */
-}
 
 .whoAreWeImg{
     width: 100%;
@@ -312,6 +279,42 @@ b{
     background-color: #88CaE7;
     color: #0D111C;
 }
+
+.sectionCarousel {
+    display: flex; /* Display slides in a row */
+    transition: transform 0.5s ease; /* Smooth transition effect */
+}
+
+.sectionCarouselSlide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    /* Optionally, add additional styling like padding or margin */
+}
+
+.sectionCarouselNav{
+    position: absolute;
+    z-index: 1;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+.sectionPrev{
+    left: 0;
+}
+.sectionNext{
+    right: 0;
+}
+
+.sectionCarouselSlide img {
+    width: 100%; /* Ensure images fill their parent container */
+    display: block; /* Remove default inline-block spacing */
+}
+
 
 @media screen and (max-width: 4000px) {
     #sectionImgContainer{
