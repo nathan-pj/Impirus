@@ -241,4 +241,8 @@ body{
     #aboutImgContainer{
         width: 90vw;
     }
+    #socialsList, #socialsList li span{
+        font-size: 2rem;
+    }
+    
 }
