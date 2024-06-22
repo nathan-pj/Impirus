@@ -145,9 +145,6 @@ body{
     width: 30%;
     height: 90%;
 }
-b{
-    font-size: 1.5em;
-}
 #sectionCard div h3{
     font-size: xx-large;
     font-family: "franklin-gothic-atf", sans-serif;
@@ -313,6 +310,15 @@ b{
 .sectionCarouselSlide img {
     width: 100%; /* Ensure images fill their parent container */
     display: block; /* Remove default inline-block spacing */
+}
+
+#mouseOverlay{
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+    font-variation-settings: 'FILL' 1;
 }
 
 

@@ -1,5 +1,244 @@
 body{
-    background: url("../assets/temp.jpg");
-    background-size:cover;
-    background-repeat: none;
+    background-color: rgb(42, 42, 42);
+}
+
+#aboutUsContainer, #contactContainer{
+    padding: 3rem 0;
+    width: 100vw;
+}
+#contactContainer{
+    background-color: #ffffff;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+#contact{
+    width: 80vw;
+    display: grid;
+    grid-template-areas: 
+    "contactH2 contactH2 contactH2"
+    "contactPar1 contactPar1 socialsList"
+    "contactPar2 contactPar2 socialsList";
+    gap: 2rem;
+}
+#contactH2{
+    grid-area: contactH2;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+    z-index: 1;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+.contactParContainer h3{
+    font-size: 2rem;
+    font-family: NSimSun;
+}
+
+.contactPar{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+#socialsList li a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+#socialsList li{
+    margin-bottom: 2rem;
+    list-style: none;
+}
+#contactPar1{
+    grid-area: contactPar1;
+}
+#contactPar2{
+    grid-area: contactPar2;
+}
+#socialsList{
+    grid-area: socialsList;
+    width: 40vw;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+}
+
+
+#aboutUs{
+    width: 70vw;
+    color: white;
+    display: grid;
+    grid-template-areas: 
+    "aboutH2 aboutImgContainer"
+    "aboutPar aboutImgContainer";
+    gap: 2rem;
+}
+
+#aboutUsContainer{
+    background-color: rgb(42, 42, 42);
+    border-radius: 15px 15px 0 0;
+    margin-top: -15px;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutH2{
+    grid-area: aboutH2;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-size: 3rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.aboutParContainer{
+    grid-area: aboutPar;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+#aboutImgContainer{
+    grid-area: aboutImgContainer;
+    min-width: 40vw;
+    background-color: aquamarine;
+    height: 90%;
+    align-self: center;
+    position: relative;
+}
+
+#aboutBackground{
+    max-width: 50%;
+    position: absolute;
+    bottom: -3rem;
+    right: -6rem;
+    animation: spinZ 10s linear infinite;
+}
+
+#webDevSparkle{
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    color: white;
+    cursor: pointer;
+
+}
+.sparkleSpan{
+    animation: spinX 2s linear infinite;
+}
+.sparkleSpan:hover{
+    color: #f2d3f4;
+}
+.webDevLink{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    padding: 1rem 2rem;
+    margin: 1rem 2rem;
+    background-color: #f2d3f4;
+    border-radius: 10px;
+}
+.webDevButtons{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+#modalImgContainer{
+    background-color: #f2d3f4;
+}
+#webDevSparkle .material-symbols-outlined:hover{
+    font-variation-settings: 'FILL' 1;
+}
+.socialsListLink:hover{
+    color: rgb(99, 99, 99);
+}
+
+@keyframes spinX {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes socialsSelect {
+    from {
+        color: rgb(0, 0, 0);
+    }
+    to {
+        color: rgb(99, 99, 99);
+    }
+}
+
+@keyframes socialsDeselect {
+    from {
+        color: rgb(99, 99, 99);
+    }
+    to {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 1100px) { 
+    #contact{
+        grid-template-areas: 
+        "contactH2"
+        "contactPar1"
+        "contactPar2"
+        "socialsList";
+        width: 70vw;
+    }
+    #socialsList{
+        width: fit-content;
+    }
+    #aboutUs{
+        width: 60vw;
+        color: white;
+        display: grid;
+        grid-template-areas: 
+        "aboutH2"
+        "aboutPar"
+        "aboutImgContainer";
+        gap: 2rem;
+    }
+    #aboutImgContainer{
+        grid-area: aboutImgContainer;
+        width: auto;
+        background-color: aquamarine;
+        height: 70vw; /* REMOVE LATER */
+        align-self: center;
+        position: relative;
+        justify-self: center;
+        margin-bottom: 2rem;
+    }
+    #aboutBackground{
+        max-width: 30%;
+        position: absolute;
+        bottom: -2rem;
+        right: -4rem;
+    }
+    #webDevSparkle{
+        left: 1rem;
+        bottom: 1rem;
+        display: flex;
+        align-items: end;
+    }
+    #aboutBackground{
+        display: none;
+        animation: none;
+    }
+}
+
+@media screen and (max-width: 450px) { 
+    #aboutUs{
+        width: 90vw;
+    }
+    #contact{
+        width: 90vw;
+    }
+    #aboutImgContainer{
+        width: 90vw;
+    }
 }

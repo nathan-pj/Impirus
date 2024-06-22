@@ -10,6 +10,9 @@ function openModal() {
     modalActive = true;
     slideWidth = slides[0].clientWidth;
     goToSlide(currentIndex);
+    if(document.getElementById('mouseOverlay') != null){
+        document.getElementById('mouseOverlay').style.display = "none"; 
+    }
 }
 
 // When the user clicks on <span> (x), close the modal
