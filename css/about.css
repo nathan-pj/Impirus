@@ -64,6 +64,9 @@ body{
     font-weight: 700;
 }
 
+.mailIcon{
+    font-size: 2.5rem;
+}
 
 #aboutUs{
     width: 70vw;
