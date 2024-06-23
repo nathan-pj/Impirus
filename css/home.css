@@ -116,7 +116,6 @@ body{
     font-weight: 700;
     font-size: 5em;
     z-index: 1;
-    word-break: break-all;
 }
 #sectionPar1{
     grid-area: sectionPar1;
