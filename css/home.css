@@ -398,6 +398,9 @@ body{
 .clientQuote{
     grid-area: clientQuote;
 }
+iframe{
+    min-height: 50vh;
+}
 .reviewText{
     grid-area: reviewText;
     width: 70%;
@@ -441,7 +444,11 @@ blockquote{
     height: 200px;
 }
 
-
+.reviewCardVideo{
+    grid-template-areas: 
+    "clientPicture reviewText" 
+    "companyImgContainer reviewText";
+}
 
 /*  Contact us section */
 
@@ -504,6 +511,9 @@ blockquote{
         "clientPicture"
         "reviewText" 
         "companyImgContainer";
+    }
+    iframe{
+        min-height: 60vh;
     }
     .clientPictureContainer, .companyImgContainer{
         margin-bottom: 2rem;

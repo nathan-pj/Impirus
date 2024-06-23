@@ -178,7 +178,7 @@ function typewriter(textArray, elementId) {
 
 // Call the function for both elements
 typewriter(review1, "review1Text");
-typewriter(review2, "review2Text");
+//typewriter(review2, "review2Text");
 
 /* Contact video speed */
 /* 
