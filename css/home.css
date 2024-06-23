@@ -395,7 +395,7 @@ body{
 }
 .reviewText{
     grid-area: reviewText;
-    max-width: 70%;
+    width: 70%;
     justify-self: center;
 }
 .companyImgContainer{
@@ -451,7 +451,7 @@ blockquote{
     overflow: hidden;
 }
 .contactContent{
-    width: 70vw;
+    width: 80vw;
     display: flex;
     place-items: center;
     flex-direction: column;
@@ -463,6 +463,7 @@ blockquote{
     font-family: NSimSun;
     margin-bottom: 2rem;
     animation: changeFont 10s infinite;
+    text-align: center;
 }
 #contactBackground{
     position: absolute;

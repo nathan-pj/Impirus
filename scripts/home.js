@@ -129,3 +129,53 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeOut();
     });
 });
+
+
+// set up text to print, each item in array is new line
+var review1 = [
+    "'Nathan is a highly skilled 3D product animator and video editor, and he works with great efficiency and dedication. He made a 3D animated video involving complex motion design for my company's supplement products and also edited a commercial. Throughout the process, he was highly responsive to feedback and made revisions swiftly and effectively. With his expert skills, he was able to not only realise what I envisioned for the video but also exceed my expectations. The end product is worthy of a professional design studio.", 
+    "I highly recommend Nathan's design services, and he is a joy to work with.'"
+];
+
+var review2 = [
+    "You will get more good reviews in the future, this is allowing you to implement them in ur website :)", 
+    "I dont have Wongs face yet, thats why im using mine lmao'."
+];
+
+var iSpeed = 20; // time delay of print out
+
+function typewriter(textArray, elementId) {
+    var iIndex = 0; // start printing array at this position
+    var iArrLength = textArray[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+
+    function type() {
+        sContents = ' ';
+        iRow = Math.max(0, iIndex - iScrollAt);
+        var destination = document.getElementById(elementId);
+        
+        while (iRow < iIndex) {
+            sContents += textArray[iRow++] + '<br />';
+        }
+        destination.innerHTML = sContents + textArray[iIndex].substring(0, iTextPos) + "_";
+        if (iTextPos++ == iArrLength) {
+            iTextPos = 0;
+            iIndex++;
+            if (iIndex != textArray.length) {
+                iArrLength = textArray[iIndex].length;
+                setTimeout(type, 500);
+            }
+        } else {
+            setTimeout(type, iSpeed);
+        }
+    }
+
+    type();
+}
+
+// Call the function for both elements
+typewriter(review1, "review1Text");
+typewriter(review2, "review2Text");
