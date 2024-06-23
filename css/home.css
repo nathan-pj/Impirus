@@ -405,6 +405,9 @@ body{
 .clientQuote{
     text-align: justify;
 }
+.clientCompany{
+    margin-bottom: 1rem;
+}
 
 .clientPictureContainer, .companyImgContainer{
     display: flex;
@@ -453,6 +456,9 @@ body{
     .clientPictureContainer img, .companyImg{
         width: auto;
         height: 200px;
+    }
+    .reviewText{
+        max-width: 90%;
     }
     #sectionCard{
     grid-template-areas:  
@@ -526,5 +532,8 @@ body{
     }
     #whoAreWe section h2{
         font-size: 0.7em;
+    }
+    .reviewText{
+        max-width: none;
     }
 }
