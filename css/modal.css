@@ -88,6 +88,7 @@
 /* carousel */
 
 #carousel {
+    grid-area: carousel;
     display: flex; /* Display slides in a row */
     transition: transform 0.5s ease; /* Smooth transition effect */
 }
@@ -98,23 +99,21 @@
 }
 
 .carouselNav{
-    position: absolute;
     z-index: 1;
     padding: 0 2rem;
     display: flex;
     align-items: center;
-    top: 0;
-    top: 50%;
+    height: 100%;
     cursor: pointer;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
 .prev{
-    left: 0;
+    grid-area: prev;
 }
 .next{
-    right: 0;
+    grid-area: next;
 }
 
 .carousel-slide img, .carousel-slide video {
@@ -177,12 +176,13 @@
 
 #modalImgContainer{
     height: auto;
-    overflow-x: hidden;
     position: relative;
     grid-area: carousel;
     min-width: 200px;
     align-items: center;
-    display: flex;
+    display: grid;
+    grid-template-areas: "prev carousel next";
+    overflow-x: hidden;
 }
 
 /* The typewriter cursor effect */
