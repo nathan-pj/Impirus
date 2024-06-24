@@ -134,7 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // set up text to print, each item in array is new line
 var review1 = [
     "'Nathan is a highly skilled 3D product animator and video editor, and he works with great efficiency and dedication. He made a 3D animated video involving complex motion design for my company's supplement products and also edited a commercial. Throughout the process, he was highly responsive to feedback and made revisions swiftly and effectively. With his expert skills, he was able to not only realise what I envisioned for the video but also exceed my expectations. The end product is worthy of a professional design studio.", 
-    "I highly recommend Nathan's design services, and he is a joy to work with.'"
+    "I highly recommend Nathan's design services, and he is a joy to work with.'
+    [SEE DOME HEALTH COMMERCIAL(we can put link here to the project page?)]"
+    
 ];
 
 var review2 = [
