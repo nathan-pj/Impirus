@@ -14,14 +14,6 @@ let slideWidth;
 let totalSlides;
 let currentIndex = 0;
 
-// Initialisation to avoid errors
-let newImages = [
-    '../assets/livingThings/wl.png',
-    '../assets/livingThings/pbo.png',
-    '../assets/livingThings/lg.png',
-    // Add more image paths as needed
-];
-
 const items = [
     [
         ['../assets/webDeveloper.png'], 
@@ -45,6 +37,41 @@ const items = [
         '../assets/based/USVSTHEMFINAL.png',
         '../assets/based/whitebg.png'], 
         "Based Bodyworks", 
+        "Replace me"
+    ],
+    [
+        ['../assets/21.jpeg'], 
+        "21", 
+        "Replace me"
+    ],
+    [
+        ['../assets/111skin.jpg'], 
+        "111 Skin", 
+        "Replace me"
+    ],
+    [
+        ['../assets/BasedBalm_still.jpg'], 
+        "Based Balm", 
+        "Replace me"
+    ],
+    [
+        ['../assets/vr.jpg'], 
+        "VR", 
+        "Replace me"
+    ],
+    [
+        ['../assets/LaPerse_still.jpg'], 
+        "LA PERSE", 
+        "Replace me"
+    ],
+    [
+        ['../assets/glasses.png'], 
+        "Glasses", 
+        "Replace me"
+    ],
+    [
+        ['../assets/dolce.jpg'], 
+        "DOLCE & GABBANA", 
         "Replace me"
     ]
 ];
@@ -72,9 +99,6 @@ function goToSlide(index) {
 /* NOTE TO SELF, HAMMERTIME IS NEEDED FOR MOBILE SWIPING */
 
 document.addEventListener('DOMContentLoaded', function() {
-
-    initialiseCarousel();
-
     // Optional: Auto slide every 5 seconds
     const autoSlideInterval = setInterval(() => {
         currentIndex = (currentIndex + 1) % totalSlides;
@@ -83,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Previous button click event
     prevButton.addEventListener('click', () => {
+        resize();
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         goToSlide(currentIndex);
         clearInterval(autoSlideInterval); // Pause auto-slide on manual navigation
@@ -90,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Next button click event
     nextButton.addEventListener('click', () => {
+        resize();
         currentIndex = (currentIndex + 1) % totalSlides;
         goToSlide(currentIndex);
         clearInterval(autoSlideInterval); // Pause auto-slide on manual navigation
@@ -112,7 +138,7 @@ function resize(){
 }
 
 function initialiseCarousel() {
-    updateCarousel(newImages);
+    updateCarousel(items[1][0]);
     goToSlide(0); // Start at the first slide
 }
 
@@ -170,4 +196,7 @@ function openModal(item) {
     }
     prevButton.style.display = "flex"; 
     nextButton.style.display = "flex"; 
+    if(item != items[1] && item != items[2]){
+        hideCarouselNav();
+    }
 }

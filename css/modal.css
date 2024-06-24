@@ -177,7 +177,6 @@
 
 #modalImgContainer{
     height: auto;
-    background-color: #88CaE7;
     overflow-x: hidden;
     position: relative;
     grid-area: carousel;
@@ -203,6 +202,9 @@
         "modalH3"
         "modalPar"
         ;
+    }
+    #carousel{
+        width: 100%;
     }
 }
 @media screen and (max-width: 700px) {

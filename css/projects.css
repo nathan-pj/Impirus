@@ -119,10 +119,11 @@ canvas {
     width: auto;
 }
 .projectDiv{
-    width: 27vw;
-    height: 27vw;
+    width: 10cm;
+    height: 10cm;
     overflow: hidden;
-    background-color: white;
+    display: flex;
+    align-items: flex-start;
     &:hover {
         top: calc( 50% - 2px );
         border: 1px solid rgba(#F2F4F8, 0);
