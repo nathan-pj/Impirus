@@ -446,7 +446,6 @@ blockquote{
 
 .reviewCardVideo{
     grid-template-areas: 
-    "clientPicture reviewText" 
     "companyImgContainer reviewText";
 }
 
