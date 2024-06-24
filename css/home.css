@@ -620,4 +620,8 @@ blockquote{
     .reviewCard{
         padding: 10px;
     }
+    .companyImg{
+        width: 90%;
+        height: auto;
+    }
 }
