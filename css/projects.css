@@ -173,6 +173,9 @@ canvas {
     display: flex;
     justify-content: center;
 }
+.textGroupReverse{
+    flex-wrap: wrap-reverse;
+}
 
 @media screen and (max-width: 1300px){
     .reviewH3{
@@ -184,6 +187,7 @@ canvas {
         min-height: 500px;
     }
 }
+
 @media screen and (max-width: 950px){
     .text{
         width: 90%;
@@ -198,6 +202,9 @@ canvas {
         min-height: 400px;
     }
 }
+
+
+
 @media screen and (max-width: 700px){
     .projectsGroup{
         width: 95vw;
