@@ -119,12 +119,32 @@ canvas {
     width: auto;
 }
 .projectDiv{
-    width: 32%;
-    height: auto;
+    width: 27vw;
+    height: 27vw;
+    overflow: hidden;
+    background-color: white;
+    &:hover {
+        top: calc( 50% - 2px );
+        border: 1px solid rgba(#F2F4F8, 0);
+        box-shadow: 0 15px 20px rgba(0,0,0,.05), 0 0 5px rgba(0,0,0,.4);
+        cursor: pointer;
+      }
+      
+      &:active {
+        top: 50%;
+        box-shadow: 0 5px 10px rgba(0,0,0,.05), 0 0 2px rgba(0,0,0,.5);
+        transition: ease-in-out .1s;
+      }
 }
 .project{
     width: 100%;
     height: auto;
+    min-height: 100%;
+    min-width: auto;
+}
+.imgTooSmall{
+    height: 100%;
+    width: auto;
 }
 .reviewGroup{
     margin: 10rem 0 2rem 0;
@@ -165,7 +185,7 @@ canvas {
     height: auto;
 
 }
-.reviewVid{
+.reviewVid, .videoShowcase{
     width: 40%;
     height: 400px;
 }
@@ -182,7 +202,7 @@ canvas {
         width:fit-content;
         text-align: center;
     }
-    .reviewVid{
+    .reviewVid, .videoShowcase{
         width: 50%;
         min-height: 500px;
     }
@@ -197,7 +217,7 @@ canvas {
     .projectsGroup{
         gap: 2rem 10px;
     }
-    .reviewVid{
+    .reviewVid, .videoShowcase{
         width: 100%;
         min-height: 400px;
     }
@@ -234,4 +254,9 @@ canvas {
         width: 90%;
         text-align: justify;
     }
+}
+
+@keyframes lift {
+    from {}
+    to {}
 }

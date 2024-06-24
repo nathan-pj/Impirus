@@ -17,9 +17,9 @@ let currentIndex = 0;
 
 // Initialisation to avoid errors
 let newImages = [
-    '../assets/wl.png',
-    '../assets/pbo.png',
-    '../assets/lg.png',
+    '../assets/livingThings/wl.png',
+    '../assets/livingThings/pbo.png',
+    '../assets/livingThings/lg.png',
     // Add more image paths as needed
 ];
 
@@ -40,6 +40,8 @@ function openModal(heading, text) {
     }
     document.getElementById('modalH3').innerHTML = heading;
     document.getElementById('modalPar').innerHTML = text;
+    prevButton.style.display = "flex"; 
+    nextButton.style.display = "flex"; 
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -97,6 +99,13 @@ window.addEventListener('resize', () => {
     }
 });
 
+function resize(){
+    if (slides.length > 0) {
+        slideWidth = slides[0].clientWidth;
+        goToSlide(currentIndex);
+    }
+}
+
 function updateCarousel(images) {
     
     // Clear current slides
@@ -124,12 +133,6 @@ function updateCarousel(images) {
 }
 
 function initialiseCarousel() {
-    newImages = [
-        '../assets/wl.png',
-        '../assets/pbo.png',
-        '../assets/lg.png',
-        // Add more image paths as needed
-    ];
     updateCarousel(newImages);
     goToSlide(0); // Start at the first slide
 }

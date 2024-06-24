@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="icon" type="image/x-icon" href="../assets/blackLogo.png">
 </head>
-<body onload="arrowAnimation(); checkPhone(); initialiseCarousel();">
+<body onload="arrowAnimation(); checkPhone(); initialiseCarousel(); resize();">
     <header class="navbar">
         <div class="navbarLogoContainer">
             <a onclick="redirectTo('./index.html')">
@@ -108,30 +108,32 @@
         <h3 class="projectsH3">Based Bodyworks</h3>
         <p class="projectsPar"><b>Lorem</b> ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate! Natus iure magni quia recusandae ut, consequuntur libero placeat ad aut obcaecati sit ipsam explicabo veritatis dolorem, eius reprehenderit in. Ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptate! Natus iure magni quia recusandae ut, consequuntur libero placeat ad aut obcaecati sit ipsam explicabo veritatis dolorem, eius reprehenderit in.</p>
         <div class="projectsGroup projectsBoxLayout">
-            <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project" onclick='openModal("cool right", "hey")'>
+            <div class="projectDiv" id="test">
+                <img src="../assets/based/3comp.png" alt="" class="project" onclick='openModal("cool right", "hey")'>
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/based/4.png" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/based/6.png" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/based/peelfinal.png" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/based/usp.png" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/based/USVSTHEMFINAL.png" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/based/whitebg.png" alt="" class="project">
             </div>
         </div>
 
         <div class="reviewGroup">
             <h3 class="reviewH3">REVIEW FROM BASED BODYWORKS</h3>
             <iframe class="reviewVid" src="https://www.youtube.com/embed/ITo-WbpANi0?si=4SO07CGdAeuCyDWW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
         </div>
 
         <h3 class="projectsH3">BPN</h3>
@@ -158,34 +160,67 @@
         <h3 class="projectsH3">Miscellaneous</h3>
         <div class="projectsGroup projectsBoxLayout">
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/livingThings/lg.png" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/livingThings/pbo.png" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/livingThings/rp.png" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/livingThings/wl.png" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/21.jpeg" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/111skin.jpg" alt="" class="project imgTooSmall">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/BasedBalm_still.jpg" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/vr.jpg" alt="" class="project">
             </div>
             <div class="projectDiv">
-                <img src="../assets/cillianTemp.png" alt="" class="project">
+                <img src="../assets/LaPerse_still.jpg" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/glasses.png" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/dolce.jpg" alt="" class="project">
             </div>
         </div>
-        
+
+        <h3 class="projectsH3">Videos</h3>
+        <div class="projectsGroup projectsBoxLayout">
+            <div class="projectDiv">
+                <img src="../assets/thumbnails/bottleThumbnail.png" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/thumbnails/domeThumbnail.png" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/thumbnails/wooshThumbnail.png" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/thumbnails/soulbrewThumbnail.png" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/thumbnails/sphereThumbnail.png" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/thumbnails/timeline222Thumbnal.png" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/thumbnails/goGelThumbnail.png" alt="" class="project">
+            </div>
+            <div class="projectDiv">
+                <img src="../assets/thumbnails/vrThumbnail.png" alt="" class="project">
+            </div>
+        </div>
     </div>
 
     <footer>
