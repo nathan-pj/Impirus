@@ -104,7 +104,7 @@ canvas {
 }
 .projectsGroup{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 3rem;
     width: 90vw;
@@ -235,7 +235,11 @@ canvas {
     }
 }
 
-
+@media screen and (max-width: 750px){
+    .projectsPar{
+        text-align: justify;
+    }
+}
 
 @media screen and (max-width: 700px){
     .projectsGroup{
@@ -269,7 +273,6 @@ canvas {
 @media screen and (max-width: 450px){
     .projectsGroup{
         gap: 1rem;
-        justify-content: flex-start;
     }
     .projectsPar{
         width: 90%;
@@ -278,5 +281,12 @@ canvas {
     .projectDiv{
         width: 3cm;
         height: 3cm;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .projectDiv{
+        width: 2.5cm;
+        height: 2.5cm;
     }
 }

@@ -18,7 +18,8 @@ const items = [
     [
         ['../assets/webDeveloper.png'], 
         "Meet the Web Developer Team", 
-        "<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='' class='webDevButtons'>LinkedIn: moamyrs@gmail.com</a>"
+        "<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='' class='webDevButtons'>LinkedIn: moamyrs@gmail.com</a>",
+        "A photo of the web developer"
     ],
     [
         ['../assets/livingThings/lg.png',
@@ -26,7 +27,8 @@ const items = [
         '../assets/livingThings/rp.png',
         '../assets/livingThings/wl.png'], 
         "Living Things Renders", 
-        "Replace me"
+        "Replace me",
+        "3D renders for Living Things"
     ],
     [
         ['../assets/based/3comp.png',
@@ -37,45 +39,52 @@ const items = [
         '../assets/based/USVSTHEMFINAL.png',
         '../assets/based/whitebg.png'], 
         "Based Bodyworks", 
-        "Replace me"
+        "Replace me",
+        "3D renders for Based Bodyworks"
     ],
     [
         ['../assets/21.jpeg'], 
         "21", 
-        "Replace me"
+        "Replace me",
+        "3D render for LANEIGE"
     ],
     [
         ['../assets/111skin.jpg'], 
         "111 Skin", 
-        "Replace me"
+        "Replace me",
+        "3D Render for 111 Skin"
     ],
     [
         ['../assets/BasedBalm_still.jpg'], 
         "Based Balm", 
-        "Replace me"
+        "Replace me",
+        "3D render for Based Balm"
     ],
     [
-        ['../assets/vr.jpg'], 
+        ['../assets/apple_animation.mp4', '../assets/vr.jpg', ], 
         "VR", 
-        "Replace me"
+        "Replace me",
+        "3D renders of Apple Vision Pro"
     ],
     [
         ['../assets/LaPerse_still.jpg'], 
         "LA PERSE", 
-        "Replace me"
+        "Replace me",
+        "3D render for LA PERSE"
     ],
     [
         ['../assets/glasses.png'], 
         "Glasses", 
-        "Replace me"
+        "Replace me",
+        "3D render of a pair of glasses"
     ],
     [
         ['../assets/dolce.jpg'], 
         "DOLCE & GABBANA", 
-        "Replace me"
+        "Replace me",
+        "3D render of a perfume from Dolce & Gabbana"
     ]
 ];
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
@@ -95,8 +104,6 @@ function goToSlide(index) {
     carousel.style.transform = `translateX(-${index * slideWidth}px)`;
     currentIndex = index;
 }
-
-/* NOTE TO SELF, HAMMERTIME IS NEEDED FOR MOBILE SWIPING */
 
 document.addEventListener('DOMContentLoaded', function() {
     // Optional: Auto slide every 5 seconds
@@ -141,12 +148,12 @@ function initialiseCarousel() {
     goToSlide(0); // Start at the first slide
 }
 
-function  hideCarouselNav(){
+function hideCarouselNav(){
     prevButton.style.display = "none"; 
     nextButton.style.display = "none"; 
 }
 
-function updateCarousel(images) {
+function updateCarousel(images, alt) {
     console.log('updateCarousel called with:', images);
     console.log('Is images an array?', Array.isArray(images));
     
@@ -160,32 +167,39 @@ function updateCarousel(images) {
 
     // Loop through the images array and create new slides
     images.forEach(imageSrc => {
+        let project;
         const slide = document.createElement('div');
         slide.className = 'carousel-slide';
 
-        const img = document.createElement('img');
-        img.src = imageSrc;
-        img.alt = 'Carousel Image';
-
-        slide.appendChild(img);
+        if((imageSrc.includes("mp4")) || (imageSrc.includes("mov") || (imageSrc.includes("webm")))){
+            project = document.createElement('video');
+            project.src = imageSrc;
+            project.controls = true;
+        }else{
+            project = document.createElement('img');
+            project.src = imageSrc;
+            project.alt = alt;
+        }
+        slide.appendChild(project);
         carousel.appendChild(slide);
     });
     
     // Update slides and slideWidth after updating carousel
     slides = document.querySelectorAll('.carousel-slide');
     totalSlides = slides.length;
+    currentIndex = 0; // Reset currentIndex to 0
     if (totalSlides > 0) {
         slideWidth = slides[0].clientWidth;
     }
+    resize(); // Call resize to adjust carousel
 }
 
 function openModal(item) {
     console.log('openModal called with:', item);
-    updateCarousel(item[0]);
+    updateCarousel(item[0], item[3]);
     modal.style.display = "block";
     modalActive = true;
-    slideWidth = slides[0].clientWidth;
-    goToSlide(currentIndex);
+    goToSlide(0); // Reset to the first slide
     if(document.getElementById('mouseOverlay') != null){
         document.getElementById('mouseOverlay').style.display = "none"; 
     }
@@ -195,7 +209,7 @@ function openModal(item) {
     }
     prevButton.style.display = "flex"; 
     nextButton.style.display = "flex"; 
-    if(item != items[1] && item != items[2]){
+    if (item[0].length <= 1) {
         hideCarouselNav();
     }
 }
