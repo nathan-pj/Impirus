@@ -56,7 +56,7 @@ header:before, footer:before, #burgerExpanded:before, #loadingScreen:before{
 #upBtn{
     z-index: 2;
     position: fixed;
-    bottom: 7rem;
+    bottom: 4rem;
     right: 4rem;
     color: white;
     border-radius: 50%;
@@ -472,6 +472,10 @@ a{
 
     #burgerExpanded:before{
         border-radius: 5px 0 0 5px;
+    }
+    #upBtn{
+        bottom: 2rem;
+        right: 1rem;
     }
 }
 @media screen and (max-width: 450px) {
