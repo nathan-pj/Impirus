@@ -53,6 +53,23 @@ header:before, footer:before, #burgerExpanded:before, #loadingScreen:before{
     color: white;
 }
 
+#upBtn{
+    z-index: 2;
+    position: fixed;
+    bottom: 7rem;
+    right: 4rem;
+    color: white;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D111C;
+    text-decoration: none;
+}
+
+
 b{
     font-size: 1.5em;
 }
