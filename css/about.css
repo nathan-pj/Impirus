@@ -104,10 +104,15 @@ body{
 #aboutImgContainer{
     grid-area: aboutImgContainer;
     min-width: 40vw;
-    background-color: aquamarine;
     height: 90%;
     align-self: center;
     position: relative;
+    display: flex;
+    align-items: end;
+}
+#aboutImg{
+    width: 100%;
+    height: auto;
 }
 
 #aboutBackground{
@@ -184,6 +189,25 @@ body{
     }
 }
 
+@media screen and (max-width: 1300px){
+    #aboutUs{
+        width: 60vw;
+        color: white;
+        display: grid;
+        grid-template-areas: 
+        "aboutH2"
+        "aboutPar"
+        "aboutImgContainer";
+        gap: 2rem;
+        justify-content: center;
+    }
+    #aboutImgContainer{
+        margin-top: 4rem;
+        width: 50%;
+        justify-self: center;
+    }
+}
+
 @media screen and (max-width: 1100px) { 
     #contact{
         grid-template-areas: 
@@ -196,24 +220,12 @@ body{
     #socialsList{
         width: fit-content;
     }
-    #aboutUs{
-        width: 60vw;
-        color: white;
-        display: grid;
-        grid-template-areas: 
-        "aboutH2"
-        "aboutPar"
-        "aboutImgContainer";
-        gap: 2rem;
-    }
     #aboutImgContainer{
         grid-area: aboutImgContainer;
         width: auto;
-        background-color: aquamarine;
         height: 70vw; /* REMOVE LATER */
         align-self: center;
         position: relative;
-        justify-self: center;
         margin-bottom: 2rem;
     }
     #aboutBackground{
@@ -234,7 +246,7 @@ body{
     }
 }
 
-@media screen and (max-width: 450px) { 
+@media screen and (max-width: 600px) { 
     #aboutUs{
         width: 90vw;
     }
@@ -247,5 +259,4 @@ body{
     #socialsList, #socialsList li span{
         font-size: 2rem;
     }
-    
 }
