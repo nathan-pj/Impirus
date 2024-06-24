@@ -144,7 +144,7 @@ var review2 = [
     "I dont have Wongs face yet, thats why im using mine lmao'."
 ];
 
-var iSpeed = 20; // time delay of print out
+var iSpeed = 50; // time delay of print out
 
 function typewriter(textArray, elementId) {
     var iIndex = 0; // start printing array at this position
