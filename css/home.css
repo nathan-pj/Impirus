@@ -449,6 +449,11 @@ blockquote{
     "companyImgContainer reviewText";
 }
 
+.reviewVid{
+    width: 100%;
+    height: auto;
+}
+
 /*  Contact us section */
 
 .contactCard{
@@ -511,8 +516,8 @@ blockquote{
         "reviewText" 
         "companyImgContainer";
     }
-    iframe{
-        min-height: 60vh;
+    .reviewVid{
+
     }
     .clientPictureContainer, .companyImgContainer{
         margin-bottom: 2rem;
