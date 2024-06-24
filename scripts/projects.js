@@ -79,5 +79,4 @@ function arrowAnimation(){
     setTimeout(() => {
         arrowDown.classList.add('floatUpDown');
     }, 8000); 
-
 }

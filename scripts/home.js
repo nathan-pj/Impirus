@@ -54,7 +54,7 @@ window.addEventListener('scroll', adjustRotations);
 adjustRotations();
 
 // Carousel
-const secCarousel = document.querySelector('.sectionCarousel');
+const secCarousel = document.getElementById('secCarousel');
 let secSlides = document.querySelectorAll('.sectionCarouselSlide');
 let secSlideWidth = secSlides[0].clientWidth;
 
@@ -179,7 +179,27 @@ function typewriter(textArray, elementId) {
 
 // Call the function for both elements
 typewriter(review1, "review1Text");
-//typewriter(review2, "review2Text");
+
+
+function initIndexHammer() {
+    var element = document.getElementById("secCarousel");
+    var hammertime = Hammer(element);
+    hammertime.on("swiperight", function (event) {         
+        secSlideWidth = secSlides[0].clientWidth;
+        secGoToSlide(secCurrentIndex);
+        secCurrentIndex = (secCurrentIndex - 1 + secTotalSlides) % secTotalSlides;
+        secGoToSlide(secCurrentIndex);
+        clearInterval(autoSlideInterval);  
+    });
+    hammertime.on("swipeleft", function (event) {         
+        secSlideWidth = secSlides[0].clientWidth;
+        secGoToSlide(secCurrentIndex);
+        secCurrentIndex = (secCurrentIndex + 1) % secTotalSlides;
+        secGoToSlide(secCurrentIndex);
+        clearInterval(autoSlideInterval);
+    });
+}
+
 
 /* Contact video speed */
 /* 

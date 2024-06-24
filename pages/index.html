@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="icon" type="image/x-icon" href="../assets/blackLogo.png">
 </head>
-<body onload="initialiseCarousel(); resize();">
+<body onload="initialiseCarousel(); resize(); initHammer(); initIndexHammer();">
     <div id="loadingScreen">
         <img id="loadingLogo" src="../assets/whiteLogo.png" alt="Loading screen. Depicts the company logo in white.">
         <p id="loadingText">Loading . . .</p>
@@ -86,7 +86,7 @@
                 <div class="grayBorder">
                     <div class="modalContent">
                         <div id="modalImgContainer">
-                            <div id="carousel"> <!-- The slides will be generated in JS!!! --></div>
+                            <div id="carousel" class="carousel"> <!-- The slides will be generated in JS!!! --></div>
                             <span class="prev carouselNav material-symbols-outlined" id="prev">arrow_back_ios</span>
                             <span class="next carouselNav material-symbols-outlined" id="next">arrow_forward_ios</span> 
                         </div>
@@ -145,7 +145,7 @@
             <h2 class="h2-4"><u id="everyAnimation">Every</u> Brand.</h2>
         </section>
         <div id="whoAreWeImgContainer">
-            <div id="carousel" class="sectionCarousel" onclick='openModal(items[1])'>
+            <div id="secCarousel" class="carousel" class="sectionCarousel" onclick='openModal(items[1])'>
                 <div class="sectionCarouselSlide">
                     <img src="../assets/livingThings/lg.png" alt="3D Render of a lemon ginger soda for Living Things">
                 </div>
@@ -229,6 +229,7 @@
             </a>
         </div>
     </footer>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
     <script src="../scripts/shared.js"></script>
     <script src="../scripts/home.js"></script>
     <script src="../scripts/modal.js"></script>

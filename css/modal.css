@@ -87,7 +87,7 @@
 
 /* carousel */
 
-#carousel {
+.carousel {
     grid-area: carousel;
     display: flex; /* Display slides in a row */
     transition: transform 0.5s ease; /* Smooth transition effect */

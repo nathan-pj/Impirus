@@ -9,6 +9,7 @@ var span = document.getElementsByClassName("close")[0];
 const carousel = document.getElementById('carousel');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
+let autoSlideInterval;
 let slides;
 let slideWidth;
 let totalSlides;
@@ -107,7 +108,7 @@ function goToSlide(index) {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Optional: Auto slide every 5 seconds
-    const autoSlideInterval = setInterval(() => {
+    autoSlideInterval = setInterval(() => {
         currentIndex = (currentIndex + 1) % totalSlides;
         goToSlide(currentIndex);
     }, 5000);
@@ -212,4 +213,21 @@ function openModal(item) {
     if (item[0].length <= 1) {
         hideCarouselNav();
     }
+}
+
+function initHammer() {
+    var element = document.getElementById("carousel");
+    var hammertime = Hammer(element);
+    hammertime.on("swiperight", function (event) {         
+        resize();
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        goToSlide(currentIndex);
+        clearInterval(autoSlideInterval);  
+    });
+    hammertime.on("swipeleft", function (event) {         
+        resize();
+        currentIndex = (currentIndex + 1) % totalSlides;
+        goToSlide(currentIndex);
+        clearInterval(autoSlideInterval);
+    });
 }
