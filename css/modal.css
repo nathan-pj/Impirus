@@ -66,8 +66,9 @@
 
 .innerModal{
     padding: 10px;
-    width: 60vw;
+    min-width: fit-content;
     height: fit-content;
+    max-width: 90vw;
 }
 
 .modalContent{
@@ -78,6 +79,7 @@
     grid-template-areas: 
     "carousel modalH3"
     "carousel modalPar";
+    max-width: 90vw;
 }
 
 .grayBorder{
@@ -88,9 +90,13 @@
 /* carousel */
 
 .carousel {
-    grid-area: carousel;
+    grid-area: project;
     display: flex; /* Display slides in a row */
     transition: transform 0.5s ease; /* Smooth transition effect */
+}
+
+#carousel{
+    display: flex; /* Display slides in a row */
 }
 
 .carousel-slide {
@@ -98,8 +104,14 @@
     /* Optionally, add additional styling like padding or margin */
 }
 
+.carousel-slide > *{
+    min-width: 300px;
+    max-width: 100%;
+    min-height: 400px;
+}
+
 .carouselNav{
-    z-index: 1;
+    z-index: 2;
     padding: 0 2rem;
     display: flex;
     align-items: center;
@@ -121,7 +133,9 @@
     width: 100%;
     display: block; 
 }
-
+.modalImgContainer{
+    overflow: hidden;
+}
 
 #modalH3{
     grid-area: modalH3;
@@ -176,14 +190,33 @@
 }
 
 #modalImgContainer{
-    height: auto;
-    position: relative;
     grid-area: carousel;
-    min-width: 200px;
-    align-items: center;
-    display: grid;
-    grid-template-areas: "prev carousel next";
     overflow-x: hidden;
+}
+#modalImgSection{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.carousel-slide{
+    width: 300px;
+}
+#modalImgContainer{
+    width: fit-content;
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-slide img, .carousel-slide video {
+    width: 100%;
+    display: block;
+    object-fit: cover; /* Ensures the image covers the entire slide */
 }
 
 /* The typewriter cursor effect */
@@ -204,8 +237,23 @@
         "modalPar"
         ;
     }
+    .carousel-slide > *, .carousel-slide {
+        max-width: 80%;
+        max-height: auto;
+    }
+    .carousel-slide > * {
+        min-width: 200px;
+        min-height: 200px;
+    }
     #carousel{
         width: 100%;
+    }
+    .carouselNav{
+        padding: 0 5px;
+    }
+    #modalImgContainer, .carousel-slide{
+        max-width: 100%;
+        max-height: auto;
     }
 }
 @media screen and (max-width: 700px) {
@@ -221,6 +269,8 @@
     .modalContent{
         margin: 1ch;
     }
+    .carousel-slide > * {
+        min-width: 100px;
+        min-height: 100px;
+    }
 }
-
-
