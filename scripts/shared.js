@@ -1,3 +1,11 @@
+
+window.addEventListener('load', function() {
+    this.document.getElementById('loadingScreen').classList.add('loadingClose');
+    setTimeout(() => {
+        this.document.getElementById('loadingScreen').style.display = 'none';
+    }, 900); 
+});
+
 function expandNavbar() {
     const burger = document.getElementById("burgerExpanded");
     burger.style.display = "flex";

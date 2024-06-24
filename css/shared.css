@@ -10,6 +10,49 @@ body{
     width: 100vw;
     height: 100%;
 }
+#loadingScreen{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    backdrop-filter: saturate(180%) blur(1000px);
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    header, footer, #burgerExpanded, #loadingScreen{
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: saturate(180%) blur(10px);
+    }
+}
+
+header:before, footer:before, #burgerExpanded:before, #loadingScreen:before{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#loadingLogo{
+    width: 4cm;
+    height: auto;
+    animation: spinZ 4s ease-in-out infinite;
+}
+#loadingText{
+    margin-top: 1cm;
+    font-family: NSimSun;
+    font-size: 1.5rem;
+    color: white;
+}
+
 b{
     font-size: 1.5em;
 }
@@ -38,16 +81,6 @@ header{
     box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.2);
     z-index: 3;
 }
-header:before, footer:before, #burgerExpanded:before{
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-}
 
 header:before{
     border-radius: 0 0 5px 5px;
@@ -60,13 +93,6 @@ footer:before{
 header, footer, #burgerExpanded{
     background: rgba(0, 0, 0, 0.1); 
     backdrop-filter: saturate(180%) blur(10px);
-}
-
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    header, footer, #burgerExpanded{
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: saturate(180%) blur(10px);
-    }
 }
 
 nav{
@@ -233,6 +259,20 @@ nav{
     font-style: normal;
 }
 
+@keyframes loadingClose {
+    from {
+        transform: translateX(0%);
+      }
+    
+      to {
+        transform: translateX(-100%);
+      }
+}
+
+.loadingClose{
+    animation: loadingClose 1s ease-in-out;
+}
+
 @keyframes burgerOpen {
     from {
         transform: translateX(100%);
@@ -378,7 +418,6 @@ a{
 .blackTransOut{
     animation: blackTransOut 1s;
 }
-
 
 @keyframes blackTransIn {
     from {height: 100vh;}

@@ -497,6 +497,17 @@ blockquote{
         justify-self: center;
     }
 }
+@media screen and (max-width: 1200px) {
+    .reviewCardOdd, .reviewCardEven{
+        grid-template-areas: 
+        "clientPicture"
+        "reviewText" 
+        "companyImgContainer";
+    }
+    .reviewText{
+        max-width: 90%;
+    }
+ }
 @media screen and (max-width: 1100px) {
     #landingVideo{
         top: 20vh;
@@ -506,19 +517,12 @@ blockquote{
     }
 }
 
+
 @media screen and (max-width: 1000px) {
     .reviewCard{
         width: 70vw;
     }
-    .reviewCardOdd, .reviewCardEven{
-        grid-template-areas: 
-        "clientPicture"
-        "reviewText" 
-        "companyImgContainer";
-    }
-    .reviewVid{
 
-    }
     .clientPictureContainer, .companyImgContainer{
         margin-bottom: 2rem;
         display: flex;
@@ -531,7 +535,7 @@ blockquote{
         height: 200px;
     }
     .reviewText{
-        max-width: 90%;
+        width: 80%;
     }
     #sectionCard{
     grid-template-areas:  
@@ -567,7 +571,7 @@ blockquote{
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .reviewText{
         width: 90%;
     }
