@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="icon" type="image/x-icon" href="../assets/blackLogo.png">
 </head>
-<body>
+<body onload="initialiseCarousel();">
     <header class="navbar">
         <div class="navbarLogoContainer">
             <a onclick="redirectTo('./index.html')">
@@ -59,52 +59,38 @@
             </div>
         </nav>
     </header>
-            <!-- The Modal -->
-            <div id="modal" class="modal">
-                <!-- Modal content -->
-                <div class="outerModal">
-                    <div id="modalNav">
-                        <p id="modalTitle">Form1</p>
-                        <div id="minimize" class="modalBtn">
-                            <span class="material-symbols-outlined">minimize</span>
-                        </div>
-                        <div id="tab" class="modalBtn">
-                            <span class="material-symbols-outlined">ad</span>
-                        </div>
-                        <div id="modalClose" class="modalBtn close">
-                            <span class="material-symbols-outlined">close</span>
-                        </div>
-                    </div>
-                    <div class="innerModal">
-                        <div class="grayBorder">
-                            <div class="modalContent">
-                                <div id="modalImgContainer">
-                                    <div class="carousel">
-                                        <div class="carousel-slide">
-                                            <img src="../assets/lg.png" alt="Lemon Ginger Soda">
-                                        </div>
-                                        <div class="carousel-slide">
-                                            <img src="../assets/pbo.png" alt="Image 2">
-                                        </div>
-                                        <div class="carousel-slide">
-                                            <img src="../assets/rp.png" alt="Image 3">
-                                        </div>
-                                        <div class="carousel-slide">
-                                            <img src="../assets/wl.png" alt="Image 3">
-                                        </div>
-                                    </div>
-                                    <span class="prev carouselNav material-symbols-outlined" id="prev">arrow_back_ios</span>
-                                    <span class="next carouselNav material-symbols-outlined" id="next">arrow_forward_ios</span> 
-                                </div>
-                                <h3 id="modalH3">2018 Honda Civic</h3>
-                                <p id="modalPar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima inventore ipsum ducimus, dicta obcaecati deserunt consequatur voluptates iste repellendus blanditiis eos cupiditate, recusandae numquam! Labore et laboriosam voluptates doloribus quisquam.
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima inventore ipsum ducimus, dicta obcaecati deserunt consequatur voluptates iste repellendus blanditiis eos cupiditate, recusandae numquam! Labore et laboriosam voluptates doloribus quisquam. <span class="caret"></span>
-                                </p>
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+        <!-- Modal content -->
+        <div class="outerModal">
+            <div id="modalNav">
+                <p id="modalTitle">Form1</p>
+                <div id="minimize" class="modalBtn">
+                    <span class="material-symbols-outlined">minimize</span>
+                </div>
+                <div id="tab" class="modalBtn">
+                    <span class="material-symbols-outlined">ad</span>
+                </div>
+                <div id="modalClose" class="modalBtn close">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+            <div class="innerModal">
+                <div class="grayBorder">
+                    <div class="modalContent">
+                        <div id="modalImgContainer">
+                            <div id="carousel"> <!-- The slides will be generated in JS!!! --></div>
+                            <span class="prev carouselNav material-symbols-outlined" id="prev">arrow_back_ios</span>
+                            <span class="next carouselNav material-symbols-outlined" id="next">arrow_forward_ios</span> 
                             </div>
-                        </div>
+                            <h3 id="modalH3"></h3>
+                            <p id="modalPar"><span class="caret"></span>
+                            </p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
     <div class="blackTransIn transition"></div>
     <div class="transition transOut"></div>
     <video id="landingVideo" autoplay loop muted>
@@ -150,7 +136,7 @@
             <h2 class="h2-4"><u id="everyAnimation">Every</u> Brand.</h2>
         </section>
         <div id="whoAreWeImgContainer">
-            <div class="sectionCarousel" onclick="openModal()">
+            <div id="carousel" class="sectionCarousel" onclick='openModal("Workin on it", "hey")'>
                 <div class="sectionCarouselSlide">
                     <img src="../assets/lg.png" alt="Lemon Ginger Soda">
                 </div>

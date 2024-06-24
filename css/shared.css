@@ -379,6 +379,7 @@ a{
     animation: blackTransOut 1s;
 }
 
+
 @keyframes blackTransIn {
     from {height: 100vh;}
     to {height: 0px;}

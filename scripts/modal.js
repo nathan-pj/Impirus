@@ -4,8 +4,33 @@ let modalActive = false;
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
- 
-function openModal() {
+
+// Carousel
+
+const carousel = document.getElementById('carousel');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+let slides;
+let slideWidth;
+let totalSlides;
+let currentIndex = 0;
+
+// Initialisation to avoid errors
+let newImages = [
+    '../assets/wl.png',
+    '../assets/pbo.png',
+    '../assets/lg.png',
+    // Add more image paths as needed
+];
+
+// Example usage:
+const webDev = [
+    '../assets/webDeveloper.png'
+];
+
+const webDevText = "<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='' class='webDevButtons'>LinkedIn: moamyrs@gmail.com</a>";
+
+function openModal(heading, text) {
     modal.style.display = "block";
     modalActive = true;
     slideWidth = slides[0].clientWidth;
@@ -13,6 +38,8 @@ function openModal() {
     if(document.getElementById('mouseOverlay') != null){
         document.getElementById('mouseOverlay').style.display = "none"; 
     }
+    document.getElementById('modalH3').innerHTML = heading;
+    document.getElementById('modalPar').innerHTML = text;
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -29,23 +56,8 @@ window.onclick = function(event) {
     }
 }
 
-// Carousel
-
-const carousel = document.querySelector('.carousel');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-let slides = document.querySelectorAll('.carousel-slide');
-let slideWidth = slides[0].clientWidth;
-
-let currentIndex = 0;
-
-const leftCNav = document.getElementById('prev');
-const rightCNav = document.getElementById('next');
-const totalSlides = slides.length;
-
 function goToSlide(index) {
     if (index < 0 || index >= totalSlides) return;
-
     carousel.style.transform = `translateX(-${index * slideWidth}px)`;
     currentIndex = index;
 }
@@ -54,8 +66,7 @@ function goToSlide(index) {
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    slideWidth = slides[0].clientWidth;
-    slides = document.querySelectorAll('.carousel-slide');
+    initialiseCarousel();
 
     // Optional: Auto slide every 5 seconds
     const autoSlideInterval = setInterval(() => {
@@ -67,24 +78,63 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         goToSlide(currentIndex);
+        clearInterval(autoSlideInterval); // Pause auto-slide on manual navigation
     });
 
     // Next button click event
     nextButton.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % totalSlides;
         goToSlide(currentIndex);
+        clearInterval(autoSlideInterval); // Pause auto-slide on manual navigation
     });
-
-    // Pause auto-slide on manual navigation
-    prevButton.addEventListener('click', () => clearInterval(autoSlideInterval));
-    nextButton.addEventListener('click', () => clearInterval(autoSlideInterval));
 });
 
 // Resize event listener
 window.addEventListener('resize', () => {
-    slideWidth = slides[0].clientWidth;
-    goToSlide(currentIndex);
+    if (slides.length > 0) {
+        slideWidth = slides[0].clientWidth;
+        goToSlide(currentIndex);
+    }
 });
 
-slideWidth = slides[0].clientWidth;
-goToSlide(currentIndex);
+function updateCarousel(images) {
+    
+    // Clear current slides
+    carousel.innerHTML = '';
+
+    // Loop through the images array and create new slides
+    images.forEach(imageSrc => {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+
+        const img = document.createElement('img');
+        img.src = imageSrc;
+        img.alt = 'Carousel Image';
+
+        slide.appendChild(img);
+        carousel.appendChild(slide);
+    });
+    
+    // Update slides and slideWidth after updating carousel
+    slides = document.querySelectorAll('.carousel-slide');
+    totalSlides = slides.length;
+    if (totalSlides > 0) {
+        slideWidth = slides[0].clientWidth;
+    }
+}
+
+function initialiseCarousel() {
+    newImages = [
+        '../assets/wl.png',
+        '../assets/pbo.png',
+        '../assets/lg.png',
+        // Add more image paths as needed
+    ];
+    updateCarousel(newImages);
+    goToSlide(0); // Start at the first slide
+}
+
+function  hideCarouselNav(){
+    prevButton.style.display = "none"; 
+    nextButton.style.display = "none"; 
+}

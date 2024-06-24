@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="../assets/blackLogo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="initialiseCarousel(); hideCarouselNav();">
     <header class="navbar">
         <div class="navbarLogoContainer">
             <a onclick="redirectTo('./index.html')">
@@ -64,7 +64,7 @@
         <!-- Modal content -->
         <div class="outerModal">
             <div id="modalNav">
-                <p id="modalTitle">Web development team</p>
+                <p id="modalTitle">Form1</p>
                 <div id="minimize" class="modalBtn">
                     <span class="material-symbols-outlined">minimize</span>
                 </div>
@@ -79,28 +79,13 @@
                 <div class="grayBorder">
                     <div class="modalContent">
                         <div id="modalImgContainer">
-                            <div class="carousel">
-                                <div class="carousel-slide">
-                                    <img src="../assets/webDeveloper.png" alt="An image of the web developer, Moa Myren" id="webDevImg">
-                                </div>
+                            <div id="carousel"> <!-- The slides will be generated in JS!!! --></div>
+                            <span class="prev carouselNav material-symbols-outlined" id="prev">arrow_back_ios</span>
+                            <span class="next carouselNav material-symbols-outlined" id="next">arrow_forward_ios</span> 
                             </div>
-                            <span class="prev carouselNav material-symbols-outlined hidden" id="prev">arrow_back_ios</span>
-                            <span class="next carouselNav material-symbols-outlined hidden" id="next">arrow_forward_ios</span> 
-                        </div>
-                        <h3 id="modalH3">Meet the web developer team</h3>
-                        <div id="modalPar"><p>Hello!
-                            <br><br>
-                            My name is Moa, and this website was developed by me. 
-                            Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. 
-                            <br><br>
-                            Thank you for viewing my work, as well as Impirus Studio!
-                            <br><br>
-                            - Moa Myrén
-                            <br><br>
-                            <b>For contact:</b></p>
-                            <a href="mailto: moamyrs@gmail.com" class="webDevButtons">Mail: moamyrs@gmail.com</a>
-                            <a href="" class="webDevButtons">LinkedIn: moamyrs@gmail.com</a>
-                        </div>
+                            <h3 id="modalH3"></h3>
+                            <p id="modalPar"><span class="caret"></span>
+                            </p>
                     </div>
                 </div>
             </div>
@@ -157,7 +142,7 @@
                 <img src="../assets/whiteLogo.png" alt="Company logo" id="aboutBackground">
             </div>
         </section>
-        <div id="webDevSparkle" onclick="openModal();">
+        <div id="webDevSparkle" onclick='openModal("Meet the Web Developer Team", webDevText); updateCarousel(webDev);'>
             <span class="material-symbols-outlined sparkleSpan">kid_star</span>
         </div>
     </div>
