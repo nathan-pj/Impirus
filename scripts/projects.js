@@ -1,11 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const images = [
-    '../assets/lg.png',
-    '../assets/pbo.png',
-    '../assets/wl.png',
-    '../assets/rp.png'
-];
+
 let imageIndex = 0;
 const placedImages = [];
 

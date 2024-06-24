@@ -6,7 +6,6 @@ let modalActive = false;
 var span = document.getElementsByClassName("close")[0];
 
 // Carousel
-
 const carousel = document.getElementById('carousel');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
@@ -23,26 +22,32 @@ let newImages = [
     // Add more image paths as needed
 ];
 
-// Example usage:
-const webDev = [
-    '../assets/webDeveloper.png'
+const items = [
+    [
+        ['../assets/webDeveloper.png'], 
+        "Meet the Web Developer Team", 
+        "<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='' class='webDevButtons'>LinkedIn: moamyrs@gmail.com</a>"
+    ],
+    [
+        ['../assets/livingThings/lg.png',
+        '../assets/livingThings/pbo.png', 
+        '../assets/livingThings/rp.png',
+        '../assets/livingThings/wl.png'], 
+        "Living Things Renders", 
+        "Replace me"
+    ],
+    [
+        ['../assets/based/3comp.png',
+        '../assets/based/4.png', 
+        '../assets/based/6.png',
+        '../assets/based/peelfinal.png',
+        '../assets/based/usp.png',
+        '../assets/based/USVSTHEMFINAL.png',
+        '../assets/based/whitebg.png'], 
+        "Based Bodyworks", 
+        "Replace me"
+    ]
 ];
-
-const webDevText = "<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='' class='webDevButtons'>LinkedIn: moamyrs@gmail.com</a>";
-
-function openModal(heading, text) {
-    modal.style.display = "block";
-    modalActive = true;
-    slideWidth = slides[0].clientWidth;
-    goToSlide(currentIndex);
-    if(document.getElementById('mouseOverlay') != null){
-        document.getElementById('mouseOverlay').style.display = "none"; 
-    }
-    document.getElementById('modalH3').innerHTML = heading;
-    document.getElementById('modalPar').innerHTML = text;
-    prevButton.style.display = "flex"; 
-    nextButton.style.display = "flex"; 
-}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -106,7 +111,24 @@ function resize(){
     }
 }
 
+function initialiseCarousel() {
+    updateCarousel(newImages);
+    goToSlide(0); // Start at the first slide
+}
+
+function  hideCarouselNav(){
+    prevButton.style.display = "none"; 
+    nextButton.style.display = "none"; 
+}
+
 function updateCarousel(images) {
+    console.log('updateCarousel called with:', images);
+    console.log('Is images an array?', Array.isArray(images));
+    
+    if (!Array.isArray(images)) {
+        console.error('updateCarousel expected an array, but received:', images);
+        return;
+    }
     
     // Clear current slides
     carousel.innerHTML = '';
@@ -132,12 +154,20 @@ function updateCarousel(images) {
     }
 }
 
-function initialiseCarousel() {
-    updateCarousel(newImages);
-    goToSlide(0); // Start at the first slide
-}
-
-function  hideCarouselNav(){
-    prevButton.style.display = "none"; 
-    nextButton.style.display = "none"; 
+function openModal(item) {
+    console.log('openModal called with:', item);
+    updateCarousel(item[0]);
+    modal.style.display = "block";
+    modalActive = true;
+    slideWidth = slides[0].clientWidth;
+    goToSlide(currentIndex);
+    if(document.getElementById('mouseOverlay') != null){
+        document.getElementById('mouseOverlay').style.display = "none"; 
+    }
+    document.getElementById('modalH3').innerHTML = item[1];
+    if(item[2] != null){
+        document.getElementById('modalPar').innerHTML = item[2];
+    }
+    prevButton.style.display = "flex"; 
+    nextButton.style.display = "flex"; 
 }
