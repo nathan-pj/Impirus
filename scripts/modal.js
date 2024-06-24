@@ -124,9 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Resize event listener
 window.addEventListener('resize', () => {
-    if (slides.length > 0) {
-        slideWidth = slides[0].clientWidth;
-        goToSlide(currentIndex);
+    if(slides != null){
+        resize();
     }
 });
 
