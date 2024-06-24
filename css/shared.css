@@ -39,6 +39,7 @@ header:before, footer:before, #burgerExpanded:before, #loadingScreen:before{
     right: 0;
     bottom: 0;
     border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #loadingLogo{
@@ -397,7 +398,6 @@ footer > *{
 }
 .footerCopyright{
     grid-area: footerCopyright;
-    color: rgb(56, 56, 56);
 }
 .footerRow{
     font-family: 'NSimSun';
