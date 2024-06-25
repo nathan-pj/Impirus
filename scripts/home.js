@@ -1,19 +1,21 @@
-document.addEventListener('mousemove', function(e) {
-    const h2 = document.getElementById('nameStretch');
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
+window.addEventListener('load', function() {
+    document.addEventListener('mousemove', function(e) {
+        const h2 = document.getElementById('nameStretch');
+        const { clientX, clientY } = e;
+        const { innerWidth, innerHeight } = window;
+        
+        // Calculate rotation angle based on mouse position
+        const rotateY = (clientX - innerWidth / 2) / innerWidth * 20; // Adjust the multiplier for intensity
+        
+        // Calculate tilt (rotateX) based on mouse position (inverted for tilt effect)
+        const rotateX = (innerHeight / 2 - clientY) / innerHeight * 20; // Adjust the multiplier for intensity
+        
+        // WITHOUT TRANSFORM X
+        //h2.style.transform = `perspective(1000px) rotateY(${rotateY}deg)`;
     
-    // Calculate rotation angle based on mouse position
-    const rotateY = (clientX - innerWidth / 2) / innerWidth * 20; // Adjust the multiplier for intensity
-    
-    // Calculate tilt (rotateX) based on mouse position (inverted for tilt effect)
-    const rotateX = (innerHeight / 2 - clientY) / innerHeight * 20; // Adjust the multiplier for intensity
-    
-    // WITHOUT TRANSFORM X
-    //h2.style.transform = `perspective(1000px) rotateY(${rotateY}deg)`;
-
-    // Apply the transform with rotation and tilt (rotateX)
-    h2.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+        // Apply the transform with rotation and tilt (rotateX)
+        h2.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+    });
 });
 
 
