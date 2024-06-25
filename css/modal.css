@@ -238,7 +238,7 @@
         ;
     }
     .carousel-slide > *, .carousel-slide {
-        max-width: 100%;
+        max-width: 80%;
         max-height: auto;
     }
     .carousel-slide > * {
@@ -259,6 +259,10 @@
 @media screen and (max-width: 700px) {
     .innerModal{
         width: 80vw;
+    }
+    .carousel-slide > *, .carousel-slide {
+        max-width: 100%;
+        max-height: auto;
     }
 }
 
