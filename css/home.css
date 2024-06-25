@@ -110,12 +110,37 @@ body{
     overflow: hidden;
     background-color: white;
 }
+.vslSection{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
 #sectionH2{
     grid-area: sectionH2;
+    font-size: 5em;
+}
+#sectionH2, #vslHeading{
     font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
-    font-size: 5em;
     z-index: 1;
+}
+#vslHeading{
+    font-size: 3.5em;
+    width: 50%;
+}
+.vslContent{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    align-items: center;
+}
+#vslVidContainer{
+    width: 45%;
+    height: 400px;
+    background-color: aqua;
+    min-width: 500px;
 }
 #sectionPar1{
     grid-area: sectionPar1;
@@ -256,24 +281,6 @@ body{
 }
 .bgText{
     position: fixed;
-}
-
-.button{
-    padding: 1rem 2rem;
-    display: block;
-    text-decoration: none;
-    color: white;
-    background-color: #0D111C;
-    border-radius: 10px;
-    width: fit-content;
-    margin: 1rem;
-    font-size: 1.5rem;
-    font-family: "franklin-gothic-atf", sans-serif;
-    font-weight: 700;
-}
-.button:hover{
-    background-color: #88CaE7;
-    color: #0D111C;
 }
 
 .sectionCarousel {
@@ -497,6 +504,15 @@ blockquote{
         justify-self: center;
     }
 }
+@media screen and (max-width: 1350px) {
+    .vslContent{
+        gap: 1rem;
+        width: 90vw;
+    }
+    #vslHeading{
+        font-size: 3em;
+    }
+ }
 @media screen and (max-width: 1200px) {
     .reviewCardOdd, .reviewCardEven{
         grid-template-areas: 
@@ -507,6 +523,11 @@ blockquote{
     .reviewText{
         max-width: 90%;
     }
+    #vslHeading{
+        width: 80%;
+        height: fit-content;
+    }
+    
  }
 @media screen and (max-width: 1100px) {
     #landingVideo{
@@ -600,6 +621,12 @@ blockquote{
 
 }
 
+@media screen and (max-width: 550px) {
+    #vslVidContainer{
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .landingAnimation{
         width: 35%;
@@ -623,5 +650,8 @@ blockquote{
     .companyImg{
         width: 90%;
         height: auto;
+    }
+    #vslHeading{
+        font-size: 2em;
     }
 }
