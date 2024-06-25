@@ -39,15 +39,11 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
 }
-#socialsList li a{
+#socialsList a:not(#book){
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     text-align: center;
     color: black;
-}
-#socialsList li{
-    margin-bottom: 2rem;
-    list-style: none;
 }
 #contactPar1{
     grid-area: contactPar1;
@@ -57,11 +53,18 @@ body{
 }
 #socialsList{
     grid-area: socialsList;
-    width: 40vw;
-    margin-top: 3rem;
     font-size: 2.5rem;
     font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 3rem 0 0;
+}
+
+.socialMedia{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .mailIcon{
@@ -258,5 +261,8 @@ body{
     }
     #socialsList, #socialsList li span{
         font-size: 2rem;
+    }
+    #socialsList{
+        margin: 3rem 0 0 0;
     }
 }
