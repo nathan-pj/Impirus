@@ -103,10 +103,8 @@ canvas {
     align-items: center;
 }
 .projectsGroup{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 90vw;
     gap: 2rem 15px;
 }
@@ -120,8 +118,6 @@ canvas {
     width: auto;
 }
 .projectDiv{
-    width: 10cm;
-    height: 10cm;
     overflow: hidden;
     display: flex;
     align-items: flex-start;
@@ -139,14 +135,15 @@ canvas {
       }
 }
 .project{
-    width: 100%;
-    height: auto;
+    min-width: 100%;
     min-height: 100%;
-    min-width: auto;
-}
-.imgTooSmall{
-    height: 100%;
+    height: auto;
     width: auto;
+}
+.projectDiv{
+    width: 30vw;
+    height: 30vw;
+    overflow: hidden;
 }
 .reviewGroup{
     margin: 10rem 0 2rem 0;
@@ -214,12 +211,6 @@ canvas {
         min-height: 500px;
     }
 }
-@media screen and (max-width: 110px){
-    .projectDiv{
-        width: 4cm;
-        height: 4cm;
-    }
-}
 @media screen and (max-width: 950px){
     .text{
         width: 90%;
@@ -246,10 +237,6 @@ canvas {
         width: 95vw;
         gap: 1rem;
     }
-    .projectDiv{
-        width: 7cm;
-        height: 7cm;
-    }
     .showcase {
         width: 85%;
         height: auto;
@@ -257,10 +244,6 @@ canvas {
 }
 
 @media screen and (max-width: 550px){
-    .projectDiv{
-        width: 4cm;
-        height: 4cm;
-    }
     .projectsGroup{
         gap: 1rem;
     }
@@ -277,16 +260,5 @@ canvas {
     .projectsPar{
         width: 90%;
         text-align: justify;
-    }
-    .projectDiv{
-        width: 3cm;
-        height: 3cm;
-    }
-}
-
-@media screen and (max-width: 390px){
-    .projectDiv{
-        width: 2.5cm;
-        height: 2.5cm;
     }
 }
