@@ -70,15 +70,16 @@
     height: fit-content;
     max-width: 90vw;
 }
-
+#modalText{
+    grid-area: modalText;
+}
 .modalContent{
     background-color: white;
     margin: 1rem;
     border: inset rgb(163, 163, 163) 2px;
     display: grid;
     grid-template-areas: 
-    "carousel modalH3"
-    "carousel modalPar";
+    "carousel modalText";
     max-width: 90vw;
 }
 
@@ -233,9 +234,7 @@
         display: grid;
         grid-template-areas: 
         "carousel"
-        "modalH3"
-        "modalPar"
-        ;
+        "modalText";
     }
     .carousel-slide > *, .carousel-slide {
         max-width: 80%;

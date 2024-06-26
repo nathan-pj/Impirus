@@ -204,6 +204,7 @@ function openModal(item) {
     if(document.getElementById('mouseOverlay') != null){
         document.getElementById('mouseOverlay').style.display = "none"; 
     }
+    document.getElementById('modalTitle').innerHTML = item[1];
     document.getElementById('modalH3').innerHTML = item[1];
     if(item[2] != null){
         document.getElementById('modalPar').innerHTML = item[2];
