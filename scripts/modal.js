@@ -128,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
         goToSlide(currentIndex);
         clearInterval(autoSlideInterval); // Pause auto-slide on manual navigation
     });
+
+    initHammer(); // Initialize hammer
 });
 
 // Resize event listener
@@ -176,6 +178,7 @@ function updateCarousel(images, alt) {
             project = document.createElement('video');
             project.src = imageSrc;
             project.controls = true;
+            project.preload = "none";
         }else{
             project = document.createElement('img');
             project.src = imageSrc;
@@ -218,7 +221,7 @@ function openModal(item) {
 
 function initHammer() {
     var element = document.getElementById("carousel");
-    var hammertime = Hammer(element);
+    var hammertime = new Hammer(element);
     hammertime.on("swiperight", function (event) {         
         resize();
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
