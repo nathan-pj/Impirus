@@ -499,6 +499,27 @@ blockquote{
     opacity: 0.5;
 }
 
+#seeCommercial{ 
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;   
+    color: rgb(224, 252, 255);
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    display: block;
+}
+
+#seeCommercial span{
+    font-size: 1.5em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+    animation: arrowRight infinite 3s ease;
+}
+
+@keyframes arrowRight {
+    0% {transform: translateX(0%);}
+    50% {transform: translateX(25px);}
+    100% {transform: translateX(0%);}
+}
 
 @media screen and (max-width: 4000px) {
     #sectionImgContainer{
@@ -521,6 +542,9 @@ blockquote{
         grid-template-areas: 
         "companyImgContainer"
         "reviewText";
+    }
+    #seeCommercial{
+        margin-bottom: 1em;
     }
     .reviewText{
         max-width: 90%;
