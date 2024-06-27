@@ -106,9 +106,9 @@
 }
 
 .carousel-slide > *{
-    min-width: 300px;
+    min-width: 500px;
     max-width: 100%;
-    min-height: 300px;
+    min-height: 500px;
     height: auto;
 }
 
@@ -201,7 +201,7 @@
 }
 
 .carousel-slide{
-    width: 300px;
+    width: 500px;
 }
 #modalImgContainer{
     width: fit-content;
