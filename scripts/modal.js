@@ -48,12 +48,7 @@ const items = [
         "Replace me",
         "3D render for LANEIGE"
     ],
-    [
-        ['../assets/111skin.jpg'], 
-        "111 Skin", 
-        "Replace me",
-        "3D Render for 111 Skin"
-    ],
+   
     [
         ['../assets/BasedBalm_still.jpg'], 
         "Based Balm", 
