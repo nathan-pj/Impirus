@@ -80,7 +80,7 @@ const items = [
         "3D render of a perfume from Dolce & Gabbana"
     ],
     [
-        ['../assets/videos/naturate.mp4'], 
+        ['../assets/videos/naturateVertical.mp4'], 
         "NATURATE animation", 
         "Replace me",
         "A 3D animation of a product from Naturate with floating rocks."
