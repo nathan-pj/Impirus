@@ -37,7 +37,6 @@ const items = [
         '../assets/based/6.png',
         '../assets/based/peelfinal.png',
         '../assets/based/usp.png',
-        '../assets/based/USVSTHEMFINAL.png',
         '../assets/based/whitebg.png'], 
         "Based Bodyworks", 
         "Replace me",
@@ -93,7 +92,7 @@ const items = [
     ],
     [
         ['../assets/videos/dome.mp4'], 
-        "Animation for Dome Health and Theia Bio", 
+        "Dome Health animation", 
         "Replace me",
         "A 3D Animation for a product from Dome Health and Theia Bio"
     ],
@@ -112,6 +111,7 @@ const items = [
 ];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
+    document.body.style.overflowY = "scroll";
     modal.style.display = "none";
     modalActive = false;
 }
@@ -119,6 +119,7 @@ span.onclick = function() {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
+        document.body.style.overflowY = "scroll";
         modal.style.display = "none";
         modalActive = false;
     }
@@ -183,7 +184,6 @@ function hideCarouselNav(){
 function updateCarousel(images, alt) {
     console.log('updateCarousel called with:', images);
     console.log('Is images an array?', Array.isArray(images));
-    
     if (!Array.isArray(images)) {
         console.error('updateCarousel expected an array, but received:', images);
         return;
@@ -223,6 +223,7 @@ function updateCarousel(images, alt) {
 }
 
 function openModal(item) {
+    document.body.style.overflowY = "hidden";
     console.log('openModal called with:', item);
     updateCarousel(item[0], item[3]);
     modal.style.display = "block";
