@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', function() {
+    if(mobileAndTabletCheck()){
+        document.getElementById("sectionBackground").remove();
+    }
+ });
+
 window.addEventListener('load', function() {
     document.addEventListener('mousemove', function(e) {
         const h2 = document.getElementById('nameStretch');

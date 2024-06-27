@@ -130,7 +130,7 @@ body{
 }
 #vslHeading{
     font-size: 3.5em;
-    width: 50%;
+    width: 40%;
 }
 .vslContent{
     width: 80%;
@@ -141,9 +141,8 @@ body{
     align-items: center;
 }
 #vslVidContainer{
-    width: 45%;
-    height: 400px;
-    min-width: 500px;
+    height: auto;
+    max-width: 45%;
 }
 #sectionPar1{
     grid-area: sectionPar1;
@@ -627,6 +626,9 @@ blockquote{
         height: auto;
         justify-self: center;
     }
+    #vslVidContainer{
+        max-width: 80%;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -685,7 +687,10 @@ blockquote{
 
 @media screen and (max-width: 550px) {
     #vslVidContainer{
-        width: 100%;
+        max-width: 90%;
+    }
+    #vslVid{
+        max-width: 100%;
     }
     #landingSection{
         height: 60vh;
