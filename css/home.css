@@ -379,11 +379,11 @@ body{
 }
 .reviewCardOdd{
     grid-template-areas: 
-    "clientPicture reviewText companyImgContainer";
+    "companyImgContainer reviewText";
 }
 .reviewCardEven{
     grid-template-areas: 
-    "companyImgContainer reviewText  clientPicture";
+    "companyImgContainer reviewText";
 }
 .clientPictureContainer{
     grid-area: clientPicture;
@@ -425,7 +425,7 @@ iframe{
 .companyImg{
     height: auto;
     width: 60%;
-    border-radius: 10px;
+    border-radius: 30%;
     max-width: 400px;
 }
 
@@ -519,9 +519,8 @@ blockquote{
 @media screen and (max-width: 1200px) {
     .reviewCardOdd, .reviewCardEven{
         grid-template-areas: 
-        "clientPicture"
-        "reviewText" 
-        "companyImgContainer";
+        "companyImgContainer"
+        "reviewText";
     }
     .reviewText{
         max-width: 90%;
@@ -561,8 +560,9 @@ blockquote{
         justify-content: center;
     }
     .clientPictureContainer img, .companyImg{
-        width: auto;
-        height: 200px;
+        width: 50%;
+        height: auto;
+        margin-top: 1rem;
     }
     .reviewText{
         width: 80%;
@@ -658,7 +658,7 @@ blockquote{
         padding: 10px;
     }
     .companyImg{
-        width: 90%;
+        width: 40%;
         height: auto;
     }
     #vslHeading{
