@@ -183,6 +183,7 @@ canvas {
     width: 40%;
     height: auto;
     min-width: 400px;
+    max-height: 400px;
 }
 .showcase{
     width: 100%;

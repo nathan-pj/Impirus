@@ -62,7 +62,7 @@ const items = [
         "3D render for Based Balm"
     ],
     [
-        ['../assets/apple_animation.mp4', '../assets/vr.jpg', ], 
+        ['../assets/videos/apple_animation.mp4', '../assets/vr.jpg', ], 
         "VR", 
         "Replace me",
         "3D renders of Apple Vision Pro"
@@ -84,6 +84,30 @@ const items = [
         "DOLCE & GABBANA", 
         "Replace me",
         "3D render of a perfume from Dolce & Gabbana"
+    ],
+    [
+        ['../assets/videos/naturate.mp4'], 
+        "NATURATE animation", 
+        "Replace me",
+        "A 3D animation of a product from Naturate with floating rocks."
+    ],
+    [
+        ['../assets/videos/dome.mp4'], 
+        "Animation for Dome Health and Theia Bio", 
+        "Replace me",
+        "A 3D Animation for a product from Dome Health and Theia Bio"
+    ],
+    [
+        ['../assets/videos/soulbrew.mp4'], 
+        "Animation for Soulbrew", 
+        "Replace me",
+        "A 3D Animation for a product from Soulbrew"
+    ],
+    [
+        ['../assets/videos/sphereVid.mp4'], 
+        "LUXE SPHERE 3", 
+        "Replace me",
+        "An abstract animation of a textured sphere"
     ]
 ];
 // When the user clicks on <span> (x), close the modal
