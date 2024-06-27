@@ -80,3 +80,23 @@ function arrowAnimation(){
         arrowDown.classList.add('floatUpDown');
     }, 8000); 
 }
+
+// Function to parse URL parameters
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+// Check if the URL contains the item parameter and open the modal with that item
+document.addEventListener('DOMContentLoaded', function() {
+    const itemParam = getUrlParameter('item');
+    if (itemParam) {
+        const itemIndex = parseInt(itemParam, 10);
+        if (!isNaN(itemIndex) && itemIndex >= 0 && itemIndex < items.length) {
+            updateCarousel(items[itemIndex][0])
+            openModal(items[itemIndex]);
+        }
+    }
+});

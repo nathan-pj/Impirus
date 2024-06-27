@@ -183,7 +183,9 @@ function resize(){
 }
 
 function initialiseCarousel() {
-    updateCarousel(items[1][0]);
+    if(!modalActive){
+        updateCarousel(items[1][0]);
+    }
     goToSlide(0); // Start at the first slide
 }
 
