@@ -172,6 +172,7 @@ body{
     height: 139%;
     left: -55%;
     top: -10%;
+    pointer-events: none;
 }
 #sectionCard div h3{
     font-size: xx-large;
