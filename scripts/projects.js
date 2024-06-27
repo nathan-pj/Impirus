@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (itemParam) {
         const itemIndex = parseInt(itemParam, 10);
         if (!isNaN(itemIndex) && itemIndex >= 0 && itemIndex < items.length) {
-            updateCarousel(items[itemIndex][0])
+            updateCarousel(items[itemIndex][0], items[itemIndex][2], items[itemIndex][3])
             openModal(items[itemIndex]);
         }
     }

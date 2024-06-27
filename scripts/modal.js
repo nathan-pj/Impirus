@@ -19,7 +19,7 @@ const items = [
     [
         ['../assets/webDeveloper.png'], 
         "Meet the Web Developer Team", 
-        "<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='' class='webDevButtons'>LinkedIn: moamyrs@gmail.com</a>",
+        ["<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='' class='webDevButtons'>LinkedIn: moamyrs@gmail.com</a>"],
         "A photo of the web developer"
     ],
     [
@@ -28,7 +28,12 @@ const items = [
         '../assets/livingThings/rp.png',
         '../assets/livingThings/wl.png'], 
         "Living Things Renders", 
-        "Replace me",
+        [
+            "Description for first living thing render",
+            "Description for second living thing render",
+            "Description for third living thing render",
+            "Description for fourth living thing render"
+        ],
         "3D renders for Living Things"
     ],
     [
@@ -39,73 +44,80 @@ const items = [
         '../assets/based/usp.png',
         '../assets/based/whitebg.png'], 
         "Based Bodyworks", 
-        "Replace me",
+        [
+            "Description for first slide",
+            "Description for second slide",
+            "Description for third slide",
+            "Description for fourth slide",
+            "Description for fifth slide",
+            "Description for sixth slide"
+        ],
         "3D renders for Based Bodyworks"
     ],
     [
         ['../assets/21.jpeg'], 
         "21", 
-        "Replace me",
+        ["Description"],
         "3D render for LANEIGE"
     ],
     [
         ['../assets/111skin.jpg'], 
         "111 Skin", 
-        "Replace me",
+        ["Description"],
         "3D render for 111 Skin"
     ],
     [
         ['../assets/BasedBalm_still.jpg'], 
         "Based Balm", 
-        "Replace me",
+        ["Description"],
         "3D render for Based Balm"
     ],
     [
         ['../assets/videos/apple_animation.mp4', '../assets/vr.jpg', ], 
         "VR", 
-        "Replace me",
+        ["Description", "second description"],
         "3D renders of Apple Vision Pro"
     ],
     [
         ['../assets/LaPerse_still.jpg'], 
         "LA PERSE", 
-        "Replace me",
+        ["Description"],
         "3D render for LA PERSE"
     ],
     [
         ['../assets/glasses.png'], 
         "Glasses", 
-        "Replace me",
+        ["Description"],
         "3D render of a pair of glasses"
     ],
     [
         ['../assets/dolce.jpg'], 
         "DOLCE & GABBANA", 
-        "Replace me",
+        ["Description"],
         "3D render of a perfume from Dolce & Gabbana"
     ],
     [
         ['../assets/videos/naturateVertical.mp4'], 
         "NATURATE animation", 
-        "Replace me",
+        ["Description"],
         "A 3D animation of a product from Naturate with floating rocks."
     ],
     [
         ['../assets/videos/dome.mp4'], 
         "Dome Health animation", 
-        "Replace me",
+        ["Description for dome commercial"],
         "A 3D Animation for a product from Dome Health and Theia Bio"
     ],
     [
         ['../assets/videos/soulbrew.mp4'], 
         "Animation for Soulbrew", 
-        "Replace me",
+        ["Description"],
         "A 3D Animation for a product from Soulbrew"
     ],
     [
         ['../assets/videos/sphereVid.mp4'], 
         "LUXE SPHERE 3", 
-        "Replace me",
+        ["Description"],
         "An abstract animation of a textured sphere"
     ]
 ];
@@ -140,6 +152,12 @@ function goToSlide(index) {
     if (index < 0 || index >= totalSlides) return;
     carousel.style.transform = `translateX(-${index * slideWidth}px)`;
     currentIndex = index;
+
+    // Update the visible paragraph
+    const paragraphs = document.querySelectorAll('.carousel-paragraph');
+    paragraphs.forEach((paragraph, idx) => {
+        paragraph.style.display = idx === index ? 'block' : 'none';
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -184,7 +202,7 @@ function resize(){
 
 function initialiseCarousel() {
     if(!modalActive){
-        updateCarousel(items[1][0]);
+        updateCarousel(items[1][0], items[1][2], items[1][3]);
     }
     goToSlide(0); // Start at the first slide
 }
@@ -194,8 +212,8 @@ function hideCarouselNav(){
     nextButton.style.display = "none"; 
 }
 
-function updateCarousel(images, alt) {
-    console.log('updateCarousel called with:', images);
+function updateCarousel(images, descriptions, alt) {
+    console.log('updateCarousel called with:', images, descriptions);
     console.log('Is images an array?', Array.isArray(images));
     if (!Array.isArray(images)) {
         console.error('updateCarousel expected an array, but received:', images);
@@ -204,25 +222,33 @@ function updateCarousel(images, alt) {
     
     // Clear current slides
     carousel.innerHTML = '';
+    const paragraphContainer = document.getElementById('modalPar');
+    paragraphContainer.innerHTML = ''; // Clear current paragraphs
 
     // Loop through the images array and create new slides
-    images.forEach(imageSrc => {
+    images.forEach((imageSrc, index) => {
         let project;
         const slide = document.createElement('div');
         slide.className = 'carousel-slide';
 
-        if((imageSrc.includes("mp4")) || (imageSrc.includes("mov") || (imageSrc.includes("webm")))){
+        if (imageSrc.includes("mp4") || imageSrc.includes("mov") || imageSrc.includes("webm")) {
             project = document.createElement('video');
             project.src = imageSrc;
             project.controls = true;
             project.preload = "none";
-        }else{
+        } else {
             project = document.createElement('img');
             project.src = imageSrc;
             project.alt = alt;
         }
         slide.appendChild(project);
         carousel.appendChild(slide);
+
+        // Create and append paragraph for this slide
+        const paragraph = document.createElement('div');
+        paragraph.className = 'carousel-paragraph';
+        paragraph.innerHTML = descriptions[index] || 'No description available';
+        paragraphContainer.appendChild(paragraph);
     });
     
     // Update slides and slideWidth after updating carousel
@@ -238,20 +264,17 @@ function updateCarousel(images, alt) {
 function openModal(item) {
     document.body.style.overflowY = "hidden";
     console.log('openModal called with:', item);
-    updateCarousel(item[0], item[3]);
+    updateCarousel(item[0], item[2], item[3]);
     modal.style.display = "block";
     modalActive = true;
     goToSlide(0); // Reset to the first slide
-    if(document.getElementById('mouseOverlay') != null){
-        document.getElementById('mouseOverlay').style.display = "none"; 
+    if (document.getElementById('mouseOverlay') != null) {
+        document.getElementById('mouseOverlay').style.display = "none";
     }
     document.getElementById('modalTitle').innerHTML = item[1];
     document.getElementById('modalH3').innerHTML = item[1];
-    if(item[2] != null){
-        document.getElementById('modalPar').innerHTML = item[2];
-    }
-    prevButton.style.display = "flex"; 
-    nextButton.style.display = "flex"; 
+    prevButton.style.display = "flex";
+    nextButton.style.display = "flex";
     if (item[0].length <= 1) {
         hideCarouselNav();
     }
