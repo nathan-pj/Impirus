@@ -109,21 +109,32 @@ const items = [
         "An abstract animation of a textured sphere"
     ]
 ];
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+
+function closeModal(){
     document.body.style.overflowY = "scroll";
     modal.style.display = "none";
     modalActive = false;
 }
 
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    closeModal();
+}
+
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
-        document.body.style.overflowY = "scroll";
-        modal.style.display = "none";
-        modalActive = false;
+        closeModal();
     }
 }
+
+// Add a key listener for the Escape button to close the modal
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape" && modalActive) {
+        closeModal();
+    }
+});
 
 function goToSlide(index) {
     if (index < 0 || index >= totalSlides) return;
