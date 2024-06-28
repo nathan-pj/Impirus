@@ -523,6 +523,12 @@ blockquote{
     100% {transform: translateX(0%);}
 }
 
+@media screen and (min-width: 1890px) { 
+    #sectionH2{
+        max-width: 30%;
+    }
+}
+
 @media screen and (max-width: 4000px) {
     #sectionImgContainer{
         max-width: 60%;
