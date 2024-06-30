@@ -19,7 +19,7 @@ function placeImage(x, y) {
         placedImages.push({ img, x: imgX, y: imgY });
         imageIndex++;
         
-        if (placedImages.length > 10) {
+        if (placedImages.length > 20) {
             const oldImage = placedImages.shift();
             ctx.clearRect(oldImage.x, oldImage.y, oldImage.img.width, oldImage.img.height);
             ctx.fillStyle = 'rgba(0,0,0,0)'; // Assuming white background, adjust if needed
