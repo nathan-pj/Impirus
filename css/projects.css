@@ -85,12 +85,17 @@ canvas {
     border-bottom: 2px solid rgba(0, 0, 0, 0.4);
     margin: 4em 0 2rem;
     font-family: NSimSun;
+    text-decoration: none;
 }
 
 .projectsPar, .text{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
+}
+.projectsH3 a {
+    text-decoration: none;
+    color: inherit;
 }
 .projectsPar{
     width: 60%;
