@@ -45,55 +45,55 @@ const items = [
         '../assets/based/whitebg.png'], 
         "Based Bodyworks", 
         [
-            "Description for first slide",
-            "Description for second slide",
-            "Description for third slide",
-            "Description for fourth slide",
-            "Description for fifth slide",
-            "Description for sixth slide"
+            "A bathroom setting featuring a showcase of shampoo ingredients.",
+            "In a jungle setting, reviews showcase a shampoo and conditioner bundle with product ingredients subtly in the background",
+            "Bundle products displayed on an ancient pillar against a dramatic sky and clouds backdrop. This composition exudes a sense of timeless elegance and distinction, ideal for highlighting unique selling points.",
+            "Texture powder presented against a gradient background, featuring a transparent coating delicately peeling off the product, revealing its unique texture and appeal.",
+            "Texture powder on a pillar, surrounded by ethereal floating rocks. The powder is depicted in motion, with a captivating visual of particles dispersing from its base, evoking a sense of dynamic energy and unique textural quality.",
+            " Conditioner gently tilted against a backdrop of soft light. Ideal for a striking product listing that highlights the product's elegant presentation."
         ],
         "3D renders for Based Bodyworks"
     ],
     [
         ['../assets/21.jpeg'], 
-        "21", 
-        ["Description"],
+        "LANEIGE", 
+        [""],
         "3D render for LANEIGE"
     ],
     [
         ['../assets/111skin.jpg'], 
         "111 Skin", 
-        ["Description"],
+        ["Minimalist image showcasing a detailed mesh and texturing."],
         "3D render for 111 Skin"
     ],
     [
         ['../assets/BasedBalm_still.jpg'], 
         "Based Balm", 
-        ["Description"],
+        ["Image for a natural skin care brand in a jungle setting to emphasise the products all natural ingredients"],
         "3D render for Based Balm"
     ],
     [
         ['../assets/videos/apple_animation.mp4', '../assets/vr.jpg', ], 
         "VR", 
-        ["Description", "second description"],
+        ["Apple Pro Vision virtual headset", "second description"],
         "3D renders of Apple Vision Pro"
     ],
     [
         ['../assets/LaPerse_still.jpg'], 
         "LA PERSE", 
-        ["Description"],
+        ["Usage of moody lighting and light rays with detailed texturing of the rocks exemplify the products feel of being rustic"],
         "3D render for LA PERSE"
     ],
     [
         ['../assets/glasses.png'], 
         "Glasses", 
-        ["Description"],
+        ["Blue light glasses"],
         "3D render of a pair of glasses"
     ],
     [
         ['../assets/dolce.jpg'], 
         "DOLCE & GABBANA", 
-        ["Description"],
+        ["A cologne bottle atop a mountain under a picturesque sky, its product droplets creating ripples in water below, surrounded by lush vegetation."],
         "3D render of a perfume from Dolce & Gabbana"
     ],
     [
