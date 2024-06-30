@@ -11,7 +11,7 @@ function resizeCanvas() {
 
 function placeImage(x, y) {
     const img = new Image();
-    img.src = items[1][0][imageIndex % items[1][0].length];
+    img.src = itemsClickMe[1][0][imageIndex % itemsClickMe[1][0].length];
     img.onload = () => {
         const imgX = x - img.width / 2;
         const imgY = y - img.height / 2;
