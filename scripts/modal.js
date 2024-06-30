@@ -20,25 +20,26 @@ const itemsClickMe = [ [
         ["<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='https://www.linkedin.com/in/moa-myr%C3%A9n-449947316/' class='webDevButtons'>LinkedIn: moamyrs@gmail.com</a>"],
         "A photo of the web developer"
     ], [
-        ['../assets/webDeveloper.png', 
-         '../assets/livingThings/lg.png', 
-         '../assets/livingThings/pbo.png', 
-         '../assets/livingThings/rp.png', 
-         '../assets/livingThings/wl.png', 
-         '../assets/based/3comp.png', 
-         '../assets/based/4.png', 
-         '../assets/based/6.png', 
-         '../assets/based/peelfinal.png', 
-         '../assets/based/usp.png', 
-         '../assets/based/whitebg.png', 
-         '../assets/21.jpeg', 
-         '../assets/111skin.jpg', 
-         '../assets/BasedBalm_still.jpg', 
-         '../assets/vr.jpg', 
-         '../assets/LaPerse_still.jpg', 
-         '../assets/glasses.png', 
-         '../assets/dolce.jpg']
-    ]]
+       ['
+    '../assets/based/4.png',
+    '../assets/111skin.jpg',
+    
+    '../assets/glasses.png',
+    '../assets/livingThings/pbo.png',
+    '../assets/livingThings/rp.png',
+    '../assets/livingThings/lg.png',
+    '../assets/based/whitebg.png',
+    '../assets/LaPerse_still.jpg',
+    '../assets/based/6.png',
+    '../assets/BasedBalm_still.jpg',
+    '../assets/21.jpeg',
+    '../assets/dolce.jpg',
+    '../assets/based/usp.png',
+    '../assets/livingThings/wl.png',
+    '../assets/vr.jpg',
+    '../assets/based/peelfinal.png',
+    '../assets/based/3comp.png'
+']]
 const items = [
     [
         ['../assets/webDeveloper.png'], 
