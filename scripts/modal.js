@@ -47,7 +47,7 @@ const items = [
     [
         ['../assets/webDeveloper.png'], 
         "Meet the Web Developer", 
-        ["<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='https://www.linkedin.com/in/moa-myr%C3%A9n-449947316/' class='webDevButtons'>LinkedIn: moamyrs@gmail.com</a>"],
+        ["<p>Hello!<br><br>My name is Moa, and this website was developed by me. Web design credits go to both Impirus Studio and me, Moa Myrén. If you want a similar website made for you, i.e. for partnership, please contact me through E-mail. <br><br>Thank you for viewing my work, as well as Impirus Studio<br><br>- Moa Myrén<br><br><b>For contact:</b></p><a href='mailto: moamyrs@gmail.com' class='webDevButtons'>Mail: moamyrs@gmail.com</a><a href='https://www.linkedin.com/in/moa-myr%C3%A9n-449947316/' class='webDevButtons'>LinkedIn: moamyrs@gmail.com>"],
         "A photo of the web developer"
     ],
     [
@@ -78,7 +78,7 @@ const items = [
             "Bundle products displayed on an ancient pillar against a dramatic sky and clouds backdrop. This composition exudes a sense of timeless elegance and distinction, ideal for highlighting unique selling points.",
             "Texture powder presented against a gradient background, featuring a transparent coating delicately peeling off the product, revealing its unique texture and appeal.",
             "Texture powder on a pillar, surrounded by ethereal floating rocks. The powder is depicted in motion, with a captivating visual of particles dispersing from its base, evoking a sense of dynamic energy and unique textural quality.",
-            " Conditioner gently tilted against a backdrop of soft light. Ideal for a striking product listing that highlights the product's elegant presentation."
+            "Conditioner gently tilted against a backdrop of soft light. Ideal for a striking product listing that highlights the product's elegant presentation."
         ],
         "3D renders for Based Bodyworks"
     ],
@@ -101,7 +101,7 @@ const items = [
         "3D render for Based Balm"
     ],
     [
-        ['../assets/videos/apple_animation.mp4', '../assets/vr.jpg', ], 
+        ['../assets/videos/apple_animation.mp4', '../assets/vr.jpg'], 
         "VR", 
         ["Apple Pro Vision virtual headset", "second description"],
         "3D renders of Apple Vision Pro"
@@ -121,7 +121,7 @@ const items = [
     [
         ['../assets/dolce.jpg'], 
         "DOLCE & GABBANA", 
-        ["A cologne bottle is perched atop a mountain under a picturesque sky. Droplets from the product create ripples in the water below, surrounded by lush vegetation. This 3D render showcases a perfume from Dolce & Gabbana."],
+        ["A cologne bottle is perched atop a mountain under a picturesque sky. Droplets from the product create ripples in the water below, surrounded by lush vegetation. This 3D render showcases a perfume from Dolce & Gabbana."]
     ],
     [
         ['../assets/videos/naturateVertical.mp4'], 
@@ -147,7 +147,8 @@ const items = [
         ["Description"],
         "An abstract animation of a textured sphere"
     ]
-]
+];
+
 
 function closeModal(){
     document.body.style.overflowY = "scroll";
