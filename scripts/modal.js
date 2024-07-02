@@ -85,19 +85,19 @@ const items = [
     [
         ['../assets/21.jpeg'], 
         "LANEIGE", 
-        [""],
+        ["The purpose of this render for Laneige was to focus on a minimalist scene and detailed texturing. These two combined offer a more elegant approach to your classic white background front angle product images."],
         "3D render for LANEIGE"
     ],
     [
         ['../assets/111skin.jpg'], 
         "111 Skin", 
-        ["Minimalist image showcasing a detailed mesh and texturing."],
+        ["The purpose of this render for 111SKIN was to emphasize the luxurious and sophisticated nature of the product. The black diamond cream is set against a rich, dark fabric background that highlights its elegance and exclusivity. Detailed texturing and the play of light and shadow enhance the product's premium appeal, providing a striking contrast that draws attention to its sleek, glossy packaging. This approach creates a captivating visual that goes beyond the traditional product shot, adding a layer of depth and allure to the presentation."],
         "3D render for 111 Skin"
     ],
     [
         ['../assets/BasedBalm_still.jpg'], 
         "Based Balm", 
-        ["Image for a natural skin care brand in a jungle setting to emphasise the products all natural ingredients"],
+        ["The purpose of this render for Based Balm was to capture the essence of its all-natural ingredients and its connection to nature. Set amidst a lush, green environment, the product is depicted as harmoniously blending with its natural surroundings. The soft, natural light filtering through the foliage enhances the organic appeal of the packaging, emphasizing its purity and commitment to natural ingredients. This scene creates an inviting, earthy ambiance that highlights the product's core values and appeals to those seeking nature-inspired skincare solutions."],
         "3D render for Based Balm"
     ],
     [
@@ -109,20 +109,19 @@ const items = [
     [
         ['../assets/LaPerse_still.jpg'], 
         "LA PERSE", 
-        ["Usage of moody lighting and light rays with detailed texturing of the rocks exemplify the products feel of being rustic"],
+        ["The purpose of this render for La Perse was to evoke a sense of mystery and elemental beauty. Positioned on a pedestal within a cave setting, the product is surrounded by rugged rocks and illuminated by dramatic, dark lighting. The subtle noise in the image emphasizes the dust in the air, enhancing the raw, natural atmosphere. This unique approach highlights the product's connection to the earth and its potent, natural ingredients, presenting La Perse as a luxurious face care solution emerging from the depths of nature."],
         "3D render for LA PERSE"
     ],
     [
         ['../assets/glasses.png'], 
         "Glasses", 
-        ["Blue light glasses"],
+        ["The purpose of this render for the blue light glasses was to showcase their innovative design and functionality in a minimalist setting. Set against a sleek black background, the transparent and bendable frame of the glasses is highlighted, emphasizing their flexibility and modern aesthetic. This simplistic approach draws attention to the unique qualities of the product, presenting it as a stylish and practical solution for eye protection in the digital age."],
         "3D render of a pair of glasses"
     ],
     [
         ['../assets/dolce.jpg'], 
         "DOLCE & GABBANA", 
-        ["A cologne bottle atop a mountain under a picturesque sky, its product droplets creating ripples in water below, surrounded by lush vegetation."],
-        "3D render of a perfume from Dolce & Gabbana"
+        ["A cologne bottle is perched atop a mountain under a picturesque sky. Droplets from the product create ripples in the water below, surrounded by lush vegetation. This 3D render showcases a perfume from Dolce & Gabbana."
     ],
     [
         ['../assets/videos/naturateVertical.mp4'], 
