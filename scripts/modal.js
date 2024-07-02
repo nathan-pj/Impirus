@@ -121,7 +121,7 @@ const items = [
     [
         ['../assets/dolce.jpg'], 
         "DOLCE & GABBANA", 
-        ["A cologne bottle is perched atop a mountain under a picturesque sky. Droplets from the product create ripples in the water below, surrounded by lush vegetation. This 3D render showcases a perfume from Dolce & Gabbana."
+        ["A cologne bottle is perched atop a mountain under a picturesque sky. Droplets from the product create ripples in the water below, surrounded by lush vegetation. This 3D render showcases a perfume from Dolce & Gabbana."],
     ],
     [
         ['../assets/videos/naturateVertical.mp4'], 
