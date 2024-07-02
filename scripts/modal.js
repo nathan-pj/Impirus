@@ -147,7 +147,7 @@ const items = [
         ["Description"],
         "An abstract animation of a textured sphere"
     ]
-];
+]
 
 function closeModal(){
     document.body.style.overflowY = "scroll";
