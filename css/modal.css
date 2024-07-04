@@ -147,8 +147,10 @@
     padding: 2rem;
 }
 #modalPar{
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 0 2rem 0;
     font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    margin: auto;
 
 }
 .caret{

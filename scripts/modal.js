@@ -264,9 +264,10 @@ function updateCarousel(images, descriptions, alt) {
         carousel.appendChild(slide);
 
         // Create and append paragraph for this slide
-        const paragraph = document.createElement('div');
+        const paragraph = document.createElement('p');
         paragraph.className = 'carousel-paragraph';
         paragraph.innerHTML = descriptions[index] || 'No description available';
+        paragraph.innerHTML += "<span class='caret'></span>";
         paragraphContainer.appendChild(paragraph);
     });
     
