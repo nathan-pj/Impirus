@@ -176,7 +176,6 @@ canvas {
 }
 .text{
     width: 50%;
-    text-align: justify;
     min-width: 400px;
     display: flex;
     align-items: center;
