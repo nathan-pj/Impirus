@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="../assets/browserIcon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body onload="initialiseCarousel(); hideCarouselNav();  resize();">
+<body onload="hideCarouselNav();  resize();">
     <div id="loadingScreen">
         <img id="loadingLogo" src="../assets/whiteLogo.png" alt="Loading screen. Depicts the company logo in white.">
         <p id="loadingText">Loading . . .</p>
@@ -139,7 +139,7 @@ Specializing in animations and product stills for social media, landing pages, a
                 <img src="../assets/whiteLogo.png" alt="the company logo in white" id="aboutBackground">
             </div>
         </section>
-        <div id="webDevSparkle" onclick='openModal(items[0]);'>
+        <div id="webDevSparkle" onclick='openModal(items[0], 0);'>
             <span class="material-symbols-outlined sparkleSpan">kid_star</span>
         </div>
     </div>

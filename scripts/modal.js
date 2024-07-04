@@ -174,6 +174,9 @@ function goToSlide(ind) {
     paragraphs.forEach((paragraph, idx) => {
         paragraph.style.display = idx === ind ? 'block' : 'none';
     });
+    if (paragraphs.length === 1) {
+        paragraphs[0].style.display = 'block';
+    }
 }
 
 // Make goToSlide available globally
@@ -289,6 +292,7 @@ function openModal(item, ind) {
     if (item[0].length <= 1) {
         hideCarouselNav();
     }
+    resize();
 }
 
 function initHammer() {

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="icon" type="image/x-icon" href="../assets/browserIcon.png">
 </head>
-<body onload="initialiseCarousel(); resize(); initIndexHammer();">
+<body onload="resize(); initIndexHammer();">
     <div id="loadingScreen">
         <img id="loadingLogo" src="../assets/whiteLogo.png" alt="Loading screen. Depicts the company logo in white.">
         <p id="loadingText">Loading . . .</p>
@@ -119,7 +119,7 @@
     </div>
     <div id="whoAreWe">
         <div id="whoAreWeImgContainer">
-            <div id="secCarousel" class="carousel" class="sectionCarousel" onclick='openModal(items[1])'>
+            <div id="secCarousel" class="carousel" class="sectionCarousel" onclick='openModal(items[1], 0)'>
                 <div class="sectionCarouselSlide">
                     <img src="../assets/livingThings/lg.png" alt="3D Render of a lemon ginger soda for Living Things">
                 </div>
