@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="icon" type="image/x-icon" href="../assets/browserIcon.png">
 </head>
-<body onload="arrowAnimation(); checkPhone(); initialiseCarousel(); resize();">
+<body onload="arrowAnimation(); checkPhone(); initialiseCarousel(1); resize();">
     <div id="loadingScreen">
         <img id="loadingLogo" src="../assets/whiteLogo.png" alt="Loading screen. Depicts the company logo in white.">
         <p id="loadingText">Loading . . .</p>
@@ -116,28 +116,28 @@
         <p class="projectsPar"> We collaborated with Based Bodyworks, a male hair product brand, to bring their product listings to life through high-quality 3D renders. By showcasing their unique ingredients and customer testimonials in visually striking images, we've helped improve their website conversion rate with these exciting renders compared to traditional real-life photos. </p>
         <div class="projectsGroup projectsBoxLayout">
             <div class="projectDiv" id="test">
-                <img src="../assets/based/3comp.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2]);'>
+                <img src="../assets/based/3comp.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 0);'>
             </div>
             <div class="projectDiv">
-                <img src="../assets/based/4.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2]);'>
+                <img src="../assets/based/4.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 1);'>
             </div>
             <div class="projectDiv">
-                <img src="../assets/based/6.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2]);'>
+                <img src="../assets/based/6.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 2);'>
             </div>
             <div class="projectDiv">
-                <img src="../assets/based/peelfinal.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2]);'>
+                <img src="../assets/based/peelfinal.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 3);'>
             </div>
             <div class="projectDiv">
-                <img src="../assets/based/usp.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2]);'>
+                <img src="../assets/based/usp.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 4);'>
             </div>
             <div class="projectDiv">
-                <img src="../assets/based/whitebg.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2]);'>
+                <img src="../assets/based/whitebg.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 5);'>
             </div>
         </div>
 
         <div class="reviewGroup">
             <h3 class="reviewH3">Based's experience with us</h3>
-            <iframe class="reviewVid" src="https://www.youtube.com/watch?v=xsOi_0HuE1s&ab_channel=Nathan" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <video class="reviewVid" src="../assets/videos/review1.mp4" controls="" alt="A video review from Based"></video>
         </div>
         <h3 class="projectsH3"><a href="https://www.bareperformancenutrition.com/">Bare Performance Nutrition</a></h3>
         <div class="textGroup">

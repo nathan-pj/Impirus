@@ -9,11 +9,11 @@ var span = document.getElementsByClassName("close")[0];
 const carousel = document.getElementById('carousel');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
-let autoSlideInterval;
 let slides;
 let slideWidth;
 let totalSlides;
-let currentIndex = 0;
+let currentIndex;
+let index;
 const itemsClickMe = 
 [
     '../assets/based/4.png',
@@ -82,7 +82,7 @@ const items = [
     [
         ['../assets/111skin.jpg'], 
         "111 Skin", 
-        ["A great example of showing emphasis of the 111SKIN luxurious and sophisticated nature of the product. The black diamond cream is set against a rich, dark fabric background that highlights its elegance and exclusivity. Detailed texturing and the play of light with the shadow enhance the product's premium appeal, providing a striking contrast that draws attention to its sleek, glossy packaging. This approach creates a captivating visual that goes beyond the traditional product shot, adding a layer of depth and allure to the presentation."],
+        ["The purpose of this render for 111SKIN was to emphasize the luxurious and sophisticated nature of the product. The black diamond cream is set against a rich, dark fabric background that highlights its elegance and exclusivity. Detailed texturing and the play of light and shadow enhance the product's premium appeal, providing a striking contrast that draws attention to its sleek, glossy packaging. This approach creates a captivating visual that goes beyond the traditional product shot, adding a layer of depth and allure to the presentation."],
         "3D render for 111 Skin"
     ],
     [
@@ -141,57 +141,50 @@ const items = [
 ];
 
 
-function closeModal(){
-    document.body.style.overflowY = "scroll";
-    modal.style.display = "none";
-    modalActive = false;
-}
-
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     closeModal();
 }
 
-
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         closeModal();
     }
 }
 
 // Add a key listener for the Escape button to close the modal
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === "Escape" && modalActive) {
         closeModal();
     }
 });
 
-function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    carousel.style.transform = `translateX(-${index * slideWidth}px)`;
-    currentIndex = index;
+function closeModal() {
+    document.body.style.overflowY = "scroll";
+    modal.style.display = "none";
+    modalActive = false;
+}
 
+function goToSlide(ind) {
+    if (ind < 0 || ind >= totalSlides) return;
+    carousel.style.transform = `translateX(-${ind * slideWidth}px)`;
     // Update the visible paragraph
     const paragraphs = document.querySelectorAll('.carousel-paragraph');
     paragraphs.forEach((paragraph, idx) => {
-        paragraph.style.display = idx === index ? 'block' : 'none';
+        paragraph.style.display = idx === ind ? 'block' : 'none';
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Optional: Auto slide every 5 seconds
-    autoSlideInterval = setInterval(() => {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        goToSlide(currentIndex);
-    }, 5000);
+// Make goToSlide available globally
+window.goToSlide = goToSlide;
 
+document.addEventListener('DOMContentLoaded', function () {
     // Previous button click event
     prevButton.addEventListener('click', () => {
         resize();
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         goToSlide(currentIndex);
-        clearInterval(autoSlideInterval); // Pause auto-slide on manual navigation
     });
 
     // Next button click event
@@ -199,7 +192,6 @@ document.addEventListener('DOMContentLoaded', function() {
         resize();
         currentIndex = (currentIndex + 1) % totalSlides;
         goToSlide(currentIndex);
-        clearInterval(autoSlideInterval); // Pause auto-slide on manual navigation
     });
 
     initHammer(); // Initialize hammer
@@ -207,45 +199,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Resize event listener
 window.addEventListener('resize', () => {
-    if(slides != null){
+    if (slides != null) {
         resize();
     }
 });
 
-function resize(){
+function resize() {
     if (slides.length > 0) {
         slideWidth = slides[0].clientWidth;
         goToSlide(currentIndex);
     }
 }
 
-function initialiseCarousel() {
-    if(!modalActive){
-        updateCarousel(items[1][0], items[1][2], items[1][3]);
+function initialiseCarousel(index) {
+    if (!modalActive) {
+        if (index >= 0 && index < items.length) {
+            updateCarousel(items[index][0], items[index][2], items[index][3], 0);
+        } else {
+            console.error('Index out of bounds');
+        }
     }
-    goToSlide(0); // Start at the first slide
 }
 
-function hideCarouselNav(){
-    prevButton.style.display = "none"; 
-    nextButton.style.display = "none"; 
+function hideCarouselNav() {
+    prevButton.style.display = "none";
+    nextButton.style.display = "none";
 }
 
-function updateCarousel(images, descriptions, alt) {
-    console.log('updateCarousel called with:', images, descriptions);
-    console.log('Is images an array?', Array.isArray(images));
-    if (!Array.isArray(images)) {
-        console.error('updateCarousel expected an array, but received:', images);
-        return;
-    }
-    
+function updateCarousel(images, descriptions, alt, ind) {
+    // Set currentIndex before clearing the carousel
+    currentIndex = ind;
     // Clear current slides
     carousel.innerHTML = '';
     const paragraphContainer = document.getElementById('modalPar');
     paragraphContainer.innerHTML = ''; // Clear current paragraphs
 
     // Loop through the images array and create new slides
-    images.forEach((imageSrc, index) => {
+    images.forEach((imageSrc, ind) => {
         let project;
         const slide = document.createElement('div');
         slide.className = 'carousel-slide';
@@ -266,28 +256,29 @@ function updateCarousel(images, descriptions, alt) {
         // Create and append paragraph for this slide
         const paragraph = document.createElement('p');
         paragraph.className = 'carousel-paragraph';
-        paragraph.innerHTML = descriptions[index] || 'No description available';
+        paragraph.innerHTML = descriptions[ind] || 'No description available';
         paragraph.innerHTML += "<span class='caret'></span>";
         paragraphContainer.appendChild(paragraph);
     });
-    
+
     // Update slides and slideWidth after updating carousel
     slides = document.querySelectorAll('.carousel-slide');
     totalSlides = slides.length;
-    currentIndex = 0; // Reset currentIndex to 0
     if (totalSlides > 0) {
         slideWidth = slides[0].clientWidth;
     }
-    resize(); // Call resize to adjust carousel
+    // Call goToSlide after resizing
+    resize();
+    goToSlide(ind);
 }
 
-function openModal(item) {
+function openModal(item, ind) {
+    currentIndex = ind; // Set to the specified slide
     document.body.style.overflowY = "hidden";
-    console.log('openModal called with:', item);
-    updateCarousel(item[0], item[2], item[3]);
+    updateCarousel(item[0], item[2], item[3], currentIndex);
     modal.style.display = "block";
     modalActive = true;
-    goToSlide(0); // Reset to the first slide
+
     if (document.getElementById('mouseOverlay') != null) {
         document.getElementById('mouseOverlay').style.display = "none";
     }
@@ -303,16 +294,17 @@ function openModal(item) {
 function initHammer() {
     var element = document.getElementById("carousel");
     var hammertime = new Hammer(element);
-    hammertime.on("swiperight", function (event) {         
+    hammertime.on("swiperight", function (event) {
         resize();
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         goToSlide(currentIndex);
-        clearInterval(autoSlideInterval);  
     });
-    hammertime.on("swipeleft", function (event) {         
+    hammertime.on("swipeleft", function (event) {
         resize();
         currentIndex = (currentIndex + 1) % totalSlides;
         goToSlide(currentIndex);
-        clearInterval(autoSlideInterval);
     });
 }
+
+// Example usage to initialize the carousel with the second item
+initialiseCarousel(1);
