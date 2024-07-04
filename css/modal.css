@@ -98,6 +98,7 @@
 
 #carousel{
     display: flex; /* Display slides in a row */
+    transition: transform 0.5s ease;
 }
 
 .carousel-slide {
@@ -228,9 +229,10 @@
 }
 
 @media screen and (max-width: 1100px) { 
-    .modalImgSection{
-        width: fit-content;
+    #modalImgSection{
+        width: 90%;
         height: auto;
+        margin: auto;
     }
     .modalContent{
         background-color: white;
