@@ -198,6 +198,8 @@
     align-items: center;
     overflow: hidden;
     justify-content: center;
+    width: 700px;
+    height: 500px;
 }
 
 .carousel-slide{
@@ -223,9 +225,13 @@
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: black; }
-  }
+}
 
 @media screen and (max-width: 1100px) { 
+    .modalImgSection{
+        width: fit-content;
+        height: auto;
+    }
     .modalContent{
         background-color: white;
         margin: 1rem;
