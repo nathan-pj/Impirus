@@ -195,7 +195,10 @@ canvas {
     height: auto;
 
 }
-.reviewVid, .videoShowcase{
+.reviewVid{
+    width: 60%;
+}
+.videoShowcase{
     width: 40%;
 }
 .showcaseImgContainer{
@@ -237,7 +240,10 @@ canvas {
         width:fit-content;
         text-align: center;
     }
-    .reviewVid, .videoShowcase{
+    .reviewVid{
+        width: 70%;
+    }
+    .videoShowcase{
         width: 50%;
     }
     .videoShowcase{
