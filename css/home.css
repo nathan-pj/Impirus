@@ -373,12 +373,12 @@ body{
     transition: transform 0.5s ease; /* Smooth transition effect */
 }
 
-.sectionCarouselSlide {
+.sectionCarouselSlide, .vslCarouselSlide {
     flex: 0 0 100%; /* Each slide takes full width */
     /* Optionally, add additional styling like padding or margin */
 }
 
-.sectionCarouselNav{
+.sectionCarouselNav, .vslCarouselNav{
     position: absolute;
     z-index: 1;
     padding: 0 2rem;
@@ -398,7 +398,7 @@ body{
     right: 0;
 }
 
-.sectionCarouselSlide img {
+.sectionCarouselSlide img, .vslCarouselSlide img {
     width: 100%; /* Ensure images fill their parent container */
     display: block; /* Remove default inline-block spacing */
 }

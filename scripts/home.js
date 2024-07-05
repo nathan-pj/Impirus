@@ -116,6 +116,20 @@ const secLeftCNav = document.getElementById('sectionPrev');
 const secRightCNav = document.getElementById('sectionNext');
 const secTotalSlides = secSlides.length;
 
+// VSL carousel
+const vslCarousel = document.getElementById('vslCarousel');
+let vslSlides = document.querySelectorAll('.vslCarouselSlide');
+let vslSlideWidth = vslSlides[0].clientWidth;
+
+let vslCurrentIndex = 0;
+
+const vslLeftCNav = document.getElementById('vslPrev');
+const vslRightCNav = document.getElementById('vslNext');
+const vslTotalSlides = vslSlides.length;
+
+let vslAutoSlideInterval;
+let secAutoSlideInterval;
+
 function secGoToSlide(index) {
     if (index < 0 || index >= secTotalSlides) return;
 
@@ -129,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
     secSlides = document.querySelectorAll('.sectionCarouselSlide');
 
     // Optional: Auto slide every 5 seconds
-    const secAutoSlideInterval = setInterval(() => {
+    secAutoSlideInterval = setInterval(() => {
         secCurrentIndex = (secCurrentIndex + 1) % secTotalSlides;
         secGoToSlide(secCurrentIndex);
     }, 5000);
@@ -154,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
     vslSlides = document.querySelectorAll('.vslCarouselSlide');
 
     // Optional: Auto slide every 5 seconds
-    const vslAutoSlideInterval = setInterval(() => {
+    vslAutoSlideInterval = setInterval(() => {
         vslCurrentIndex = (vslCurrentIndex + 1) % vslTotalSlides;
         vslGoToSlide(vslCurrentIndex);
     }, 5000);
@@ -241,14 +255,14 @@ function initIndexHammer() {
         secGoToSlide(secCurrentIndex);
         secCurrentIndex = (secCurrentIndex - 1 + secTotalSlides) % secTotalSlides;
         secGoToSlide(secCurrentIndex);
-        clearInterval(autoSlideInterval);  
+        clearInterval(secAutoSlideInterval);  
     });
     hammertime.on("swipeleft", function (event) {         
         secSlideWidth = secSlides[0].clientWidth;
         secGoToSlide(secCurrentIndex);
         secCurrentIndex = (secCurrentIndex + 1) % secTotalSlides;
         secGoToSlide(secCurrentIndex);
-        clearInterval(autoSlideInterval);
+        clearInterval(secAutoSlideInterval);
     });
 
     var element2 = document.getElementById("vslCarousel");
@@ -268,17 +282,6 @@ function initIndexHammer() {
         clearInterval(vslAutoSlideInterval);
     });
 }
-
-// VSL carousel
-const vslCarousel = document.getElementById('vslCarousel');
-let vslSlides = document.querySelectorAll('.vslCarouselSlide');
-let vslSlideWidth = vslSlides[0].clientWidth;
-
-let vslCurrentIndex = 0;
-
-const vslLeftCNav = document.getElementById('vslPrev');
-const vslRightCNav = document.getElementById('vslNext');
-const vslTotalSlides = vslSlides.length;
 
 function vslGoToSlide(index) {
     if (index < 0 || index >= vslTotalSlides) return;
