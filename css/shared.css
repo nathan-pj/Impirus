@@ -49,7 +49,7 @@ header:before, footer:before, #burgerExpanded:before, #loadingScreen:before{
 }
 #loadingText{
     margin-top: 1cm;
-    font-family: NSimSun;
+    font-family: "franklin-gothic-atf", sans-serif;
     font-size: 1.5rem;
     color: white;
 }
@@ -162,7 +162,7 @@ nav{
 
 .navbarOptions a, .navbarCompanyName{
     font-size: 1.5rem;
-    font-family: NSimSun;
+    font-family: "franklin-gothic-atf", sans-serif;
     text-decoration: none;
 }
 .navbarLogoContainer{
@@ -234,7 +234,7 @@ nav{
     margin: 1rem 4rem;
     font-size: xx-large;
     color: white;
-    font-family: NSimSun;
+    font-family: "franklin-gothic-atf", sans-serif;
     text-decoration: none;
 }
 .navbarLogoImg2{
@@ -417,7 +417,7 @@ footer > *{
     grid-area: footerCopyright;
 }
 .footerRow{
-    font-family: 'NSimSun';
+    font-family: "franklin-gothic-atf", sans-serif;
 }
 .footerRow > *{
     margin: 0 1ch;
