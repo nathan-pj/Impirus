@@ -110,9 +110,32 @@
     <div class="vslSection card">
         <div class="vslContent">
             <div id="vslVidContainer">
-                <video src="../assets/videos/vslVid.mov" controls="" alt="Impirus Pitch video" id="vslVid">
+                <div id="vslImgContainer">
+                    <div id="vslCarousel" class="carousel" class="sectionCarousel" onclick='openModal(items[1], 0)'>
+                        <div class="vslCarouselSlide">
+                            <img src="../assets/livingThings/lg.png" alt="3D Render of a lemon ginger soda for Living Things">
+                        </div>
+                        <div class="vslCarouselSlide">
+                            <img src="../assets/livingThings/pbo.png" alt="3D Render of a peach and blood orange soda for Living Things">
+                        </div>
+                        <div class="vslCarouselSlide">
+                            <img src="../assets/livingThings/rp.png" alt="3D Render of a raspberry & pomogranate soda for Living Things">
+                        </div>
+                        <div class="vslCarouselSlide">
+                            <img src="../assets/livingThings/wl.png" alt="3D Render of a watermelon lime soda for Living Things">
+                        </div>
+                    </div>
+                    <span class="sectionPrev sectionCarouselNav material-symbols-outlined" id="vslPrev">arrow_back_ios</span>
+                    <span class="sectionNext sectionCarouselNav material-symbols-outlined" id="vslNext">arrow_forward_ios</span> 
+                </div>
             </div>
             <h2 id="vslHeading">We <u>seamlessly</u> level up your brands visuals.</h2>
+            <div id="vslAnimation">
+                <video id="sectionBackground" autoplay playsinline poster loop muted alt="render of a moving sphere">
+                    <source src="../assets/videos/finalwoosh.mov" type="video/quicktime">
+                    <source src="../assets/videos/finalWoosh.webm" type="video/webm">
+                </video>
+            </div>
         </div>
     </div>
     <div id="whoAreWe">

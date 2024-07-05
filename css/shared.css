@@ -75,21 +75,23 @@ b{
     font-size: 1.5em;
 }
 .button{
-    padding: 1.5rem 2rem;
+    padding: 4rem 5rem;
     display: block;
     text-decoration: none;
     color: white;
     background-color: #0D111C;
-    border-radius: 10px;
+    border-radius: 20px;
     width: fit-content;
     margin: 1rem 0;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
+    text-align: center;
 }
 .button:hover{
-    background-color: #88CaE7;
+    background-color: rgba(255, 82, 238, 1);
     color: #0D111C;
+    box-shadow: 0 0 40px 15px rgba(255, 82, 238, 0.4); /* Adjust the shadow parameters as needed */
 }
 /* Header */
 .navbarLogoImg, .navbarLogoImg2{

@@ -143,8 +143,8 @@ body{
     z-index: 1;
 }
 #vslHeading{
-    font-size: 3.5em;
-    width: 40%;
+    font-size: 4.7em;
+    width: 50%;
 }
 .vslContent{
     width: 80%;
@@ -157,6 +157,12 @@ body{
 #vslVidContainer{
     height: auto;
     max-width: 45%;
+}
+#vslAnimation{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    right: -30%;
 }
 #sectionPar1{
     grid-area: sectionPar1;
@@ -196,9 +202,7 @@ body{
 
 @keyframes changeFont {
     0% { font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
-    14.28% { font-family: 'Times New Roman', serif; }
     28.56% { font-family: NSimSun; }
-    42.84% { font-family: 'Georgia', serif; }
     57.12% { font-family: 'Courier New', monospace; }
     71.4% { font-family: 'Arial Narrow', Arial, sans-serif; }
     85.68% { font-family: monospace; }
@@ -222,7 +226,7 @@ body{
     position: relative;
 }
 
-#whoAreWeImgContainer{
+#whoAreWeImgContainer, #vslImgContainer{
    width: 40%;
    min-width: 300px;
    height: 100%; 
@@ -230,8 +234,15 @@ body{
    overflow: hidden; /* Hide overflowing content */
    position: relative;
 }
+#vslImgContainer{
+    width: 100%;
+}
 #whoAreWeImgContainer:hover{
     background-color: #efefef;
+}
+
+#vslImgContainer:hover{
+    background-color: white;  
 }
 
 #whoAreWe::after{
@@ -245,12 +256,47 @@ body{
     pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 
+.contactContent{
+    backdrop-filter: saturate(180%) blur(1000px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    position: relative;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .contactContent{
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: saturate(180%) blur(10px);
+    }
+}
+
+.contactContent:before{
+    border-radius: 15px;
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .grayHoverAnimation{
     animation: hoverGray 1s;
 }
 
 .grayHoverAnimationEnd{
     animation: hoverGrayEnd 1s;
+}
+
+.whiteHoverAnimation{
+    animation: hoverWhite 1s;
+}
+
+.whiteHoverAnimationEnd{
+    animation: hoverWhiteEnd 1s;
 }
 
 @keyframes hoverGray {
@@ -263,6 +309,15 @@ body{
     to {background-color: white;}
 }
 
+@keyframes hoverWhite {
+    from { background-color: #efefef;}
+    to {background-color: white;}
+}
+
+@keyframes hoverWhiteEnd {
+    from { background-color: white;}
+    to {background-color: #efefef;}
+}
 
 
 .whoAreWeImg{
@@ -510,14 +565,14 @@ blockquote{
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background-color: white;
+    background: white;
+    color: white;
 }
 .contactContent{
     width: 80vw;
     display: flex;
     place-items: center;
     flex-direction: column;
-    background-color: #efefef;
     padding: 4rem;
 }
 .contactContent h2{
@@ -575,10 +630,13 @@ blockquote{
         width: 90vw;
     }
     #vslHeading{
-        font-size: 3em;
+        font-size: 4em;
     }
  }
 @media screen and (max-width: 1200px) {
+    #vslAnimation{
+        display: none;
+    }
     .reviewCardOdd, .reviewCardEven{
         grid-template-areas: 
         "companyImgContainer"
@@ -612,7 +670,7 @@ blockquote{
     #landingVideo{
         top: 20vh;
     }
-    #whoAreWeImgContainer{
+    #whoAreWeImgContainer, #vslImgContainer{
         margin-top: 2rem;
     }
 }
@@ -672,7 +730,7 @@ blockquote{
 }
 
 @media screen and (max-width: 900px) {
-    #whoAreWeImgContainer{
+    #whoAreWeImgContainer, #vslImgContainer{
         width: 50%;
     }
 }
@@ -700,7 +758,7 @@ blockquote{
     #whoAreWe h2{
         font-size: 0.8em;
     }
-    #whoAreWeImgContainer{
+    #whoAreWeImgContainer, #vslImgContainer{
         width: 60%;
     }
     #sectionBackground{
@@ -760,7 +818,7 @@ blockquote{
         height: auto;
     }
     #vslHeading{
-        font-size: 2em;
+        font-size: 3em;
     }
     #sectionH2{
         font-size: 4rem;
