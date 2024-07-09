@@ -137,17 +137,18 @@ canvas {
     margin-bottom: 2rem;
     font-size: 1.7rem;
 }
+
 .projectsGroup{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 55vw;
-    gap: 2rem 15px;
-    min-width: fit-content;
-}
-.projectsGroup:not(:first-of-type){
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 90vw;
+    gap: 2rem 15px;
+    min-width: fit-content;
+}
+.twoSquareGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 55vw;
     gap: 2rem 15px;
     min-width: fit-content;
 }
