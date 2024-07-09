@@ -1,7 +1,7 @@
 /*
 GREEN: #80ffdb 
 TURQUOISE: #64dfdf 
-MAGENTA: #6930c3  
+PURPLE: #6930c3  
 BLACK: #18181f
 */
 *{
@@ -85,7 +85,8 @@ b{
     display: block;
     text-decoration: none;
     color: white;
-    background-color: #0D111C;
+    background: rgb(100,223,223);
+    background: radial-gradient(circle, #6930c3 0%, rgba(100,223,223,1)100%);
     border-radius: 20px;
     width: fit-content;
     margin: 1rem 0;
@@ -95,9 +96,9 @@ b{
     text-align: center;
 }
 .button:hover{
-    background-color: rgba(255, 82, 238, 1);
+    background-color: rgba(100,223,223,1) ;
     color: #0D111C;
-    box-shadow: 0 0 40px 15px rgba(255, 82, 238, 0.4); /* Adjust the shadow parameters as needed */
+    box-shadow: 0 0 40px 15px rgba(100,223,223,0.4); /* Adjust the shadow parameters as needed */
 }
 /* Header */
 .navbarLogoImg, .navbarLogoImg2{

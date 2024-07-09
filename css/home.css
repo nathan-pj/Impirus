@@ -139,7 +139,7 @@ Rich Black: #0D111C
     z-index: 1;
 }
 #vslHeading{
-    font-size: 4.7em;
+    font-size: 3.7rem;
     width: 50%;
 }
 .vslContent{
@@ -563,7 +563,8 @@ blockquote{
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background: white;
+    background: url(../assets/background.jpg);
+    background-size: cover;
     color: white;
 }
 .contactContent{
