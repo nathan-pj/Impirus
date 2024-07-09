@@ -154,9 +154,10 @@ body{
 .hidden{
     display: none;
 }
-#modalImgContainer{
-    background-color: #f2d3f4;
+#caret{
+    display: none;
 }
+
 #webDevSparkle .material-symbols-outlined:hover{
     font-variation-settings: 'FILL' 1;
 }

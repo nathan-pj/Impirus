@@ -4,18 +4,27 @@ body{
 }
 .canvasCard{
     background-color: rgb(42, 42, 42);
-    border: 1px solid rgb(0, 0, 0, 0.4);
     width: 100vw;
     height: 90vh;
-    border-radius: 15px 15px 0 0;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 canvas {
     display: block;
     z-index: 1;
+}
+.canvasCard::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Adjust the height as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(240, 240, 240));
+    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 #canvasH2{
     position: absolute;
@@ -67,12 +76,20 @@ canvas {
 .card{
     background-color: #efefef;
     padding: 3rem 0;
-    border: 1px solid rgb(0, 0, 0, 0.4);
     width: 100vw;
-    border-radius: 15px 15px 0 0;
-    margin-top: -15px;
     position: relative;
     z-index: 1;
+}
+
+.card::after:first-of-type{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Adjust the height as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(240, 240, 240));
+    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 .projectsH2{
     font-family: "franklin-gothic-atf", sans-serif;
@@ -103,6 +120,16 @@ canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.projectsContainer::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Adjust the height as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
+    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 .projectsPar{
     width: 30%;
@@ -243,6 +270,16 @@ canvas {
     z-index: 1;
     overflow: hidden;
     background-color: white;
+}
+.firstContact::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Adjust the height as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(240, 240, 240));
+    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 .contactContent{
     width: 80vw;
