@@ -730,7 +730,10 @@ blockquote{
 
 @media screen and (max-width: 900px) {
     #whoAreWeImgContainer, #vslImgContainer{
-        width: 50%;
+        width: 80%;
+    }
+    #vslHeading{
+        font-size: 3rem; 
     }
 }
 
@@ -757,8 +760,12 @@ blockquote{
     #whoAreWe h2{
         font-size: 0.8em;
     }
-    #whoAreWeImgContainer, #vslImgContainer{
-        width: 60%;
+    #whoAreWeImgContainer{
+        width: 80%;
+    } 
+    
+    #vslImgContainer{
+        width: 90%;
     }
     #sectionBackground{
         width: 130%;
