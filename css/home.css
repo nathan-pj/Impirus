@@ -475,10 +475,8 @@ Rich Black: #0D111C
     grid-template-areas: 
     "clientPicture reviewText companyImgContainer";
     gap: 1rem;
-    background-color: #0D111C;
     color: white;
     padding: 5rem;
-    border-radius: 15px;
 }
 .reviewCardOdd{
     grid-template-areas: 

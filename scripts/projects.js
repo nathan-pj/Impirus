@@ -52,7 +52,7 @@ function placeImage(x, y) {
     img.src = itemsClickMe[imageIndex % itemsClickMe.length];
     img.onload = () => {
         const startX = x - img.width / 2;
-        const startY = 0 - img.height; // Start from above the canvas
+        const startY = y - img.height + (img.height / 3); // Start from above the canvas
         const endX = x - img.width / 2;
         const endY = y - img.height / 2;
         animateImage(img, startX, startY, endX, endY, 200); // 500ms duration
