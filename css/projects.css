@@ -301,7 +301,6 @@ canvas {
     display: flex;
     place-items: center;
     flex-direction: column;
-    padding: 4rem;
 }
 #btmContactContent h2{
     font-family: "franklin-gothic-atf", sans-serif;
