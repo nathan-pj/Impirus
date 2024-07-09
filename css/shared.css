@@ -85,8 +85,8 @@ b{
     display: block;
     text-decoration: none;
     color: white;
-    background: rgb(100,223,223);
-    background: radial-gradient(circle, #6930c3 0%, rgba(100,223,223,1)100%);
+    background: rgb(105,48,195);
+    background: linear-gradient(105deg, rgba(105,48,195,1) 0%, rgba(128,255,219,1) 100%);
     border-radius: 20px;
     width: fit-content;
     margin: 1rem 0;
@@ -96,8 +96,8 @@ b{
     text-align: center;
 }
 .button:hover{
-    background-color: rgba(100,223,223,1) ;
-    color: #0D111C;
+    background: rgb(105,48,195);
+    background: linear-gradient(60deg, rgba(105,48,195,1) 0%, rgba(128,255,219,1) 100%);
     box-shadow: 0 0 40px 15px rgba(100,223,223,0.4); /* Adjust the shadow parameters as needed */
 }
 /* Header */

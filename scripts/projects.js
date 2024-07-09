@@ -9,27 +9,54 @@ function resizeCanvas() {
     canvas.height = window.innerHeight;
 }
 
+function animateImage(img, startX, startY, endX, endY, duration) {
+    const startTime = performance.now();
+    
+    function animationStep(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        const x = startX + (endX - startX) * progress;
+        const y = startY + (endY - startY) * progress;
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the entire canvas
+        placedImages.forEach(({ img, x, y }) => {
+            ctx.drawImage(img, x, y);
+        });
+
+        ctx.drawImage(img, x, y);
+        
+        if (progress < 1) {
+            requestAnimationFrame(animationStep);
+        } else {
+            placedImages.push({ img, x: endX, y: endY });
+            if (placedImages.length > 15) {
+                const oldImage = placedImages.shift();
+                ctx.clearRect(oldImage.x, oldImage.y, oldImage.img.width, oldImage.img.height);
+                ctx.fillStyle = 'rgba(0,0,0,0)'; // Assuming white background, adjust if needed
+                ctx.fillRect(oldImage.x, oldImage.y, oldImage.img.width, oldImage.img.height);
+                
+                // Redraw remaining images
+                placedImages.forEach(({ img, x, y }) => {
+                    ctx.drawImage(img, x, y);
+                });
+            }
+        }
+    }
+    
+    requestAnimationFrame(animationStep);
+}
+
 function placeImage(x, y) {
     const img = new Image();
     img.src = itemsClickMe[imageIndex % itemsClickMe.length];
     img.onload = () => {
-        const imgX = x - img.width / 2;
-        const imgY = y - img.height / 2;
-        ctx.drawImage(img, imgX, imgY);
-        placedImages.push({ img, x: imgX, y: imgY });
+        const startX = x - img.width / 2;
+        const startY = 0 - img.height; // Start from above the canvas
+        const endX = x - img.width / 2;
+        const endY = y - img.height / 2;
+        animateImage(img, startX, startY, endX, endY, 200); // 500ms duration
         imageIndex++;
-        
-        if (placedImages.length > 15) {
-            const oldImage = placedImages.shift();
-            ctx.clearRect(oldImage.x, oldImage.y, oldImage.img.width, oldImage.img.height);
-            ctx.fillStyle = 'rgba(0,0,0,0)'; // Assuming white background, adjust if needed
-            ctx.fillRect(oldImage.x, oldImage.y, oldImage.img.width, oldImage.img.height);
-            
-            // Redraw remaining images
-            placedImages.forEach(({ img, x, y }) => {
-                ctx.drawImage(img, x, y);
-            });
-        }
     };
 }
 
