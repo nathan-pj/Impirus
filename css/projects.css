@@ -180,10 +180,18 @@ canvas {
     grid-area: sectionH2;
     font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
-    font-size: 5em;
+    font-size: 3.5em;
+}
+.textH2{
+    margin-bottom: 5px;
+}
+.showcaseGroup{
+    background-color: #d3d3d3;
+    padding: 1rem 1rem 4rem 1rem;
+    border-radius: 15px;
 }
 .textGroup{
-    margin-top: 10rem;
+    margin-top: 4rem;
     width: 90vw;
     display: flex;
     justify-content: space-around;
@@ -194,11 +202,12 @@ canvas {
     width: 50%;
     min-width: 400px;
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
 }
 .text p{
-    max-width: 90%;
+    max-width: 100%;
+    font-size: 1.2rem;
 }
 .showcaseImgContainer{
     width: 40%;
@@ -278,6 +287,15 @@ canvas {
     .videoShowcase{
         min-height: 500px;
     }
+}
+@media screen and (max-width: 1000px) {
+    .showcaseGroup{
+        width: fit-content;
+    }
+    .text{
+        align-items: center;
+    }
+    
 }
 @media screen and (max-width: 950px){
     .text{
