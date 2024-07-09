@@ -81,7 +81,7 @@ canvas {
     text-align: center;
 }
 .projectsH3{
-    font-size: 3rem;
+    font-size: 4.5rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.4);
     margin: 4em 0 2rem;
     font-family: "franklin-gothic-atf", sans-serif;
@@ -98,21 +98,37 @@ canvas {
     text-decoration: none;
     color: inherit;
 }
-.projectsPar{
-    width: 60%;
-    margin-bottom: 2rem;
-    text-align: left;
-}
+
 .projectsContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.projectsPar{
+    width: 30%;
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+}
 .projectsGroup{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 55vw;
+    gap: 2rem 15px;
+    min-width: fit-content;
+}
+.projectsGroup:not(:first-of-type){
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 90vw;
     gap: 2rem 15px;
+    min-width: fit-content;
+}
+.textProject{
+    display: flex;
+    width: fit-content;
+    justify-content: space-around;
+    gap: 2rem;
 }
 
 .projectDiv{
@@ -254,6 +270,9 @@ canvas {
     .text{
         width: 90%;
     }
+    .projectsPar{
+        font-size: 1.2rem;
+    }
 }
 @media screen and (max-width: 850px){
     .projectsGroup{
@@ -262,6 +281,19 @@ canvas {
     .reviewVid, .videoShowcase{
         width: 100%;
         min-height: 400px;
+    }
+    .projectsGroup{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 95vw;
+        gap: 5px;
+    }
+    .textProject{
+        flex-wrap: wrap;
+    }
+    .projectsPar{
+        width: 80%;
+        font-size: 1rem;
     }
 }
 
