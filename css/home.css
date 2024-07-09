@@ -788,9 +788,13 @@ blockquote{
     #vslVid{
         max-width: 100%;
     }
+    #vslHeading{
+        font-size: 2.5rem;
+    }
     #landingSection{
         height: 60vh;
     }
+
 }
 
 @media screen and (max-width: 450px) {
