@@ -16,16 +16,6 @@ canvas {
     display: block;
     z-index: 1;
 }
-.canvasCard::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 60px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(240, 240, 240));
-    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
-}
 #canvasH2{
     position: absolute;
     font-family: "franklin-gothic-atf", sans-serif;
@@ -121,15 +111,25 @@ canvas {
     flex-direction: column;
     align-items: center;
 }
-.projectsContainer::after{
+.projectsContainer::before,
+.projectsContainer::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
     width: 100%;
     height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
-    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
+    pointer-events: none; /* Ensures the pseudo-elements do not interfere with user interactions */
+}
+
+.projectsContainer::before {
+    top: -50px;
+    z-index: 3;
+    background: linear-gradient(to top, rgb(240, 240, 240), rgba(255, 255, 255, 0));
+}
+
+.projectsContainer::after {
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 .projectsPar{
     width: 30%;
