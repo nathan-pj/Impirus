@@ -157,6 +157,24 @@ Rich Black: #0D111C
     to {transform: translateY(0px);}
 }
 
+/* 
+.word{
+    color: black;
+    display: inline-block;
+    margin: 1rem 0;
+    position: relative;
+    color: #ff7070;
+}
+.wordAnimation{
+    animation: scrollAnimation 0.5s step-end;
+    color: black;
+}
+@keyframes scrollAnimation {
+    from {color: #ff7070;}
+    to {color: black;}
+}
+*/
+
 .vslContent{
     width: 80%;
     display: flex;
