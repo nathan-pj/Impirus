@@ -20,7 +20,45 @@ window.addEventListener('load', function() {
         logo.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
     });
 });
+function wrapWordsWithSpan(elementId, spanClass) {
+    const element = document.getElementById(elementId);
+    if (!element) {
+        console.error(`Element with id "${elementId}" not found.`);
+        return;
+    }
 
+    // Get the text content of the element
+    const text = element.textContent;
+
+    // Split the text into words (using regex to include punctuation marks)
+    const words = text.split(/(\s+)/).filter(word => word.trim().length > 0);
+
+    // Wrap each word in a span element
+    const wrappedWords = words.map(word => {
+        return `<span class="${spanClass}">${word}</span>`;
+    }).join(' ');
+
+    // Set the modified content back to the element
+    element.innerHTML = wrappedWords;
+}
+
+// Call the function to wrap words in the element with id "content"
+wrapWordsWithSpan('vslHeading', 'word');
+
+const grayWords = document.querySelectorAll('.word');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('wordAnimation');
+        } 
+        /* else {
+            entry.target.classList.remove('black');
+        } */
+    });
+});
+
+grayWords.forEach((el) => observer.observe(el));
 
 // Function to adjust rotation based on scroll position
 function adjustRotations() {
@@ -138,6 +176,11 @@ function secGoToSlide(index) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    secSlideWidth = secSlides[0].clientWidth;
+    secGoToSlide(secCurrentIndex);
+    vslSlideWidth = vslSlides[0].clientWidth;
+    vslGoToSlide(vslCurrentIndex);
 
     secSlideWidth = secSlides[0].clientWidth;
     secSlides = document.querySelectorAll('.sectionCarouselSlide');
@@ -290,8 +333,7 @@ function vslGoToSlide(index) {
     vslCurrentIndex = index;
 }
 
-/* Contact video speed */
-/* 
-let vid = document.getElementById("contactBackground");
-vid.playbackRate = 0.2; 
-*/
+secSlideWidth = secSlides[0].clientWidth;
+secGoToSlide(secCurrentIndex);
+vslSlideWidth = vslSlides[0].clientWidth;
+vslGoToSlide(vslCurrentIndex);

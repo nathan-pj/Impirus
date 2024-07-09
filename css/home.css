@@ -142,6 +142,20 @@ Rich Black: #0D111C
     font-size: 3.7rem;
     width: 50%;
 }
+.word{
+    color: black;
+    display: inline-block;
+    margin: 1rem 0;
+    position: relative;
+}
+.wordAnimation{
+    animation: scrollAnimation 2s ease;
+}
+@keyframes scrollAnimation {
+    from {transform: translateY(100px);}
+    to {transform: translateY(0px);}
+}
+
 .vslContent{
     width: 80%;
     display: flex;
