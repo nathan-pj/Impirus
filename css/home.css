@@ -261,11 +261,12 @@ Rich Black: #0D111C
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -50px;
     width: 100%;
     height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(236, 236, 236));
-    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
+    pointer-events: none;
+    z-index: 2;
 }
 
 .contactContent{
@@ -439,10 +440,11 @@ Rich Black: #0D111C
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: -50px;
     width: 100%;
     height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(240, 240, 240));
+    z-index: 2;
     pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 .reviewSection h2{
