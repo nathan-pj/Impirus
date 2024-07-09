@@ -238,7 +238,6 @@ body{
     #aboutImgContainer{
         grid-area: aboutImgContainer;
         width: auto;
-        height: 70vw; /* REMOVE LATER */
         align-self: center;
         position: relative;
         margin-bottom: 2rem;
