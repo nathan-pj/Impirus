@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(mobileAndTabletCheck()){
         document.getElementById("sectionBackground").remove();
     }
- });
+ }); 
 
 window.addEventListener('load', function() {
     document.addEventListener('mousemove', function(e) {
@@ -45,7 +45,7 @@ function wrapWordsWithSpan(elementId, spanClass) {
 // Call the function to wrap words in the element with id "content"
 wrapWordsWithSpan('vslHeading', 'word');
 
-const grayWords = document.querySelectorAll('.word');
+const words = document.querySelectorAll('.word');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -58,45 +58,41 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-grayWords.forEach((el) => observer.observe(el));
+words.forEach((el) => observer.observe(el));
 
-// Function to adjust rotation based on scroll position
-function adjustRotations() {
-    const h2Elements = document.querySelectorAll('#whoAreWe h2');
-    const maxScroll = 1200; // The scroll position at which the rotation should be 0
-    const startRotationX = 20; // Initial X rotation in degrees
-    const startRotationY = -20; // Initial Y rotation in degrees
+const video = document.getElementById('sectionBackground');
 
-    // Get the current scroll position
-    const scrollTop = window.scrollY;
+let scrollTimeout;
 
-    // Calculate the new rotation based on scroll position
-    let rotationX = startRotationX;
-    let rotationY = startRotationY;
-
-    if (scrollTop >= maxScroll) {
-        // If the scroll position is greater than or equal to maxScroll, set rotation to 0
-        rotationX = 0;
-        rotationY = 0;
-    } else {
-        // Otherwise, calculate the rotation based on the scroll position
-        rotationX = startRotationX - (scrollTop / maxScroll) * startRotationX;
-        rotationY = startRotationY - (scrollTop / maxScroll) * startRotationY;
+// Function to play the video
+function playVideo() {
+    if (video.paused) {
+        video.play();
     }
-
-    // Apply the calculated rotation to each h2 element
-    h2Elements.forEach((h2) => {
-        h2.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-    });
 }
 
-// Add an event listener for the scroll event
-window.addEventListener('scroll', adjustRotations);
+// Function to pause the video
+function pauseVideo() {
+    if (!video.paused) {
+        video.pause();
+    }
+}
 
-// Initial call to set the rotation based on the initial scroll position
-adjustRotations();
+// Event listener for scroll events
+window.addEventListener('scroll', () => {
+    playVideo(); // Play the video when scrolling
 
-// set up text to print, each item in array is new line
+    // Clear any existing timeout to avoid pausing the video too soon
+    clearTimeout(scrollTimeout);
+
+    // Set a timeout to pause the video if no scroll event occurs within 200 milliseconds
+    scrollTimeout = setTimeout(pauseVideo, 100);
+});
+
+// Pause the video initially until the user starts scrolling
+pauseVideo();
+
+// set up text to print in review section, each item in array is new line
 var review1 = [
     "'Nathan is a highly skilled 3D product animator and video editor, and he works with great efficiency and dedication. He made a 3D animated video involving complex motion design for my company's supplement products and also edited a commercial. Throughout the process, he was highly responsive to feedback and made revisions swiftly and effectively. With his expert skills, he was able to not only realise what I envisioned for the video but also exceed my expectations. The end product is worthy of a professional design studio.", 
     "I highly recommend Nathan's design services, and he is a joy to work with.'"
@@ -243,6 +239,8 @@ window.addEventListener('resize', () => {
 
 secSlideWidth = secSlides[0].clientWidth;
 secGoToSlide(secCurrentIndex);
+vslSlideWidth = vslSlides[0].clientWidth;
+vslGoToSlide(vslCurrentIndex);
 
 const carouselBg = document.getElementById('whoAreWeImgContainer');
 

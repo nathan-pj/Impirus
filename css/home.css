@@ -85,6 +85,7 @@ Rich Black: #0D111C
     padding: 3rem 0;
     animation: fadeInFixedWidth ease 1s;
     position: relative;
+    z-index: 2;
 }
 .card{
     background-color: rgb(236, 236, 236);
@@ -172,9 +173,13 @@ Rich Black: #0D111C
 }
 #vslAnimation{
     width: 600px;
-    height: 600px;
-    position: absolute;
-    right: -30%;
+    height: 0px;
+    overflow: visible; 
+    position: sticky;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 40%;
 }
 #sectionPar1{
     grid-area: sectionPar1;
@@ -198,12 +203,12 @@ Rich Black: #0D111C
 }
 #sectionBackground{
     position: absolute;
-    z-index: 2;
     opacity: 1;
     width: 140%;
-    height: 139%;
+    height: 350px;
     left: -55%;
-    top: -10%;
+    right: 0;
+    top: 100px;
     pointer-events: none;
 }
 #sectionCard div h3{
@@ -266,7 +271,6 @@ Rich Black: #0D111C
     height: 50px; /* Adjust the height as needed */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
     pointer-events: none;
-    z-index: 2;
 }
 
 .contactContent{
@@ -648,7 +652,7 @@ blockquote{
  }
 @media screen and (max-width: 1200px) {
     #vslAnimation{
-        display: none;
+        display: absolute;
     }
     .reviewCardOdd, .reviewCardEven{
         grid-template-areas: 
@@ -674,9 +678,8 @@ blockquote{
     }
     #sectionBackground{
         width: 138%;
-        height: 113%;
-        left: -500px;
-        top: -50px;
+        top: 80px;
+        left: -125%;
     }
  }
 @media screen and (max-width: 1100px) {
@@ -686,10 +689,16 @@ blockquote{
     #whoAreWeImgContainer, #vslImgContainer{
         margin-top: 2rem;
     }
+    #sectionBackground{
+        left: -115%;
+    }
 }
 
 
 @media screen and (max-width: 1000px) {
+    #sectionBackground{
+        left: -105%;
+    }
     .reviewCard{
         width: 70vw;
     }
@@ -725,12 +734,6 @@ blockquote{
     #sectionPar1{
         z-index: 1;
     }
-    #sectionBackground{
-        width: 130%;
-        height: 100%;
-        left: -15%;
-        top: -40%;
-    }
     
     #sectionImgContainer{
         max-width: 50%;
@@ -743,6 +746,9 @@ blockquote{
 }
 
 @media screen and (max-width: 900px) {
+    #sectionBackground{
+        left: -92%;
+    }
     #whoAreWeImgContainer, #vslImgContainer{
         width: 80%;
     }
@@ -752,6 +758,9 @@ blockquote{
 }
 
 @media screen and (max-width: 800px) {
+    #sectionBackground{
+        left: -80%;
+    }
     .reviewText{
         width: 90%;
     }
@@ -781,24 +790,20 @@ blockquote{
     #vslImgContainer{
         width: 90%;
     }
-    #sectionBackground{
-        width: 130%;
-        height: 100%;
-        left: 0%;
-        top: -40%;
-    }
 
 }
 
+@media screen and (max-width: 750px) {
+    #sectionBackground{
+        left: -66%;
+    }
+}
 @media screen and (max-width: 600px) {
     #sectionH2{
         font-size: 5rem;
     }
     #sectionBackground{
-        width: 130%;
-        height: 100%;
-        left: 20%;
-        top: -40%;
+        left: -56%;
     }
     
 }
@@ -843,11 +848,5 @@ blockquote{
     }
     #sectionH2{
         font-size: 4rem;
-    }
-    #sectionBackground{
-        width: 130%;
-        height: 100%;
-        left: 10%;
-        top: -45%;
     }
 }
