@@ -129,7 +129,7 @@ canvas {
 
 .projectsContainer::after {
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 .projectsPar{
     width: 30%;
@@ -212,14 +212,23 @@ canvas {
 }
 .textH2{
     margin-bottom: 5px;
+    max-width: 80%;
+    text-align: center;
 }
 .showcaseGroup{
-    background-color: #d3d3d3;
+    background-color: #e5e5e5;
     padding: 1rem 1rem 4rem 1rem;
     border-radius: 15px;
 }
+.showcaseVideos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
 .textGroup{
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 90vw;
     display: flex;
     justify-content: space-around;
@@ -227,30 +236,31 @@ canvas {
     gap: 2rem;
 }
 .text{
-    width: 50%;
+    width: 100%;
     min-width: 400px;
     display: flex;
-    align-items: left;
+    align-items: center;
     flex-direction: column;
 }
 .text p{
-    max-width: 100%;
+    max-width: 60%;
     font-size: 1.2rem;
 }
 .showcaseImgContainer{
-    width: 40%;
     height: auto;
-    min-width: 400px;
+    max-width: 400px;
     max-height: 400px;
 }
 .showcase{
     height: auto;
+    max-width: 400px;
+    border-radius: 15px;
 }
 .reviewVid{
     width: 60%;
 }
 .videoShowcase{
-    width: 40%;
+    width: 50%;
 }
 .showcaseImgContainer{
     display: flex;
@@ -341,6 +351,9 @@ canvas {
     .projectsPar{
         font-size: 1.2rem;
     }
+    .text p{
+        max-width: 80%;
+    }
 }
 @media screen and (max-width: 850px){
     .projectsGroup{
@@ -415,7 +428,9 @@ canvas {
     .reviewH3{
         font-size: 3rem;
     }
-
+    .text p{
+        max-width: 90%;
+    }
 }
 
 @media screen and (max-width: 450px){
