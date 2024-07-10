@@ -54,9 +54,10 @@ function placeImage(x, y) {
         const startX = x - img.width / 2; // Messing with this value will make them fall from different angles
         const startY = y - img.height + (img.height / 3); // This value will effect how far the squares fall !! 
         // You can also mess with it and make it start from the bottom and float up.
-        const endX = x - img.width / 2; 
-        const endY = y - img.height / 2;
-        animateImage(img, startX, startY, endX, endY, 200); // This will effect how fast they fall
+        
+        const endX = x - img.width / 2; // This value will make the image land exactly where the user clicks, probably shouldnt be messed with
+        const endY = y - img.height / 2; // This value will make the image land exactly where the user clicks, probably shouldnt be messed with
+        animateImage(img, startX, startY, endX, endY, 200); // This will effect how FAST they fall
         imageIndex++;
     };
 }

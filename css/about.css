@@ -7,7 +7,8 @@ body{
     width: 100vw;
 }
 #contactContainer{
-    background-color: #ffffff;
+    background: url(../assets/background3.jpg);
+    background-size: cover;
     width: 100vw;
     display: flex;
     justify-content: center;

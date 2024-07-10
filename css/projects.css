@@ -110,6 +110,8 @@ canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 .projectsContainer::before,
 .projectsContainer::after {
@@ -123,13 +125,12 @@ canvas {
 
 .projectsContainer::before {
     top: -50px;
-    z-index: 3;
     background: linear-gradient(to top, rgb(240, 240, 240), rgba(255, 255, 255, 0));
 }
 
 .projectsContainer::after {
-    bottom: 0;
-    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    bottom: -50px;
+    background: linear-gradient(to bottom, rgba(240, 240, 240, 1), rgba(255, 255, 255, 0));
 }
 .projectsPar{
     width: 30%;
@@ -280,7 +281,8 @@ canvas {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background-color: white;
+    background: url(../assets/background.jpg);
+    background-size: cover;
 }
 .firstContact::after{
     content: '';
@@ -430,6 +432,9 @@ canvas {
     }
     .text p{
         max-width: 90%;
+    }
+    .projectsH3{
+        font-size: 3.5rem;
     }
 }
 
