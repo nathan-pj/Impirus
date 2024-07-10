@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(42, 42, 42);
+    background-color: #18181f;
 }
 
 #aboutUsContainer, #contactContainer{
@@ -21,7 +21,7 @@ body{
     bottom: 0;
     width: 100%;
     height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(42, 42, 42));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #18181f);
     pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 #contact{
@@ -98,7 +98,7 @@ body{
 }
 
 #aboutUsContainer{
-    background-color: rgb(42, 42, 42);
+    background-color: #18181f;
     position: relative;
     width: 100vw;
     display: flex;
