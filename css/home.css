@@ -75,7 +75,7 @@ Rich Black: #0D111C
 }
 
 .bottom {
-    height: 100vh;
+    height: 50vh;
 }
 
 .top {
@@ -92,6 +92,12 @@ Rich Black: #0D111C
     width: 100%;
     transform: scale(2.2);
     transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+.bottom h2{
+    width: 100vw;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
 }
 .card{
     background-color: rgb(236, 236, 236);
