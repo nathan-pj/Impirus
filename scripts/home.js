@@ -92,6 +92,26 @@ window.addEventListener('scroll', () => {
 // Pause the video initially until the user starts scrolling
 pauseVideo();
 
+const zoom = document.querySelector('.zoom');
+const minZoom = 0.5;
+const maxZoom = 2;
+
+const vslHeight = document.getElementById('vsl').offsetHeight;
+const landingHeight = document.getElementById('landingSection').offsetHeight;
+
+addEventListener('scroll', e => {
+    const vh = window.innerHeight;
+    const scrollTop = document.documentElement.scrollTop;
+
+    const start = vslHeight + landingHeight; // Start after vsl and landingSection
+    const stop = start + vh; // Stop after an additional viewport height
+
+    if (scrollTop > start && scrollTop < stop) {
+        const scale = Math.max(2.2 - (scrollTop - start) / (stop - start) * (maxZoom - minZoom), minZoom);
+        zoom.style.transform = `scale(${scale})`;
+    }
+});
+
 // set up text to print in review section, each item in array is new line
 var review1 = [
     "'Nathan is a highly skilled 3D product animator and video editor, and he works with great efficiency and dedication. He made a 3D animated video involving complex motion design for my company's supplement products and also edited a commercial. Throughout the process, he was highly responsive to feedback and made revisions swiftly and effectively. With his expert skills, he was able to not only realise what I envisioned for the video but also exceed my expectations. The end product is worthy of a professional design studio.", 
@@ -139,17 +159,6 @@ function typewriter(textArray, elementId) {
 
 typewriter(review1, "review1Text");
 
-// Carousel for the otherwise empty section (not VSL section)
-const secCarousel = document.getElementById('secCarousel');
-let secSlides = document.querySelectorAll('.sectionCarouselSlide');
-let secSlideWidth = secSlides[0].clientWidth;
-
-let secCurrentIndex = 0;
-
-const secLeftCNav = document.getElementById('sectionPrev');
-const secRightCNav = document.getElementById('sectionNext');
-const secTotalSlides = secSlides.length;
-
 // VSL carousel
 const vslCarousel = document.getElementById('vslCarousel');
 let vslSlides = document.querySelectorAll('.vslCarouselSlide');
@@ -162,46 +171,11 @@ const vslRightCNav = document.getElementById('vslNext');
 const vslTotalSlides = vslSlides.length;
 
 let vslAutoSlideInterval;
-let secAutoSlideInterval;
-
-function secGoToSlide(index) {
-    if (index < 0 || index >= secTotalSlides) return;
-
-    secCarousel.style.transform = `translateX(-${index * secSlideWidth}px)`;
-    secCurrentIndex = index;
-}
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    secSlideWidth = secSlides[0].clientWidth;
-    secGoToSlide(secCurrentIndex);
     vslSlideWidth = vslSlides[0].clientWidth;
     vslGoToSlide(vslCurrentIndex);
-
-    secSlideWidth = secSlides[0].clientWidth;
-    secSlides = document.querySelectorAll('.sectionCarouselSlide');
-
-    // Optional: Auto slide every 5 seconds
-    secAutoSlideInterval = setInterval(() => {
-        secCurrentIndex = (secCurrentIndex + 1) % secTotalSlides;
-        secGoToSlide(secCurrentIndex);
-    }, 5000);
-
-    // Previous button click event
-    secLeftCNav.addEventListener('click', () => {
-        secCurrentIndex = (secCurrentIndex - 1 + secTotalSlides) % secTotalSlides;
-        secGoToSlide(secCurrentIndex);
-    });
-
-    // Next button click event
-    secRightCNav.addEventListener('click', () => {
-        secCurrentIndex = (secCurrentIndex + 1) % secTotalSlides;
-        secGoToSlide(secCurrentIndex);
-    });
-
-    // Pause auto-slide on manual navigation
-    secLeftCNav.addEventListener('click', () => clearInterval(secAutoSlideInterval));
-    secRightCNav.addEventListener('click', () => clearInterval(secAutoSlideInterval));
 
     vslSlideWidth = vslSlides[0].clientWidth;
     vslSlides = document.querySelectorAll('.vslCarouselSlide');
@@ -231,40 +205,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Resize event listener
 window.addEventListener('resize', () => {
-    secSlideWidth = secSlides[0].clientWidth;
-    secGoToSlide(secCurrentIndex);
     vslSlideWidth = vslSlides[0].clientWidth;
     vslGoToSlide(vslCurrentIndex);
 });
 
-secSlideWidth = secSlides[0].clientWidth;
-secGoToSlide(secCurrentIndex);
 vslSlideWidth = vslSlides[0].clientWidth;
 vslGoToSlide(vslCurrentIndex);
-
-const carouselBg = document.getElementById('whoAreWeImgContainer');
-
-function fadeIn(){
-    carouselBg.classList.remove('grayHoverAnimationEnd');
-    carouselBg.classList.add('grayHoverAnimation');
-}
-
-function fadeOut(){
-    carouselBg.classList.remove('grayHoverAnimation');
-    carouselBg.classList.add('grayHoverAnimationEnd');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    carouselBg.addEventListener('mouseenter', () => {
-        fadeIn();
-    });
-
-    carouselBg.addEventListener('mouseleave', () => {
-        fadeOut();
-    });
-});
-
-
 
 const vslCarouselBg = document.getElementById('vslImgContainer');
 
@@ -289,23 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initIndexHammer() {
-    var element = document.getElementById("secCarousel");
-    var hammertime = Hammer(element);
-    hammertime.on("swiperight", function (event) {         
-        secSlideWidth = secSlides[0].clientWidth;
-        secGoToSlide(secCurrentIndex);
-        secCurrentIndex = (secCurrentIndex - 1 + secTotalSlides) % secTotalSlides;
-        secGoToSlide(secCurrentIndex);
-        clearInterval(secAutoSlideInterval);  
-    });
-    hammertime.on("swipeleft", function (event) {         
-        secSlideWidth = secSlides[0].clientWidth;
-        secGoToSlide(secCurrentIndex);
-        secCurrentIndex = (secCurrentIndex + 1) % secTotalSlides;
-        secGoToSlide(secCurrentIndex);
-        clearInterval(secAutoSlideInterval);
-    });
-
     var element2 = document.getElementById("vslCarousel");
     var hammertime2 = new Hammer(element2);
     hammertime2.on("swiperight", function (event) {         
@@ -331,7 +260,5 @@ function vslGoToSlide(index) {
     vslCurrentIndex = index;
 }
 
-secSlideWidth = secSlides[0].clientWidth;
-secGoToSlide(secCurrentIndex);
 vslSlideWidth = vslSlides[0].clientWidth;
 vslGoToSlide(vslCurrentIndex);

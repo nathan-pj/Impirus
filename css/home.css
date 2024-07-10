@@ -9,6 +9,7 @@ Indigo Dye: #0A5270
 Russian Violet: #3D2F60
 Rich Black: #0D111C
 */
+
 #landingSection{
     width: 100vw;
     height: 85vh;
@@ -67,25 +68,30 @@ Rich Black: #0D111C
     }
 }
 
-/* Who are we section */
-#whoAreWeContainer {
-    width: 100vw;
-    height: 20vh;
+#whoAreWe {
+    height: 200vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
 }
 
-#whoAreWe {
-    padding-top: 6rem;
-    width: 100vw;
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    padding: 3rem 0;
-    animation: fadeInFixedWidth ease 1s;
+.bottom {
+    height: 100vh;
+}
+
+.top {
+    height: 80vh;
+    background-color: white;
     position: relative;
-    z-index: 2;
+    z-index: 1;
+}
+.zoom {
+    /* z-index: 1; Idk if i should add this or not */
+    position: sticky;
+    top: 20vh;
+    will-change: transform;
+    width: 100%;
+    transform: scale(2.2);
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
 }
 .card{
     background-color: rgb(236, 236, 236);
@@ -198,6 +204,7 @@ Rich Black: #0D111C
     top: 0;
     bottom: 0;
     left: 40%;
+    z-index: 1;
 }
 #sectionPar1{
     grid-area: sectionPar1;
@@ -247,21 +254,7 @@ Rich Black: #0D111C
     animation: changeFont 6s infinite;
 }
 
-#whoAreWe section {
-    width: 50%;
-    min-width: fit-content;
-    height: 100%;
-    display: grid;
-    grid-template-areas: 
-        "h2-1"
-        "h2-2"
-        "h2-3"
-        "h2-4";
-    font-size: 3.5rem;
-    position: relative;
-}
-
-#whoAreWeImgContainer, #vslImgContainer{
+#vslImgContainer{
    width: 40%;
    min-width: 300px;
    height: 100%; 
@@ -272,15 +265,14 @@ Rich Black: #0D111C
 #vslImgContainer{
     width: 100%;
 }
-#whoAreWeImgContainer:hover{
-    background-color: #efefef;
-}
-
 #vslImgContainer:hover{
     background-color: white;  
 }
-
-#whoAreWe::after{
+.bottom{
+    position: relative;
+}
+.bottom::after{
+    z-index: 2;
     content: '';
     position: absolute;
     left: 0;
@@ -331,13 +323,6 @@ Rich Black: #0D111C
     to {background-color: #efefef;}
 }
 
-
-.whoAreWeImg{
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
-
 #landingSection{
     animation: fadeInFixedWidth ease 1s;
 }
@@ -352,30 +337,6 @@ Rich Black: #0D111C
     to {height: 1; width: 100vw; opacity: 1; transform: translateY(0);}
 }
 
-
-#whoAreWe h2{
-    width: 100%;
-    margin: 0.4rem 0;
-    transform: rotateX(20deg) rotateY(-20deg);
-}
-.h2-1{
-    grid-area: h2-1;
-    font-family: "franklin-gothic-atf", sans-serif;
-}
-.h2-2{
-    grid-area: h2-2;
-    font-family: NSimSun;
-    transform: rotateX(20deg) rotateY(-20deg);
-}
-.h2-3{
-    grid-area: h2-3;
-    font-family: "franklin-gothic-atf", sans-serif;
-}
-.h2-4{
-    grid-area: h2-4;
-    font-family: "franklin-gothic-atf", sans-serif;
-    height: 3ch;
-}
 .bgText{
     position: fixed;
 }
@@ -680,7 +641,7 @@ blockquote{
     #landingVideo{
         top: 20vh;
     }
-    #whoAreWeImgContainer, #vslImgContainer{
+    #vslImgContainer{
         margin-top: 2rem;
     }
     #sectionBackground{
@@ -743,7 +704,7 @@ blockquote{
     #sectionBackground{
         left: -92%;
     }
-    #whoAreWeImgContainer, #vslImgContainer{
+    #vslImgContainer{
         width: 80%;
     }
     #vslHeading{
@@ -774,12 +735,6 @@ blockquote{
     #landingVideo{
         top: 30vh;
     }
-    #whoAreWe h2{
-        font-size: 0.8em;
-    }
-    #whoAreWeImgContainer{
-        width: 80%;
-    } 
     
     #vslImgContainer{
         width: 90%;
@@ -824,9 +779,6 @@ blockquote{
     }
     #nameStretch{
         height: 50%;
-    }
-    #whoAreWe section h2{
-        font-size: 0.7em;
     }
     .reviewText{
         max-width: none;
