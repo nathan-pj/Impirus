@@ -51,11 +51,12 @@ function placeImage(x, y) {
     const img = new Image();
     img.src = itemsClickMe[imageIndex % itemsClickMe.length];
     img.onload = () => {
-        const startX = x - img.width / 2;
-        const startY = y - img.height + (img.height / 3); // Start from above the canvas
-        const endX = x - img.width / 2;
+        const startX = x - img.width / 2; // Messing with this value will make them fall from different angles
+        const startY = y - img.height + (img.height / 3); // This value will effect how far the squares fall !! 
+        // You can also mess with it and make it start from the bottom and float up.
+        const endX = x - img.width / 2; 
         const endY = y - img.height / 2;
-        animateImage(img, startX, startY, endX, endY, 200); // 500ms duration
+        animateImage(img, startX, startY, endX, endY, 200); // This will effect how fast they fall
         imageIndex++;
     };
 }
