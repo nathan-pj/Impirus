@@ -292,30 +292,7 @@ Rich Black: #0D111C
 }
 
 .contactContent{
-    backdrop-filter: saturate(180%) blur(1000px);
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
     position: relative;
-}
-
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .contactContent{
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: saturate(180%) blur(10px);
-    }
-}
-
-.contactContent:before{
-    border-radius: 15px;
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .grayHoverAnimation{
@@ -599,7 +576,7 @@ blockquote{
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background: url(../assets/background.jpg);
+    background: url(../assets/background2.jpg);
     background-size: cover;
     color: white;
 }
