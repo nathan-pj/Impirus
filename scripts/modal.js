@@ -143,6 +143,20 @@ const items = [
         "An abstract animation of a textured sphere",
         ['../assets/thumbnails/sphereThumbnail.png']
     ],
+    [
+        ['../assets/step1.png',
+        '../assets/step2.png', 
+        '../assets/step3.png',
+        '../assets/step4.png'], 
+        "Partnership Tutorial", 
+        [
+            "Description for first step",
+            "Description for second step",
+            "Description for third step",
+            "Description for fourth step"
+        ],
+        "A guide describing the interaction that follows every partnership." 
+    ]
 ];
 
 
