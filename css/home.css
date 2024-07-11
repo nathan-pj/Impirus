@@ -70,6 +70,9 @@ body{
       transform: scale(1);
     }
 }
+.zoomSection{
+    position: relative;
+}
 #whoAreWe {
     height: fit-content;
     background-color: rgb(255, 255, 255);
@@ -117,12 +120,12 @@ body{
     z-index: 1;
 }
 .left{
-    width: 20vw;
+    width: 10vw;
     left: 0;
     top: 0;
 }
 .right{
-    width: 20vw;
+    width: 10vw;
     right: 0;
     top: 0;
 }
