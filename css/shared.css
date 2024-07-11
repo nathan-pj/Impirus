@@ -245,6 +245,10 @@ nav{
     position: sticky;
     top: 0;
 }
+#navbar{
+    position: fixed;
+    transition: 0.5s ease-in-out;
+}
 #burgerExpanded{
     width: fit-content;
     height: 100vh;

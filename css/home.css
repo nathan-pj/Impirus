@@ -9,6 +9,9 @@ Indigo Dye: #0A5270
 Russian Violet: #3D2F60
 Rich Black: #0D111C
 */
+body{
+    z-index: -2;
+}
 
 #landingSection{
     width: 100vw;
@@ -73,14 +76,17 @@ Rich Black: #0D111C
 #whoAreWe {
     height: fit-content;
     background-color: rgb(255, 255, 255);
-    z-index: 2;
+    z-index: 0;
     width: 100vw;
     overflow-x: hidden;
     position: relative;
+    overflow-y: hidden;
 }
 
 .bottom {
     height: 50vh;
+    z-index: 2;
+    margin-top: 20vh;
 }
 
 .top {
@@ -97,6 +103,9 @@ Rich Black: #0D111C
     width: 100%;
     transform: scale(2.2);
     transition: transform 0.3s ease; /* Add transition for smooth animation */
+    overflow-y: hidden;
+    border-radius: 15px;
+    z-index: 0;
 }
 .bottom h2{
     width: 100vw;
@@ -108,7 +117,7 @@ Rich Black: #0D111C
     position: absolute;
     background-color: white;
     height: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 .left{
     width: 20vw;

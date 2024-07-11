@@ -18,7 +18,7 @@
     <a id="upBtn" href="#contact">
         <span class="material-symbols-outlined">arrow_upward</span>
     </a>
-    <header class="navbar">
+    <header class="navbar" id="navbar">
         <div class="navbarLogoContainer">
             <a onclick="redirectTo('./index.html')">
                 <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg" id="navLogo">
@@ -44,27 +44,27 @@
                 <div class="rightLine navbarLines"></div>
             </div>
         </nav>
-        <nav id="burgerExpanded">
-            <span class="material-symbols-outlined" id="burgerClose" onclick="closeNavbar()">close</span>
-            <div class="burgerOptions">
-                <div>
-                    <a onclick="redirectTo('./index.html')" class="burgerLink">HOME</a>
-                    <div class="burgerLinkLine burgerLine1"></div>  
-                </div>
-                <div>
-                    <a onclick="redirectTo('./projects.html')" class="burgerLink">PROJECTS</a>
-                    <div class="burgerLinkLine burgerLine2"></div>
-                </div>
-                <div>
-                    <a onclick="redirectTo('./about.html')" class="burgerLink">CONTACT</a>
-                    <div class="burgerLinkLine burgerLine3"></div>
-                </div>
-            </div>
-            <div id="burgerShowcase">
-                <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg">
-            </div>
-        </nav>
     </header>
+    <nav id="burgerExpanded">
+        <span class="material-symbols-outlined" id="burgerClose" onclick="closeNavbar()">close</span>
+        <div class="burgerOptions">
+            <div>
+                <a onclick="redirectTo('./index.html')" class="burgerLink">HOME</a>
+                <div class="burgerLinkLine burgerLine1"></div>  
+            </div>
+            <div>
+                <a onclick="redirectTo('./projects.html')" class="burgerLink">PROJECTS</a>
+                <div class="burgerLinkLine burgerLine2"></div>
+            </div>
+            <div>
+                <a onclick="redirectTo('./about.html')" class="burgerLink">CONTACT</a>
+                <div class="burgerLinkLine burgerLine3"></div>
+            </div>
+        </div>
+        <div id="burgerShowcase">
+            <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg">
+        </div>
+    </nav>
     <!-- The Modal  ( windows XP inspired popup )-->
     <div id="modal" class="modal">
         <div class="outerModal">
