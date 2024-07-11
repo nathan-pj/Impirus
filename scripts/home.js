@@ -186,6 +186,8 @@ document.addEventListener('DOMContentLoaded', function() {
         resizeVsl();
     }
 
+    resizeVsl();
+
     vslSlideWidth = vslSlides[0].clientWidth;
     vslSlides = document.querySelectorAll('.vslCarouselSlide');
 
