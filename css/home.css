@@ -84,9 +84,9 @@ body{
 }
 
 .bottom {
-    height: 50vh;
+    height: fit-content;
     z-index: 2;
-    margin-top: 10vh;
+    margin-bottom: 20vh;
 }
 
 .top {
