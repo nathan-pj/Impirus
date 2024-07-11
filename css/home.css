@@ -69,9 +69,11 @@ Rich Black: #0D111C
 }
 
 #whoAreWe {
-    height: 200vh;
+    height: fit-content;
     background-color: rgb(255, 255, 255);
     z-index: 2;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .bottom {
@@ -164,10 +166,20 @@ Rich Black: #0D111C
 .wordAnimation{
     animation: scrollAnimation 2s ease;
 }
+/* 
+.wordAnimationReverse{
+    animation: scrollAnimationReverse 2s ease;
+} */
 @keyframes scrollAnimation {
     from {transform: translateY(100px);}
     to {transform: translateY(0px);}
 }
+
+/* 
+@keyframes scrollAnimationReverse {
+    from {transform: translateY(0px);}
+    to  {transform: translateY(100px);}
+} */
 
 /* 
 .word{

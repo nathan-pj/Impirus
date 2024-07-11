@@ -52,9 +52,9 @@ const observer = new IntersectionObserver((entries) => {
         if(entry.isIntersecting){
             entry.target.classList.add('wordAnimation');
         } 
-        /* else {
-            entry.target.classList.remove('black');
-        } */
+        else {
+            entry.target.classList.remove('wordAnimation');
+        }
     });
 });
 
