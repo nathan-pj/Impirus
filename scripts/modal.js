@@ -92,7 +92,7 @@ const items = [
         "3D render for Based Balm"
     ],
     [
-        ['../assets/videos/apple_animation.mp4', '../assets/vr.jpg'], 
+        ['../assets/vr.jpg'], 
         "VR", 
         ["Apple Pro Vision virtual headset", "second description"],
         "3D renders of Apple Vision Pro",
