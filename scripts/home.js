@@ -46,15 +46,15 @@ function wrapWordsWithSpan(elementId, spanClass) {
 wrapWordsWithSpan('vslHeading', 'word');
 
 const words = document.querySelectorAll('.word');
-
+const vslHeading = document.getElementById('vslHeading')
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
             entry.target.classList.add('wordAnimation');
         } 
-        else {
+        /* else {
             entry.target.classList.remove('wordAnimation');
-        }
+        } */
     });
 });
 
@@ -103,10 +103,10 @@ addEventListener('scroll', e => {
     const vh = window.innerHeight;
     const scrollTop = document.documentElement.scrollTop;
 
-    const start = vslHeight + landingHeight; // Start after vsl and landingSection
+    const start = vslHeight + landingHeight + 250; // Start after vsl and landingSection
     const stop = start + vh; // Stop after an additional viewport height
 
-    if (scrollTop > start && scrollTop < stop) {
+    if (scrollTop > zoom.scrollTop && scrollTop < document.querySelector('.bottom').scrollTop) {
         const scale = Math.max(2.2 - (scrollTop - start) / (stop - start) * (maxZoom - minZoom), minZoom);
         zoom.style.transform = `scale(${scale})`;
     }

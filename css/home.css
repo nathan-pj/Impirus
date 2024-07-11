@@ -67,13 +67,16 @@ Rich Black: #0D111C
       transform: scale(1);
     }
 }
-
+.zoomSection{
+    position: relative;
+}
 #whoAreWe {
     height: fit-content;
     background-color: rgb(255, 255, 255);
     z-index: 2;
     width: 100vw;
     overflow-x: hidden;
+    position: relative;
 }
 
 .bottom {
@@ -100,6 +103,22 @@ Rich Black: #0D111C
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.5rem;
+}
+.left, .right{
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    z-index: 2;
+}
+.left{
+    width: 20vw;
+    left: 0;
+    top: 0;
+}
+.right{
+    width: 20vw;
+    right: 0;
+    top: 0;
 }
 .card{
     background-color: rgb(236, 236, 236);
