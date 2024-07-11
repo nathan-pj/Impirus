@@ -95,7 +95,8 @@ const items = [
         ['../assets/videos/apple_animation.mp4', '../assets/vr.jpg'], 
         "VR", 
         ["Apple Pro Vision virtual headset", "second description"],
-        "3D renders of Apple Vision Pro"
+        "3D renders of Apple Vision Pro",
+        ['../assets/thumbnails/vrThumbnail.png']
     ],
     [
         ['../assets/LaPerse_still.jpg'], 
@@ -118,25 +119,29 @@ const items = [
         ['../assets/videos/naturateVertical.mp4'], 
         "NATURATE animation", 
         ["Description"],
-        "A 3D animation of a product from Naturate with floating rocks."
+        "A 3D animation of a product from Naturate with floating rocks.",
+        ['../assets/thumbnails/bottleThumbnail.png']
     ],
     [
         ['../assets/videos/dome.mp4'], 
         "Dome Health animation", 
         ["Description for dome commercial"],
-        "A 3D Animation for a product from Dome Health and Theia Bio"
+        "A 3D Animation for a product from Dome Health and Theia Bio",
+        ['../assets/thumbnails/domeThumbnail.png']
     ],
     [
         ['../assets/videos/soulbrew.mp4'], 
         "Animation for Soulbrew", 
         ["Description"],
-        "A 3D Animation for a product from Soulbrew"
+        "A 3D Animation for a product from Soulbrew",
+        ['../assets/thumbnails/soulbrewThumbnail.png']
     ],
     [
         ['../assets/videos/sphereVid.mp4'], 
         "LUXE SPHERE 3", 
         ["Description"],
-        "An abstract animation of a textured sphere"
+        "An abstract animation of a textured sphere",
+        ['../assets/thumbnails/sphereThumbnail.png']
     ],
 ];
 
@@ -217,7 +222,12 @@ function resize() {
 function initialiseCarousel(index) {
     if (!modalActive) {
         if (index >= 0 && index < items.length) {
-            updateCarousel(items[index][0], items[index][2], items[index][3], 0);
+            if(items[index][4] != null){
+                updateCarousel(items[index][0], items[index][2], items[index][3], 0, items[index][4]);
+            } else {
+                updateCarousel(items[index][0], items[index][2], items[index][3], 0, null);
+            }
+
         } else {
             console.error('Index out of bounds');
         }
@@ -229,7 +239,7 @@ function hideCarouselNav() {
     nextButton.style.display = "none";
 }
 
-function updateCarousel(images, descriptions, alt, ind) {
+function updateCarousel(images, descriptions, alt, ind, thumbnail) {
     // Set currentIndex before clearing the carousel
     currentIndex = ind;
     // Clear current slides
@@ -248,6 +258,9 @@ function updateCarousel(images, descriptions, alt, ind) {
             project.src = imageSrc;
             project.controls = true;
             project.preload = "none";
+            if(thumbnail != null){
+                project.poster = thumbnail;
+            }
         } else {
             project = document.createElement('img');
             project.src = imageSrc;
@@ -278,7 +291,11 @@ function updateCarousel(images, descriptions, alt, ind) {
 function openModal(item, ind) {
     currentIndex = ind; // Set to the specified slide
     document.body.style.overflowY = "hidden";
-    updateCarousel(item[0], item[2], item[3], currentIndex);
+    if(item[4] != null){
+        updateCarousel(item[0], item[2], item[3], currentIndex, item[4]);
+    } else {
+        updateCarousel(item[0], item[2], item[3], currentIndex, null);
+    }
     modal.style.display = "block";
     modalActive = true;
 
