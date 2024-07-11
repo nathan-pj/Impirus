@@ -181,8 +181,10 @@ let vslAutoSlideInterval;
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    vslSlideWidth = vslSlides[0].clientWidth;
-    vslGoToSlide(vslCurrentIndex);
+    const needToResizeVslCarousel = getUrlParameter('resize');
+    if (needToResizeVslCarousel) {
+        resizeVsl();
+    }
 
     vslSlideWidth = vslSlides[0].clientWidth;
     vslSlides = document.querySelectorAll('.vslCarouselSlide');
@@ -212,12 +214,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Resize event listener
 window.addEventListener('resize', () => {
-    vslSlideWidth = vslSlides[0].clientWidth;
-    vslGoToSlide(vslCurrentIndex);
+    resizeVsl();
 });
 
-vslSlideWidth = vslSlides[0].clientWidth;
-vslGoToSlide(vslCurrentIndex);
+function resizeVsl(){
+    vslSlideWidth = vslSlides[0].clientWidth;
+    vslGoToSlide(vslCurrentIndex);
+}
+
+resizeVsl();
 
 const vslCarouselBg = document.getElementById('vslImgContainer');
 
