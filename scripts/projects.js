@@ -100,14 +100,6 @@ function arrowAnimation(){
     }, 8000); 
 }
 
-// Function to parse URL parameters
-function getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-}
-
 // Check if the URL contains the item parameter and open the modal with that item
 document.addEventListener('DOMContentLoaded', function() {
     const itemParam = getUrlParameter('item');

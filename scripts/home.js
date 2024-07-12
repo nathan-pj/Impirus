@@ -92,33 +92,6 @@ window.addEventListener('scroll', () => {
 // Pause the video initially until the user starts scrolling
 pauseVideo();
 
-const zoom = document.querySelector('.zoom');
-const minZoom = 0.5;
-const maxZoom = 1.9; // Initial zoom level
-
-window.addEventListener('scroll', () => {
-    const vh = window.innerHeight;
-    const scrollTop = document.documentElement.scrollTop;
-
-    const whoAreWe = document.getElementById('whoAreWe');
-    const whoAreWeRect = whoAreWe.getBoundingClientRect();
-    const whoAreWeTop = whoAreWeRect.top + scrollTop;
-    const whoAreWeHeight = whoAreWeRect.height;
-
-    const start = whoAreWeTop - vh + (vh * 0.95); // Start zooming out when the top of the image is at 75% of the viewport height
-    const stop = whoAreWeTop + whoAreWeHeight - (vh); // Stop zooming out when the bottom of the image is at 70% of the viewport height
-
-    if (scrollTop > start && scrollTop < stop) {
-        const progress = (scrollTop - start) / (stop - start);
-        const scale = maxZoom - (progress * (maxZoom - minZoom));
-        zoom.style.transform = `scale(${scale})`;
-    } else if (scrollTop <= start) {
-        zoom.style.transform = `scale(${maxZoom})`;
-    } else if (scrollTop >= stop) {
-        zoom.style.transform = `scale(${minZoom})`;
-    }
-});
-
 // set up text to print in review section, each item in array is new line
 var review1 = [
     "'Nathan is a highly skilled 3D product animator and video editor, and he works with great efficiency and dedication. He made a 3D animated video involving complex motion design for my company's supplement products and also edited a commercial. Throughout the process, he was highly responsive to feedback and made revisions swiftly and effectively. With his expert skills, he was able to not only realise what I envisioned for the video but also exceed my expectations. The end product is worthy of a professional design studio.", 

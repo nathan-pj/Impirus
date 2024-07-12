@@ -70,65 +70,6 @@ body{
       transform: scale(1);
     }
 }
-.zoomSection{
-    position: relative;
-}
-#whoAreWe {
-    height: fit-content;
-    background-color: rgb(255, 255, 255);
-    z-index: 0;
-    width: 100vw;
-    overflow-x: hidden;
-    position: relative;
-    overflow-y: hidden;
-}
-
-.bottom {
-    height: fit-content;
-    z-index: 2;
-    margin-bottom: 20vh;
-}
-
-.top {
-    height: 80vh;
-    background-color: white;
-    position: relative;
-    z-index: 1;
-}
-.zoom {
-    /* z-index: 1; Idk if i should add this or not */
-    position: sticky;
-    top: 20vh;
-    will-change: transform;
-    width: 100%;
-    transform: scale(2.2);
-    transition: transform 0.3s ease; /* Add transition for smooth animation */
-    overflow-y: hidden;
-    border-radius: 15px;
-    z-index: 0;
-}
-.bottom h2{
-    width: 100vw;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2.5rem;
-}
-.left, .right{
-    position: absolute;
-    background-color: white;
-    height: 100%;
-    z-index: 1;
-}
-.left{
-    width: 10vw;
-    left: 0;
-    top: 0;
-}
-.right{
-    width: 10vw;
-    right: 0;
-    top: 0;
-}
 .card{
     background-color: rgb(236, 236, 236);
     padding: 3rem 0;
