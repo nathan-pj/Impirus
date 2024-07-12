@@ -92,6 +92,32 @@ window.addEventListener('scroll', () => {
 // Pause the video initially until the user starts scrolling
 pauseVideo();
 
+// Zoom in logic
+
+const zoom = document.getElementById('zoom');
+const minZoom = 1;
+const maxZoom = 2;
+
+addEventListener('scroll', e => {
+    const vh = window.innerHeight / 100;
+    const scrollTop = document.documentElement.scrollTop;
+
+    // Calculate the height of all elements above #zoom
+    const topHeight = document.querySelector('.top').offsetHeight;
+    const wrapHeight = document.querySelector('.wrap').offsetTop;
+
+    // Adjust the start and stop points based on the cumulative height
+    const start = wrapHeight + topHeight;
+    const stop = start + (100 * vh); // Adjust as needed for desired zoom duration
+
+    if (scrollTop > start && scrollTop < stop) {
+        const scale = Math.max(2.2 - (scrollTop - start) / 200, 1); // adjust the value "200" to make it scale faster / slower
+        zoom.style.transform = `scale(${scale})`;
+    }
+});
+
+// zoom in logic END
+
 // set up text to print in review section, each item in array is new line
 var review1 = [
     "'Nathan is a highly skilled 3D product animator and video editor, and he works with great efficiency and dedication. He made a 3D animated video involving complex motion design for my company's supplement products and also edited a commercial. Throughout the process, he was highly responsive to feedback and made revisions swiftly and effectively. With his expert skills, he was able to not only realise what I envisioned for the video but also exceed my expectations. The end product is worthy of a professional design studio.", 
