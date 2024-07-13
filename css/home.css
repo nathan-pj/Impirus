@@ -564,7 +564,7 @@ blockquote{
     }
 
     .bottom {
-        height: 100vh;
+        height: 50vh;
     }
 
     .top {
@@ -595,7 +595,7 @@ blockquote{
     .bottom h2{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 3.5rem;
-        width: 50vw;
+        width: 100vw;
         text-align: center;
     }
 /* zoom in logic end */
