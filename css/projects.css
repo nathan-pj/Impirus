@@ -136,7 +136,8 @@ canvas {
     width: 30%;
     text-align: left;
     margin-bottom: 2rem;
-    font-size: 1.7rem;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .projectsGroup{
@@ -337,6 +338,11 @@ canvas {
         min-height: 500px;
     }
 }
+@media screen and (max-width: 1100px) {
+    .projectsPar{
+        font-size: 2rem;
+    } 
+}
 @media screen and (max-width: 1000px) {
     .showcaseGroup{
         width: fit-content;
@@ -344,14 +350,13 @@ canvas {
     .text{
         align-items: center;
     }
-    
 }
 @media screen and (max-width: 950px){
     .text{
         width: 90%;
     }
     .projectsPar{
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
     .text p{
         max-width: 80%;
@@ -377,6 +382,7 @@ canvas {
     .projectsPar{
         width: 80%;
         font-size: 1rem;
+        font-weight: normal;
     }
     .contactContent{
         width: 80vw;
