@@ -150,10 +150,10 @@ const items = [
         '../assets/step4.png'], 
         "Partnership Tutorial", 
         [
-            "Description for first step",
-            "Description for second step",
-            "Description for third step",
-            "Description for fourth step"
+            "Our process begins with a personalized consultation call, where we take the time to understand your specific needs and vision. If you're requesting an animation, we'll also create a storyboard that outlines different frames and sequences. This is your opportunity to share your brand’s goals, target audience, and the unique aspects of your product. Our experienced team will ask detailed questions to ensure we capture every nuance of your vision. By the end of this call, you’ll have a clear understanding of how we can transform your ideas into stunning 3D visuals.",
+            "Once we have a solid understanding of your needs, we’ll ask you to provide images of your product from multiple angles, flat label images, and any reference images that illustrate how you'd like the final image or animation to look. These references will serve as the foundation for our 3D artists to create accurate and detailed digital models. The more detailed and clear the references, the more precise our final 3D render will be.",
+            "With your product images and references in hand, our artists get to work. Using our 3D software, we meticulously recreate your product in digital form, paying close attention to every detail to ensure accuracy and realism. Throughout this stage, you have unlimited calls to check in and review the progress, so you can see your product coming to life step by step.",
+            "After the initial 3D model is created, we present it to you for review. We value your feedback and will make any necessary adjustments to ensure the final render meets your expectations perfectly. You are entitled to three revisions for free, ensuring that every detail aligns with your vision. Once you are completely satisfied, we deliver the final high-quality 3D stills and animations in your desired format, ready for use in marketing, advertising, or any other application you have in mind."
         ],
         "A guide describing the interaction that follows every partnership." 
     ]
