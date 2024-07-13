@@ -564,7 +564,9 @@ blockquote{
     }
 
     .bottom {
-        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .top {
@@ -597,6 +599,11 @@ blockquote{
         font-size: 3.5rem;
         width: 100vw;
         text-align: center;
+    }
+    .bottom p{
+        width: 60vw;
+        font-family: "franklin-gothic-atf", sans-serif;
+        padding-bottom: 40vh;
     }
 /* zoom in logic end */
 
@@ -769,6 +776,9 @@ blockquote{
     #sectionBackground{
         left: -66%;
     }
+    .bottom p{
+        width: 80vw;
+    }
 }
 @media screen and (max-width: 600px) {
     #sectionH2{
@@ -816,5 +826,8 @@ blockquote{
     }
     #sectionH2{
         font-size: 4rem;
+    }
+    .bottom p{
+        width: 90vw;
     }
 }
