@@ -95,6 +95,8 @@ pauseVideo();
 // Zoom in logic
 
 const zoom = document.getElementById('zoom');
+
+/* 
 const minZoom = 1;
 const maxZoom = 2;
 
@@ -113,6 +115,35 @@ addEventListener('scroll', e => {
     if (scrollTop > start && scrollTop < stop) {
         const scale = Math.max(2.2 - (scrollTop - start) / 200, 1); // adjust the value "200" to make it scale faster / slower
         zoom.style.transform = `scale(${scale})`;
+    }
+});
+*/
+
+
+const minTranslateX = 0;
+const maxTranslateX = 20;
+
+addEventListener('scroll', e => {
+    const vh = window.innerHeight / 100;
+    const scrollTop = document.documentElement.scrollTop;
+
+    // Calculate the height of all elements above #zoom
+    const topHeight = document.querySelector('.top').offsetHeight;
+    const wrapHeight = document.querySelector('.wrap').offsetTop;
+
+    // Adjust the start and stop points based on the cumulative height
+    const start = wrapHeight + topHeight;
+    const stop = start + (100 * vh); // Adjust as needed for desired zoom duration
+
+    if (scrollTop > start && scrollTop < stop) {
+        // Calculate the scale value
+        const scale = Math.max(2.2 - (scrollTop - start) / 200, 1); // adjust the value "200" to make it scale faster / slower
+        
+        // Calculate the translateX value
+        const translateX = Math.max(maxTranslateX - (scrollTop - start) / ((stop - start) / (maxTranslateX - minTranslateX)), minTranslateX);
+
+        // Apply both scale and translateX
+        zoom.style.transform = `scale(${scale}) translateX(${translateX}vw)`;
     }
 });
 
