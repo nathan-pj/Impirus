@@ -555,56 +555,56 @@ blockquote{
 }
 
 /* zoom in logic */
-    #zoom {
-        position: sticky;
-        top: 20vh;
-        will-change: transform;
-        width: 100%;
-        transform: scale(2.2), translateX(20vw);
-    }
+#zoom {
+    position: sticky;
+    top: 20vh;
+    will-change: transform;
+    width: 100%;
+    transform: scale(2.2) translateX(20vw);
+}
 
-    .bottom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .top {
-        height: 80vh;
-    }
+.top {
+    height: 80vh;
+}
 
-    .top::after{
-        content: '';
-        position: absolute;
-        left: 0;
-        top: -50px;
-        width: 100%;
-        height: 50px; /* Adjust the height as needed */
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
-        pointer-events: none;
-    }
+.top::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 100%;
+    height: 50px; /* Adjust the height as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
+    pointer-events: none;
+}
 
-    .wrap {
-        height: 200vh;
-    }
+.wrap {
+    height: 200vh;
+}
 
-    .top, .wrap{
-        z-index: 2;
-        position: relative;
-        background-color: white;
-    }
+.top, .wrap{
+    z-index: 2;
+    position: relative;
+    background-color: white;
+}
 
-    .bottom h2{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 3.5rem;
-        width: 100vw;
-        text-align: center;
-    }
-    .bottom p{
-        width: 60vw;
-        font-family: "franklin-gothic-atf", sans-serif;
-        padding-bottom: 40vh;
-    }
+.bottom h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.5rem;
+    width: 100vw;
+    text-align: center;
+}
+.bottom p{
+    width: 60vw;
+    font-family: "franklin-gothic-atf", sans-serif;
+    padding-bottom: 40vh;
+}
 /* zoom in logic end */
 
 @keyframes arrowRight {
