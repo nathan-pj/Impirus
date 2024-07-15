@@ -560,7 +560,7 @@ blockquote{
     top: 20vh;
     will-change: transform;
     width: 100%;
-    transform: scale(2.2) translateX(20vw);
+    transform: scale(2.3);
 }
 
 .bottom {

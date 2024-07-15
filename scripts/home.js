@@ -121,7 +121,7 @@ addEventListener('scroll', e => {
 
 
 const minTranslateX = 0;
-const maxTranslateX = 20;
+const maxTranslateX = 0;
 
 addEventListener('scroll', e => {
     const vh = window.innerHeight / 100;
@@ -137,7 +137,7 @@ addEventListener('scroll', e => {
 
     if (scrollTop > start && scrollTop < stop) {
         // Calculate the scale value
-        const scale = Math.max(2.2 - (scrollTop - start) / 200, 1); // adjust the value "200" to make it scale faster / slower
+        const scale = Math.max(2.3 - (scrollTop - start) / 200, 1); // adjust the value "200" to make it scale faster / slower
         
         // Calculate the translateX value
         const translateX = Math.max(maxTranslateX - (scrollTop - start) / ((stop - start) / (maxTranslateX - minTranslateX)), minTranslateX);
