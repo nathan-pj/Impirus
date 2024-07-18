@@ -7,7 +7,7 @@ body{
     width: 100vw;
 }
 #contactContainer{
-    background: url(../assets/background3.jpg);
+    background: url(../assets/contactBackground.png);
     background-size: cover;
     width: 100vw;
     display: flex;
