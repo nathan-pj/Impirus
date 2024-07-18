@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    /* 
     if(mobileAndTabletCheck()){
         document.getElementById("sectionBackground").remove();
-    } */
+    } 
  }); 
 
 window.addEventListener('load', function() {
