@@ -17,7 +17,9 @@ window.addEventListener('load', function() {
         const rotateX = (innerHeight / 2 - clientY) / innerHeight * 40; // Adjust the multiplier for intensity
     
         // Apply the transform with rotation and tilt (rotateX)
-        logo.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+        setTimeout(() => {
+            logo.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+        }, 300);
     });
 });
 function wrapWordsWithSpan(elementId, spanClass) {
