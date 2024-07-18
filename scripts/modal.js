@@ -137,7 +137,7 @@ const items = [
         ['../assets/thumbnails/soulbrewThumbnail.png']
     ],
     [
-        ['../assets/videos/sphereVid.mp4'], 
+        ['../assets/videos/luxeText.mp4'], 
         "LUXE SPHERE 3", 
         ["Description"],
         "An abstract animation of a textured sphere",
