@@ -1,18 +1,6 @@
-/*
-font-family: "franklin-gothic-atf", sans-serif;
-font-weight: 700;
-font-style: normal;
-
-Skye Blue: #88CaE7
-Hot Pink: #F865B0
-Indigo Dye: #0A5270
-Russian Violet: #3D2F60
-Rich Black: #0D111C
-*/
-
-
 body{
     z-index: -2;
+    font-family: NSimSun;
 }
 
 #imgLink{
@@ -116,7 +104,6 @@ body{
     font-size: 5rem;
 }
 #sectionH2, #vslHeading{
-    font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
     z-index: 1;
 }
@@ -194,13 +181,11 @@ body{
 #sectionPar1{
     grid-area: sectionPar1;
     z-index: 1;
-    font-family: "franklin-gothic-atf", sans-serif;
 
 }
 #sectionPar2{
     grid-area: sectionPar2;
     z-index: 1;
-    font-family: "franklin-gothic-atf", sans-serif;
 }
 #sectionImgContainer{
     grid-area: sectionImgContainer;
@@ -223,7 +208,6 @@ body{
 }
 #sectionCard div h3{
     font-size: xx-large;
-    font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
 }
 
@@ -395,17 +379,12 @@ body{
     border-bottom: 2px solid rgba(0, 0, 0, 0.4);
     font-size: 3rem;
     margin-bottom: 1rem;
-    font-family: "franklin-gothic-atf", sans-serif;
 }
-.reviewText h3{
-    font-family: "franklin-gothic-atf", sans-serif;
-}
+
 .reviewText h4{
-    font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
 }
 .imgContext{
-    font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
 }
 .reviewsContainer{
@@ -486,7 +465,6 @@ iframe{
 }
 
 blockquote{
-    font-family: "franklin-gothic-atf", sans-serif;
 }
 
 .clientPictureContainer, .companyImgContainer{
@@ -536,7 +514,6 @@ blockquote{
 }
 .contactContent h2{
     font-size: 4rem;
-    font-family: "franklin-gothic-atf", sans-serif;
     margin-bottom: 2rem;
     animation: changeFont 10s infinite;
     text-align: center;
@@ -549,7 +526,6 @@ blockquote{
 }
 
 #seeCommercial{ 
-    font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;   
     color: rgb(224, 252, 255);
     font-size: 1.5em;
@@ -605,15 +581,15 @@ blockquote{
 }
 
 .bottom h2{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3.5rem;
     width: 100vw;
     text-align: center;
+    margin-top: 4rem;
 }
 .bottom p{
     width: 60vw;
-    font-family: "franklin-gothic-atf", sans-serif;
     padding-bottom: 40vh;
+    font-size: 2rem;
 }
 /* zoom in logic end */
 

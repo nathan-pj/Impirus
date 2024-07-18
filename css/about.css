@@ -36,7 +36,6 @@ body{
 }
 #contactH2{
     grid-area: contactH2;
-    font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
     font-size: 4em;
     z-index: 1;
@@ -45,16 +44,13 @@ body{
 }
 .contactParContainer h3{
     font-size: 4rem;
-    font-family: "franklin-gothic-atf", sans-serif;
 }
 
 .contactPar{
-    font-family: "franklin-gothic-atf", sans-serif;
     text-align: justify;
     max-width: 80%;
 }
 #socialsList a:not(#book){
-    font-family: "franklin-gothic-atf", sans-serif;
     text-decoration: none;
     text-align: center;
     color: black;
@@ -68,7 +64,6 @@ body{
 #socialsList{
     grid-area: socialsList;
     font-size: 2.5rem;
-    font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
     display: flex;
     flex-direction: column;
@@ -108,14 +103,12 @@ body{
 
 #aboutH2{
     grid-area: aboutH2;
-    font-family: "franklin-gothic-atf", sans-serif;
     font-size: 3rem;
     border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .aboutParContainer{
     grid-area: aboutPar;
-    font-family: "franklin-gothic-atf", sans-serif;
     text-align: justify;
 }
 #aboutImgContainer{

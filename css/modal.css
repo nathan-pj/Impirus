@@ -55,7 +55,6 @@
 #modalTitle{
     position: absolute;
     left: 1rem;
-    font-family: "franklin-gothic-atf", sans-serif;
     color: white;
     height: 100%;
     display: flex;
@@ -142,13 +141,11 @@
 
 #modalH3{
     font-size: 2.5rem;
-    font-family: "franklin-gothic-atf", sans-serif;
     font-weight: 700;
     padding: 2rem;
 }
 #modalPar{
     padding: 0 0 2rem 0;
-    font-family: "franklin-gothic-atf", sans-serif;
     width: 90%;
     margin: auto;
 
