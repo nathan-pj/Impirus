@@ -96,10 +96,12 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
+/*
 let Scrollbar = window.Scrollbar;
 
 const options = {
     'damping' : 0.04
 }
 
-Scrollbar.init(document.querySelector('.scroll'), options);
+
+Scrollbar.init(document.querySelector('.scroll'), options); */
