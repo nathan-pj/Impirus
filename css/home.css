@@ -16,7 +16,7 @@ body{
     align-items: center;
     flex-direction: column;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
+     /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: -1;
 }
 #landingSection::after{
