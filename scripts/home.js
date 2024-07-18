@@ -4,24 +4,40 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
  }); 
 
-window.addEventListener('load', function() {
+ window.addEventListener('load', function() {
+    const logo = document.getElementById('landingAnimation');
+
     document.addEventListener('mousemove', function(e) {
-        const logo = document.getElementById('landingAnimation');
-        const { clientX, clientY } = e;
-        const { innerWidth, innerHeight } = window;
-        
-        // Calculate rotation angle based on mouse position
-        const rotateY = (clientX - innerWidth / 2) / innerWidth * 40; // Adjust the multiplier for intensity
-        
-        // Calculate tilt (rotateX) based on mouse position (inverted for tilt effect)
-        const rotateX = (innerHeight / 2 - clientY) / innerHeight * 40; // Adjust the multiplier for intensity
-    
-        // Apply the transform with rotation and tilt (rotateX)
-        setTimeout(() => {
-            logo.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
-        }, 200);
+      const { clientX, clientY } = e;
+      const { innerWidth, innerHeight } = window;
+      
+      // Calculate rotation angle based on mouse position
+      const rotateY = (clientX - innerWidth / 2) / innerWidth * 40; // Adjust the multiplier for intensity
+      
+      // Calculate tilt (rotateX) based on mouse position (inverted for tilt effect)
+      const rotateX = (innerHeight / 2 - clientY) / innerHeight * 40; // Adjust the multiplier for intensity
+
+      // Apply the transform with rotation and tilt (rotateX)
+      setTimeout(() => {
+        if (!logo.classList.contains('hover')) {
+          logo.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+        } else {
+          logo.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.15)`;
+        }
+      }, 200);
     });
-});
+
+    logo.addEventListener('mouseenter', function() {
+      logo.classList.add('hover');
+      logo.style.transform += ' scale(1.15)'; // Increase the scale on hover
+    });
+
+    logo.addEventListener('mouseleave', function() {
+      logo.classList.remove('hover');
+      logo.style.transform = logo.style.transform.replace(' scale(1.15)', ''); // Reset the scale on mouse leave
+    });
+  });
+
 function wrapWordsWithSpan(elementId, spanClass) {
     const element = document.getElementById(elementId);
     if (!element) {

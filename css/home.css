@@ -126,6 +126,7 @@
 #vslHeading{
     font-size: 3.7rem;
     width: 90%;
+    margin: auto;
 }
 .vslHeadingContainer{
     width: 50%;
@@ -746,7 +747,7 @@ blockquote{
         width: 80%;
     }
     #vslHeading{
-        font-size: 3rem; 
+        font-size: 2rem;
     }
 }
 
