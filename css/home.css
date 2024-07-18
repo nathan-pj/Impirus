@@ -1,5 +1,7 @@
 #contentWrapper{
-   overflow-x: hidden; 
+   width: 100vw;
+   height: auto;
+   overflow: clip; 
    position: relative;
 }
 #landingSection{
@@ -189,6 +191,7 @@
     height: 0px;
     overflow: visible; 
     position: sticky;
+    position: -webkit-sticky; /* For Safari */
     right: 0;
     top: 0;
     bottom: 0;
@@ -559,11 +562,21 @@ blockquote{
 
 /* zoom in logic */
 #zoom {
-    position: sticky;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky !important;
     top: 20vh;
     will-change: transform;
     width: 100%;
     transform: scale(2.3);
+}
+.wrap {
+    height: 200vh;
+}
+
+.top, .wrap{
+    z-index: 2;
+    position: relative;
+    background-color: white;
 }
 
 .bottom {
@@ -585,16 +598,6 @@ blockquote{
     height: 50px; /* Adjust the height as needed */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
     pointer-events: none;
-}
-
-.wrap {
-    height: 200vh;
-}
-
-.top, .wrap{
-    z-index: 2;
-    position: relative;
-    background-color: white;
 }
 
 .bottom h2{
