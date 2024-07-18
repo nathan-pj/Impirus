@@ -6,6 +6,8 @@
     align-items: center;
     flex-direction: column;
     position: relative;
+    z-index: 2;
+    overflow: hidden;
      /* background-color: rgba(0, 0, 0, 0.5); */
 }
 #landingSection::after{
@@ -17,6 +19,7 @@
     height: 50px; /* Adjust the height as needed */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(236, 236, 236));
     pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
+    z-index: 1;
 }
 #landingVideo{
     width: 100%;
@@ -27,7 +30,8 @@
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: 0;
+    overflow: hidden;
 }
 
 #nameStretch{
@@ -87,6 +91,9 @@
     justify-content: center;
     position: relative;
 }
+#vsl{
+    z-index: 0;
+}
 #vslVid{
     width: auto;
     height: 100%;
@@ -101,6 +108,9 @@
 }
 #vslHeading{
     font-size: 3.7rem;
+    width: 100%;
+}
+.vslHeadingContainer{
     width: 50%;
 }
 .word{
@@ -168,7 +178,7 @@
     top: 0;
     bottom: 0;
     left: 40%;
-    z-index: 1;
+    z-index: 0;
 }
 #sectionPar1{
     grid-area: sectionPar1;
@@ -193,9 +203,9 @@
     opacity: 1;
     width: 140%;
     height: 240px;
-    left: -55%;
+    left: -75%;
     right: 0;
-    top: 100px;
+    top: -50vh;
     pointer-events: none;
 }
 #sectionCard div h3{
@@ -628,7 +638,7 @@ blockquote{
     .reviewText{
         max-width: 90%;
     }
-    #vslHeading{
+    .vslHeadingContainer{
         width: 80%;
         height: fit-content;
     }

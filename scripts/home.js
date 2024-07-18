@@ -20,7 +20,7 @@ window.addEventListener('load', function() {
         // Apply the transform with rotation and tilt (rotateX)
         setTimeout(() => {
             logo.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
-        }, 300);
+        }, 200);
     });
 });
 function wrapWordsWithSpan(elementId, spanClass) {
