@@ -1,3 +1,7 @@
+#contentWrapper{
+   overflow-x: hidden; 
+   position: relative;
+}
 #landingSection{
     width: 100vw;
     height: 85vh;

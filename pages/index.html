@@ -12,234 +12,236 @@
     <link rel="icon" type="image/x-icon" href="../assets/browserIcon.png">
 </head>
 <body onload="resize();">
-    <div id="loadingScreen">
-        <img id="loadingLogo" src="../assets/whiteLogo.png" alt="Loading screen. Depicts the company logo in white.">
-    </div>
-    <a id="upBtn" href="#landingSection">
-        <span class="material-symbols-outlined">arrow_upward</span>
-    </a>
-    <header class="navbar" id="navbar">
-        <div class="navbarLogoContainer">
-            <a onclick="redirectTo('./index.html?resize')">
-                <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg" id="navLogo">
-            </a>
+    <div id="contentWrapper">
+        <div id="loadingScreen">
+            <img id="loadingLogo" src="../assets/whiteLogo.png" alt="Loading screen. Depicts the company logo in white.">
         </div>
-        <nav>
-            <div class="navbarOptionsContainer">
-                <a class="navbarCompanyName navLink" onclick="redirectTo('./index.html?resize')">IMPIRUS</a>
-                <div class="navbarLogo">
-                    <a onclick="redirectTo('./index.html?resize')">
-                        <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg2">
-                    </a>
+        <a id="upBtn" href="#landingSection">
+            <span class="material-symbols-outlined">arrow_upward</span>
+        </a>
+        <header class="navbar" id="navbar">
+            <div class="navbarLogoContainer">
+                <a onclick="redirectTo('./index.html?resize')">
+                    <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg" id="navLogo">
+                </a>
+            </div>
+            <nav>
+                <div class="navbarOptionsContainer">
+                    <a class="navbarCompanyName navLink" onclick="redirectTo('./index.html?resize')">IMPIRUS</a>
+                    <div class="navbarLogo">
+                        <a onclick="redirectTo('./index.html?resize')">
+                            <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg2">
+                        </a>
+                    </div>
+                    <div class="navbarOptions">
+                        <a onclick="redirectTo('./index.html?resize')" class="navLink">HOME</a>
+                        <a onclick="redirectTo('./projects.html')" class="navLink">PROJECTS</a>
+                        <a onclick="redirectTo('./about.html')" class="navLink" id="about">CONTACT</a>
+                        <span class="material-symbols-outlined" id="burgerMenu" onclick="expandNavbar()">drag_handle</span>
+                    </div>
                 </div>
-                <div class="navbarOptions">
-                    <a onclick="redirectTo('./index.html?resize')" class="navLink">HOME</a>
-                    <a onclick="redirectTo('./projects.html')" class="navLink">PROJECTS</a>
-                    <a onclick="redirectTo('./about.html')" class="navLink" id="about">CONTACT</a>
-                    <span class="material-symbols-outlined" id="burgerMenu" onclick="expandNavbar()">drag_handle</span>
+                <div class="navbarLine">
+                    <div class="leftLine navbarLines"></div>
+                    <div class="rightLine navbarLines"></div>
+                </div>
+            </nav>
+        </header>
+        <nav id="burgerExpanded">
+            <span class="material-symbols-outlined" id="burgerClose" onclick="closeNavbar()">close</span>
+            <div class="burgerOptions">
+                <div>
+                    <a onclick="redirectTo('./index.html?resize')" class="burgerLink">HOME</a>
+                    <div class="burgerLinkLine burgerLine1"></div>  
+                </div>
+                <div>
+                    <a onclick="redirectTo('./projects.html')" class="burgerLink">PROJECTS</a>
+                    <div class="burgerLinkLine burgerLine2"></div>
+                </div>
+                <div>
+                    <a onclick="redirectTo('./about.html')" class="burgerLink">CONTACT</a>
+                    <div class="burgerLinkLine burgerLine3"></div>
                 </div>
             </div>
-            <div class="navbarLine">
-                <div class="leftLine navbarLines"></div>
-                <div class="rightLine navbarLines"></div>
+            <div id="burgerShowcase">
+                <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg">
             </div>
         </nav>
-    </header>
-    <nav id="burgerExpanded">
-        <span class="material-symbols-outlined" id="burgerClose" onclick="closeNavbar()">close</span>
-        <div class="burgerOptions">
-            <div>
-                <a onclick="redirectTo('./index.html?resize')" class="burgerLink">HOME</a>
-                <div class="burgerLinkLine burgerLine1"></div>  
-            </div>
-            <div>
-                <a onclick="redirectTo('./projects.html')" class="burgerLink">PROJECTS</a>
-                <div class="burgerLinkLine burgerLine2"></div>
-            </div>
-            <div>
-                <a onclick="redirectTo('./about.html')" class="burgerLink">CONTACT</a>
-                <div class="burgerLinkLine burgerLine3"></div>
-            </div>
-        </div>
-        <div id="burgerShowcase">
-            <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg">
-        </div>
-    </nav>
-    <!-- The Modal  ( windows XP inspired popup )-->
-    <div id="modal" class="modal">
-        <div class="outerModal">
-            <div id="modalNav">
-                <p id="modalTitle">Form1</p>
-                <div id="minimize" class="modalBtn">
-                    <span class="material-symbols-outlined">minimize</span>
+        <!-- The Modal  ( windows XP inspired popup )-->
+        <div id="modal" class="modal">
+            <div class="outerModal">
+                <div id="modalNav">
+                    <p id="modalTitle">Form1</p>
+                    <div id="minimize" class="modalBtn">
+                        <span class="material-symbols-outlined">minimize</span>
+                    </div>
+                    <div id="tab" class="modalBtn">
+                        <span class="material-symbols-outlined">ad</span>
+                    </div>
+                    <div id="modalClose" class="modalBtn close">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
                 </div>
-                <div id="tab" class="modalBtn">
-                    <span class="material-symbols-outlined">ad</span>
-                </div>
-                <div id="modalClose" class="modalBtn close">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-            </div>
-            <div class="innerModal">
-                <div class="grayBorder">
-                    <div class="modalContent">
-                        <div id="modalImgSection">
-                            <span class="prev carouselNav material-symbols-outlined" id="prev">arrow_back_ios</span>
-                            <div id="modalImgContainer">
-                                <div id="carousel"> <!-- The slides will be generated in JS!!! --></div>
+                <div class="innerModal">
+                    <div class="grayBorder">
+                        <div class="modalContent">
+                            <div id="modalImgSection">
+                                <span class="prev carouselNav material-symbols-outlined" id="prev">arrow_back_ios</span>
+                                <div id="modalImgContainer">
+                                    <div id="carousel"> <!-- The slides will be generated in JS!!! --></div>
+                                </div>
+                                <span class="next carouselNav material-symbols-outlined" id="next">arrow_forward_ios</span> 
                             </div>
-                            <span class="next carouselNav material-symbols-outlined" id="next">arrow_forward_ios</span> 
-                        </div>
-                        <div id="modalText">
-                            <h3 id="modalH3"></h3>
-                            <div id="modalPar"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="blackTransIn transition"></div>
-    <div class="transition transOut"></div>
-    <div id="landingSection">
-        <video id="landingVideo" autoplay playsinline poster loop muted alt="a 3D animation of a textured sphere">
-            <source src="../assets/videos/sphereVidHorisontal.mp4" type="video/mp4">
-        </video>
-        <img onclick="redirectTo('./projects.html')"  src="../assets/whiteLogo.png" id="landingAnimation" alt="the company logo in white">
-    </div>
-    <div class="vslSection card" id="vsl">
-        <div class="vslContent">
-            <div id="vslVidContainer">
-                <div id="vslImgContainer">
-                    <div id="vslCarousel" class="carousel" class="sectionCarousel" onclick='openModal(items[14], 0);'>
-                        <div class="vslCarouselSlide">
-                            <img src="../assets/step1.png" alt="step 1">
-                        </div>
-                        <div class="vslCarouselSlide">
-                            <img src="../assets/step2.png" alt="step 2">
-                        </div>
-                        <div class="vslCarouselSlide">
-                            <img src="../assets/step3.png" alt="step 3">
-                        </div>
-                        <div class="vslCarouselSlide">
-                            <img src="../assets/step4.png" alt="step 4">
+                            <div id="modalText">
+                                <h3 id="modalH3"></h3>
+                                <div id="modalPar"></div>
+                            </div>
                         </div>
                     </div>
-                    <span class="sectionPrev sectionCarouselNav material-symbols-outlined" id="vslPrev">arrow_back_ios</span>
-                    <span class="sectionNext sectionCarouselNav material-symbols-outlined" id="vslNext">arrow_forward_ios</span> 
-                </div>
-            </div>
-            <div class="vslHeadingContainer">
-                <h2 id="vslHeading">At Impirus Studio, our artists transform your ideas into high-quality, accessible images and animations. We streamline the process, making it simple for anyone to enhance their brand image in just four steps.</h2>
-                <div id="vslAnimation">
-                    <video id="sectionBackground" autoplay playsinline poster loop muted alt="render of a moving sphere">
-                        <source src="../assets/videos/cube.webm" type="video/webm">
-                        <source src="../assets/videos/cube.mov" type="video/mov">
-                    </video>
                 </div>
             </div>
         </div>
-    </div>
-
-    <section class="top"></section>
-    <section class="wrap">
-        <img id="zoom" src="../assets/zoomImage.png">
-    </section>
-    <section class="bottom">
-        <h2>Rendered from scratch.</h2>
-        <p>We handle every aspect of the creative process using Blender, including modeling, texturing, lighting, animation, and video editing. Our comprehensive approach ensures your brand visuals are crafted with precision and creativity.</p>
-    </section>
-
-    <div class="card contactCard">
-        <div class="contactContent">
-            <a onclick="redirectTo('./about.html')" class="button frostedGlass">Contact us</a>
-            <a onclick="redirectTo('./projects.html')" class="button frostedGlass">Projects</a>
-        </div>
-    </div>
-    <div class="reviewSection card">
-        <h2>Reviews</h2>
-        <div class="reviewsContainer">
-            
-
-            <div class="reviewCard reviewCardEven reviewCardVideo frostedGlass"  style="background: rgba(0, 0, 0, 0.7);">
-                <div class="reviewText">
-                    <h3 class="clientName">Matias Militaru</h3>
-                    <h4 class="clientCompany"><i>Based Bodyworks</i>
-                    <video class="reviewVid" src="../assets/videos/review1.mp4" controls="" alt="A video review from Based" poster="../assets/thumbnails/reviewThumbnail.png"></video>
-                </div>
-                <div class="companyImgContainer">
-                    <img class="companyImg" src="../assets/basedLogoBeige.png" alt="The company logo for Based Bodyworks">
-                </div>
-            </div>
-            <div class="reviewCard reviewCardOdd frostedGlass" style="background: rgba(0, 0, 0, 0.7);">
-                <div class="companyImgContainer">
-                    <img class="companyImg" src="../assets/tempBrand.png" alt="The company logo for Dome Health and Theia Bio">
-                </div>
-                <div class="reviewText">
-                    <h3 class="clientName">Kawa Wong</h3>
-                    <h4 class="clientCompany">Founder of <i>Dome Health and Theia Bio</i></h4>
-                    <blockquote class="clientQuote" id="review1Text"></blockquote>
-                    <a href="./projects.html?item=11#videos" id="seeCommercial">SEE DOME HEALTH COMMERCIAL NOW <span class="material-symbols-outlined">arrow_right_alt</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--
-    <div class="sectionContainer card">
-        <section id="sectionCard">
-            <h2 id="sectionH2">LUXE SPHERE 3</h2>
-            <div id="sectionPar1">
-                <h3>LS-3</h3>
-                <p><b>Effortless Interaction: </b> Whether in zero-gravity or on solid ground, the LX-3 Luxe Sphere redefines interaction. Designed with advanced Ectoplasm® technology, this transparent cloth bubble morphs seamlessly as 
-                    energy balls glide within, reacting to touch and motion in real-time. Experience a sensory revolution where aesthetics meet cutting-edge innovation.
-                    Embrace the future with the LX-3 Luxe Sphere. Where innovation meets elegance, every moment becomes an immersive experience.
-
-
-                </p>
-            </div>
-            <div id="sectionPar2">
-                <h3>Introducing Ectoplasm®</h3>
-                <p><b>Cutting-Edge Technology: </b>Ectoplasm® is a cutting-edge material developed to revolutionize interactive experiences. This advanced technology allows for real-time responsiveness to touch and motion,
-                    creating a seamless interaction between the user and the device. With its unique properties, Ectoplasm® can morph and adapt to various shapes and forms, providing a dynamic and engaging user 
-                    experience. It is the perfect blend of elegance and innovation, setting a new standard in the realm of interactive devices. Whether used in artistic installations or practical applications, Ectoplasm® technology represents the future of responsive design.
-                <br>
-                <a href="./projects.html?item=13#videos" id="seeCommercial" style="color: rgb(11, 29, 72);">WATCH NOW <span class="material-symbols-outlined">arrow_right_alt</span></a>
-                </p>
-            </div>
-            <div id="sectionImgContainer">
-                <img id="sectionImg" src="../assets/sphere.png" alt="render of a blue sphere">
-            </div>
-            <video id="sectionBackground" autoplay playsinline poster loop muted alt="render of a moving sphere">
-                <source src="../assets/videos/finalwoosh.mov" type="video/quicktime">
-                <source src="../assets/videos/finalWoosh.webm" type="video/webm">
+        <div class="blackTransIn transition"></div>
+        <div class="transition transOut"></div>
+        <div id="landingSection">
+            <video id="landingVideo" autoplay playsinline poster loop muted alt="a 3D animation of a textured sphere">
+                <source src="../assets/videos/sphereVidHorisontal.mp4" type="video/mp4">
             </video>
+            <img onclick="redirectTo('./projects.html')"  src="../assets/whiteLogo.png" id="landingAnimation" alt="the company logo in white">
+        </div>
+        <div class="vslSection card" id="vsl">
+            <div class="vslContent">
+                <div id="vslVidContainer">
+                    <div id="vslImgContainer">
+                        <div id="vslCarousel" class="carousel" class="sectionCarousel" onclick='openModal(items[14], 0);'>
+                            <div class="vslCarouselSlide">
+                                <img src="../assets/step1.png" alt="step 1">
+                            </div>
+                            <div class="vslCarouselSlide">
+                                <img src="../assets/step2.png" alt="step 2">
+                            </div>
+                            <div class="vslCarouselSlide">
+                                <img src="../assets/step3.png" alt="step 3">
+                            </div>
+                            <div class="vslCarouselSlide">
+                                <img src="../assets/step4.png" alt="step 4">
+                            </div>
+                        </div>
+                        <span class="sectionPrev sectionCarouselNav material-symbols-outlined" id="vslPrev">arrow_back_ios</span>
+                        <span class="sectionNext sectionCarouselNav material-symbols-outlined" id="vslNext">arrow_forward_ios</span> 
+                    </div>
+                </div>
+                <div class="vslHeadingContainer">
+                    <h2 id="vslHeading">At Impirus Studio, our artists transform your ideas into high-quality, accessible images and animations. We streamline the process, making it simple for anyone to enhance their brand image in just four steps.</h2>
+                    <div id="vslAnimation">
+                        <video id="sectionBackground" autoplay playsinline poster loop muted alt="render of a moving sphere">
+                            <source src="../assets/videos/cube.webm" type="video/webm">
+                            <source src="../assets/videos/cube.mov" type="video/mov">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="top"></section>
+        <section class="wrap">
+            <img id="zoom" src="../assets/zoomImage.png">
         </section>
+        <section class="bottom">
+            <h2>Rendered from scratch.</h2>
+            <p>We handle every aspect of the creative process using Blender, including modeling, texturing, lighting, animation, and video editing. Our comprehensive approach ensures your brand visuals are crafted with precision and creativity.</p>
+        </section>
+
+        <div class="card contactCard">
+            <div class="contactContent">
+                <a onclick="redirectTo('./about.html')" class="button frostedGlass">Contact us</a>
+                <a onclick="redirectTo('./projects.html')" class="button frostedGlass">Projects</a>
+            </div>
+        </div>
+        <div class="reviewSection card">
+            <h2>Reviews</h2>
+            <div class="reviewsContainer">
+                
+
+                <div class="reviewCard reviewCardEven reviewCardVideo frostedGlass"  style="background: rgba(0, 0, 0, 0.7);">
+                    <div class="reviewText">
+                        <h3 class="clientName">Matias Militaru</h3>
+                        <h4 class="clientCompany"><i>Based Bodyworks</i>
+                        <video class="reviewVid" src="../assets/videos/review1.mp4" controls="" alt="A video review from Based" poster="../assets/thumbnails/reviewThumbnail.png"></video>
+                    </div>
+                    <div class="companyImgContainer">
+                        <img class="companyImg" src="../assets/basedLogoBeige.png" alt="The company logo for Based Bodyworks">
+                    </div>
+                </div>
+                <div class="reviewCard reviewCardOdd frostedGlass" style="background: rgba(0, 0, 0, 0.7);">
+                    <div class="companyImgContainer">
+                        <img class="companyImg" src="../assets/tempBrand.png" alt="The company logo for Dome Health and Theia Bio">
+                    </div>
+                    <div class="reviewText">
+                        <h3 class="clientName">Kawa Wong</h3>
+                        <h4 class="clientCompany">Founder of <i>Dome Health and Theia Bio</i></h4>
+                        <blockquote class="clientQuote" id="review1Text"></blockquote>
+                        <a href="./projects.html?item=11#videos" id="seeCommercial">SEE DOME HEALTH COMMERCIAL NOW <span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="sectionContainer card">
+            <section id="sectionCard">
+                <h2 id="sectionH2">LUXE SPHERE 3</h2>
+                <div id="sectionPar1">
+                    <h3>LS-3</h3>
+                    <p><b>Effortless Interaction: </b> Whether in zero-gravity or on solid ground, the LX-3 Luxe Sphere redefines interaction. Designed with advanced Ectoplasm® technology, this transparent cloth bubble morphs seamlessly as 
+                        energy balls glide within, reacting to touch and motion in real-time. Experience a sensory revolution where aesthetics meet cutting-edge innovation.
+                        Embrace the future with the LX-3 Luxe Sphere. Where innovation meets elegance, every moment becomes an immersive experience.
+
+
+                    </p>
+                </div>
+                <div id="sectionPar2">
+                    <h3>Introducing Ectoplasm®</h3>
+                    <p><b>Cutting-Edge Technology: </b>Ectoplasm® is a cutting-edge material developed to revolutionize interactive experiences. This advanced technology allows for real-time responsiveness to touch and motion,
+                        creating a seamless interaction between the user and the device. With its unique properties, Ectoplasm® can morph and adapt to various shapes and forms, providing a dynamic and engaging user 
+                        experience. It is the perfect blend of elegance and innovation, setting a new standard in the realm of interactive devices. Whether used in artistic installations or practical applications, Ectoplasm® technology represents the future of responsive design.
+                    <br>
+                    <a href="./projects.html?item=13#videos" id="seeCommercial" style="color: rgb(11, 29, 72);">WATCH NOW <span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    </p>
+                </div>
+                <div id="sectionImgContainer">
+                    <img id="sectionImg" src="../assets/sphere.png" alt="render of a blue sphere">
+                </div>
+                <video id="sectionBackground" autoplay playsinline poster loop muted alt="render of a moving sphere">
+                    <source src="../assets/videos/finalwoosh.mov" type="video/quicktime">
+                    <source src="../assets/videos/finalWoosh.webm" type="video/webm">
+                </video>
+            </section>
+        </div>
+        -->
+        <footer>
+            <div class="footerLine"></div>
+            <div class="footerSocials footerRow">
+                <a href="https://twitter.com/impirus3d" class="footerLink">X</a>
+                <a href="https://www.instagram.com/impirus.studio/" class="footerLink">Instagram</a>
+                <a href="https://www.linkedin.com/in/nathan-page-jones-1541032a8/" class="footerLink">LinkedIn</a>
+                <a href="mailto: impirus3d@gmail.com" class="footerLink">Email</a>
+            </div>
+            <div class="footerNav footerRow">
+                <a onclick="redirectTo('./index.html?resize')" class="footerLink">Home</a>
+                <a onclick="redirectTo('./projects.html')" class="footerLink">Projects</a>
+                <a onclick="redirectTo('./about.html')" class="footerLink">Contact</a>
+            </div>
+            <div class="footerCopyright footerRow">
+                <p>Copyright 2024</p>
+            </div>
+            <div class="footerLogoContainer" id="footerLogo">
+                <a onclick="redirectTo('./index.html?resize')">
+                    <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg">
+                </a>
+            </div>
+        </footer>
     </div>
-     -->
-    <footer>
-        <div class="footerLine"></div>
-        <div class="footerSocials footerRow">
-            <a href="https://twitter.com/impirus3d" class="footerLink">X</a>
-            <a href="https://www.instagram.com/impirus.studio/" class="footerLink">Instagram</a>
-            <a href="https://www.linkedin.com/in/nathan-page-jones-1541032a8/" class="footerLink">LinkedIn</a>
-            <a href="mailto: impirus3d@gmail.com" class="footerLink">Email</a>
-        </div>
-        <div class="footerNav footerRow">
-            <a onclick="redirectTo('./index.html?resize')" class="footerLink">Home</a>
-            <a onclick="redirectTo('./projects.html')" class="footerLink">Projects</a>
-            <a onclick="redirectTo('./about.html')" class="footerLink">Contact</a>
-        </div>
-        <div class="footerCopyright footerRow">
-            <p>Copyright 2024</p>
-        </div>
-        <div class="footerLogoContainer" id="footerLogo">
-            <a onclick="redirectTo('./index.html?resize')">
-                <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg">
-            </a>
-        </div>
-    </footer>
     <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-    <!-- Smooth Scrolling by Studio Freight! Check them out, it's awesome! https://lenis.darkroom.engineering/ -->
+    <!-- Smooth Scrolling by Studio Freight! Check them out, they're awesome! https://lenis.darkroom.engineering/ -->
     <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
     <script src="../scripts/scroll.js"></script>
     <script src="../scripts/shared.js"></script>
