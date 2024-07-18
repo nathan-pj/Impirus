@@ -199,10 +199,10 @@
 #modalImgSection{
     display: flex;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
     justify-content: center;
     width: 700px;
-    height: 500px;
+    min-height: fit-content;
 }
 
 .carousel-slide{

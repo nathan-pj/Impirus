@@ -9,8 +9,16 @@ Indigo Dye: #0A5270
 Russian Violet: #3D2F60
 Rich Black: #0D111C
 */
+
+
 body{
     z-index: -2;
+}
+
+#imgLink{
+    position: absolute;
+    width: 20%;
+    height: 60%;
 }
 
 #landingSection{
@@ -747,6 +755,7 @@ blockquote{
 @media screen and (max-width: 800px) {
     #sectionBackground{
         left: -80%;
+        height: 170px;
     }
     .reviewText{
         width: 90%;
