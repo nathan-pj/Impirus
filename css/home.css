@@ -675,6 +675,9 @@ blockquote{
     #sectionBackground{
         left: -115%;
     }
+    #vslHeading{
+        font-size: 3em;
+    }
 }
 
 
