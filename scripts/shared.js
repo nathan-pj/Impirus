@@ -15,7 +15,7 @@ function mobileAndTabletCheck() {
     })(navigator.userAgent || navigator.vendor || window.opera);
     return check;
 }
-console.log("hiiiii");
+
 function expandNavbar() {
     const burger = document.getElementById("burgerExpanded");
     burger.style.display = "flex";
@@ -96,12 +96,4 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
-/*
-let Scrollbar = window.Scrollbar;
-
-const options = {
-    'damping' : 0.04
-}
-
-
-Scrollbar.init(document.querySelector('.scroll'), options); */
+console.log("Hello user <3 !");
