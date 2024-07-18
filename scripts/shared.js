@@ -1,10 +1,10 @@
-
 window.addEventListener('load', function() {
     this.document.getElementById('loadingScreen').classList.add('loadingClose');
     setTimeout(() => {
         this.document.getElementById('loadingScreen').style.display = 'none';
     }, 900); 
 });
+
 
 function mobileAndTabletCheck() {
     let check = false;
@@ -15,7 +15,7 @@ function mobileAndTabletCheck() {
     })(navigator.userAgent || navigator.vendor || window.opera);
     return check;
 }
-
+console.log("hiiiii");
 function expandNavbar() {
     const burger = document.getElementById("burgerExpanded");
     burger.style.display = "flex";
@@ -95,3 +95,11 @@ function getUrlParameter(name) {
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
+
+let Scrollbar = window.Scrollbar;
+
+const options = {
+    'damping' : 0.04
+}
+
+Scrollbar.init(document.querySelector('.scroll'), options);

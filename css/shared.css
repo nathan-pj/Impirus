@@ -12,10 +12,17 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    overflow-x: hidden;
     width: 100vw;
     height: 100%;
     font-family: NSimSun;
+    overflow-x: hidden;
+    outline: none;
+}
+#scrollbarContainer{
+    width: 100%;
+    height: 500vh;
+    overflow-x: hidden;
+    position: relative;
 }
 #loadingScreen{
     width: 100vw;
