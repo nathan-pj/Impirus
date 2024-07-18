@@ -1,6 +1,5 @@
 body{
     z-index: -2;
-    font-family: NSimSun;
 }
 
 #imgLink{
@@ -588,7 +587,7 @@ blockquote{
 }
 .bottom p{
     width: 60vw;
-    padding-bottom: 40vh;
+    padding-bottom: 5rem;
     font-size: 2rem;
 }
 /* zoom in logic end */
