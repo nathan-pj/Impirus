@@ -66,40 +66,40 @@
                 <img src="../assets/whiteLogo.png" alt="the company logo in white" class="navbarLogoImg">
             </div>
         </nav>
-        <!-- The Modal  ( windows XP inspired popup )-->
-        <div id="modal" class="modal">
-            <div class="outerModal">
-                <div id="modalNav">
-                    <p id="modalTitle">Form1</p>
-                    <div id="minimize" class="modalBtn">
-                        <span class="material-symbols-outlined">minimize</span>
-                    </div>
-                    <div id="tab" class="modalBtn">
-                        <span class="material-symbols-outlined">ad</span>
-                    </div>
-                    <div id="modalClose" class="modalBtn close">
-                        <span class="material-symbols-outlined">close</span>
-                    </div>
+    <!-- The Modal  ( windows XP inspired popup )-->
+    <div id="modal" class="modal">
+        <div class="outerModal">
+            <div id="modalNav">
+                <p id="modalTitle">Form1</p>
+                <div id="minimize" class="modalBtn">
+                    <span class="material-symbols-outlined">minimize</span>
                 </div>
-                <div class="innerModal">
-                    <div class="grayBorder">
-                        <div class="modalContent">
-                            <div id="modalImgSection">
-                                <span class="prev carouselNav material-symbols-outlined" id="prev">arrow_back_ios</span>
-                                <div id="modalImgContainer">
-                                    <div id="carousel"> <!-- The slides will be generated in JS!!! --></div>
-                                </div>
-                                <span class="next carouselNav material-symbols-outlined" id="next">arrow_forward_ios</span> 
+                <div id="tab" class="modalBtn">
+                    <span class="material-symbols-outlined">ad</span>
+                </div>
+                <div id="modalClose" class="modalBtn close">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+            <div class="innerModal" id="innerModal">
+                <div class="grayBorder">
+                    <div class="modalContent">
+                        <div id="modalImgSection">
+                            <span class="prev carouselNav material-symbols-outlined" id="prev">arrow_back_ios</span>
+                            <div id="modalImgContainer">
+                                <div id="carousel"> <!-- The slides will be generated in JS!!! --></div>
                             </div>
-                            <div id="modalText">
-                                <h3 id="modalH3"></h3>
-                                <div id="modalPar"></div>
-                            </div>
+                            <span class="next carouselNav material-symbols-outlined" id="next">arrow_forward_ios</span> 
+                        </div>
+                        <div id="modalText">
+                            <h3 id="modalH3"></h3>
+                            <div id="modalPar"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
         <div class="blackTransIn transition"></div>
         <div class="transition transOut"></div>
         <div id="landingSection">
@@ -185,39 +185,7 @@
                 </div>
             </div>
         </div>
-        <!--
-        <div class="sectionContainer card">
-            <section id="sectionCard">
-                <h2 id="sectionH2">LUXE SPHERE 3</h2>
-                <div id="sectionPar1">
-                    <h3>LS-3</h3>
-                    <p><b>Effortless Interaction: </b> Whether in zero-gravity or on solid ground, the LX-3 Luxe Sphere redefines interaction. Designed with advanced Ectoplasm® technology, this transparent cloth bubble morphs seamlessly as 
-                        energy balls glide within, reacting to touch and motion in real-time. Experience a sensory revolution where aesthetics meet cutting-edge innovation.
-                        Embrace the future with the LX-3 Luxe Sphere. Where innovation meets elegance, every moment becomes an immersive experience.
-
-
-                    </p>
-                </div>
-                <div id="sectionPar2">
-                    <h3>Introducing Ectoplasm®</h3>
-                    <p><b>Cutting-Edge Technology: </b>Ectoplasm® is a cutting-edge material developed to revolutionize interactive experiences. This advanced technology allows for real-time responsiveness to touch and motion,
-                        creating a seamless interaction between the user and the device. With its unique properties, Ectoplasm® can morph and adapt to various shapes and forms, providing a dynamic and engaging user 
-                        experience. It is the perfect blend of elegance and innovation, setting a new standard in the realm of interactive devices. Whether used in artistic installations or practical applications, Ectoplasm® technology represents the future of responsive design.
-                    <br>
-                    <a href="./projects.html?item=13#videos" id="seeCommercial" style="color: rgb(11, 29, 72);">WATCH NOW <span class="material-symbols-outlined">arrow_right_alt</span></a>
-                    </p>
-                </div>
-                <div id="sectionImgContainer">
-                    <img id="sectionImg" src="../assets/sphere.png" alt="render of a blue sphere">
-                </div>
-                <video id="sectionBackground" autoplay playsinline poster loop muted alt="render of a moving sphere">
-                    <source src="../assets/videos/finalwoosh.mov" type="video/quicktime">
-                    <source src="../assets/videos/finalWoosh.webm" type="video/webm">
-                </video>
-            </section>
-        </div>
-        -->
-        <footer>
+        <footer id="footer">
             <div class="footerLine"></div>
             <div class="footerSocials footerRow">
                 <a href="https://twitter.com/impirus3d" class="footerLink">X</a>

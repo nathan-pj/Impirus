@@ -79,7 +79,7 @@
                     <span class="material-symbols-outlined">close</span>
                 </div>
             </div>
-            <div class="innerModal">
+            <div class="innerModal" id="innerModal">
                 <div class="grayBorder">
                     <div class="modalContent">
                         <div id="modalImgSection">
@@ -114,24 +114,24 @@
         <h3 class="projectsH3"><a href="https://basedbodyworks.com/">Based Bodyworks</a></h3>
         <div class="textProject">
             <p class="projectsPar"> We collaborated with Based Bodyworks, a male hair product brand, to bring their product listings to life through high-quality 3D renders. By showcasing their unique ingredients and customer testimonials in visually striking images, we made these exciting renders accessible to them. This approach significantly improved their website conversion rates compared to traditional real-life photos.</p>
-            <div class="projectsGroup projectsBoxLayout projects twoSquareGrid">
-                <div class="projectDiv" id="test">
+            <div class="projectsGroup projectsBoxLayout projects twoSquareGrid" id="basedGroup">
+                <div class="projectDiv" id="test" href="#basedGroup">
                     <img src="../assets/based/3comp.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 0);'>
                 </div>
                 <div class="projectDiv">
-                    <img src="../assets/based/4.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 1);'>
+                    <img src="../assets/based/4.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 1);' href="#basedGroup">
                 </div>
                 <div class="projectDiv">
-                    <img src="../assets/based/6.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 2);'>
+                    <img src="../assets/based/6.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 2);' href="#basedGroup">
                 </div>
                 <div class="projectDiv">
-                    <img src="../assets/based/peelfinal.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 3);'>
+                    <img src="../assets/based/peelfinal.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 3);' href="#basedGroup">
                 </div>
                 <div class="projectDiv">
-                    <img src="../assets/based/usp.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 4);'>
+                    <img src="../assets/based/usp.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 4);' href="#basedGroup">
                 </div>
                 <div class="projectDiv">
-                    <img src="../assets/based/whitebg.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 5);'>
+                    <img src="../assets/based/whitebg.png" alt="3D render for Based Bodyworks" class="project" onclick='openModal(items[2], 5);' href="#basedGroup">
                 </div>
             </div>
         </div>
@@ -164,7 +164,7 @@
             <a onclick="redirectTo('./about.html')" class="button frostedGlass" id="firstBtn">Contact us</a>
         </div>
     </div>
-    <div class="card projectsContainer">
+    <div class="card projectsContainer" id="animations">
     <h3 class="projectsH3" id="videos">Animations</h3>
         <div class="projectsGroup projectsBoxLayout">
             <div class="projectDiv">
@@ -184,7 +184,7 @@
             </div> -->
         </div>
         <h3 class="projectsH3" id="miscellaneous">Product Stills</h3>
-        <div class="projectsGroup projectsBoxLayout">
+        <div class="projectsGroup projectsBoxLayout" id="stills">
             <div class="projectDiv">
                 <img src="../assets/21.jpeg" alt="3D render for LANEIGE" class="project"  onclick='openModal(items[3], 0);'>
             </div>
@@ -219,7 +219,7 @@
             <a onclick="redirectTo('./about.html')" class="button frostedGlass">Contact us</a>
         </div>
     </div>
-    <footer>
+    <footer id="footer">
         <div class="footerLine"></div>
         <div class="footerSocials footerRow">
             <a href="https://twitter.com/impirus3d" class="footerLink">X</a>

@@ -1,8 +1,8 @@
 window.addEventListener('load', function() {
     this.document.getElementById('loadingScreen').classList.add('loadingClose');
-    setTimeout(() => {
-        this.document.getElementById('loadingScreen').style.display = 'none';
-    }, 900); 
+        setTimeout(() => {
+            this.document.getElementById('loadingScreen').style.display = 'none';
+        }, 900); 
 });
 
 

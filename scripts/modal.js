@@ -169,7 +169,7 @@ span.onclick = function () {
 window.onclick = function (event) {
     if (event.target == modal) {
         closeModal();
-    }
+    } 
 }
 
 // Add a key listener for the Escape button to close the modal
@@ -181,6 +181,7 @@ document.addEventListener('keydown', function (event) {
 
 function closeModal() {
     document.body.style.overflowY = "scroll";
+    handleModalState(false);
     modal.style.display = "none";
     modalActive = false;
 }
@@ -303,6 +304,26 @@ function updateCarousel(images, descriptions, alt, ind, thumbnail) {
 }
 
 function openModal(item, ind) {
+    handleModalState(true);
+
+    // Get the viewport height
+    const viewportHeight = window.innerHeight;
+
+    const modalContentHeight = modal.scrollHeight;
+
+    // Get the distance from the top of the page to the footer
+    const footerRect = footer.getBoundingClientRect();
+    const distanceToFooterFromViewport = (footerRect.top);
+
+    let topPosition = window.scrollY;
+
+    // Check if the modal is too close to the footer
+    if ((viewportHeight - distanceToFooterFromViewport) < modalContentHeight) {
+        // Adjust top position to ensure the modal is fully visible above the footer
+        topPosition = window.scrollY - (modal.offsetHeight/2);
+    }
+    
+    modal.style.top = `${topPosition}px`;
     currentIndex = ind; // Set to the specified slide
     document.body.style.overflowY = "hidden";
     if(item[4] != null){
@@ -324,6 +345,24 @@ function openModal(item, ind) {
         hideCarouselNav();
     }
     resize();
+    scrollToTarget("modal");
+}
+
+function handleModalState(isOpen) {
+    if (isOpen) {
+      document.getElementById('modal').style.display = 'flex'; // Show modal
+      document.body.style.overflow = 'hidden'; // Prevent body scroll
+    } else {
+        document.getElementById('modal').style.display = 'none'; // Hide modal
+      document.body.style.overflow = ''; // Restore body scroll
+    }
+  }
+
+function scrollToTarget(target) {
+    const targetElement = document.getElementById(target);
+    if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 function initHammer() {
