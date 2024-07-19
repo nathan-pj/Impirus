@@ -173,6 +173,7 @@ body{
     color: rgb(99, 99, 99);
 }
 
+/* Keyframes are animations that usually don't need JavaScript */
 @keyframes spinX {
     from {
         transform: rotate(0deg);
@@ -200,6 +201,10 @@ body{
     }
 }
 
+/* Media queries adjust the styling for different screen sizes. 
+Mine are based on the width of the screen. 
+For example: "@media screen and (max-width: 1100px)" includes styling that will only be applied for screens with a width BELOW 1100px width. 
+*/
 @media screen and (max-width: 1300px){
     #aboutUs{
         width: 60vw;

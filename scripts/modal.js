@@ -1,11 +1,11 @@
-// Get the modal
+// Get the modal (Windows XP window)
 var modal = document.getElementById("modal");
 let modalActive = false;
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// Carousel
+// Get modal carousel elements
 const carousel = document.getElementById('carousel');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
@@ -14,6 +14,8 @@ let slideWidth;
 let totalSlides;
 let currentIndex;
 let index;
+
+// Your own array :o !! These images are included in the "Click me" section.
 const itemsClickMe = 
 [
     '../assets/based/4.png',
@@ -34,6 +36,11 @@ const itemsClickMe =
     '../assets/based/peelfinal.png',
     '../assets/based/3comp.png'
 ];
+/*
+THESE are all the items that can be displayed in the modal. 
+If you want to edit/add projects to show in the modal, then you must edit/expand this list (among other steps).
+A more detailed explanation can be found in documentation/README.md
+*/
 const items = [
     [
         ['../assets/webDeveloper.png'], 
@@ -160,32 +167,33 @@ const items = [
 ];
 
 
-// When the user clicks on <span> (x), close the modal
+// When the user clicks on the close button in the modal (x), the modal will close. 
 span.onclick = function () {
     closeModal();
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// When the user clicks anywhere outside of the modal, the modal will close.
 window.onclick = function (event) {
     if (event.target == modal) {
         closeModal();
     } 
 }
 
-// Add a key listener for the Escape button to close the modal
+// When the user presses Escape, the modal will close. 
 document.addEventListener('keydown', function (event) {
     if (event.key === "Escape" && modalActive) {
         closeModal();
     }
 });
 
+// This method closes the modal
 function closeModal() {
     document.body.style.overflowY = "scroll";
-    handleModalState(false);
     modal.style.display = "none";
     modalActive = false;
 }
 
+// This method changes the slide in the carousel
 function goToSlide(ind) {
     if (ind < 0 || ind >= totalSlides) return;
     carousel.style.transform = `translateX(-${ind * slideWidth}px)`;
@@ -199,9 +207,9 @@ function goToSlide(ind) {
     }
 }
 
-// Make goToSlide available globally
 window.goToSlide = goToSlide;
 
+// This section enables you to change slide by pressing the arrow buttons.
 document.addEventListener('DOMContentLoaded', function () {
     // Previous button click event
     prevButton.addEventListener('click', () => {
@@ -217,10 +225,10 @@ document.addEventListener('DOMContentLoaded', function () {
         goToSlide(currentIndex);
     });
 
-    initHammer(); // Initialize hammer
+    initHammer(); // Initialize hammer (swiping on mobile)
 });
 
-// Resize event listener
+// Resize carousel slides whenever the user resizes the browser window
 window.addEventListener('resize', () => {
     if (slides != null) {
         resize();
@@ -234,10 +242,12 @@ function resize() {
     }
 }
 
+// This fills the modal with content to show, just to avoid it being empty when entering the site. 
+// Needed to avoid "null" errors.
 function initialiseCarousel(index) {
     if (!modalActive) {
         if (index >= 0 && index < items.length) {
-            if(items[index][4] != null){
+            if(items[index][4] != null){ // Checks whether the project has a thumbnail for a video
                 updateCarousel(items[index][0], items[index][2], items[index][3], 0, items[index][4]);
             } else {
                 updateCarousel(items[index][0], items[index][2], items[index][3], 0, null);
@@ -249,11 +259,13 @@ function initialiseCarousel(index) {
     }
 }
 
+// Hides the carousel arrow buttons. Used when there's only one slide to show. 
 function hideCarouselNav() {
     prevButton.style.display = "none";
     nextButton.style.display = "none";
 }
 
+// Actually implements the content in the modal (Which project is  being currently shown)
 function updateCarousel(images, descriptions, alt, ind, thumbnail) {
     // Set currentIndex before clearing the carousel
     currentIndex = ind;
@@ -268,6 +280,7 @@ function updateCarousel(images, descriptions, alt, ind, thumbnail) {
         const slide = document.createElement('div');
         slide.className = 'carousel-slide';
 
+        // If the content is a video -> create a video element rather than an image element.
         if (imageSrc.includes("mp4") || imageSrc.includes("mov") || imageSrc.includes("webm")) {
             project = document.createElement('video');
             project.src = imageSrc;
@@ -276,7 +289,7 @@ function updateCarousel(images, descriptions, alt, ind, thumbnail) {
             if(thumbnail != null){
                 project.poster = thumbnail;
             }
-        } else {
+        } else { // If content is an image -> create image element.
             project = document.createElement('img');
             project.src = imageSrc;
             project.alt = alt;
@@ -288,7 +301,8 @@ function updateCarousel(images, descriptions, alt, ind, thumbnail) {
         const paragraph = document.createElement('p');
         paragraph.className = 'carousel-paragraph';
         paragraph.innerHTML = descriptions[ind] || 'No description available';
-        paragraph.innerHTML += "<span class='caret'></span>";
+        paragraph.innerHTML += "<span class='caret'></span>"; // Implements the blinking caret animation. 
+        // Google "caret text" and go on images to see what I mean
         paragraphContainer.appendChild(paragraph);
     });
 
@@ -303,9 +317,8 @@ function updateCarousel(images, descriptions, alt, ind, thumbnail) {
     goToSlide(ind);
 }
 
+// This method opens the modal (displays the modal to the user)
 function openModal(item, ind) {
-    handleModalState(true);
-
     // Get the viewport height
     const viewportHeight = window.innerHeight;
 
@@ -317,7 +330,7 @@ function openModal(item, ind) {
 
     let topPosition = window.scrollY;
 
-    // Check if the modal is too close to the footer
+    // Check if the user is too close to the footer
     if ((viewportHeight - distanceToFooterFromViewport) < modalContentHeight) {
         // Adjust top position to ensure the modal is fully visible above the footer
         topPosition = window.scrollY - (modal.offsetHeight/2);
@@ -326,7 +339,7 @@ function openModal(item, ind) {
     modal.style.top = `${topPosition}px`;
     currentIndex = ind; // Set to the specified slide
     document.body.style.overflowY = "hidden";
-    if(item[4] != null){
+    if(item[4] != null){ // Checks whether the project has a thumbnail for a video
         updateCarousel(item[0], item[2], item[3], currentIndex, item[4]);
     } else {
         updateCarousel(item[0], item[2], item[3], currentIndex, null);
@@ -345,19 +358,12 @@ function openModal(item, ind) {
         hideCarouselNav();
     }
     resize();
+    // Will scroll the user up to the modal that's being displayed
     scrollToTarget("modal");
 }
 
-function handleModalState(isOpen) {
-    if (isOpen) {
-      document.getElementById('modal').style.display = 'flex'; // Show modal
-      document.body.style.overflow = 'hidden'; // Prevent body scroll
-    } else {
-        document.getElementById('modal').style.display = 'none'; // Hide modal
-      document.body.style.overflow = ''; // Restore body scroll
-    }
-  }
-
+// Scrolls the user up to a certain element on the page.
+// Is currently used to scroll the user up to the modal, but can be used for other stuff
 function scrollToTarget(target) {
     const targetElement = document.getElementById(target);
     if (targetElement) {
@@ -365,6 +371,7 @@ function scrollToTarget(target) {
     }
 }
 
+// Enables swiping through the carousel for mobile users
 function initHammer() {
     var element = document.getElementById("carousel");
     var hammertime = new Hammer(element);
@@ -380,5 +387,5 @@ function initHammer() {
     });
 }
 
-// Example usage to initialize the carousel with the second item
+// Initialize the carousel with content (does not matter which project is being displayed, the user will not see it)
 initialiseCarousel(1);

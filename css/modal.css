@@ -244,12 +244,17 @@
     object-fit: cover; /* Ensures the image covers the entire slide */
 }
 
+/* Keyframes are animations that usually don't need JavaScript */
 /* The typewriter cursor effect */
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: black; }
 }
 
+/* Media queries adjust the styling for different screen sizes. 
+Mine are based on the width of the screen. 
+For example: "@media screen and (max-width: 1100px)" includes styling that will only be applied for screens with a width BELOW 1100px width. 
+*/
 @media screen and (max-width: 1100px) { 
     #modalImgSection{
         width: 90%;

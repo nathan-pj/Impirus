@@ -1,3 +1,4 @@
+// This block makes the loading screen dissappear once the page has fully loaded. 
 window.addEventListener('load', function() {
     this.document.getElementById('loadingScreen').classList.add('loadingClose');
         setTimeout(() => {
@@ -5,7 +6,11 @@ window.addEventListener('load', function() {
         }, 900); 
 });
 
-
+/* This is a borrowed method that checks if the user is on a mobile device or not. 
+It returns a boolean (true or false value) that reveals the result of the check.
+true = on mobile
+false = on desktop
+*/
 function mobileAndTabletCheck() {
     let check = false;
     (function(a) {
@@ -16,6 +21,7 @@ function mobileAndTabletCheck() {
     return check;
 }
 
+// Displays the vertical menu (for smaller screens)
 function expandNavbar() {
     const burger = document.getElementById("burgerExpanded");
     burger.style.display = "flex";
@@ -23,6 +29,7 @@ function expandNavbar() {
     burger.classList.remove("burgerCloseAnimation");
 }
 
+// Closes the vertical menu (for smaller screens)
 function closeNavbar() {
     const burger = document.getElementById("burgerExpanded");
     burger.classList.add("burgerCloseAnimation");
@@ -32,6 +39,8 @@ function closeNavbar() {
     }, 900); 
 }
 
+// Adds a gray color to each navbar link whenever the user hovers over them.
+// This logic works for the vertical and horizontal navbar + footer
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.burgerLink, .navLink, .navbarCompanyName, .footerLink').forEach(item => {
         item.addEventListener('mouseenter', () => {
@@ -69,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Takes the user to a different page
+// Adds a closing animation before the site changes (page turns black)
 function redirectTo(url) {
     let transOut = document.querySelector('.transOut');
     transOut.classList.add('blackTransOut');
@@ -77,6 +88,7 @@ function redirectTo(url) {
     }, 900); 
 }
 
+// Makes the navbar dissappear when you scroll down, and reappear when you scroll up again.
 var prevScrollpos = window.scrollY;
 window.onscroll = function() {
 var currentScrollPos = window.scrollY;
@@ -88,7 +100,8 @@ var currentScrollPos = window.scrollY;
   prevScrollpos = currentScrollPos;
 }
 
-// Function to parse URL parameters
+// Function to parse URL parameters. 
+// You can ignore this method, but it's needed to make links such as "SEE DOME COMMERCIAL NOW" work. 
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');

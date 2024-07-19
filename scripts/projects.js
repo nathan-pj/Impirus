@@ -1,3 +1,5 @@
+// The "Click me" section consists of a canvas element. 
+// So all logic that mentions "canvas" has to do with the "click me" section.
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -9,6 +11,7 @@ function resizeCanvas() {
     canvas.height = window.innerHeight;
 }
 
+// Animates every image being placed on the canvas to float down. 
 function animateImage(img, startX, startY, endX, endY, duration) {
     const startTime = performance.now();
     
@@ -30,7 +33,8 @@ function animateImage(img, startX, startY, endX, endY, duration) {
             requestAnimationFrame(animationStep);
         } else {
             placedImages.push({ img, x: endX, y: endY });
-            if (placedImages.length > 15) {
+            if (placedImages.length > 15) { // Removes the oldest placed photos. 
+                // The current boundary is set to 15 pictures at a time. Adjust as needed, but do NOT make it an insane amount.
                 const oldImage = placedImages.shift();
                 ctx.clearRect(oldImage.x, oldImage.y, oldImage.img.width, oldImage.img.height);
                 ctx.fillStyle = 'rgba(0,0,0,0)'; // Assuming white background, adjust if needed
@@ -47,6 +51,7 @@ function animateImage(img, startX, startY, endX, endY, duration) {
     requestAnimationFrame(animationStep);
 }
 
+// Handles the placing of every image on the canvas. 
 function placeImage(x, y) {
     const img = new Image();
     img.src = itemsClickMe[imageIndex % itemsClickMe.length];
@@ -62,6 +67,7 @@ function placeImage(x, y) {
     };
 }
 
+// Captures the coordinates of where the user is clicking on the canvas, and sends them to the placeImage() method.
 canvas.addEventListener('click', (e) => {
     const rect = canvas.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -76,6 +82,7 @@ const moreInfo = document.getElementById('moreInfo');
 const arrowDown = document.getElementById('arrowDown');
 const canvasH2 = document.getElementById('canvasH2');
 
+// For mobile users, the text will say "TAP ME" instead of "CLICK ME"
 function checkPhone() {
     const isMobileOrTablet = mobileAndTabletCheck();
     const canvasH2 = document.getElementById('canvasH2'); // Make sure this element exists
@@ -89,18 +96,19 @@ function checkPhone() {
     }
 }
 
-
+// Makes the arrow on the canvas appear + float after some seconds
 function arrowAnimation(){
     setTimeout(() => {
         moreInfo.classList.add('fadeIn');
         moreInfo.style.display = "flex";
-    }, 5000); 
+    }, 5000); // Appears after 5 seconds
     setTimeout(() => {
         arrowDown.classList.add('floatUpDown');
-    }, 8000); 
+    }, 8000); // Starts floating up and down after 8 seconds (three seconds after it appears)
 }
 
-// Check if the URL contains the item parameter and open the modal with that item
+// Check if the URL contains a specific project and open the modal with that item. 
+// Makes links like "SEE DOME COMMERCIAL NOW" work. 
 document.addEventListener('DOMContentLoaded', function() {
     const itemParam = getUrlParameter('item');
     if (itemParam) {
