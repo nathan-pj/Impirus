@@ -485,9 +485,6 @@ iframe{
     margin-bottom: 1rem;
 }
 
-blockquote{
-}
-
 .clientPictureContainer, .companyImgContainer{
     display: flex;
     flex-direction: column;

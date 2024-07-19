@@ -454,8 +454,6 @@ footer > *{
 .footerCopyright{
     grid-area: footerCopyright;
 }
-.footerRow{
-}
 .footerRow > *{
     margin: 0 1ch;
 }
