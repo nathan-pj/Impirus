@@ -63,10 +63,10 @@ Includes all css files. Each page has it's own css file, these have the same nam
 
 `modal.css` contains styling for the modal (windows XP window). 
 
-## >documentation
+### >documentation
 Contains documentation for the website.
 
-## >pages
+### >pages
 Contains the HTML-file for every page. The HTML contains the structure of the elements being shown on the website, but you know this already. 
 
 `about.html` = contact page
@@ -75,7 +75,7 @@ Contains the HTML-file for every page. The HTML contains the structure of the el
 
 `projects.html` = projects page
 
-## >scripts
+### >scripts
 Contains all JavaScript logic for the website. Every HTML-file has it's corresponding JavaScript file, similar to the css files. OBS, `home.js` is used for the home page (`index.html`).
 
 `modal.js` contains all logic for the modal (windows XP window). 
