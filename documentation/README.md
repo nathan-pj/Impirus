@@ -93,6 +93,8 @@ All files need to be added to the `assets` folder. Make sure you have scaled all
 2. **Add the HTML for the New Project in `projects.html`**
 First you must choose which group the project will be displayed within. For example, any element with the class `projectsGroup` is a classic group with three projects on every row. 
 
+![Picture of a project group](./projectGroup.png)
+
 Then you can implement the project within your chosen group. Your project should be of the following structure:
 ```
 <div class="projectDiv">
@@ -109,7 +111,8 @@ Adding the new project to the `items` array is the trickiest step. The array con
 
 This example aims to explain the structure of the array:
 ```
-const items = [
+const items = 
+[
     [ // item 1
         ['path to video in text', 'path to second image', 'path to third image'], // Each image/video will be it's own slide in the carousel
         "project title", 
