@@ -287,3 +287,133 @@ Replace all sources from the example with your own sources.
 
 And you're done!
 
+## Adding and applying fonts
+Adding and replacing fonts is easy, but there can be more steps depending on the font. Some fonts can easily be accessed through Visual Studio Code (VSC), others you will have to import. If you are unsure whether a font exists within VSC or not, you can simply try to apply it to a random element. 
+
+Try to apply "font-family: [insert font name];" to any element. If VSC suggests a font with the same name, then it already exists within VSC. Like so:
+
+![autoFill](./yesVSC.png)
+
+If it does not exist within VSC, then the app won't try suggesting something to you (or it will suggest something with a similar name), like so:
+
+![autoFill](./noVSC.png)
+
+If you have found a niche artsy font, then chances are it does not exist within VSC. 
+
+## Fonts within VSC
+1. **Locate the element(s) you wish to change**
+Locate the element(s) that you want to change. You can search for these elements in their respective HTML-files (use CTRL + F with the text content of the element).
+
+If you want to change multiple elements at once, you can add a class to them. There are other ways of selecting elements, but they get more complex the deeper into the rabbit hole you get. If they already have a common class that's only specific to the elements you want to change, then you can utilize this class instead of adding a new one. 
+
+If you only want to edit one element, then you can utilize it's ID, or add a new ID. 
+
+2. **Navigate to the correct CSS file**
+Different CSS files should contain different styling:
+* If all of the elements are within the home page --> `home.css`
+
+* If all of the elements are within the contact page --> `about.css`
+
+* If all of the elements are within the projects page --> `projects.css`
+
+* If all of the elements are within the modal (Windows XP window) --> `modal.css`
+
+* If the elements scattered across multiple pages (for example the navbar) --> `shared.css`
+
+
+3. **Select the element(s)**
+Select the element(s) with the class name or ID name. When referencing IDs, use "#" as a prefix. When referencing classes, use "." as a prefix.
+
+For example:
+
+```
+/* This is how you select an ID */
+#someIDName{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* This is how you select a class */
+.someClassName{
+    font-family: 'Times New Roman', Times, serif;
+}
+```
+
+Replace the font name with your own font and you're done!
+
+## Fonts outside of VSC
+First read the steps to fonts within VSC to find out how to locate your elements and selecting the right CSS file. 
+
+1. **Get the necessary files**
+
+When implementing fonts outside of VSC, you need to add their files to the project. You will need the following files:
+
+
+- font.eot
+- font.svg
+- font.ttf
+- font.woff
+- font.woff2
+
+If you only have one file, for example the ".ttf" file, then that's okay! Simply convert the file to all of the other file types with an online tool, [such as this one](https://cloudconvert.com/ttf-to-woff). 
+
+Add all of these files to the `assets` directory. 
+
+2. **Import the font in shared.css**
+
+You must import the font in `shared.css`.
+
+Your import of the font should look something like this:
+
+```
+/* This block implements NSimSun!!! Do not remove */
+@font-face {
+    font-family: 'NSimSun';
+    src: url('../assets/simsun.eot'); /* IE9 Compat Modes */
+    src: url('../assets/simsun.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/simsun.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/simsun.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../assets/simsun.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/simsun.svg#NSimSun') format('svg'); /* Legacy iOS, there should not be a hashtag in the actual file name, only this reference */
+    font-weight: normal;
+    font-style: normal;
+}
+```
+
+OBS! Replace all file names with your own sources.
+
+3. **Select your elements in the right CSS file**
+Now you can add your font to elements normally (in the right CSS files of course)! For example:
+
+```
+p{
+    font-family: NSimSun;
+}
+```
+
+The name of the font will be the same one as the name you specified in your import. 
+
+And you're done!
+
+## If you want to change the font of ALL elements
+Simply change the font applied to "body" in `shared.css`. 
+
+```
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100vw;
+    height: 100%;
+    font-family: NSimSun;  <----- Change this!!!!
+    outline: none;
+    overflow-y: scroll !important;
+}
+```
+
+## If you want to change the font of ALL elements in a specific file
+Add a class to the body of a specific HTML-file. Then use that class name to target that specific body in it's corresponding css file. 
+
