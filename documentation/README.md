@@ -414,6 +414,6 @@ body{
 }
 ```
 
-## If you want to change the font of ALL elements in a specific file
+## If you want to change the font of ALL elements in a specific page
 Add a class to the body of a specific HTML-file. Then use that class name to target that specific body in it's corresponding css file. 
 
