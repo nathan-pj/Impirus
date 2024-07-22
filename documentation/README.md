@@ -341,7 +341,7 @@ For example:
 Replace the font name with your own font and you're done!
 
 ### Fonts outside of VSC
-First read the steps to fonts within VSC to find out how to locate your elements and selecting the right CSS file. 
+First read the steps to fonts within VSC to find out how to locate your elements and select the right CSS file. 
 
 1. **Get the necessary files**
 
