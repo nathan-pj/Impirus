@@ -300,7 +300,7 @@ If it does not exist within VSC, then the app won't try suggesting something to 
 
 If you have found a niche artsy font, then chances are it does not exist within VSC. 
 
-## Fonts within VSC
+### Fonts within VSC
 1. **Locate the element(s) you wish to change**
 Locate the element(s) that you want to change. You can search for these elements in their respective HTML-files (use CTRL + F with the text content of the element).
 
@@ -340,7 +340,7 @@ For example:
 
 Replace the font name with your own font and you're done!
 
-## Fonts outside of VSC
+### Fonts outside of VSC
 First read the steps to fonts within VSC to find out how to locate your elements and selecting the right CSS file. 
 
 1. **Get the necessary files**
@@ -394,7 +394,7 @@ The name of the font will be the same one as the name you specified in your impo
 
 And you're done!
 
-## If you want to change the font of ALL elements
+### If you want to change the font of ALL elements
 Simply change the font applied to "body" in `shared.css`. 
 
 ```
@@ -414,6 +414,6 @@ body{
 }
 ```
 
-## If you want to change the font of ALL elements in a specific page
+### If you want to change the font of ALL elements in a specific page
 Add a class to the body of a specific HTML-file. Then use that class name to target that specific body in it's corresponding css file. 
 
