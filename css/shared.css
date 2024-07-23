@@ -180,6 +180,7 @@ nav{
     justify-content: space-between;
 }
 .navbarOptions{
+    font-family: Bocalupo;
     display: flex;
     justify-content: space-around;
 }
