@@ -246,6 +246,7 @@ nav{
     top: 0;
 }
 #navbar{
+    font-family: Bocalupo;
     position: fixed;
     transition: 0.5s ease-in-out;
 }
@@ -310,6 +311,7 @@ nav{
 .menuDeselect {
     animation: menuDeselect 0.5s ease;
     color: white;
+    font-family: Bocalupo;
 }
 
 .menuSelect {
