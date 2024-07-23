@@ -333,12 +333,12 @@ nav{
 }
 @font-face {
     font-family: 'Bocalupo';
-    src: url('./assets/Bocalupo-Regular.eot'); /* IE9 Compat Modes */
-    src: url('./assets/Bocalupo-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('./assets/Bocalupo-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('./assets/Bocalupo-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-         url('./assets/Bocalupo-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('./assets/Bocalupo-Regular.svg#Bocalupo') format('svg'); /* Legacy iOS */
+    src: url('../assets/Bocalupo-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../assets/Bocalupo-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/Bocalupo-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/Bocalupo-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../assets/Bocalupo-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/Bocalupo-Regular.svg#Bocalupo') format('svg'); /* Legacy iOS */
     font-weight: normal;
     font-style: normal;
 }
