@@ -132,9 +132,7 @@ const items = [
     [
         ['../assets/videos/dome.mp4'], 
         "Dome Health animation", 
-        ["Introducing Dome Health, a leading brand in the field of nootropics. This captivating video showcases this innovative product, with each pill elegantly floating among glowing synapses. The dynamic animation highlights the core benefits of these nootropics—enhanced focus, improved cognitive function, and heightened mental clarity.
-
-As the video progresses, the sleek design and fluid movement of the pills through the neural pathways symbolize the seamless integration of Dome Health's nootropics into your daily routine. The visual representation of synapses emphasizes the connection between the product and the brain's natural functions, reinforcing the idea of achieving peak mental performance through science and wellness."],
+        ["Introducing Dome Health, a leading brand in the field of nootropics. This captivating video showcases this innovative product, with each pill elegantly floating among glowing synapses. The dynamic animation highlights the core benefits of these nootropics—enhanced focus, improved cognitive function, and heightened mental clarity. As the video progresses, the sleek design and fluid movement of the pills through the neural pathways symbolize the seamless integration of Dome Health's nootropics into your daily routine. The visual representation of synapses emphasizes the connection between the product and the brain's natural functions, reinforcing the idea of achieving peak mental performance through science and wellness."],
         "A 3D Animation for a product from Dome Health and Theia Bio",
         ['../assets/thumbnails/domeThumbnail.png']
     ],
@@ -148,9 +146,7 @@ As the video progresses, the sleek design and fluid movement of the pills throug
     [
         ['../assets/videos/luxeText.mp4'], 
         "LUXE SPHERE 3", 
-        ["ntroducing the LX-3 Luxe Sphere, a futuristic product concept I designed featuring Ectoplasm® fabric. This captivating video showcases the LX-3's fluid, mesmerizing display of motion and light. The Adaptive Dynamics of the Ectoplasm® fabric allows it to adjust its form seamlessly, while embedded energy spheres in the Interactive Core provide a responsive tactile experience that enhances both play and deep thinking. The video highlights the lightweight yet durable construction of the LX-3, made from high-resilience materials for longevity and endurance across diverse environments.
-
-Whether used as a standalone object or integrated into your living space, the LX-3 Luxe Sphere elevates ambiance and stimulates creativity. Ideal for modern interiors, zero-gravity habitats, or as a centerpiece for interactive art installations, this product exemplifies the perfect blend of advanced material science and artistic design, bringing a touch of futuristic elegance to any setting."],
+        ["Introducing the LX-3 Luxe Sphere, a futuristic product concept I designed featuring Ectoplasm® fabric. This captivating video showcases the LX-3's fluid, mesmerizing display of motion and light. The Adaptive Dynamics of the Ectoplasm® fabric allows it to adjust its form seamlessly, while embedded energy spheres in the Interactive Core provide a responsive tactile experience that enhances both play and deep thinking. The video highlights the lightweight yet durable construction of the LX-3, made from high-resilience materials for longevity and endurance across diverse environments. Whether used as a standalone object or integrated into your living space, the LX-3 Luxe Sphere elevates ambiance and stimulates creativity. Ideal for modern interiors, zero-gravity habitats, or as a centerpiece for interactive art installations, this product exemplifies the perfect blend of advanced material science and artistic design, bringing a touch of futuristic elegance to any setting."],       
         "An abstract animation of a textured sphere",
         ['../assets/thumbnails/sphereThumbnail.png']
     ],
