@@ -598,6 +598,10 @@ iframe{
     pointer-events: none;
 }
 
+.renderedTitle{
+   font-family: Bocaluco;
+}
+
 .bottom h2{
     font-size: 3.5rem;
     width: 100vw;
