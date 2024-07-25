@@ -140,6 +140,8 @@
 .wordAnimation{
     animation: scrollAnimation 2s ease;
 }
+
+
 /* 
 .wordAnimationReverse{
     animation: scrollAnimationReverse 2s ease;
@@ -613,7 +615,7 @@ iframe{
     padding-bottom: 5rem;
     font-size: 2rem;
 }
-/* zoom in logic end */
+/* zoom in logic end  hiiiiii*/
 
 /* Keyframes are animations that usually don't need JavaScript */
 @keyframes arrowRight {
