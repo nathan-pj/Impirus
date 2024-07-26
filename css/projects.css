@@ -62,7 +62,8 @@ canvas {
 }
 
 .card{
-    background-color: #efefef;
+    background: url('../assets/ooorganize.svg');
+    background-attachment: fixed;
     padding: 3rem 0;
     width: 100vw;
     position: relative;
@@ -131,8 +132,9 @@ canvas {
     width: 30%;
     text-align: left;
     margin-bottom: 2rem;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
+    word-spacing: 20%;
 }
 
 .projectsGroup{
@@ -239,8 +241,10 @@ canvas {
     flex-direction: column;
 }
 .text p{
-    max-width: 60%;
-    font-size: 1.2rem;
+    padding-top: 5%;
+    max-width: 90%;
+    font-size: 3rem;
+    padding-bottom: 5%;
 }
 .showcaseImgContainer{
     height: auto;
@@ -276,7 +280,7 @@ canvas {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background: url(../assets/background.jpg);
+    background: url(../assets/homeBackground.png);
     background-size: cover;
 }
 .firstContact::after{
