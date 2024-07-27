@@ -62,6 +62,7 @@ canvas {
 }
 
 .card{
+    background-color: #ffffff;
     background: url('../assets/ooorganize.svg');
     background-attachment: fixed;
     padding: 3rem 0;
