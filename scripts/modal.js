@@ -71,8 +71,8 @@ const items = [
         '../assets/based/whitebg.png'], 
         "Based Bodyworks", 
         [
-            "A bathroom setting featuring a showcase of shampoo ingredients.",
-            "In a jungle setting, reviews showcase a shampoo and conditioner bundle with product ingredients subtly in the background",
+            "In a dark, cosmic setting, the product is showcased floating between two rugged, illuminated rocks, creating an ethereal and captivating visual effect. The deep blue background, speckled with subtle starlight, adds a touch of mystery and elegance, making the product appear otherworldly and highly desirable",
+            "In a lush, jungle setting, reviews showcase a shampoo and conditioner bundle with product ingredients, coconut and aloe vera, subtly in the background. The scene features the bottles standing amidst vibrant greenery and dewy foliage.",
             "Bundle products displayed on an ancient pillar against a dramatic sky and clouds backdrop. This composition exudes a sense of timeless elegance and distinction, ideal for highlighting unique selling points.",
             "Texture powder presented against a gradient background, featuring a transparent coating delicately peeling off the product, revealing its unique texture and appeal.",
             "Texture powder on a pillar, surrounded by ethereal floating rocks. The powder is depicted in motion, with a captivating visual of particles dispersing from its base, evoking a sense of dynamic energy and unique textural quality.",
