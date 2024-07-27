@@ -70,6 +70,12 @@ canvas {
     z-index: 1;
 }
 
+@media (max-width: 768px) {
+    .card {
+        background-attachment: scroll;
+    }
+}
+
 .card::after:first-of-type{
     content: '';
     position: absolute;
