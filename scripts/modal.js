@@ -31,6 +31,8 @@ const itemsClickMe =
     '../assets/21.jpeg',
     '../assets/dolce.jpg',
     '../assets/based/usp.png',
+    '../assets/based/peelfinal.png',
+
     '../assets/livingThings/wl.png',
     '../assets/vr.jpg',
     '../assets/based/peelfinal.png',
