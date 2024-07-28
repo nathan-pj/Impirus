@@ -83,7 +83,7 @@ canvas {
     bottom: 0;
     width: 100%;
     height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(240, 240, 240));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
     pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 .projectsH2{
@@ -133,12 +133,12 @@ canvas {
 
 .projectsContainer::before {
     top: -50px;
-    background: linear-gradient(to top, rgb(240, 240, 240), rgba(255, 255, 255, 0));
+    background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
 }
 
 .projectsContainer::after {
     bottom: -50px;
-    background: linear-gradient(to bottom, rgba(240, 240, 240, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
 }
 .projectsPar{
     width: 30%;
@@ -302,7 +302,7 @@ canvas {
     bottom: 0;
     width: 100%;
     height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(240, 240, 240));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
     pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 .contactContent{
