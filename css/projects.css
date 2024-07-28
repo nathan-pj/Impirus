@@ -109,7 +109,6 @@ canvas {
 }
 
 .projectsContainer{
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,8 +126,8 @@ canvas {
 }
 
 .projectsContainer::before {
-    top: -50px;
-    background: linear-gradient(to top, rgb(240, 240, 240), rgba(255, 255, 255, 0));
+    top: 0px;
+    background: linear-gradient(to bottom, rgb(42, 42, 42), rgba(255, 255, 255, 0));
 }
 
 .projectsContainer::after {
