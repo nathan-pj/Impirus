@@ -417,3 +417,109 @@ body{
 ### If you want to change the font of ALL elements in a specific page
 Add a class to the body of a specific HTML-file. Then use that class name to target that specific body in it's corresponding css file. 
 
+## Changing the transparent video (cube animation)
+
+1. **Export two versions of your transparent video**
+
+For this process, you will need two formats of your transparent video:
+* Your video as a .mov-file
+* Your video as a .webm-file
+
+We need two versions of the same video for browser compatability. 
+
+Both files need to be transparent! You cannot transform a video in html, so make sure they are already transparent. If you do not know how to make your video transparent, check out online converters as most of them work. For example, google something along the lines of "mov to webm no watermark" (so sorry but I don't remember which site I used...).  
+
+*OBS! Make sure your files are SMALL, preferrably under 30 mb.*
+
+When properly formatted and sized, these two files should be added to the `>assets>videos` directory.
+
+2. **Delete the old transparent videos**
+
+Now that you have your new videos, you should delete the previously used ones. If it is your first time changing the transparent video, then you should delete the files "cube.webm" and "cube.mov" from the same directory.
+
+2. **Navigate to `index.html`**
+
+To change the transparent video from the home page, navigate to `index.html`. 
+
+3. **Edit the "vslAnimation" element**
+
+This is the element we will be changing:
+```
+<div id="vslAnimation">
+    <video id="sectionBackground" autoplay playsinline poster loop muted alt="render of a moving sphere">
+        <source src="../assets/videos/cube.webm" type="video/webm">
+        <source src="../assets/videos/cube.mov" type="video/mov">
+    </video>
+</div>
+```
+
+It contains two `<source>` elements, these will be the sources to your videos. 
+
+The first source should be the path to your .webm-file. You may edit the path to use the file name of your new video.
+
+For example, if my new .webm-file is called "donkey.webm" i will edit the first source to look like this:
+
+```
+<source src="../assets/videos/donkey.webm" type="video/webm">
+```
+
+The second source should be your .mov-file. You should edit the path to include your new .mov-file.
+
+For example, if my .mov-file is called "hashbrown.mov", i will edit the source to look like this: 
+
+```
+<source src="../assets/videos/hashbrown.mov" type="video/mov">
+```
+
+And you're finished!
+
+### If the transparent video is not aligned properly
+If your new video does not have the same dimensions/size as the previous one, there is a chance that it will not be aligned properly. 
+
+![proper](./properlyAligned.png)
+
+![proper](./notProperlyAligned.png)
+(The cube placement has been edited for demonstration)
+
+In these cases, navigate to `home.css` and locate the following code:
+
+```
+#sectionBackground{
+    position: absolute;
+    opacity: 1;
+    width: 140%;
+    height: 240px;
+    left: -75%;
+    right: 0;
+    top: -50vh;
+    pointer-events: none;
+}
+```
+
+Here you can adjust the positioning of the video. To adjust the positioning, simply play around with the *top/left* values (potentially *right* as well).
+
+For some context, *vh* stands for viewport height. The viewport is the users screen. Vh works in percentage, so 100vh = 100% of the users screen height. 
+
+*top* is currently set to -50vh. This means the cube is pushed **towards** the top by 50% of the viewport. 
+
+If it were 50vh (not negative) then it would be pushed **away** from the top.
+
+The math may become too convoluted if I explain everything in detail, so my best advice is for you to play around with it and see how it turns out!
+
+**Just remember to also update the media queries** created for the same element (#sectionBackground). This is to make sure the cube is properly positioned **for every screen size** (mobile sizes can be ignored). 
+
+The media queries will look something like this: 
+
+```
+@media screen and (max-width: 900px) {
+    #sectionBackground{
+        left: -92%;
+    }
+    . . . 
+```
+
+In this example, the media query declares that for screens smaller than 900px wide, the cube should be pushed -92% to the left. 
+
+You can test varying screen sizes by opening the inspector, and dragging the size of the inspector window to make the inspector bigger, making the website smaller in return. 
+
+Side note: You may have noticed it is impossible to click on the transparent video to inspect it. This is per design to avoid it blocking the carousel functionality, but you can still navigate to the video through inspecting other elements in the same area. 
