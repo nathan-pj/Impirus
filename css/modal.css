@@ -129,9 +129,10 @@
 }
 
 .carousel-slide > *{
-    min-width: 500px;
-    max-width: 100%;
+    min-width: auto;
+    max-width: 500px;
     min-height: 500px;
+    max-height: 75vh;
     height: auto;
 }
 
