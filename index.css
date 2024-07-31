@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#loadingScreen{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    backdrop-filter: saturate(180%) blur(1000px);
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#loadingLogo{
+    width: 4cm;
+    height: auto;
+    animation: spinZ 4s ease-in-out infinite;
+}
+#loadingText{
+    margin-top: 1cm;
+    font-size: 1.5rem;
+    color: white;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    header, footer, #burgerExpanded, #loadingScreen{
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: saturate(180%) blur(10px);
+    }
+}
+
+header:before, footer:before, #burgerExpanded:before, #loadingScreen:before{
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+@keyframes spinZ {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
