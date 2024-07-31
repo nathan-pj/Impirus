@@ -17,7 +17,7 @@
 #loadingLogo{
     width: 4cm;
     height: auto;
-    animation: spinZ 4s ease-in-out infinite;
+    /* animation: spinZ 4s ease-in-out infinite; */
 }
 #loadingText{
     margin-top: 1cm;
