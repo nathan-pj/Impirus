@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Redirecting. . .</h1>
+    <script>
+        // Takes the user to a different page
+        // Adds a closing animation before the site changes (page turns black)
+        function redirectToWebsite(url) {
+            setTimeout(() => {
+                window.location.href = url;
+            }, 900); 
+        }
+
+        // This section enables you to change slide by pressing the arrow buttons.
+        document.addEventListener('DOMContentLoaded', function () {
+            redirectToWebsite("./pages/home.html");
+        });
+        console.log("hey");
+    </script>
+</body>
+</html>

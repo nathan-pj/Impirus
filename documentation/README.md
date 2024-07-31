@@ -21,7 +21,7 @@ This file aims to explain different aspects of the website and how to add more c
 
 > pages
     about.html
-    index.html
+    home.html
     projects.html
 
 > scripts
@@ -57,7 +57,7 @@ Includes all thumbnails for videos. Keep the sizes around 500x500 pixels for bet
 Includes all the videos to be displayed. Always check the size of a video before you add it. I'm saying this since I know you export your renders in very high quality.
 
 ### >css
-Includes all css files. Each page has it's own css file, these have the same name as their corresponding HTML-file. For example, `projects.css` belongs to `projects.html`. OBS, `home.css` is an exception of this rule, since `home.css` belongs to index.html. 
+Includes all css files. Each page has it's own css file, these have the same name as their corresponding HTML-file. For example, `projects.css` belongs to `projects.html`. OBS, `home.css` is an exception of this rule, since `home.css` belongs to home.html. 
 
 `shared.css` contains styling that is applied to every page. This file mostly contains styling for the navbar and footer.
 
@@ -71,12 +71,12 @@ Contains the HTML-file for every page. The HTML contains the structure of the el
 
 `about.html` = contact page
 
-`index.html` = home page
+`home.html` = home page
 
 `projects.html` = projects page
 
 ### >scripts
-Contains all JavaScript logic for the website. Every HTML-file has it's corresponding JavaScript file, similar to the css files. OBS, `home.js` is used for the home page (`index.html`).
+Contains all JavaScript logic for the website. Every HTML-file has it's corresponding JavaScript file, similar to the css files. OBS, `home.js` is used for the home page (`home.html`).
 
 `modal.js` contains all logic for the modal (windows XP window). 
 
@@ -437,9 +437,9 @@ When properly formatted and sized, these two files should be added to the `>asse
 
 Now that you have your new videos, you should delete the previously used ones. If it is your first time changing the transparent video, then you should delete the files "cube.webm" and "cube.mov" from the same directory.
 
-2. **Navigate to `index.html`**
+2. **Navigate to `home.html`**
 
-To change the transparent video from the home page, navigate to `index.html`. 
+To change the transparent video from the home page, navigate to `home.html`. 
 
 3. **Edit the "vslAnimation" element**
 
