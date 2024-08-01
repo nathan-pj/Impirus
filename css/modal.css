@@ -98,7 +98,7 @@
 .modalContent{
     background-color: white;
     margin: 1rem;
-    border: inset rgb(163, 163, 163) 2px;
+    border: inset rgba(163, 163, 163, 0.295) 2px;
     display: grid;
     grid-template-areas: 
     "carousel modalText";

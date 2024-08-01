@@ -71,7 +71,7 @@ const items = [
         '../assets/based/peelfinal.png',
         '../assets/based/usp.png',
         '../assets/based/whitebg.png'], 
-        "Based Bodyworks", 
+        "based_bodyworks.png", 
         [
             "In a dark, cosmic setting, the product is showcased floating between two rugged, illuminated rocks, creating an ethereal and captivating visual effect. The deep blue background, speckled with subtle starlight, adds a touch of mystery and elegance, making the product appear otherworldly and highly desirable",
             "In a lush, jungle setting, reviews showcase a shampoo and conditioner bundle with product ingredients, coconut and aloe vera, subtly in the background. The scene features the bottles standing amidst vibrant greenery and dewy foliage.",
@@ -84,70 +84,70 @@ const items = [
     ],
     [
         ['../assets/21.jpeg'], 
-        "LANEIGE", 
+        "laneige.png", 
         ["The purpose of this render for Laneige was to focus on a minimalist scene and detailed texturing. These two combined offer a more elegant approach to your classic white background front angle product images."],
         "3D render for LANEIGE"
     ],
     [
         ['../assets/111skin.jpg'], 
-        "111 Skin", 
+        "111_skin.png", 
         ["The purpose of this render for 111SKIN was to emphasize the luxurious and sophisticated nature of the product. The black diamond cream is set against a rich, dark fabric background that highlights its elegance and exclusivity. Detailed texturing and the play of light and shadow enhance the product's premium appeal, providing a striking contrast that draws attention to its sleek, glossy packaging. This approach creates a captivating visual that goes beyond the traditional product shot, adding a layer of depth and allure to the presentation."],
         "3D render for 111 Skin"
     ],
     [
         ['../assets/BasedBalm_still.jpg'], 
-        "Based Balm", 
+        "based_balm.png", 
         ["The purpose of this render for Based Balm was to capture the essence of its all-natural ingredients and its connection to nature. Set amidst a lush, green environment, the product is depicted as harmoniously blending with its natural surroundings. The soft, natural light filtering through the foliage enhances the organic appeal of the packaging, emphasizing its purity and commitment to natural ingredients. This scene creates an inviting, earthy ambiance that highlights the product's core values and appeals to those seeking nature-inspired skincare solutions."],
         "3D render for Based Balm"
     ],
     [
         ['../assets/vr.jpg'], 
-        "VR", 
+        "apple_pro_vision.png", 
         ["Apple Pro Vision virtual headset", "second description"],
         "3D renders of Apple Vision Pro",
         ['../assets/thumbnails/vrThumbnail.png']
     ],
     [
         ['../assets/LaPerse_still.jpg'], 
-        "LA PERSE", 
+        "la_perse.png", 
         ["The purpose of this render for La Perse was to evoke a sense of mystery and elemental beauty. Positioned on a pedestal within a cave setting, the product is surrounded by rugged rocks and illuminated by dramatic, dark lighting. The subtle noise in the image emphasizes the dust in the air, enhancing the raw, natural atmosphere. This unique approach highlights the product's connection to the earth and its potent, natural ingredients, presenting La Perse as a luxurious face care solution emerging from the depths of nature."],
         "3D render for LA PERSE"
     ],
     [
         ['../assets/glasses.png'], 
-        "Glasses", 
+        "theia_bio.png", 
         ["The purpose of this render for the blue light glasses was to showcase their innovative design and functionality in a minimalist setting. Set against a sleek black background, the transparent and bendable frame of the glasses is highlighted, emphasizing their flexibility and modern aesthetic. This simplistic approach draws attention to the unique qualities of the product, presenting it as a stylish and practical solution for eye protection in the digital age."],
         "3D render of a pair of glasses"
     ],
     [
         ['../assets/dolce.jpg'], 
-        "DOLCE & GABBANA", 
+        "dolce_and_gabbana.png", 
         ["A cologne bottle is perched atop a mountain under a picturesque sky. Droplets from the product create ripples in the water below, surrounded by lush vegetation. This 3D render showcases a perfume from Dolce & Gabbana."]
     ],
     [
         ['../assets/videos/naturateVertical.mp4'], 
-        "NATURATE animation", 
+        "naturate_animation.mp4", 
         ["Introducing Naturate, a concept brand created through 3D rendering. This video features a sleek jar floating among natural stones. The minimalist design highlights Naturate’s commitment to purity and simplicity. The render is intended to evoke a sense of harmony between natural elements and modern design, emphasizing the brand's dedication to using raw, organic materials."],
         "A 3D animation of a product from Naturate with floating rocks.",
         ['../assets/thumbnails/bottleThumbnail.png']
     ],
     [
         ['../assets/videos/dome.mp4'], 
-        "Dome Health animation", 
+        "dome_health.mp4", 
         ["Introducing Dome Health, a leading brand in the field of nootropics. This captivating video showcases this innovative product, with each pill elegantly floating among glowing synapses. The dynamic animation highlights the core benefits of these nootropics—enhanced focus, improved cognitive function, and heightened mental clarity. As the video progresses, the sleek design and fluid movement of the pills through the neural pathways symbolize the seamless integration of Dome Health's nootropics into your daily routine. The visual representation of synapses emphasizes the connection between the product and the brain's natural functions, reinforcing the idea of achieving peak mental performance through science and wellness."],
         "A 3D Animation for a product from Dome Health and Theia Bio",
         ['../assets/thumbnails/domeThumbnail.png']
     ],
     [
         ['../assets/videos/soulbrew.mp4'], 
-        "Animation for Soulbrew", 
+        "soulbrew.mp4", 
         ["Description"],
         "A 3D Animation for a product from Soulbrew",
         ['../assets/thumbnails/soulbrewThumbnail.png']
     ],
     [
         ['../assets/videos/luxeText.mp4'], 
-        "LUXE SPHERE 3", 
+        "luxe_sphere3.mp4", 
         ["Introducing the LX-3 Luxe Sphere, a futuristic product concept I designed featuring Ectoplasm® fabric. This captivating video showcases the LX-3's fluid, mesmerizing display of motion and light. The Adaptive Dynamics of the Ectoplasm® fabric allows it to adjust its form seamlessly, while embedded energy spheres in the Interactive Core provide a responsive tactile experience that enhances both play and deep thinking. The video highlights the lightweight yet durable construction of the LX-3, made from high-resilience materials for longevity and endurance across diverse environments. Whether used as a standalone object or integrated into your living space, the LX-3 Luxe Sphere elevates ambiance and stimulates creativity. Ideal for modern interiors, zero-gravity habitats, or as a centerpiece for interactive art installations, this product exemplifies the perfect blend of advanced material science and artistic design, bringing a touch of futuristic elegance to any setting."],       
         "An abstract animation of a textured sphere",
         ['../assets/thumbnails/sphereThumbnail.png']
