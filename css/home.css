@@ -124,9 +124,10 @@
     z-index: 1;
 }
 #vslHeading{
-    font-size: 3.7rem;
+    font-size: 1.5rem;
     width: 90%;
     margin: auto;
+    text-align: center;
 }
 .vslHeadingContainer{
     width: 50%;
@@ -399,7 +400,7 @@
     pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 .reviewSection h2{
-    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    /* border-bottom: 2px solid rgba(0, 0, 0, 0.4); */
     font-size: 3rem;
     margin-bottom: 1rem;
 }
@@ -449,6 +450,7 @@
 .clientName{
     grid-area: clientName;
     font-size: 2.5rem;
+    padding-bottom: 1rem;
 }
 .clientCompany{
     grid-area: clientCompany;
@@ -497,6 +499,9 @@ iframe{
     width: auto;
     height: 200px;
 }
+.companyImgBased{
+    height: 100px;
+}
 
 .reviewCardVideo{
     grid-template-areas: 
@@ -504,14 +509,15 @@ iframe{
 }
 
 .reviewVid{
-    width: 100%;
+    width: 90%;
     height: auto;
+    border-radius: 15px;
 }
 
 /*  Contact us section */
 
 .contactCard{
-    height: 90vh;
+    height: 60vh;
     width: 100vw;
     display: flex;
     align-items: center;
