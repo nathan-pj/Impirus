@@ -190,12 +190,14 @@ canvas {
         top: calc( 50% - 2px );
         border: 1px solid rgba(#F2F4F8, 0);
         box-shadow: 0 15px 20px rgba(0,0,0,.05), 0 0 5px rgba(0,0,0,.4);
+        border-radius: 25px;
         cursor: pointer;
       }
       
       &:active {
         top: 50%;
         box-shadow: 0 5px 10px rgba(0,0,0,.05), 0 0 2px rgba(0,0,0,.5);
+        border-radius: 25px;
         transition: ease-in-out .1s;
       }
 }
