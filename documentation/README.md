@@ -32,6 +32,8 @@ This file aims to explain different aspects of the website and how to add more c
     scroll.js
     shared.js
 
+index.css
+index.html
 ```
 
 ## Directories and Important Files 
@@ -83,6 +85,9 @@ Contains all JavaScript logic for the website. Every HTML-file has it's correspo
 `scroll.js` contains all logic for the smooth scrolling
 
 `shared.js` contains logic used in every page. Mostly consists of navbar/footer logic.
+
+### `index.css` and `index.html`
+These files exist in the root folder of the project. They have been implemented to support our deployment of the website. They will only appear for a second before redirecting the user to the real home page (`home.html`). Nonetheless, ` `index.html` is the direct file that your domain leads to, even though it immediately redirects the user to `home.html`. 
 
 ## How to Add More Projects
 You will complete more projects, and it's only natural that you will want to add these to the website. I have tried making the process as easy as possible, given our limitations. 
