@@ -124,9 +124,10 @@
     z-index: 1;
 }
 #vslHeading{
-    font-size: 3.7rem;
+    font-size: 1.5rem;
     width: 90%;
     margin: auto;
+    text-align: center;
 }
 .vslHeadingContainer{
     width: 50%;
@@ -399,7 +400,7 @@
     pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 .reviewSection h2{
-    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    /* border-bottom: 2px solid rgba(0, 0, 0, 0.4); */
     font-size: 3rem;
     margin-bottom: 1rem;
 }
@@ -449,6 +450,7 @@
 .clientName{
     grid-area: clientName;
     font-size: 2.5rem;
+    padding-bottom: 1rem;
 }
 .clientCompany{
     grid-area: clientCompany;
@@ -497,6 +499,9 @@ iframe{
     width: auto;
     height: 200px;
 }
+.companyImgBased{
+    height: 100px;
+}
 
 .reviewCardVideo{
     grid-template-areas: 
@@ -504,14 +509,15 @@ iframe{
 }
 
 .reviewVid{
-    width: 100%;
+    width: 90%;
     height: auto;
+    border-radius: 15px;
 }
 
 /*  Contact us section */
 
 .contactCard{
-    height: 90vh;
+    height: 60vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -612,9 +618,8 @@ iframe{
 }
 .bottom p{
     width: 60vw;
-    padding-bottom: 15%;
-    font-size: 4rem;
-    padding-top: 20%
+    font-size: 2rem;
+    padding-top: 10%
 }
 /* zoom in logic end  hiiiiii*/
 
@@ -630,10 +635,19 @@ Mine are based on the width of the screen.
 For example: "@media screen and (max-width: 1100px)" includes styling that will only be applied for screens with a width BELOW 1100px width. 
 */
 
-@media screen and (min-width: 1890px) { 
+@media screen and (min-width: 1000px) { 
+    .bottom p{
+        font-size: 2rem;
+        text-align: justify;
+    }
     #sectionH2{
         max-width: 30%;
     }
+    #vslHeading{
+        font-size: 2rem;
+        text-align: justify;
+    }
+
 }
 
 @media screen and (max-width: 4000px) {
@@ -646,10 +660,10 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
 @media screen and (max-width: 1450px) {
     .vslContent{
         gap: 1rem;
-        width: 90vw;
+        width: 100vw;
     }
     #vslHeading{
-        font-size: 2.7em;
+        font-size: 2rem;
     }
  }
 @media screen and (max-width: 1200px) {
@@ -694,7 +708,7 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
         left: -115%;
     }
     #vslHeading{
-        font-size: 3em;
+        font-size: 2rem;
     }
 }
 

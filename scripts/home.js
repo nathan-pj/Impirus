@@ -133,12 +133,12 @@ addEventListener('scroll', e => {
     const wrapHeight = document.querySelector('.wrap').offsetTop;
 
     // Adjust the start and stop points based on the cumulative height
-    const start = wrapHeight + topHeight;
+    const start = wrapHeight;
     const stop = start + (100 * vh); // Adjust the numeric value as needed to make the zooming in/out animation faster/slower
 
     if (scrollTop > start && scrollTop < stop) {
         // Calculate the scale value
-        const scale = Math.max(2.3 - (scrollTop - start) / 200, 1); // adjust the value "200" to make it scale faster / slower
+        const scale = Math.max(2.3 - (scrollTop - start) / 400, 1); // adjust the value "200" to make it scale faster / slower
         
         // Calculate the value of which the image should move to the left / right. 
         // We need this since the image it zooms into is not perfectly horizontally centered.
