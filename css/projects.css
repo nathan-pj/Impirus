@@ -97,16 +97,70 @@ canvas {
     margin: 4em 0 2rem;
     text-decoration: none;
     color: black;
+    overflow: visible;
+    text-align: center;
 }
 
 .projectsPar, .text{
     text-decoration: none;
     color: black;
+    text-align: center;
 }
 .projectsH3 a {
     text-decoration: none;
     color: inherit;
+    
+    display: inline-block;
+    text-align: center;
+   
+    
 }
+/* .projectsH3 a:hover {
+    color:rgb(0, 0, 0);
+
+}
+.projectsH3 a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle at center, 
+        rgba(173, 216, 230, 1) 0%, 
+        rgba(173, 216, 230, 0.8) 25%, 
+        rgba(0, 255, 255, 0.8) 50%, 
+        rgba(0, 255, 255, 0.4) 75%, 
+        rgba(255, 0, 43, 0.4) 90%, 
+        rgb(255, 255, 255) 95%, 
+        rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center;
+    transition: transform 1s cubic-bezier(0.4, 0, 1, 1), width 1s cubic-bezier(0.4, 0, 1, 1), height 1s cubic-bezier(0.4, 0, 1, 1);
+    z-index: -1;
+}
+
+.projectsH3 a:hover::after {
+ 
+        width: 300px;  /* Use fixed values to maintain aspect ratio */
+        /* height: 300px; /* Use fixed values to maintain aspect ratio */
+    
+    /* transform: translate(-50%, -50%) scale(1);
+} */ 
+
+
+.projectsH3 a span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s ease;
+}
+
+..projectsH3 a:hover span {
+    color: aqua;
+} */
+
+
 
 .projectsContainer{
     display: flex;
@@ -149,6 +203,10 @@ canvas {
     font-weight: light;
     word-spacing: 30%;
 }
+
+
+
+
 
 .projectsGroup{
     display: grid;

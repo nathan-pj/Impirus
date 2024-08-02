@@ -98,8 +98,8 @@ header:before, footer:before, #burgerExpanded:before, #loadingScreen:before{
     left: 0;
     right: 0;
     bottom: 0;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    background-color: rgba(0, 0, 0, 0.4); 
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.03); 
     border-radius: 15px;
 }
 
@@ -110,7 +110,7 @@ b{
     padding: 4rem 5rem;
     display: block;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     background: linear-gradient(105deg, rgba(105,48,195,0.1) 0%, rgba(128,255,219,0.1) 100%);
     border-radius: 20px;
     width: fit-content;
