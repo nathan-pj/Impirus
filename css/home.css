@@ -451,6 +451,7 @@
     grid-area: clientName;
     font-size: 2.5rem;
     padding-bottom: 1rem;
+    text-align: center;
 }
 .clientCompany{
     grid-area: clientCompany;
