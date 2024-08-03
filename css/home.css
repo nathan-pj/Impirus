@@ -417,24 +417,55 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-.reviewCard{
+.reviewCard {
+    border-radius: 25px;
     margin-top: 2rem;
     width: 90%;
     display: grid;
     grid-template-areas: 
-    "clientPicture reviewText companyImgContainer";
+        "clientPicture reviewText companyImgContainer";
     gap: 1rem;
-    color: white;
     padding: 5rem;
+    background-image: url('../assets/ffflux.svg');
+    background-size: cover;
+    
 }
 .reviewCardOdd{
+    background-image: url('../assets/ffflux.svg');
+    background-size: cover;
     grid-template-areas: 
     "companyImgContainer reviewText";
 }
 .reviewCardEven{
+    background-image: url('../assets/ffflux.svg');
+    background-size: cover;
     grid-template-areas: 
     "companyImgContainer reviewText";
 }
+
+
+.reviewCardKawa {
+    border-radius: 25px;
+    margin-top: 2rem;
+    width: 90%;
+    display: grid;
+    grid-template-areas: 
+        "clientPicture reviewText companyImgContainer";
+    gap: 1rem;
+    padding: 5rem;
+    background-image: url('../assets/ffflux2.svg');
+    background-size: cover;
+    
+}
+.reviewCardOddKawa{
+    background-image: url('../assets/ffflux2.svg');
+    background-size: cover;
+    grid-template-areas: 
+    "companyImgContainer reviewText";
+}
+
+
+
 .clientPictureContainer{
     grid-area: clientPicture;
     height: 70%;
@@ -452,6 +483,7 @@
     font-size: 2.5rem;
     padding-bottom: 1rem;
     text-align: center;
+    color:whitesmoke;
 }
 .clientCompany{
     grid-area: clientCompany;
@@ -459,6 +491,7 @@
 }
 .clientQuote{
     grid-area: clientQuote;
+    color:whitesmoke;
 }
 iframe{
     min-height: 50vh;
