@@ -704,7 +704,7 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
     #vslAnimation{
         display: absolute;
     }
-    .reviewCardOdd, .reviewCardEven{
+    .reviewCardOddKawa, .reviewCardEven{
         grid-template-areas: 
         "companyImgContainer"
         "reviewText";
