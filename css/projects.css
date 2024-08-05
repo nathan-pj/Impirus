@@ -205,10 +205,6 @@ canvas {
     word-spacing: 30%;
 }
 
-
-
-
-
 .projectsGroup{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -217,8 +213,6 @@ canvas {
     min-width: fit-content;
 }
 .twoSquareGrid{
-    padding-right: 1rem;
-    padding-left: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 55vw;
@@ -230,7 +224,7 @@ canvas {
 .textProject{
     display: flex;
     width: fit-content;
-    justify-content: space-around;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -300,8 +294,9 @@ canvas {
 .showcaseGroup{
     overflow-x: hidden;
     background-color: #e5e5e5;
-    padding: 1rem 1rem 4rem 1rem;
+    padding: 1rem 0 4rem 0;
     border-radius: 15px;
+    margin: auto;
 }
 .showcaseVideos{
     display: flex;
@@ -320,7 +315,6 @@ canvas {
 }
 .text{
     width: 100%;
-    min-width: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -485,6 +479,7 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
         width: 80%;
         font-size: 1rem;
         font-weight: normal;
+        padding-left: 0px;
     }
     .contactContent{
         width: 80vw;
