@@ -156,7 +156,7 @@ canvas {
     transition: color 0.5s ease;
 }
 
-..projectsH3 a:hover span {
+.projectsH3 a:hover span {
     color: aqua;
 } */
 
@@ -198,6 +198,7 @@ canvas {
     width: 50%;
     text-align: left;
     padding-left: 1.5rem;
+    
     margin-bottom: 2rem;
     font-size: 3rem;
     font-weight: light;
@@ -216,14 +217,15 @@ canvas {
     min-width: fit-content;
 }
 .twoSquareGrid{
+    padding-right: 1rem;
+    padding-left: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 55vw;
-    gap: 2rem 15px;
+    gap: 2rem 2rem;
     min-width: fit-content;
     height: fit-content;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    
 }
 .textProject{
     display: flex;
@@ -274,13 +276,14 @@ canvas {
 .reviewGroup{
     margin: 10rem 0 2rem 0;
     display: flex;
-    width: 90vw;
+    width: 100%;
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
 }
 .reviewH3, .textH2{
+    text-align: center;
     grid-area: sectionH2;
     font-weight: 700;
     font-size: 3.5em;
@@ -290,7 +293,12 @@ canvas {
     max-width: 80%;
     text-align: center;
 }
+
+
+
+
 .showcaseGroup{
+    overflow-x: hidden;
     background-color: #e5e5e5;
     padding: 1rem 1rem 4rem 1rem;
     border-radius: 15px;
