@@ -1,155 +1,158 @@
-#contentWrapper{
-   width: 100vw;
-   height: auto;
-   overflow: clip; 
-   position: relative;
+#contentWrapper {
+  width: 100vw;
+  height: auto;
+  overflow: clip;
+  position: relative;
 }
-#landingSection{
-    width: 100vw;
-    height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
-     /* background-color: rgba(0, 0, 0, 0.5); */
+#landingSection {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
-#landingSection::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
-    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
-    z-index: 1;
+#landingSection::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+  pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
+  z-index: 1;
 }
-#landingVideo{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 0;
-    overflow: hidden;
+#landingVideo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
 }
 
-#nameStretch{
-    width: 70%;
-    height: 70%;
-    position: absolute;
-    z-index: -1;
-    transition: transform 0.1s ease;
+#nameStretch {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  z-index: -1;
+  transition: transform 0.1s ease;
 }
-#landingAnimation{
-    position: absolute;
-    width: 20%;
-    height: auto;
-    transition: transform 0.3s ease;
+#landingAnimation {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  transition: transform 0.3s ease;
 }
-#landingAnimation:hover{
-    cursor: pointer;
+#landingAnimation:hover {
+  cursor: pointer;
 }
 
 @keyframes growShrink {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-.card{
-    background-color: rgb(255, 255, 255);
-    padding: 3rem 0;
+.card {
+  background-color: rgb(255, 255, 255);
+  padding: 3rem 0;
 }
-#sectionCard{
-    display: grid;
-    grid-template-areas:  
+#sectionCard {
+  display: grid;
+  grid-template-areas:
     "sectionH2 sectionPar1 sectionPar2"
     "sectionH2 sectionPar1 sectionPar2"
-    "sectionH2 sectionPar1 sectionImgContainer"
-    ;
-    gap: 3rem;
-    width: 90%;
-    position: relative;
+    "sectionH2 sectionPar1 sectionImgContainer";
+  gap: 3rem;
+  width: 90%;
+  position: relative;
 }
-.sectionContainer{
-    width: 100vw;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    background-color: white;
+.sectionContainer {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color: white;
 }
-.vslSection{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    position: relative;
+.vslSection {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
-#vsl{
-    z-index: 0;
+#vsl {
+  z-index: 0;
 }
-#vsl::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
-    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
-    z-index: 1;
+#vsl::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+  pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
+  z-index: 1;
 }
-#vslVid{
-    width: auto;
-    height: 100%;
+#vslVid {
+  width: auto;
+  height: 100%;
 }
-#sectionH2{
-    grid-area: sectionH2;
-    font-size: 5rem;
+#sectionH2 {
+  grid-area: sectionH2;
+  font-size: 5rem;
 }
-#sectionH2, #vslHeading{
-    font-weight: 700;
-    z-index: 1;
+#sectionH2,
+#vslHeading {
+  font-weight: 700;
+  z-index: 1;
 }
-#vslHeading{
-    font-size: 1.5rem;
-    width: 90%;
-    margin: auto;
-    text-align: center;
+#vslHeading {
+  font-size: 1.5rem;
+  width: 90%;
+  margin: auto;
+  text-align: center;
 }
-.vslHeadingContainer{
-    width: 50%;
+.vslHeadingContainer {
+  width: 50%;
 }
-.word{
-    color: black;
-    display: inline-block;
-    margin: 1rem 0;
-    position: relative;
+.word {
+  color: black;
+  display: inline-block;
+  margin: 1rem 0;
+  position: relative;
 }
-.wordAnimation{
-    animation: scrollAnimation 2s ease;
+.wordAnimation {
+  animation: scrollAnimation 2s ease;
 }
-
 
 /* 
 .wordAnimationReverse{
     animation: scrollAnimationReverse 2s ease;
 } */
 @keyframes scrollAnimation {
-    from {transform: translateY(100px);}
-    to {transform: translateY(0px);}
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 /* 
@@ -176,492 +179,536 @@
 }
 */
 
-.vslContent{
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap-reverse;
-    gap: 2rem;
-    align-items: center;
+.vslContent {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  gap: 2rem;
+  align-items: center;
 }
-#vslVidContainer{
-    height: auto;
-    max-width: 45%;
-    display: flex;
-    justify-content: center;
+#vslVidContainer {
+  height: auto;
+  max-width: 45%;
+  display: flex;
+  justify-content: center;
 }
-#vslAnimation{
-    width: 600px;
-    height: 0px;
-    overflow: visible; 
-    position: sticky;
-    position: -webkit-sticky; /* For Safari */
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 40%;
-    z-index: 1;
+#vslAnimation {
+  width: 600px;
+  height: 0px;
+  overflow: visible;
+  position: sticky;
+  position: -webkit-sticky; /* For Safari */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 40%;
+  z-index: 1;
 }
-#sectionPar1{
-    grid-area: sectionPar1;
-    z-index: 1;
-
+#sectionPar1 {
+  grid-area: sectionPar1;
+  z-index: 1;
 }
-#sectionPar2{
-    grid-area: sectionPar2;
-    z-index: 1;
+#sectionPar2 {
+  grid-area: sectionPar2;
+  z-index: 1;
 }
-#sectionImgContainer{
-    grid-area: sectionImgContainer;
-    max-width: 100%;
-    max-height: auto;
+#sectionImgContainer {
+  grid-area: sectionImgContainer;
+  max-width: 100%;
+  max-height: auto;
 }
-#sectionImg{
-    width: 100%;
-    height: auto;
+#sectionImg {
+  width: 100%;
+  height: auto;
 }
-#sectionBackground{
-    position: absolute;
-    opacity: 1;
-    width: 140%;
-    height: 240px;
-    left: -75%;
-    right: 0;
-    top: -50vh;
-    pointer-events: none;
+#sectionBackground {
+  position: absolute;
+  opacity: 1;
+  width: 140%;
+  height: 240px;
+  left: -75%;
+  right: 0;
+  top: -50vh;
+  pointer-events: none;
 }
-#sectionCard div h3{
-    font-size: xx-large;
-    font-weight: 700;
+#sectionCard div h3 {
+  font-size: xx-large;
+  font-weight: 700;
 }
 
 @keyframes changeFont {
-    0% { font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
-    28.56% { font-family: NSimSun; }
-    57.12% { font-family: 'Courier New', monospace; }
-    71.4% { font-family: 'Arial Narrow', Arial, sans-serif; }
-    85.68% { font-family: monospace; }
+  0% {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  28.56% {
+    font-family: NSimSun;
+  }
+  57.12% {
+    font-family: "Courier New", monospace;
+  }
+  71.4% {
+    font-family: "Arial Narrow", Arial, sans-serif;
+  }
+  85.68% {
+    font-family: monospace;
+  }
 }
 
-#everyAnimation{
-    animation: changeFont 6s infinite;
+#everyAnimation {
+  animation: changeFont 6s infinite;
 }
 
-#vslImgContainer{
-   width: 40%;
-   min-width: 300px;
-   height: 100%; 
-   border-radius: 20px;
-   overflow: hidden; /* Hide overflowing content */
-   position: relative;
+#vslImgContainer {
+  width: 40%;
+  min-width: 300px;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden; /* Hide overflowing content */
+  position: relative;
 }
-#vslImgContainer{
-    width: 100%;
+#vslImgContainer {
+  width: 100%;
 }
-#vslImgContainer:hover{
-    background-color: white;  
+#vslImgContainer:hover {
+  background-color: white;
 }
-.bottom{
-    position: relative;
+.bottom {
+  position: relative;
 }
-.bottom::after{
-    z-index: 2;
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -50px;
-    width: 100%;
-    height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
-    pointer-events: none;
-}
-
-.contactContent{
-    position: relative;
+.bottom::after {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+  pointer-events: none;
 }
 
-.grayHoverAnimation{
-    animation: hoverGray 1s;
+.contactContent {
+  position: relative;
 }
 
-.grayHoverAnimationEnd{
-    animation: hoverGrayEnd 1s;
+.grayHoverAnimation {
+  animation: hoverGray 1s;
 }
 
-.whiteHoverAnimation{
-    animation: hoverWhite 1s;
+.grayHoverAnimationEnd {
+  animation: hoverGrayEnd 1s;
 }
 
-.whiteHoverAnimationEnd{
-    animation: hoverWhiteEnd 1s;
+.whiteHoverAnimation {
+  animation: hoverWhite 1s;
+}
+
+.whiteHoverAnimationEnd {
+  animation: hoverWhiteEnd 1s;
 }
 
 @keyframes hoverGray {
-    from { background-color: white;}
-    to {background-color: #efefef;}
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #efefef;
+  }
 }
 
 @keyframes hoverGrayEnd {
-    from { background-color: #efefef;}
-    to {background-color: white;}
+  from {
+    background-color: #efefef;
+  }
+  to {
+    background-color: white;
+  }
 }
 
 @keyframes hoverWhite {
-    from { background-color: #efefef;}
-    to {background-color: white;}
+  from {
+    background-color: #efefef;
+  }
+  to {
+    background-color: white;
+  }
 }
 
 @keyframes hoverWhiteEnd {
-    from { background-color: white;}
-    to {background-color: #efefef;}
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #efefef;
+  }
 }
 
-#landingSection{
-    animation: fadeInFixedWidth ease 1s;
+#landingSection {
+  animation: fadeInFixedWidth ease 1s;
 }
 
-@keyframes fadeIn{
-    from {scale: .8; opacity: 0; transform: translateY(-20%);}
-    to {scale: 1; opacity: 1; transform: translateY(0);}
+@keyframes fadeIn {
+  from {
+    scale: 0.8;
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes fadeInFixedWidth{
-    from {height: .8; width: 100vw; opacity: 0; transform: translateY(-20%);}
-    to {height: 1; width: 100vw; opacity: 1; transform: translateY(0);}
+@keyframes fadeInFixedWidth {
+  from {
+    height: 0.8;
+    width: 100vw;
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    height: 1;
+    width: 100vw;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.bgText{
-    position: fixed;
+.bgText {
+  position: fixed;
 }
 
 .sectionCarousel {
-    display: flex; /* Display slides in a row */
-    transition: transform 0.5s ease; /* Smooth transition effect */
+  display: flex; /* Display slides in a row */
+  transition: transform 0.5s ease; /* Smooth transition effect */
 }
 
-.sectionCarouselSlide, .vslCarouselSlide {
-    flex: 0 0 100%; /* Each slide takes full width */
-    /* Optionally, add additional styling like padding or margin */
+.sectionCarouselSlide,
+.vslCarouselSlide {
+  flex: 0 0 100%; /* Each slide takes full width */
+  /* Optionally, add additional styling like padding or margin */
 }
 
-.sectionCarouselNav, .vslCarouselNav{
-    position: absolute;
-    z-index: 1;
-    padding: 0 2rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    top: 0;
-    cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+.sectionCarouselNav,
+.vslCarouselNav {
+  position: absolute;
+  z-index: 1;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  top: 0;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
-.sectionPrev{
-    left: 0;
+.sectionPrev {
+  left: 0;
 }
-.sectionNext{
-    right: 0;
-}
-
-.sectionCarouselSlide img, .vslCarouselSlide img {
-    width: 100%; /* Ensure images fill their parent container */
-    display: block; /* Remove default inline-block spacing */
+.sectionNext {
+  right: 0;
 }
 
-#mouseOverlay{
-    display: block;
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    font-size: 3rem;
-    font-variation-settings: 'FILL' 1;
+.sectionCarouselSlide img,
+.vslCarouselSlide img {
+  width: 100%; /* Ensure images fill their parent container */
+  display: block; /* Remove default inline-block spacing */
+}
+
+#mouseOverlay {
+  display: block;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  font-variation-settings: "FILL" 1;
 }
 
 /* Review section */
 
-.reviewSection{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.reviewSection {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-.reviewSection::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: -50px;
-    width: 100%;
-    height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(240, 240, 240));
-    z-index: 2;
-    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
+.reviewSection::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(240, 240, 240));
+  z-index: 2;
+  pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
-.reviewSection h2{
-    /* border-bottom: 2px solid rgba(0, 0, 0, 0.4); */
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.reviewSection h2 {
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.4); */
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.reviewText h4{
-    font-weight: 700;
+.reviewText h4 {
+  font-weight: 700;
 }
-.imgContext{
-    font-weight: 700;
+.imgContext {
+  font-weight: 700;
 }
-.reviewsContainer{
-    width: 90vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.reviewsContainer {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .reviewCard {
-    border-radius: 25px;
-    margin-top: 2rem;
-    width: 90%;
-    display: grid;
-    grid-template-areas: 
-        "clientPicture reviewText companyImgContainer";
-    gap: 1rem;
-    padding: 5rem;
-    background-image: url('../assets/ffflux.svg');
-    background-size: cover;
-    
+  border-radius: 25px;
+  margin-top: 2rem;
+  width: 90%;
+  display: grid;
+  grid-template-areas: "clientPicture reviewText companyImgContainer";
+  gap: 1rem;
+  padding: 5rem;
+  background-image: url("../assets/ffflux.svg");
+  background-size: cover;
 }
-.reviewCardOdd{
-    background-image: url('../assets/ffflux.svg');
-    background-size: cover;
-    grid-template-areas: 
-    "companyImgContainer reviewText";
+.reviewCardOdd {
+  background-image: url("../assets/ffflux.svg");
+  background-size: cover;
+  grid-template-areas: "companyImgContainer reviewText";
 }
-.reviewCardEven{
-    background-image: url('../assets/ffflux.svg');
-    background-size: cover;
-    grid-template-areas: 
-    "companyImgContainer reviewText";
+.reviewCardEven {
+  background-image: url("../assets/ffflux.svg");
+  background-size: cover;
+  grid-template-areas: "companyImgContainer reviewText";
 }
-
 
 .reviewCardKawa {
-    border-radius: 25px;
-    margin-top: 2rem;
-    width: 90%;
-    display: grid;
-    grid-template-areas: 
-        "clientPicture reviewText companyImgContainer";
-    gap: 1rem;
-    padding: 5rem;
-    background-image: url('../assets/ffflux2.svg');
-    background-size: cover;
-    
+  border-radius: 25px;
+  margin-top: 2rem;
+  width: 90%;
+  display: grid;
+  grid-template-areas: "clientPicture reviewText companyImgContainer";
+  gap: 1rem;
+  padding: 5rem;
+  background-image: url("../assets/ffflux2.svg");
+  background-size: cover;
 }
-.reviewCardOddKawa{
-    background-image: url('../assets/ffflux2.svg');
-    background-size: cover;
-    grid-template-areas: 
-    "companyImgContainer reviewText";
+.reviewCardOddKawa {
+  background-image: url("../assets/ffflux2.svg");
+  background-size: cover;
+  grid-template-areas: "companyImgContainer reviewText";
 }
 
-
-
-.clientPictureContainer{
-    grid-area: clientPicture;
-    height: 70%;
-    width: auto;
-    place-self: center;
+.clientPictureContainer {
+  grid-area: clientPicture;
+  height: 70%;
+  width: auto;
+  place-self: center;
 }
-.clientPictureContainer img{
-    height: auto;
-    width: 60%;
-    border-radius: 50%;
-    max-width: 400px;
+.clientPictureContainer img {
+  height: auto;
+  width: 60%;
+  border-radius: 50%;
+  max-width: 400px;
 }
-.clientName{
-    grid-area: clientName;
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    color:whitesmoke;
+.clientName {
+  grid-area: clientName;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: whitesmoke;
 }
-.clientCompany{
-    grid-area: clientCompany;
-    font-size: 1.5rem;
+.clientCompany {
+  grid-area: clientCompany;
+  font-size: 1.5rem;
 }
-.clientQuote{
-    grid-area: clientQuote;
-    color:whitesmoke;
+.clientQuote {
+  grid-area: clientQuote;
+  color: whitesmoke;
 }
-iframe{
-    min-height: 50vh;
+iframe {
+  min-height: 50vh;
 }
-.reviewText{
-    grid-area: reviewText;
-    width: 70%;
-    justify-self: center;
+.reviewText {
+  grid-area: reviewText;
+  width: 70%;
+  justify-self: center;
 }
-.companyImgContainer{
-    height: 70%;
-    width: auto;
-    grid-area: companyImgContainer;
-    place-self: center;
+.companyImgContainer {
+  height: 70%;
+  width: auto;
+  grid-area: companyImgContainer;
+  place-self: center;
 }
-.companyImg{
-    height: auto;
-    width: 60%;
-    max-width: 400px;
+.companyImg {
+  height: auto;
+  width: 60%;
+  max-width: 400px;
 }
 
-.imgContext{
-    margin-top: 1rem;
+.imgContext {
+  margin-top: 1rem;
 }
-.clientQuote{
-    text-align: justify;
+.clientQuote {
+  text-align: justify;
 }
-.clientCompany{
-    margin-bottom: 1rem;
-}
-
-.clientPictureContainer, .companyImgContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.clientPictureContainer img, .companyImg{
-    width: auto;
-    height: 200px;
-}
-.companyImgBased{
-    height: 100px;
+.clientCompany {
+  margin-bottom: 1rem;
 }
 
-.reviewCardVideo{
-    grid-template-areas: 
-    "companyImgContainer reviewText";
+.clientPictureContainer,
+.companyImgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.clientPictureContainer img,
+.companyImg {
+  width: auto;
+  height: 200px;
+}
+.companyImgBased {
+  height: 100px;
 }
 
-.reviewVid{
-    width: 90%;
-    height: auto;
-    border-radius: 15px;
+.reviewCardVideo {
+  grid-template-areas: "companyImgContainer reviewText";
+}
+
+.reviewVid {
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
 }
 
 /*  Contact us section */
 
-.contactCard{
-    height: 60vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background: url(../assets/homeBackground.png);
-    background-size: cover;
-    color: white;
+.contactCard {
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: url(../assets/homeBackground.png);
+  background-size: cover;
+  color: white;
 }
-.contactContent{
-    width: 90vw;
-    display: flex;
-    place-items: center;
-    gap: 2rem;
-    padding: 4rem;
-    flex-wrap: wrap;
-    justify-content: center;
+.contactContent {
+  width: 90vw;
+  display: flex;
+  place-items: center;
+  gap: 2rem;
+  padding: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.contactContent h2{
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    animation: changeFont 10s infinite;
-    text-align: center;
+.contactContent h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  animation: changeFont 10s infinite;
+  text-align: center;
 }
-#contactBackground{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    opacity: 0.5;
-}
-
-#seeCommercial{ 
-    font-weight: 700;   
-    color: rgb(224, 252, 255);
-    font-size: 1.5em;
-    margin-top: 1.5em;
-    display: block;
+#contactBackground {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  opacity: 0.5;
 }
 
-#seeCommercial span{
-    font-size: 1.5em;
-    margin-left: 0.5em;
-    vertical-align: middle;
-    animation: arrowRight infinite 3s ease;
+#seeCommercial {
+  font-weight: 700;
+  color: rgb(224, 252, 255);
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  display: block;
+}
+
+#seeCommercial span {
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  vertical-align: middle;
+  animation: arrowRight infinite 3s ease;
 }
 
 /* zoom in logic */
 #zoom {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky !important;
-    top: 20vh;
-    will-change: transform;
-    width: 100%;
-    transform: scale(2.3);
+  position: -webkit-sticky; /* For Safari */
+  position: sticky !important;
+  top: 20vh;
+  will-change: transform;
+  width: 100%;
+  transform: scale(2.3);
 }
 .wrap {
-    height: 200vh;
+  height: 200vh;
 }
 
-.top, .wrap{
-    z-index: 2;
-    position: relative;
-    background-color: white;
+.top,
+.wrap {
+  z-index: 1;
+  position: relative;
+  background-color: white;
 }
 
 .bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top {
-    height: 80vh;
+  height: 80vh;
 }
 
-.top::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: -50px;
-    width: 100%;
-    height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
-    pointer-events: none;
+.top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+  pointer-events: none;
 }
 
-.renderedTitle{
-   font-family: Bocaluco;
+.renderedTitle {
+  font-family: Bocaluco;
 }
 
-.bottom h2{
-    font-size: 3.5rem;
-    width: 100vw;
-    text-align: center;
-    margin-top: 4rem;
+.bottom h2 {
+  font-size: 3.5rem;
+  width: 100vw;
+  text-align: center;
+  margin-top: 4rem;
 }
-.bottom p{
-    width: 60vw;
-    font-size: 2rem;
-    padding-top: 10%
+.bottom p {
+  width: 60vw;
+  font-size: 2rem;
+  padding-top: 10%;
 }
 /* zoom in logic end  hiiiiii*/
 
 /* Keyframes are animations that usually don't need JavaScript */
 @keyframes arrowRight {
-    0% {transform: translateX(0%);}
-    50% {transform: translateX(25px);}
-    100% {transform: translateX(0%);}
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 /* Media queries adjust the styling for different screen sizes. 
@@ -669,240 +716,239 @@ Mine are based on the width of the screen.
 For example: "@media screen and (max-width: 1100px)" includes styling that will only be applied for screens with a width BELOW 1100px width. 
 */
 
-@media screen and (min-width: 1000px) { 
-    .bottom p{
-        font-size: 2rem;
-        text-align: justify;
-    }
-    #sectionH2{
-        max-width: 30%;
-    }
-    #vslHeading{
-        font-size: 2rem;
-        text-align: justify;
-    }
-
+@media screen and (min-width: 1000px) {
+  .bottom p {
+    font-size: 2rem;
+    text-align: justify;
+  }
+  #sectionH2 {
+    max-width: 30%;
+  }
+  #vslHeading {
+    font-size: 2rem;
+    text-align: justify;
+  }
 }
 
 @media screen and (max-width: 4000px) {
-    #sectionImgContainer{
-        max-width: 60%;
-        max-height: auto;
-        justify-self: center;
-    }
+  #sectionImgContainer {
+    max-width: 60%;
+    max-height: auto;
+    justify-self: center;
+  }
 }
 @media screen and (max-width: 1450px) {
-    .vslContent{
-        gap: 1rem;
-        width: 100vw;
-    }
-    #vslHeading{
-        font-size: 2rem;
-    }
- }
+  .vslContent {
+    gap: 1rem;
+    width: 100vw;
+  }
+  #vslHeading {
+    font-size: 2rem;
+  }
+}
 @media screen and (max-width: 1200px) {
-    #vslAnimation{
-        display: absolute;
-    }
-    .reviewCardOddKawa, .reviewCardEven{
-        grid-template-areas: 
-        "companyImgContainer"
-        "reviewText";
-    }
-    #seeCommercial{
-        margin-bottom: 1em;
-    }
-    .reviewText{
-        max-width: 90%;
-    }
-    .vslHeadingContainer{
-        width: 80%;
-        height: fit-content;
-    }
-    #vslVidContainer{
-        margin-bottom: 5rem;
-    }
-    #vslVid{
-        width: 100%;
-        height: auto;
-    }
-    #sectionBackground{
-        width: 138%;
-        left: -125%;
-    }
- }
+  #vslAnimation {
+    display: absolute;
+  }
+  .reviewCardOddKawa,
+  .reviewCardEven {
+    grid-template-areas:
+      "companyImgContainer"
+      "reviewText";
+  }
+  #seeCommercial {
+    margin-bottom: 1em;
+  }
+  .reviewText {
+    max-width: 90%;
+  }
+  .vslHeadingContainer {
+    width: 80%;
+    height: fit-content;
+  }
+  #vslVidContainer {
+    margin-bottom: 5rem;
+  }
+  #vslVid {
+    width: 100%;
+    height: auto;
+  }
+  #sectionBackground {
+    width: 138%;
+    left: -125%;
+  }
+}
 @media screen and (max-width: 1100px) {
-    #landingVideo{
-        top: 20vh;
-    }
-    #vslImgContainer{
-        margin-top: 2rem;
-    }
-    #sectionBackground{
-        left: -115%;
-    }
-    #vslHeading{
-        font-size: 2rem;
-    }
+  #landingVideo {
+    top: 20vh;
+  }
+  #vslImgContainer {
+    margin-top: 2rem;
+  }
+  #sectionBackground {
+    left: -115%;
+  }
+  #vslHeading {
+    font-size: 2rem;
+  }
 }
 
-
 @media screen and (max-width: 1000px) {
-    #sectionBackground{
-        left: -105%;
-    }
-    .reviewCard{
-        width: 70vw;
-    }
+  #sectionBackground {
+    left: -105%;
+  }
+  .reviewCard {
+    width: 70vw;
+  }
 
-    .clientPictureContainer, .companyImgContainer{
-        margin-bottom: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .clientPictureContainer img, .companyImg{
-        width: 50%;
-        height: auto;
-        margin-top: 1rem;
-    }
-    .reviewText{
-        width: 80%;
-    }
-    #sectionCard{
-    grid-template-areas:  
-    "sectionH2"
-    "sectionPar1"
-    "sectionPar2" 
-    "sectionImgContainer";
+  .clientPictureContainer,
+  .companyImgContainer {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .clientPictureContainer img,
+  .companyImg {
+    width: 50%;
+    height: auto;
+    margin-top: 1rem;
+  }
+  .reviewText {
+    width: 80%;
+  }
+  #sectionCard {
+    grid-template-areas:
+      "sectionH2"
+      "sectionPar1"
+      "sectionPar2"
+      "sectionImgContainer";
     width: 70%;
     justify-content: center;
-    }
-    #sectionH2{
-        text-align: center;
-        font-size: 7rem;
-    }
-    #sectionPar1{
-        z-index: 1;
-    }
-    
-    #sectionImgContainer{
-        max-width: 50%;
-        height: auto;
-        justify-self: center;
-    }
-    #vslVidContainer{
-        max-width: 80%;
-    }
+  }
+  #sectionH2 {
+    text-align: center;
+    font-size: 7rem;
+  }
+  #sectionPar1 {
+    z-index: 1;
+  }
+
+  #sectionImgContainer {
+    max-width: 50%;
+    height: auto;
+    justify-self: center;
+  }
+  #vslVidContainer {
+    max-width: 80%;
+  }
 }
 
 @media screen and (max-width: 900px) {
-    #sectionBackground{
-        left: -92%;
-    }
-    #vslImgContainer{
-        width: 80%;
-    }
-    #vslHeading{
-        font-size: 2rem;
-    }
+  #sectionBackground {
+    left: -92%;
+  }
+  #vslImgContainer {
+    width: 80%;
+  }
+  #vslHeading {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    #sectionBackground{
-        left: -80%;
-        height: 170px;
-    }
-    .reviewText{
-        width: 90%;
-    }
-    .reviewCard{
-        width: 95vw;
-        padding: 1rem;
-    }
-    #sectionH2{
-        text-align: left;
-    }
-    #sectionCard{
-        width: 90%;
-    }
-    #landingAnimation{
-        width: 30%;
-    }
-    #landingVideo{
-        top: 30vh;
-    }
-    
-    #vslImgContainer{
-        width: 90%;
-    }
+  #sectionBackground {
+    left: -80%;
+    height: 170px;
+  }
+  .reviewText {
+    width: 90%;
+  }
+  .reviewCard {
+    width: 95vw;
+    padding: 1rem;
+  }
+  #sectionH2 {
+    text-align: left;
+  }
+  #sectionCard {
+    width: 90%;
+  }
+  #landingAnimation {
+    width: 30%;
+  }
+  #landingVideo {
+    top: 30vh;
+  }
 
+  #vslImgContainer {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 750px) {
-    #sectionBackground{
-        left: -66%;
-    }
-    .bottom p{
-        width: 80vw;
-    }
+  #sectionBackground {
+    left: -66%;
+  }
+  .bottom p {
+    width: 80vw;
+  }
 }
 @media screen and (max-width: 600px) {
-    #sectionH2{
-        font-size: 5rem;
-    }
-    #sectionBackground{
-        left: -56%;
-    }
-    
+  #sectionH2 {
+    font-size: 5rem;
+  }
+  #sectionBackground {
+    left: -56%;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    #vslVidContainer{
-        max-width: 90%;
-    }
-    #vslVid{
-        max-width: 100%;
-    }
-    #vslHeading{
-        font-size: 1rem;
-        max-width: 80vw;
-    }
-    #landingSection{
-        height: 60vh;
-    }
-    .bottom p{
-        font-size: 1.6rem;
-    }
+  #vslVidContainer {
+    max-width: 90%;
+  }
+  #vslVid {
+    max-width: 100%;
+  }
+  #vslHeading {
+    font-size: 1rem;
+    max-width: 80vw;
+  }
+  #landingSection {
+    height: 60vh;
+  }
+  .bottom p {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
-    #vslHeading{
-        font-size: 1rem;
-    }
+  #vslHeading {
+    font-size: 1rem;
+  }
 
-    #landingAnimation{
-        width: 35%;
-    }
-    #nameStretch{
-        height: 50%;
-    }
-    .reviewText{
-        max-width: none;
-        width: 95%;
-    }
-    .reviewCard{
-        padding: 10px;
-    }
-    .companyImg{
-        width: 40%;
-        height: auto;
-    }
-    #sectionH2{
-        font-size: 4rem;
-    }
-    .bottom p{
-        width: 85vw;
-    }
+  #landingAnimation {
+    width: 35%;
+  }
+  #nameStretch {
+    height: 50%;
+  }
+  .reviewText {
+    max-width: none;
+    width: 95%;
+  }
+  .reviewCard {
+    padding: 10px;
+  }
+  .companyImg {
+    width: 40%;
+    height: auto;
+  }
+  #sectionH2 {
+    font-size: 4rem;
+  }
+  .bottom p {
+    width: 85vw;
+  }
 }
