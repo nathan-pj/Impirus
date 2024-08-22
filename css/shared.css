@@ -1,110 +1,116 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    width: 100vw;
-    height: 100%;
-    font-family: NSimSun;
-    outline: none;
-    overflow-y: scroll !important;
+body {
+  width: 100vw;
+  height: 100%;
+  font-family: NSimSun;
+  outline: none;
+  overflow-y: scroll !important;
 }
-#scrollbarContainer{
-    width: 100%;
-    height: 500vh;
-    overflow-x: hidden;
-    position: relative;
+#scrollbarContainer {
+  width: 100%;
+  height: 500vh;
+  overflow-x: hidden;
+  position: relative;
 }
-#loadingScreen{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 5;
-    backdrop-filter: saturate(180%) blur(1000px);
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    header, footer, #burgerExpanded, #loadingScreen{
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: saturate(180%) blur(10px);
-    }
-}
-
-header:before, footer:before, #burgerExpanded:before, #loadingScreen:before{
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-#loadingLogo{
-    width: 4cm;
-    height: auto;
-    animation: spinZ 4s ease-in-out infinite;
-}
-#loadingText{
-    margin-top: 1cm;
-    font-size: 1.5rem;
-    color: white;
-}
-
-#upBtn{
-    z-index: 3;
-    position: fixed;
-    bottom: 4rem;
-    right: 4rem;
-    color: white;
-    border-radius: 50%;
-    width: 3em;
-    height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0D111C;
-    text-decoration: none;
+#loadingScreen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  backdrop-filter: saturate(180%) blur(1000px);
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .frostedGlass{
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: saturate(180%) blur(10px);
-    }
-}
-
-.frostedGlass{
-    background: rgba(0, 0, 0, 0.1); 
+  header,
+  footer,
+  #burgerExpanded,
+  #loadingScreen {
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: saturate(180%) blur(10px);
-    border-radius: 15px;
+  }
 }
 
-.frostedGlass:before{
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    background-color: rgba(0, 0, 0, 0.03); 
-    border-radius: 15px;
+header:before,
+footer:before,
+#burgerExpanded:before,
+#loadingScreen:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-b{
-    font-size: 1.5em;
+#loadingLogo {
+  width: 4cm;
+  height: auto;
+  animation: spinZ 4s ease-in-out infinite;
+}
+#loadingText {
+  margin-top: 1cm;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#upBtn {
+  z-index: 3;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  color: white;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d111c;
+  text-decoration: none;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .frostedGlass {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+}
+
+.frostedGlass {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-radius: 15px;
+}
+
+.frostedGlass:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
+}
+
+b {
+  font-size: 1.5em;
 }
 .button{
     font-family: Horizon;
@@ -120,153 +126,158 @@ b{
     font-weight: 700;
     text-align: center;
 }
-.button:hover{
-    background: linear-gradient(60deg, rgba(105,48,195,0.1) 0%, rgba(128,255,219,0.1) 100%);
-    box-shadow: 0 0 40px 15px rgba(100,223,223,0.4); /* Adjust the shadow parameters as needed */
+.button:hover {
+  background: linear-gradient(
+    60deg,
+    rgba(105, 48, 195, 0.1) 0%,
+    rgba(128, 255, 219, 0.1) 100%
+  );
+  box-shadow: 0 0 40px 15px rgba(100, 223, 223, 0.4); /* Adjust the shadow parameters as needed */
 }
 /* Header */
-.navbarLogoImg, .navbarLogoImg2{
-    width: 100%;
-    height: auto;
+.navbarLogoImg,
+.navbarLogoImg2 {
+  width: 100%;
+  height: auto;
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
+.navbar {
+  display: flex;
+  justify-content: space-between;
 }
-.navbarLine{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.navbarLine {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-.navbarOptionsContainer, .navbarLine{
-    margin: 5px 0;
+.navbarOptionsContainer,
+.navbarLine {
+  margin: 5px 0;
 }
-header{
-    height: 100px;
-    width: 100%;
-    color: white;
-    border-radius: 0 0 10px 10px;
-    box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.2);
-    z-index: 3;
-}
-
-header:before{
-    border-radius: 0 0 5px 5px;
+header {
+  height: 100px;
+  width: 100%;
+  color: white;
+  border-radius: 0 0 10px 10px;
+  box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.2);
+  z-index: 3;
 }
 
-footer:before{
-    border-radius: 5px 5px 0 0;
+header:before {
+  border-radius: 0 0 5px 5px;
 }
 
-header, footer, #burgerExpanded{
-    background: rgba(0, 0, 0, 0.1); 
-    backdrop-filter: saturate(180%) blur(10px);
+footer:before {
+  border-radius: 5px 5px 0 0;
 }
 
-nav{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 0;
-    width: 90%;
+header,
+footer,
+#burgerExpanded {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: saturate(180%) blur(10px);
 }
-#about{
-    margin-right: 30px;
+
+nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 90%;
 }
-.navbarOptionsContainer{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+#about {
+  margin-right: 30px;
+}
+.navbarOptionsContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 .navbarOptions{
     font-family: Horizon;
     display: flex;
     justify-content: space-around;
 }
-.navbarOptions > *{
-    margin: 0 10px;
-    color: white;
+.navbarOptions > * {
+  margin: 0 10px;
+  color: white;
 }
 
-.navbarCompanyName{
-    color: white;
+.navbarCompanyName {
+  color: white;
 }
 
-.navbarOptions a, .navbarCompanyName{
-    font-size: 1.5rem;
-    text-decoration: none;
+.navbarOptions a,
+.navbarCompanyName {
+  font-size: 1.5rem;
+  text-decoration: none;
 }
-.navbarLogoContainer{
-    width: 80px;
-    height: 80px;
-    margin: 10px 15px;
-    display: flex;
-    align-items: center;
+.navbarLogoContainer {
+  width: 80px;
+  height: 80px;
+  margin: 10px 15px;
+  display: flex;
+  align-items: center;
 }
-.navbarLine{
-    width: 100%;
-    margin: -10px 5px;
+.navbarLine {
+  width: 100%;
+  margin: -10px 5px;
 }
-.navbarLines{
-    height: 2px;
-    background-color: white;
+.navbarLines {
+  height: 2px;
+  background-color: white;
 }
-.leftLine{
-    width: 10ch;
-    margin-right: 5px;
-    flex-grow: 1;
+.leftLine {
+  width: 10ch;
+  margin-right: 5px;
+  flex-grow: 1;
 }
 
-.rightLine{
-    width: 80vw;
-    margin-right: 5px;
+.rightLine {
+  width: 80vw;
+  margin-right: 5px;
 }
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
-#burgerMenu{
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
+#burgerMenu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
-.navbarLogo{
-    height: 50px;
-    width: 50px;
-    margin-left: 5px;
-    display: none;
+.navbarLogo {
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+  display: none;
 }
-.navbar{
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
+.navbar {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 #navbar{
     font-family: Horizon;
     position: fixed;
     transition: 0.5s ease-in-out;
 }
-#burgerExpanded{
-    width: fit-content;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-    display: none;
-    box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.2);
-    backdrop-filter: saturate(180%) blur(15px);
-    z-index: 4;
+#burgerExpanded {
+  width: fit-content;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.2);
+  backdrop-filter: saturate(180%) blur(15px);
+  z-index: 4;
 }
-.burgerOptions{
-    display: flex;
-    flex-direction: column;
+.burgerOptions {
+  display: flex;
+  flex-direction: column;
 }
 .burgerLink{
     font-family: Horizon;
@@ -275,39 +286,39 @@ nav{
     color: white;
     text-decoration: none;
 }
-.navbarLogoImg2{
-    display: none;
+.navbarLogoImg2 {
+  display: none;
 }
-.burgerOptions > *{
-    margin: 1rem 0;
+.burgerOptions > * {
+  margin: 1rem 0;
 }
-.burgerLinkLine{
-    width: 100%;
-    height: 1px;
-    background-color: rgb(255, 255, 255);
+.burgerLinkLine {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
 }
 
-#burgerClose{
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 10px 10px;
-    cursor: pointer;
-    font-size: xx-large;
+#burgerClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 10px;
+  cursor: pointer;
+  font-size: xx-large;
 }
-.burgerOpenAnimation{
-    animation: burgerOpen 1s ease-in-out;
+.burgerOpenAnimation {
+  animation: burgerOpen 1s ease-in-out;
 }
-.burgerCloseAnimation{
-    animation: burgerClose 1s ease-in-out;
+.burgerCloseAnimation {
+  animation: burgerClose 1s ease-in-out;
 }
-#burgerShowcase{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 3rem;
-    animation: spinZ infinite linear 2s;
+#burgerShowcase {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 3rem;
+  animation: spinZ infinite linear 2s;
 }
 
 .menuDeselect {
@@ -317,32 +328,35 @@ nav{
 }
 
 .menuSelect {
-    animation: menuSelect 0.5s ease;
-    color: rgb(56, 56, 56);
+  animation: menuSelect 0.5s ease;
+  color: rgb(56, 56, 56);
 }
 
 /* This block implements NSimSun!!! Do not remove */
 @font-face {
-    font-family: 'NSimSun';
-    src: url('../assets/simsun.eot'); /* IE9 Compat Modes */
-    src: url('../assets/simsun.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../assets/simsun.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../assets/simsun.woff') format('woff'), /* Pretty Modern Browsers */
-         url('../assets/simsun.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../assets/simsun.svg#NSimSun') format('svg'); /* Legacy iOS */
-    font-weight: normal;
-    font-style: normal;
+  font-family: "NSimSun";
+  src: url("../assets/simsun.eot"); /* IE9 Compat Modes */
+  src: url("../assets/simsun.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/simsun.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../assets/simsun.woff") format("woff"),
+    /* Pretty Modern Browsers */ url("../assets/simsun.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../assets/simsun.svg#NSimSun") format("svg"); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Bocalupo';
-    src: url('../assets/Bocalupo-Regular.eot'); /* IE9 Compat Modes */
-    src: url('../assets/Bocalupo-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../assets/Bocalupo-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../assets/Bocalupo-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-         url('../assets/Bocalupo-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../assets/Bocalupo-Regular.svg#Bocalupo') format('svg'); /* Legacy iOS */
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Bocalupo";
+  src: url("../assets/Bocalupo-Regular.eot"); /* IE9 Compat Modes */
+  src: url("../assets/Bocalupo-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/Bocalupo-Regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../assets/Bocalupo-Regular.woff")
+      format("woff"),
+    /* Pretty Modern Browsers */ url("../assets/Bocalupo-Regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../assets/Bocalupo-Regular.svg#Bocalupo")
+      format("svg"); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -372,172 +386,184 @@ nav{
 
 /* Keyframes are animations that usually don't need JavaScript */
 @keyframes loadingClose {
-    from {
-        transform: translateX(0%);
-      }
-    
-      to {
-        transform: translateX(-100%);
-      }
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-.loadingClose{
-    animation: loadingClose 1s ease-in-out;
+.loadingClose {
+  animation: loadingClose 1s ease-in-out;
 }
 
 @keyframes burgerOpen {
-    from {
-        transform: translateX(100%);
-      }
-    
-      to {
-        transform: translateX(0%);
-      }
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
 }
 
 @keyframes burgerClose {
-    from {
-        transform: translateX(0%);
-      }
-    
-      to {
-        transform: translateX(100%);
-      }
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
 }
 @keyframes spinZ {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(180deg);
-    }
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
 }
 
 @keyframes spinZReverse {
-    from {
-        transform: rotateY(180deg);
-    }
-    to {
-        transform: rotateY(0deg);
-    }
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
 
 @keyframes menuSelect {
-    from {
-        color: rgb(255, 255, 255);
-    }
-    to {
-        color: rgb(56, 56, 56);
-    }
+  from {
+    color: rgb(255, 255, 255);
+  }
+  to {
+    color: rgb(56, 56, 56);
+  }
 }
 
 @keyframes menuDeselect {
-    from {
-        color: rgb(56, 56, 56);
-    }
-    to {
-        color: rgb(255, 255, 255);
-    }
+  from {
+    color: rgb(56, 56, 56);
+  }
+  to {
+    color: rgb(255, 255, 255);
+  }
 }
 /* header END */
 
 /* footer */
-footer{
-    width: 100vw;
-    height: 15ch;
-    min-height: fit-content;
-    display: grid;
-    grid-template-areas: 
+footer {
+  width: 100vw;
+  height: 15ch;
+  min-height: fit-content;
+  display: grid;
+  grid-template-areas:
     "footerLine footerLine"
     "footerSocials footerLogoContainer"
     "footerNav footerLogoContainer"
     "footerCopyright footerLogoContainer";
-    gap: 5px 10px;
-    align-items: center;
-    border-radius: 10px 10px 0 0;
-    box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.2);
-    position: relative;
-    z-index: 1;
-    background: url(../assets/footerBanner.png);
-    background-size: cover;
+  gap: 5px 10px;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+  background: black;
+  background-size: cover;
 }
-.footerLine{
-    width: 90%;
-    margin: 10px;
-    height: 2px;
-    background-color: white;
-    grid-area: footerLine;
-    justify-self: center;
+.footerLine {
+  width: 90%;
+  margin: 10px;
+  height: 2px;
+  background-color: white;
+  grid-area: footerLine;
+  justify-self: center;
 }
-footer > *, footer > * > a{
-    color: white;
-    text-decoration: none;
+footer > *,
+footer > * > a {
+  color: white;
+  text-decoration: none;
 }
-footer > *{
-    width: 90vw;
-    display: flex;
+footer > * {
+  width: 90vw;
+  display: flex;
 }
-.footerLogoContainer{
-    width: 50px;
-    height: 30px;
-    grid-area: footerLogoContainer;
+.footerLogoContainer {
+  width: 50px;
+  height: 30px;
+  grid-area: footerLogoContainer;
 }
-.navbarLogo, #burgerShowcase{
-    display: flex;
-    align-items: center;
+.navbarLogo,
+#burgerShowcase {
+  display: flex;
+  align-items: center;
 }
-.footerNav{
-    grid-area: footerNav;
+.footerNav {
+  grid-area: footerNav;
 }
-.footerSocials{
-    grid-area: footerSocials;
+.footerSocials {
+  grid-area: footerSocials;
 }
-.footerCopyright{
-    grid-area: footerCopyright;
+.footerCopyright {
+  grid-area: footerCopyright;
 }
-.footerRow > *{
-    margin: 0 1ch;
-}
-
-.footerLogoSelect{
-    animation: spinZ 0.5s ease;
-}
-.footerLogoDeselect{
-    animation: spinZReverse 0.5s ease;
+.footerRow > * {
+  margin: 0 1ch;
 }
 
-.transition{
-    width: 100vw;
-    height: 0px;
-    background-color: #0D111C;
-    z-index: 3;
-    top: 0;
+.footerLogoSelect {
+  animation: spinZ 0.5s ease;
 }
-a{
-    cursor: pointer;
+.footerLogoDeselect {
+  animation: spinZReverse 0.5s ease;
 }
-.blackTransIn{
-   animation: blackTransIn 1s;
-   position: absolute;
+
+.transition {
+  width: 100vw;
+  height: 0px;
+  background-color: #0d111c;
+  z-index: 3;
+  top: 0;
 }
-.transOut{
-    height: 100%;
-    width: 0px; 
-    position: fixed;
+a {
+  cursor: pointer;
 }
-.blackTransOut{
-    animation: blackTransOut 1s;
+.blackTransIn {
+  animation: blackTransIn 1s;
+  position: absolute;
+}
+.transOut {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+}
+.blackTransOut {
+  animation: blackTransOut 1s;
 }
 
 /* Keyframes are animations that usually don't need JavaScript */
 @keyframes blackTransIn {
-    from {height: 100vh;}
-    to {height: 0px;}
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0px;
+  }
 }
 
 @keyframes blackTransOut {
-    from {height: 100%; width: 0px;}
-    to {height: 100%; width: 100vw;}
+  from {
+    height: 100%;
+    width: 0px;
+  }
+  to {
+    height: 100%;
+    width: 100vw;
+  }
 }
 
 /* Media queries adjust the styling for different screen sizes. 
@@ -565,50 +591,51 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
         display: none;
     }
 
-    .navbarLine{
-        margin: 0 5px;
-    }
+  .navbarLine {
+    margin: 0 5px;
+  }
 
-    #burgerExpanded:before{
-        border-radius: 5px 0 0 5px;
-    }
-    #upBtn{
-        bottom: 2rem;
-        right: 1rem;
-    }
+  #burgerExpanded:before {
+    border-radius: 5px 0 0 5px;
+  }
+  #upBtn {
+    bottom: 2rem;
+    right: 1rem;
+  }
 }
 @media screen and (max-width: 450px) {
-    #burgerExpanded{
-        width: 100vw;
-        border-radius: 1px;
-        overflow-y: hidden;
-        overflow-x: hidden;
-    }
-    #burgerShowcase{
-        margin-bottom: 7rem;
-    }
-    .button{
-        font-size: 2.5rem;
-    }
+  #burgerExpanded {
+    width: 100vw;
+    border-radius: 1px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  #burgerShowcase {
+    margin-bottom: 7rem;
+  }
+  .button {
+    font-size: 2.5rem;
+  }
 }
 
 /* This is for smooth scrolling, do not remove */
-html.lenis, html.lenis body {
-    height: auto;
+html.lenis,
+html.lenis body {
+  height: auto;
 }
 
 .lenis.lenis-smooth {
-    scroll-behavior: auto !important;
+  scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
+  overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .lenis.lenis-smooth iframe {
-    pointer-events: none;
+  pointer-events: none;
 }

@@ -1,19 +1,19 @@
-body{
-    background-color: rgb(42, 42, 42);
+body {
+  background-color: rgb(42, 42, 42);
 }
-.canvasCard{
-    background-color: rgb(42, 42, 42);
-    width: 100vw;
-    height: 90vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+.canvasCard {
+  background-color: rgb(42, 42, 42);
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 canvas {
-    display: block;
-    z-index: 1;
+  display: block;
+  z-index: 1;
 }
 #canvasH2{
     font-family: Horizon;
@@ -25,96 +25,105 @@ canvas {
     max-width: 95%;
     text-align: center;
 }
-#moreInfo{
-    position: absolute;
-    bottom: 3rem;
-    color: white;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+#moreInfo {
+  position: absolute;
+  bottom: 3rem;
+  color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
-#moreInfo h3{
-    font-weight: 700;
-    font-size: 1em;
+#moreInfo h3 {
+  font-weight: 700;
+  font-size: 1em;
 }
-#arrowDown{
-    margin-top: 1rem;
+#arrowDown {
+  margin-top: 1rem;
 }
-.floatUpDown{
-    animation: floatUpDown 2s infinite ease-in-out;
+.floatUpDown {
+  animation: floatUpDown 2s infinite ease-in-out;
 }
-.fadeIn{
-    animation: fadeIn 2s;
+.fadeIn {
+  animation: fadeIn 2s;
 }
 /* Keyframes are animations that usually don't need JavaScript */
 @keyframes floatUpDown {
-    0% { margin-bottom: 0;}
-    50% {margin-bottom: 1rem;}
-    100% { margin-bottom: 0;}
+  0% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 1rem;
+  }
+  100% {
+    margin-bottom: 0;
+  }
 }
 
 @keyframes fadeIn {
-    from {  opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.card{
-    background: url('../assets/ooorganize.svg');
-    background-attachment: fixed;
-    padding: 3rem 0;
-    width: 100vw;
-    position: relative;
-    z-index: 1;
+.card {
+  background: url("../assets/ooorganize.svg");
+  background-attachment: fixed;
+  padding: 3rem 0;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
-    .card {
-        background-attachment: scroll;
-    }
+  .card {
+    background-attachment: scroll;
+  }
 }
 
-.card::after:first-of-type{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
-    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
+.card::after:first-of-type {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+  pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
-.projectsH2{
-    font-weight: 700;
-    font-size: 4rem;
-    text-align: center;
+.projectsH2 {
+  font-weight: 700;
+  font-size: 4rem;
+  text-align: center;
 }
-.projectsH3{
-    font-size: 4.5rem;
-    /* border-bottom: 2px solid rgba(0, 0, 0, 0.4); */
-    margin: 4em 0 2rem;
-    text-decoration: none;
-    color: black;
-    overflow: visible;
-    text-align: center;
+.projectsH3 {
+  font-size: 4.5rem;
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.4); */
+  margin: 4em 0 2rem;
+  text-decoration: none;
+  color: black;
+  overflow: visible;
+  text-align: center;
 }
 
-.projectsPar, .text{
-    text-decoration: none;
-    color: black;
-    text-align: center;
+.projectsPar,
+.text {
+  text-decoration: none;
+  color: black;
+  text-align: center;
 }
 .projectsH3 a {
-    text-decoration: none;
-    color: inherit;
-    
-    display: inline-block;
-    text-align: center;
-   
-    
+  text-decoration: none;
+  color: inherit;
+
+  display: inline-block;
+  text-align: center;
 }
 /* .projectsH3 a:hover {
     color:rgb(0, 0, 0);
@@ -145,265 +154,264 @@ canvas {
 .projectsH3 a:hover::after {
  
         width: 300px;  /* Use fixed values to maintain aspect ratio */
-        /* height: 300px; /* Use fixed values to maintain aspect ratio */
-    
-    /* transform: translate(-50%, -50%) scale(1);
-} */ 
+/* height: 300px; /* Use fixed values to maintain aspect ratio */
 
+/* transform: translate(-50%, -50%) scale(1);
+} */
 
 .projectsH3 a span {
-    position: relative;
-    z-index: 1;
-    transition: color 0.5s ease;
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s ease;
 }
 
 .projectsH3 a:hover span {
-    color: aqua;
-} */
-
-
-
-.projectsContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 2;
+  color: aqua;
+}
+*/ .projectsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
 }
 .projectsContainer::before,
 .projectsContainer::after,
 .fadeIntoCanvas::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 50px; /* Adjust the height as needed */
-    pointer-events: none; /* Ensures the pseudo-elements do not interfere with user interactions */
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  pointer-events: none; /* Ensures the pseudo-elements do not interfere with user interactions */
 }
 
 .fadeIntoCanvas::before {
-    top: 0px;
-    background: linear-gradient(to bottom, rgb(42, 42, 42), rgba(255, 255, 255, 0));
+  top: 0px;
+  background: linear-gradient(
+    to bottom,
+    rgb(42, 42, 42),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .projectsContainer::before {
-    top: -50px;
-    background: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  top: -50px;
+  background: linear-gradient(
+    to top,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .projectsContainer::after {
-    bottom: -50px;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  bottom: -50px;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  );
 }
-.projectsPar{
-    width: 50%;
-    text-align: left;
-    padding-left: 1.5rem;
-    
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    font-weight: light;
-    word-spacing: 30%;
+.projectsPar {
+  width: 50%;
+  text-align: left;
+  padding-left: 1.5rem;
+
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: light;
+  word-spacing: 30%;
 }
 
-
-
-
-
-.projectsGroup{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 90vw;
-    gap: 2rem 15px;
-    min-width: fit-content;
+.projectsGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 102vw;
+  gap: 2rem 15px;
+  min-width: fit-content;
 }
-.twoSquareGrid{
-    padding-right: 1rem;
-    padding-left: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 55vw;
-    gap: 2rem 2rem;
-    min-width: fit-content;
-    height: fit-content;
-    
+.twoSquareGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 55vw;
+  gap: 2rem 2rem;
+  min-width: fit-content;
+  height: fit-content;
 }
-.textProject{
-    display: flex;
-    width: fit-content;
-    justify-content: space-around;
-    gap: 2rem;
+.textProject {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.projectDiv{
-    width: 30%;
-    height: auto;
+.projectDiv {
+  width: 30%;
+  height: auto;
 }
-.showcase{
-    height: 100%;
-    width: auto;
+.showcase {
+  height: 100%;
+  width: auto;
 }
-.projectDiv{
-    overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-    &:hover {
-        top: calc( 50% - 2px );
-        border: 1px solid rgba(#F2F4F8, 0);
-        box-shadow: 0 15px 20px rgba(0,0,0,.05), 0 0 5px rgba(0,0,0,.4);
-        border-radius: 25px;
-        cursor: pointer;
-      }
-      
-      &:active {
-        top: 50%;
-        box-shadow: 0 5px 10px rgba(0,0,0,.05), 0 0 2px rgba(0,0,0,.5);
-        border-radius: 25px;
-        transition: ease-in-out .1s;
-      }
-}
-.project{
-    min-width: 100%;
-    min-height: 100%;
-    height: auto;
-    width: auto;
+.projectDiv {
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  &:hover {
+    top: calc(50% - 2px);
+    border: 1px solid rgba(#f2f4f8, 0);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05), 0 0 5px rgba(0, 0, 0, 0.4);
     border-radius: 25px;
-}
-.projectDiv{
-    width: 30vw;
-    height: 30vw;
-    overflow: hidden;
-}
-.reviewGroup{
-    margin: 10rem 0 2rem 0;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.reviewH3, .textH2{
-    text-align: center;
-    grid-area: sectionH2;
-    font-weight: 700;
-    font-size: 3.5em;
-}
-.textH2{
-    margin-bottom: 5px;
-    max-width: 80%;
-    text-align: center;
-}
+    cursor: pointer;
+  }
 
-
-
-
-.showcaseGroup{
-    overflow-x: hidden;
-    background-color: #e5e5e5;
-    padding: 1rem 1rem 4rem 1rem;
-    border-radius: 15px;
-}
-.showcaseVideos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.textGroup{
-    margin-top: 2rem;
-    width: 90vw;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-.text{
-    width: 100%;
-    min-width: 400px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.text p{
-    padding-top: 5%;
-    max-width: 50%;
-    font-size: 1.2rem;
-    padding-bottom: 5%;
-}
-.showcaseImgContainer{
-    height: auto;
-    max-width: 400px;
-    max-height: 400px;
-}
-.showcase{
-    height: auto;
-    max-width: 400px;
-    border-radius: 15px;
-}
-.reviewVid{
-    width: 60%;
+  &:active {
+    top: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05), 0 0 2px rgba(0, 0, 0, 0.5);
     border-radius: 25px;
+    transition: ease-in-out 0.1s;
+  }
 }
-.videoShowcase{
-    width: 50%;
+.project {
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+  border-radius: 25px;
 }
-.showcaseImgContainer{
-    display: flex;
-    justify-content: center;
+.projectDiv {
+  width: 30vw;
+  height: 30vw;
+  overflow: hidden;
 }
-.textGroupReverse{
-    flex-wrap: wrap-reverse;
+.reviewGroup {
+  margin: 10rem 0 2rem 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-.contactCard{
-    height: fit-content;
-    width: 100vw;
-    min-width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background: url(../assets/homeBackground.png);
-    background-size: cover;
+.reviewH3,
+.textH2 {
+  text-align: center;
+  grid-area: sectionH2;
+  font-weight: 700;
+  font-size: 3.5em;
 }
-.firstContact::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50px; /* Adjust the height as needed */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgb(255, 255, 255));
-    pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
-}
-.contactContent{
-    width: 80vw;
-    display: flex;
-    align-items: center; 
-    justify-content: space-around;
-    padding: 2rem;
-}
-.contactContent h2{
-    font-size: 6rem;
-    margin-bottom: 2rem;
-    animation: changeFont 10s infinite;
-    text-align: center;
+.textH2 {
+  margin-bottom: 5px;
+  max-width: 80%;
+  text-align: center;
 }
 
-#btmContactContent{
-    width: 80vw;
-    display: flex;
-    place-items: center;
-    flex-direction: column;
+.showcaseGroup {
+  overflow-x: hidden;
+  background-color: #e5e5e5;
+  padding: 1rem 0 4rem 0;
+  border-radius: 15px;
+  margin: auto;
 }
-#btmContactContent h2{
-    margin-bottom: 2rem;
-    animation: changeFont 10s infinite;
-    text-align: center;
+.showcaseVideos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.textGroup {
+  margin-top: 2rem;
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.text p {
+  padding-top: 5%;
+  max-width: 50%;
+  font-size: 1.2rem;
+  padding-bottom: 5%;
+}
+.showcaseImgContainer {
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
+.showcase {
+  height: auto;
+  max-width: 400px;
+  border-radius: 15px;
+}
+.reviewVid {
+  width: 60%;
+  border-radius: 25px;
+}
+.videoShowcase {
+  width: 50%;
+}
+.showcaseImgContainer {
+  display: flex;
+  justify-content: center;
+}
+.textGroupReverse {
+  flex-wrap: wrap-reverse;
+}
+
+.contactCard {
+  height: fit-content;
+  width: 100vw;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: url(../assets/homeBackground.png);
+  background-size: cover;
+}
+.firstContact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height as needed */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(255, 255, 255));
+  pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
+}
+.contactContent {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.contactContent h2 {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  animation: changeFont 10s infinite;
+  text-align: center;
+}
+
+#btmContactContent {
+  width: 80vw;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+}
+#btmContactContent h2 {
+  margin-bottom: 2rem;
+  animation: changeFont 10s infinite;
+  text-align: center;
 }
 
 /* Media queries adjust the styling for different screen sizes. 
@@ -411,158 +419,158 @@ Mine are based on the width of the screen.
 For example: "@media screen and (max-width: 1100px)" includes styling that will only be applied for screens with a width BELOW 1100px width. 
 */
 
-@media screen and (min-width: 1200px) { 
-    .projectsPar{
-        font-size: 2.5rem;
-        text-align: start;
-    }
-    .text p {
-        font-size: 1.5rem;
-    }
+@media screen and (min-width: 1200px) {
+  .projectsPar {
+    font-size: 2.5rem;
+    text-align: start;
+  }
+  .text p {
+    font-size: 1.5rem;
+  }
 }
 
-@media screen and (max-width: 1300px){
-
-
-    .projectsPar{
-        font-size: 2rem;
-    }
-    .reviewH3{
-        width:fit-content;
-        text-align: center;
-    }
-    .reviewVid{
-        width: 70%;
-    }
-    .videoShowcase{
-        width: 50%;
-    }
-    .videoShowcase{
-        min-height: 500px;
-    }
+@media screen and (max-width: 1300px) {
+  .projectsPar {
+    font-size: 2rem;
+  }
+  .reviewH3 {
+    width: fit-content;
+    text-align: center;
+  }
+  .reviewVid {
+    width: 70%;
+  }
+  .videoShowcase {
+    width: 50%;
+  }
+  .videoShowcase {
+    min-height: 500px;
+  }
 }
 @media screen and (max-width: 1100px) {
-    .projectsPar{
-        font-size: 2rem;
-    } 
+  .projectsPar {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 1000px) {
-    .showcaseGroup{
-        width: fit-content;
-    }
-    .text{
-        align-items: center;
-    }
+  .showcaseGroup {
+    width: fit-content;
+  }
+  .text {
+    align-items: center;
+  }
 }
-@media screen and (max-width: 950px){
-    .text{
-        width: 90%;
-    }
-    .projectsPar{
-        font-size: 2rem;
-    }
-    .text p{
-        max-width: 80%;
-    }
+@media screen and (max-width: 950px) {
+  .text {
+    width: 90%;
+  }
+  .projectsPar {
+    font-size: 2rem;
+  }
+  .text p {
+    max-width: 80%;
+  }
 }
-@media screen and (max-width: 850px){
-    .projectsGroup{
-        gap: 2rem 10px;
-    }
-    .reviewVid, .videoShowcase{
-        width: 100%;
-        min-height: 400px;
-    }
-    .projectsGroup{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 95vw;
-        gap: 5px;
-    }
-    .textProject{
-        flex-wrap: wrap;
-    }
-    .projectsPar{
-        width: 80%;
-        font-size: 1rem;
-        font-weight: normal;
-    }
-    .contactContent{
-        width: 80vw;
-        justify-content: space-around;
-        padding: none;
-    }
-    .contactContent h2{
-        font-size: 6rem;
-        text-align: left;
-    }
-    #firstBtn{
-        padding: 3rem 4rem;
-        font-size: 2.5rem;
-    }
-}
-
-@media screen and (max-width: 750px){
-    .projectsPar{
-        text-align: justify;
-    }
-    .contactContent{
-        width: 80vw;
-        justify-content: space-around;
-        padding: none;
-    }
-    .contactContent h2{
-        font-size: 4rem;
-        text-align: left;
-    }
-    #firstBtn{
-        padding: 2rem 3rem;
-        font-size: 2rem;
-    }
+@media screen and (max-width: 850px) {
+  .projectsGroup {
+    gap: 2rem 10px;
+  }
+  .reviewVid,
+  .videoShowcase {
+    width: 100%;
+    min-height: 400px;
+  }
+  .projectsGroup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 95vw;
+    gap: 5px;
+  }
+  .textProject {
+    flex-wrap: wrap;
+  }
+  .projectsPar {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: normal;
+    padding-left: 0px;
+  }
+  .contactContent {
+    width: 80vw;
+    justify-content: space-around;
+    padding: none;
+  }
+  .contactContent h2 {
+    font-size: 6rem;
+    text-align: left;
+  }
+  #firstBtn {
+    padding: 3rem 4rem;
+    font-size: 2.5rem;
+  }
 }
 
-@media screen and (max-width: 700px){
-    .projectsGroup{
-        width: 95vw;
-        gap: 1rem;
-    }
-    .showcase {
-        width: 85%;
-        height: auto;
-    }
+@media screen and (max-width: 750px) {
+  .projectsPar {
+    text-align: justify;
+  }
+  .contactContent {
+    width: 80vw;
+    justify-content: space-around;
+    padding: none;
+  }
+  .contactContent h2 {
+    font-size: 4rem;
+    text-align: left;
+  }
+  #firstBtn {
+    padding: 2rem 3rem;
+    font-size: 2rem;
+  }
 }
 
-@media screen and (max-width: 550px){
-    .projectsGroup{
-        gap: 1rem;
-    }
-    .reviewH3{
-        font-size: 3rem;
-    }
-    .text p{
-        max-width: 90%;
-    }
-    .projectsH3{
-        font-size: 3.5rem;
-    }
+@media screen and (max-width: 700px) {
+  .projectsGroup {
+    width: 95vw;
+    gap: 1rem;
+  }
+  .showcase {
+    width: 85%;
+    height: auto;
+  }
 }
 
-@media screen and (max-width: 450px){
-    .projectsGroup{
-        gap: 5px;
-    }
-    .projectsPar{
-        width: 90%;
-        text-align: justify;
-    }
-    .contactContent{
-        width: 90vw;
-        padding: 0;
-    }
-    .contactContent h2{
-        font-size: 3rem;
-    }
-    #firstBtn{
-        font-size: 1.5rem;
-    }
+@media screen and (max-width: 550px) {
+  .projectsGroup {
+    gap: 1rem;
+  }
+  .reviewH3 {
+    font-size: 3rem;
+  }
+  .text p {
+    max-width: 90%;
+  }
+  .projectsH3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .projectsGroup {
+    gap: 5px;
+  }
+  .projectsPar {
+    width: 90%;
+    text-align: justify;
+  }
+  .contactContent {
+    width: 90vw;
+    padding: 0;
+  }
+  .contactContent h2 {
+    font-size: 3rem;
+  }
+  #firstBtn {
+    font-size: 1.5rem;
+  }
 }
