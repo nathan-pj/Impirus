@@ -15,14 +15,15 @@ canvas {
   display: block;
   z-index: 1;
 }
-#canvasH2 {
-  position: absolute;
-  font-weight: 700;
-  font-size: 5em;
-  color: white;
-  z-index: 0;
-  max-width: 95%;
-  text-align: center;
+#canvasH2{
+    font-family: Horizon;
+    position: absolute;
+    font-weight: 700;
+    font-size: 5em;
+    color: white;
+    z-index: 0;
+    max-width: 95%;
+    text-align: center;
 }
 #moreInfo {
   position: absolute;

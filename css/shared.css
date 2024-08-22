@@ -112,22 +112,19 @@ footer:before,
 b {
   font-size: 1.5em;
 }
-.button {
-  padding: 4rem 5rem;
-  display: block;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  background: linear-gradient(
-    105deg,
-    rgba(105, 48, 195, 0.1) 0%,
-    rgba(128, 255, 219, 0.1) 100%
-  );
-  border-radius: 20px;
-  width: fit-content;
-  margin: 1rem 0;
-  font-size: 3.5rem;
-  font-weight: 700;
-  text-align: center;
+.button{
+    font-family: Horizon;
+    padding: 4rem 5rem;
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(105deg, rgba(105,48,195,0.1) 0%, rgba(128,255,219,0.1) 100%);
+    border-radius: 20px;
+    width: fit-content;
+    margin: 1rem 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
 }
 .button:hover {
   background: linear-gradient(
@@ -197,10 +194,10 @@ nav {
   width: 100%;
   justify-content: space-between;
 }
-.navbarOptions {
-  font-family: Bocalupo;
-  display: flex;
-  justify-content: space-around;
+.navbarOptions{
+    font-family: Horizon;
+    display: flex;
+    justify-content: space-around;
 }
 .navbarOptions > * {
   margin: 0 10px;
@@ -260,10 +257,10 @@ nav {
   position: sticky;
   top: 0;
 }
-#navbar {
-  font-family: Bocalupo;
-  position: fixed;
-  transition: 0.5s ease-in-out;
+#navbar{
+    font-family: Horizon;
+    position: fixed;
+    transition: 0.5s ease-in-out;
 }
 #burgerExpanded {
   width: fit-content;
@@ -282,11 +279,12 @@ nav {
   display: flex;
   flex-direction: column;
 }
-.burgerLink {
-  margin: 1rem 4rem;
-  font-size: xx-large;
-  color: white;
-  text-decoration: none;
+.burgerLink{
+    font-family: Horizon;
+    margin: 1rem 4rem;
+    font-size: xx-large;
+    color: white;
+    text-decoration: none;
 }
 .navbarLogoImg2 {
   display: none;
@@ -324,9 +322,9 @@ nav {
 }
 
 .menuDeselect {
-  animation: menuDeselect 0.5s ease;
-  color: white;
-  font-family: Bocalupo;
+    animation: menuDeselect 0.5s ease;
+    color: white;
+    font-family: Horizon;
 }
 
 .menuSelect {
@@ -360,6 +358,31 @@ nav {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+    font-family: 'Horizon';
+    src: url('../assets/Horizon.eot'); /* IE9 Compat Modes */
+    src: url('../assets/Horizon.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/Horizon.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/Horizon.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../assets/Horizon.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/Horizon.svg#Horizon') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Horizon-full';
+    src: url('../assets/Horizon-full.eot'); /* IE9 Compat Modes */
+    src: url('../assets/Horizon-full.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/Horizon-full.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/Horizon-full.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../assets/Horizon-full.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../assets/Horizon-full.svg#Horizon') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* Keyframes are animations that usually don't need JavaScript */
 @keyframes loadingClose {
@@ -548,30 +571,25 @@ Mine are based on the width of the screen.
 For example: "@media screen and (max-width: 1100px)" includes styling that will only be applied for screens with a width BELOW 1100px width. 
 */
 @media screen and (max-width: 700px) {
-  .navbarOptions > * {
-    margin: 0 20px;
-  }
-  .navbarLogo,
-  .navbarLogoImg,
-  #burgerMenu,
-  .navbarLogoImg2 {
-    display: block;
-  }
-  .navbarLogoContainer,
-  .navLink,
-  .navbarCompanyName {
-    display: none;
-    font-family: Bocalupo;
-  }
-  .navbarOptionsContainer {
-    align-items: flex-end;
-  }
-  .leftLine {
-    margin-right: 5px;
-  }
-  #footerLogo {
-    display: none;
-  }
+    .navbarOptions > *{
+        margin: 0 20px;
+    }
+    .navbarLogo, .navbarLogoImg, #burgerMenu, .navbarLogoImg2{
+        display: block;
+    }
+    .navbarLogoContainer, .navLink, .navbarCompanyName{
+        display: none;
+        font-family: Horizon;
+    }
+    .navbarOptionsContainer{
+        align-items: flex-end;
+    }
+    .leftLine{
+        margin-right: 5px;
+    }
+    #footerLogo{
+        display: none;
+    }
 
   .navbarLine {
     margin: 0 5px;

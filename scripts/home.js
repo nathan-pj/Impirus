@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if(mobileAndTabletCheck()){
         document.getElementById("sectionBackground").remove();
     } 
+    
+    
  }); 
 
  // This section makes the logo from the first section rotate/tilt after the users mouse. 
