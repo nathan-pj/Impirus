@@ -76,6 +76,7 @@
 }
 
 #modalTitle{
+    font-family: Horizon;
     position: absolute;
     left: 1rem;
     color: white;
