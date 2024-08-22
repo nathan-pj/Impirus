@@ -83,6 +83,7 @@ body{
 }
 
 #aboutUs{
+    font-family: Horizon;
     width: 70vw;
     color: white;
     display: grid;
