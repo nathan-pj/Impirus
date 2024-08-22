@@ -90,15 +90,15 @@ function redirectTo(url) {
 
 // Makes the navbar dissappear when you scroll down, and reappear when you scroll up again.
 var prevScrollpos = window.scrollY;
-window.onscroll = function() {
-var currentScrollPos = window.scrollY;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-100px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+// window.onscroll = function() {
+// var currentScrollPos = window.scrollY;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-100px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
 
 // Function to parse URL parameters. 
 // You can ignore this method, but it's needed to make links such as "SEE DOME COMMERCIAL NOW" work. 
