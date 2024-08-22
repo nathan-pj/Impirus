@@ -94,6 +94,7 @@ footer:before,
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: saturate(180%) blur(10px);
   border-radius: 15px;
+  text-align: center;
 }
 
 .frostedGlass:before {
@@ -104,36 +105,39 @@ footer:before,
   left: 0;
   right: 0;
   bottom: 0;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  background-color: rgba(0, 0, 0, 0.03);
+  border: 2px solid rgb(8, 176, 206);
+  background-color: rgba(0, 0, 0, 0.178);
   border-radius: 15px;
+  text-align: center;
+  font-size: 10rem;
 }
 
 b {
   font-size: 1.5em;
 }
-.button{
+.button {
     font-family: Horizon;
     padding: 4rem 5rem;
-    display: block;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     text-decoration: none;
     color: rgb(0, 0, 0);
     background: linear-gradient(105deg, rgba(105,48,195,0.1) 0%, rgba(128,255,219,0.1) 100%);
     border-radius: 20px;
-    width: fit-content;
+    width: 30%;
+    height: 20%;
     margin: 1rem 0;
-    font-size: 3.5rem;
+    
     font-weight: 700;
     text-align: center;
 }
+
 .button:hover {
-  background: linear-gradient(
-    60deg,
-    rgba(105, 48, 195, 0.1) 0%,
-    rgba(128, 255, 219, 0.1) 100%
-  );
-  box-shadow: 0 0 40px 15px rgba(100, 223, 223, 0.4); /* Adjust the shadow parameters as needed */
+    background: linear-gradient(60deg, rgba(105, 48, 195, 0.1) 0%, rgba(128, 255, 219, 0.1) 100%);
+    box-shadow: 0 0 40px 15px rgba(100, 223, 223, 0.4); /* Adjust the shadow parameters as needed */
 }
+
 /* Header */
 .navbarLogoImg,
 .navbarLogoImg2 {
