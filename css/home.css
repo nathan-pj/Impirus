@@ -450,6 +450,7 @@
   pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
 .reviewSection h2 {
+    text-align: center;
   /* border-bottom: 2px solid rgba(0, 0, 0, 0.4); */
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -468,6 +469,7 @@
   justify-content: center;
 }
 .reviewCard {
+    text-align: center;
   border-radius: 25px;
   margin-top: 2rem;
   width: 90%;
@@ -492,15 +494,20 @@
 .reviewCardKawa {
   border-radius: 25px;
   margin-top: 2rem;
+  
   width: 90%;
   display: grid;
   grid-template-areas: "clientPicture reviewText companyImgContainer";
-  gap: 1rem;
-  padding: 5rem;
+  
+  padding: .5rem;
   background-image: url("../assets/ffflux2.svg");
   background-size: cover;
 }
 .reviewCardOddKawa {
+    justify-content: center;
+    text-align: center;
+    width:100%;
+    padding-top: 2rem;
   background-image: url("../assets/ffflux2.svg");
   background-size: cover;
   grid-template-areas: "companyImgContainer reviewText";
@@ -519,10 +526,12 @@
   max-width: 400px;
 }
 .clientName {
+    font-family: Horizon;
   grid-area: clientName;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   padding-bottom: 1rem;
   text-align: center;
+ 
   color: whitesmoke;
 }
 .clientCompany {
@@ -605,13 +614,28 @@ iframe {
   color: white;
 }
 .contactContent {
-  width: 90vw;
-  display: flex;
-  place-items: center;
-  gap: 2rem;
-  padding: 4rem;
-  flex-wrap: wrap;
-  justify-content: center;
+    font-size: 4rem;
+    width: 90vw;
+    display: flex;
+    place-items: center;
+    gap: 2rem;
+    padding: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Media Query for tablets (landscape) */
+@media (max-width: 1024px) {
+    .contactContent {
+        font-size: 3rem; /* Slightly smaller font size for tablets */
+    }
+}
+
+/* Media Query for mobile devices (portrait) */
+@media (max-width: 768px) {
+    .contactContent {
+        font-size: 1rem; /* Smaller font size for mobile phones */
+    }
 }
 .contactContent h2 {
   font-size: 4rem;
