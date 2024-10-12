@@ -432,6 +432,9 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
   .text p {
     font-size: 1.5rem;
   }
+  .textProject {
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -451,10 +454,16 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
   .videoShowcase {
     min-height: 500px;
   }
+  .textProject {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 1100px) {
   .projectsPar {
     font-size: 2rem;
+  }
+  .textProject {
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -463,6 +472,9 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
   }
   .text {
     align-items: center;
+  }
+  .textProject {
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 950px) {
@@ -474,6 +486,9 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
   }
   .text p {
     max-width: 80%;
+  }
+  .textProject {
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 850px) {
