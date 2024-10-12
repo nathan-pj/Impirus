@@ -106,25 +106,27 @@ function pauseVideo() {
     }
 }
 
-// Establishes that whenever you scroll, they should play the cube video.
-window.addEventListener('scroll', () => {
-    playVideo(); // Play the video when scrolling
+// // Establishes that whenever you scroll, they should play the cube video.
+// window.addEventListener('scroll', () => {
+//     playVideo(); // Play the video when scrolling
 
-    // Clear any existing timeout to avoid pausing the video too soon
-    clearTimeout(scrollTimeout);
+//     // Clear any existing timeout to avoid pausing the video too soon
+//     clearTimeout(scrollTimeout);
 
-    // Set a timeout to pause the video if no scroll event occurs within 100 milliseconds
-    scrollTimeout = setTimeout(pauseVideo, 100); // Adjust this value to make it react slower/faster to the user having stopped scrolling.
-});
+//     // Set a timeout to pause the video if no scroll event occurs within 100 milliseconds
+//     scrollTimeout = setTimeout(pauseVideo, 100); // Adjust this value to make it react slower/faster to the user having stopped scrolling.
+// });
 
-// Pause the video initially until the user starts scrolling
-pauseVideo();
+// // Pause the video initially until the user starts scrolling
+// pauseVideo();
 
 // This section makes the zoom effect work on the blender workspace screenshot
 
 const zoom = document.getElementById('zoom');
 const minTranslateX = 0;
 const maxTranslateX = 0;
+
+let zoomedOut = false;
 
 addEventListener('scroll', e => {
     const vh = window.innerHeight / 100;
@@ -138,18 +140,25 @@ addEventListener('scroll', e => {
     const start = wrapHeight;
     const stop = start + (100 * vh); // Adjust the numeric value as needed to make the zooming in/out animation faster/slower
 
-    if (scrollTop > start && scrollTop < stop) {
-        // Calculate the scale value
-        const scale = Math.max(2.3 - (scrollTop - start) / 400, 1); // adjust the value "200" to make it scale faster / slower
-        
-        // Calculate the value of which the image should move to the left / right. 
-        // We need this since the image it zooms into is not perfectly horizontally centered.
-        const translateX = Math.max(maxTranslateX - (scrollTop - start) / ((stop - start) / (maxTranslateX - minTranslateX)), minTranslateX);
-
-        // Apply both scale and translateX (horizontal moving)
-        zoom.style.transform = `scale(${scale}) translateX(${translateX}vw)`;
+    if(!zoomedOut){
+        if (scrollTop > start && scrollTop < stop) {
+            // Calculate the scale value
+            const scale = Math.max(2.3 - (scrollTop - start) / 400, 1); // adjust the value "200" to make it scale faster / slower
+            
+            // Calculate the value of which the image should move to the left / right. 
+            // We need this since the image it zooms into is not perfectly horizontally centered.
+            const translateX = Math.max(maxTranslateX - (scrollTop - start) / ((stop - start) / (maxTranslateX - minTranslateX)), minTranslateX);
+    
+            // Apply both scale and translateX (horizontal moving)
+            zoom.style.transform = `scale(${scale}) translateX(${translateX}vw)`;
+            
+        }
     }
-});
+    if(scrollTop >= stop){
+        zoomedOut = true;
+        document.getElementById("zoom").style.position = "static";
+    }
+}); 
 
 // Set up the text to print in the review section, each item in array is a new line
 var review1 = [

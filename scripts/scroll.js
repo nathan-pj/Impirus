@@ -10,7 +10,7 @@ lenis.on('scroll', (e) => {
 })
 
 function raf(time) {
-  lenis.raf(time);
+  lenis.raf(time*10);
   requestAnimationFrame(raf);
 }
 

@@ -671,8 +671,11 @@ iframe {
   position: sticky !important;
   top: 20vh;
   will-change: transform;
-  width: 100%;
-  transform: scale(2.3);
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Ease-out as an example */
+
+  width: 90%;
+  transform: scale(1);
+  max-width: 100%
 }
 .wrap {
   height: 200vh;
@@ -683,17 +686,21 @@ iframe {
   z-index: 1;
   position: relative;
   background-color: white;
+  display: flex;
+  justify-content: center; /* Horizontally center the child */
+  align-items: center; /* Vertically center the child if needed */
+  height: 100vh; /* Adjust if necessary */
 }
 
 .bottom {
-    font-family: Horizon-full;
+    font-family: Joan;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .top {
-  height: 80vh;
+  height: 1vh;
 }
 
 .top::after {
@@ -719,8 +726,9 @@ iframe {
 }
 .bottom p {
   width: 60vw;
-  font-size: 2rem;
+  font-size: 3rem;
   padding-top: 10%;
+  padding-bottom: 10%;
 }
 /* zoom in logic end  hiiiiii*/
 

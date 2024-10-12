@@ -387,6 +387,20 @@ nav {
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Joan';
+  src: url('../assets/Joan-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../assets/Joan-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/Joan-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/Joan-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../assets/Joan-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/Joan-Regular.svg#Joan') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 
 /* Keyframes are animations that usually don't need JavaScript */
 @keyframes loadingClose {
