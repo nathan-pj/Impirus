@@ -246,6 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Next button click event
     vslRightCNav.addEventListener('click', () => {
         vslCurrentIndex = (vslCurrentIndex + 1) % vslTotalSlides;
+        console.log("clock")
         vslGoToSlide(vslCurrentIndex);
     });
 

@@ -99,6 +99,7 @@
 #vsl {
   z-index: 0;
 }
+
 #vsl::after {
   content: "";
   position: absolute;
