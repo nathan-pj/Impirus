@@ -445,7 +445,7 @@
   top: -50px;
   width: 100%;
   height: 50px; /* Adjust the height as needed */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(240, 240, 240));
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(10, 0, 0)); */
   z-index: 2;
   pointer-events: none; /* Ensures the pseudo-element does not interfere with user interactions */
 }
@@ -666,6 +666,96 @@ iframe {
 }
 
 /* zoom in logic */
+
+
+
+.testimonials {
+  display: flex;
+  flex-direction: column; /* Default to column for mobile */
+  justify-content: center;
+  align-items: center; /* Center horizontally */
+  gap: 2rem;
+  width: 100vw;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.testimonial {
+  position: relative; /* Ensure proper stacking context */
+  background-color: rgba(255, 255, 255, 0.6); /* More transparent background */
+  border-radius: 10px; /* Optional: rounded corners */
+  padding: 20px; /* Add some padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
+  overflow: hidden; /* Hide overflow */
+  z-index: 1; /* Higher z-index to stay in front */
+}
+
+.testimonial-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.client-name {
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.client-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+.testimonial-media,
+.testimonial-text {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.testimonial-video {
+  width: 100%;
+  height: 250px;
+  max-height: 250px;
+  border-radius: 10px;
+}
+
+.testimonial-quote {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.view-commercial {
+  font-weight: bold;
+  color: #0066cc;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.view-commercial:hover {
+  text-decoration: underline;
+}
+
+/* Adjust layout for larger screens (side by side) */
+@media (min-width: 768px) {
+  .testimonials {
+      flex-direction: row; /* Side by side on larger screens */
+      justify-content: center;
+      align-items: stretch; /* Ensure both cards have the same height */
+  }
+
+  .testimonial {
+      width: 45%; /* Ensure both take 45% of the width */
+      max-width: none;
+  }
+}
+
+
+
+
 #zoom {
   position: -webkit-sticky; /* For Safari */
   position: sticky !important;
@@ -1038,3 +1128,37 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
         width: 70%; /* Further reduce overall width on very small screens */
     }
 }
+
+
+
+.orb {
+  animation: spin 2s linear infinite;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  margin-top: 55px;
+  border-radius: 50%;
+  position: absolute; /* Absolute positioning to layer correctly */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center */
+  box-shadow: 
+      inset 0 0 50px #fff,
+      inset 20px 0 60px violet,
+      inset -20px 0 60px blue,
+      inset 20px 0 300px violet,
+      inset -20px 0 300px blue, 
+      0 0 50px #fff,
+      -10px 0 60px violet,
+      10px 0 60px blue;
+  z-index: 0; /* Set orbs behind testimonials */
+}
+
+@keyframes spin {
+  0% {
+      transform: translateX(-50%) rotate(0deg); /* Keep the horizontal centering */
+  }
+  100% {
+      transform: translateX(-50%) rotate(360deg); /* Keep the spinning without drifting */
+  }
+}
+
