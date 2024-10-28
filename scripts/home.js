@@ -71,7 +71,7 @@ function wrapWordsWithSpan(elementId, spanClass) {
 
 // Call the function to wrap words in heading
 // If we don't do this process then the entire heading would float up as one big block, which would look strange....
-wrapWordsWithSpan('vslHeading', 'word');
+// wrapWordsWithSpan('vslHeading', 'word');
 
 // This actually makes the words float up. 
 // It senses that you have scrolled far enough down and adds the animation, word for word.
@@ -204,7 +204,7 @@ function typewriter(textArray, elementId) {
 The first argument takes a string array (see review1 for example), this will determine what is typed.
 The second argument takes the id of the element in which you want to type out the text. 
 */
-typewriter(review1, "review1Text");
+// typewriter(review1, "review1Text");
 
 // This logic makes the carousel with the tutorial slides work. 
 const vslCarousel = document.getElementById('vslCarousel');
