@@ -334,11 +334,17 @@ function openModal(item, ind) {
 
     // Check if the user is too close to the footer
     if ((viewportHeight - distanceToFooterFromViewport) < modalContentHeight) {
+
         // Adjust top position to ensure the modal is fully visible above the footer
         topPosition = window.scrollY - (modal.offsetHeight/2);
     }
-    
-    modal.style.top = `${topPosition}px`;
+
+
+    if(item == items[0]){
+        modal.style.top = `${topPosition - 100}px`;
+    }else{
+        modal.style.top = `${topPosition}px`;
+    }
     currentIndex = ind; // Set to the specified slide
     document.body.style.overflowY = "hidden";
     if(item[4] != null){ // Checks whether the project has a thumbnail for a video

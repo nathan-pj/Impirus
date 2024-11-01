@@ -83,6 +83,10 @@ footer:before,
   text-decoration: none;
 }
 
+video{
+  object-fit: cover;
+}
+
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .frostedGlass {
     -webkit-backdrop-filter: blur(10px);
