@@ -404,7 +404,17 @@ nav {
 }
 
 
-
+@font-face {
+  font-family: 'HelveticaNeueMedium';
+  src: url('../assets/HelveticaNeueMedium.eot'); /* IE9 Compat Modes */
+  src: url('../assets/HelveticaNeueMedium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/HelveticaNeueMedium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/HelveticaNeueMedium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../assets/HelveticaNeueMedium.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/HelveticaNeueMedium.svg#HelveticaNeueMedium') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* Keyframes are animations that usually don't need JavaScript */
 @keyframes loadingClose {
