@@ -170,7 +170,7 @@ canvas {
 .projectsH3 a:hover span {
   color: aqua;
 }
-*/ .projectsContainer {
+.projectsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,9 +228,11 @@ canvas {
 .projectsGroup {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 102vw;
+  width: fit-content;
   gap: 2rem 15px;
   min-width: fit-content;
+  justify-items: center;
+  justify-content: center;
 }
 .twoSquareGrid {
   display: grid;
@@ -315,6 +317,8 @@ canvas {
   padding: 1rem 0 4rem 0;
   border-radius: 15px;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 .showcaseVideos {
   display: flex;
@@ -419,6 +423,28 @@ canvas {
   text-align: center;
 }
 
+#container {
+  display: grid;
+  gap: 10px; /* Space between rows */
+  background-color: #f0f0f0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem; /* Space between columns */
+}
+
+.item {
+  padding: 10px;
+  background-color: #ff8ec3;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 250px;
+  max-width: 250px;
+}
+
+
 /* Media queries adjust the styling for different screen sizes. 
 Mine are based on the width of the screen. 
 For example: "@media screen and (max-width: 1100px)" includes styling that will only be applied for screens with a width BELOW 1100px width. 
@@ -426,7 +452,7 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
 
 @media screen and (min-width: 1200px) {
   .projectsPar {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-align: start;
   }
   .text p {
@@ -434,6 +460,10 @@ For example: "@media screen and (max-width: 1100px)" includes styling that will 
   }
   .textProject {
     flex-wrap: wrap;
+  }
+  .projectDiv{
+    width: 20vw;
+    height: 20vw;
   }
 }
 

@@ -119,3 +119,60 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('container');
+    const items = [
+      'Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10',
+      'Item 11', 'Item 12', 'Item 13', 'Item 14', 'Item 15', 'Item 16', 'Item 17', 'Item 18', 'Item 19', 'Item 20',
+      'Item 21', 'Item 22', 'Item 23', 'Item 24', 'Item 25', 'Item 26', 'Item 27', 'Item 28', 'Item 29', 'Item 30',
+      'Item 31', 'Item 32', 'Item 33', 'Item 34', 'Item 35', 'Item 36', 'Item 37', 'Item 38', 'Item 39', 'Item 40'
+    ];
+  
+    function getRandomHeight() {
+      return Math.floor(Math.random() * 50) + 50; // Random height between 50 and 100 pixels
+    }
+  
+    function getRandomMargin() {
+      return Math.floor(Math.random() * 6); // Random margin between 0 and 10 pixels
+    }
+  
+    function populateRows() {
+      let index = 0;
+      const totalItems = items.length;
+  
+      while (index < totalItems) {
+        // Create a new row
+        const row = document.createElement('div');
+        row.classList.add('row');
+  
+        // Randomly choose number of columns between 4 and 6
+        let columns = Math.floor(Math.random() * 3) + 4; // Random number between 4 and 6
+  
+        // Ensure the last row contains only the remaining items
+        if (index + columns > totalItems) {
+          columns = totalItems - index; // Adjust columns for the last row
+        }
+  
+        // Populate the row with items
+        for (let i = 0; i < columns && index < totalItems; i++, index++) {
+          const itemDiv = document.createElement('div');
+          itemDiv.classList.add('item');
+          itemDiv.textContent = items[index];
+          
+          // Set a random height and vertical margins for each item
+          itemDiv.style.height = `${getRandomHeight()}px`;
+          itemDiv.style.marginTop = `${getRandomMargin()}rem`;
+          // itemDiv.style.marginBottom = `${getRandomMargin()}px`;
+          
+          row.appendChild(itemDiv);
+        }
+  
+        // Append the row to the container
+        container.appendChild(row);
+      }
+    }
+  
+    populateRows();
+  });
+  
