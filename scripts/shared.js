@@ -1,10 +1,3 @@
-// This block makes the loading screen dissappear once the page has fully loaded. 
-window.addEventListener('load', function() {
-    this.document.getElementById('loadingScreen').classList.add('loadingClose');
-        setTimeout(() => {
-            this.document.getElementById('loadingScreen').style.display = 'none';
-        }, 900); 
-});
 
 /* This is a borrowed method that checks if the user is on a mobile device or not. 
 It returns a boolean (true or false value) that reveals the result of the check.
@@ -81,11 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Takes the user to a different page
 // Adds a closing animation before the site changes (page turns black)
 function redirectTo(url) {
-    let transOut = document.querySelector('.transOut');
-    transOut.classList.add('blackTransOut');
-    setTimeout(() => {
-        window.location.href = url;
-    }, 900); 
+    window.location.href = url;
 }
 
 // Makes the navbar dissappear when you scroll down, and reappear when you scroll up again.

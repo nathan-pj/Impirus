@@ -18,24 +18,11 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-#loadingScreen {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 5;
-  backdrop-filter: saturate(180%) blur(1000px);
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   header,
   footer,
-  #burgerExpanded,
-  #loadingScreen {
+  #burgerExpanded{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: saturate(180%) blur(10px);
   }
@@ -43,8 +30,7 @@ body {
 
 header:before,
 footer:before,
-#burgerExpanded:before,
-#loadingScreen:before {
+#burgerExpanded:before{
   content: " ";
   position: absolute;
   z-index: -1;
@@ -54,17 +40,6 @@ footer:before,
   bottom: 0;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(0, 0, 0, 0.3);
-}
-
-#loadingLogo {
-  width: 4cm;
-  height: auto;
-  animation: spinZ 4s ease-in-out infinite;
-}
-#loadingText {
-  margin-top: 1cm;
-  font-size: 1.5rem;
-  color: white;
 }
 
 #upBtn {
@@ -417,20 +392,6 @@ nav {
 }
 
 /* Keyframes are animations that usually don't need JavaScript */
-@keyframes loadingClose {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.loadingClose {
-  animation: loadingClose 1s ease-in-out;
-}
-
 @keyframes burgerOpen {
   from {
     transform: translateX(100%);
@@ -546,57 +507,16 @@ footer > * {
 .footerRow > * {
   margin: 0 1ch;
 }
-
 .footerLogoSelect {
   animation: spinZ 0.5s ease;
 }
 .footerLogoDeselect {
   animation: spinZReverse 0.5s ease;
 }
-
-.transition {
-  width: 100vw;
-  height: 0px;
-  background-color: #0d111c;
-  z-index: 3;
-  top: 0;
-}
 a {
   cursor: pointer;
 }
-.blackTransIn {
-  animation: blackTransIn 1s;
-  position: absolute;
-}
-.transOut {
-  height: 100%;
-  width: 0px;
-  position: fixed;
-}
-.blackTransOut {
-  animation: blackTransOut 1s;
-}
 
-/* Keyframes are animations that usually don't need JavaScript */
-@keyframes blackTransIn {
-  from {
-    height: 100vh;
-  }
-  to {
-    height: 0px;
-  }
-}
-
-@keyframes blackTransOut {
-  from {
-    height: 100%;
-    width: 0px;
-  }
-  to {
-    height: 100%;
-    width: 100vw;
-  }
-}
 
 /* Media queries adjust the styling for different screen sizes. 
 Mine are based on the width of the screen. 

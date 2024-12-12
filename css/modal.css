@@ -246,6 +246,10 @@
     object-fit: cover; /* Ensures the image covers the entire slide */
 }
 
+.carousel-paragraph{
+    margin-top: 1rem;
+}
+
 /* Keyframes are animations that usually don't need JavaScript */
 /* The typewriter cursor effect */
 @keyframes blink-caret {
